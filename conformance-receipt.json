@@ -16,7 +16,7 @@
     "BB-11",
     "BB-12"
   ],
-  "executedAtUtc": "2026-11-16T10:52:39.851Z",
+  "executedAtUtc": "2026-11-16T11:48:42.261Z",
   "allScenariosPassed": true,
   "scenarios": [
     {
@@ -68,5 +68,5 @@
     "totalPlatformEscrowKobo": 0,
     "totalStateIntermediaryEscrowKobo": 0
   },
-  "attestationSha256Digest": "43e26e8e923573d509cc4eac31ab2c35c77d678c48436ff091608beec5ed2fa2"
+  "attestationSha256Digest": "b533126ad756de7c2c207d410cc6a86ec1a9993871df4830c5c2f4b0a6b409e3"
 }

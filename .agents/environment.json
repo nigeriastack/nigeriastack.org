@@ -1,0 +1,3 @@
+{
+  "install": "pnpm install --frozen-lockfile && pnpm --filter \"@nigeriastack/*\" build && pnpm --filter nigeriastack-org-portal build && CI=true npx wrangler d1 migrations apply nigeriastack-commons-d1-prod --local --config apps/web/wrangler.toml && CI=true npx wrangler d1 execute nigeriastack-commons-d1-prod --local --config apps/web/wrangler.toml --file=./scripts/seed-d1-from-canonical-json.sql"
+}
