@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/MarketLinkOrderContract.schema.json",
+  "title": "MarketLinkOrderContract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "orderOperationId",
+    "namespace",
+    "buyerFinderNodeId",
+    "merchantCatalogNodeId",
+    "haulageFulfillmentNodeId",
+    "orderState",
+    "antiMonopolyAttestation",
+    "deliverySureEvidenceId"
+  ],
+  "properties": {
+    "orderOperationId": { "type": "string", "pattern": "^cop_[0-9A-HJKMNP-TV-Z]{26}$" },
+    "namespace": { "const": "urn:ngstack:marketlink:v2026" },
+    "buyerFinderNodeId": { "type": "string" },
+    "merchantCatalogNodeId": { "type": "string" },
+    "haulageFulfillmentNodeId": { "type": "string" },
+    "orderState": {
+      "enum": ["DISCOVERED", "QUOTED", "ORDER_ACCEPTED", "IN_TRANSIT_CORRIDOR", "DELIVERED_VERIFIED", "DISPUTED_OR_REVERSED"]
+    },
+    "antiMonopolyAttestation": {
+      "type": "object",
+      "required": ["paidRankingBoostApplied", "portableMerchantReputation"],
+      "properties": {
+        "paidRankingBoostApplied": { "const": false },
+        "portableMerchantReputation": { "const": true }
+      }
+    },
+    "deliverySureEvidenceId": { "type": "string", "pattern": "^s84_[0-9A-HJKMNP-TV-Z]{26}$" }
+  }
+}

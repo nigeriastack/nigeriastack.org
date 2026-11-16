@@ -1,0 +1,294 @@
+{
+  "$schema": "https://nigeriastack.org/schemas/v2026/GDriveSyncManifest.schema.json",
+  "manifestId": "NS-WORKTREE-2026-V2026.6.5",
+  "version": "2026.6.5",
+  "license": "CC0-1.0",
+  "googleDriveFolderId": "1YKr7gx0UnaIe23tKjHLB3NnRwlgPL9he",
+  "googleDriveFolderName": "nigeriastack-org",
+  "workspaceIsolationInvariant": "100% decoupled from sibling commercial domains",
+  "totalSyncedDriveFiles": 47,
+  "artifacts": [
+    {
+      "id": "1dbtkc-jF8dtRAEHgXXazo5baVPmWyRc7wXEJxPCA-fU",
+      "name": "I do not think the filesystem worktree, Website S...",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T05:12:02.528Z"
+    },
+    {
+      "id": "1Y8Tt58riVdiBRRAX_uFmO4xJA36dHbrqnVjRCeP7gZ4",
+      "name": "NIGERIASTACK_COMPLETE_WORKTREE_AND_GDRIVE_SYNC_MANIFEST.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-16T08:10:01.766Z"
+    },
+    {
+      "id": "1lk6u-lt8snVVdMagIlBMD1yQkP5iuDtpUq6wzgadKO8",
+      "name": "NS-KB-01_NIGERIA_STACK_INSTITUTIONAL_CHARTER.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T06:25:03.442Z"
+    },
+    {
+      "id": "1liMzUBeIUbodgdZD4vveq0aWL_ol5lbZNkXTOthftkk",
+      "name": "NS-KB-02_SOVEREIGN_NAMING_AND_PROTOCOL_GLOSSARY.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:40:11.773Z"
+    },
+    {
+      "id": "1LDi7jcz_PD8cwfgVI6rz5Ur_WHz1fvuW63XjKo4hm2M",
+      "name": "NS-KB-02_verify-cleanroom-nomenclature.ts",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:39:07.168Z"
+    },
+    {
+      "id": "14uP7vq3foXV4mgqShpL_rpXlAOIBx6kIT5LNciCzoYA",
+      "name": "NS-KB-03A_RESIDUAL_DEMAND_AND_GAP_MECHANISMS.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:19:59.186Z"
+    },
+    {
+      "id": "1pdj4XoC5vi7FzgphKWtJh1lI9D7sLadVxs8lj8YawFE",
+      "name": "NS-KB-03A_RESIDUAL_DEMAND_AND_GAP_MECHANISMS.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:15:05.768Z"
+    },
+    {
+      "id": "1aHfIKVMiOp3lb6GHD0cRFpMm7MQ-aRskVLOKBQN6LU0",
+      "name": "NS-KB-03A_RESIDUAL_DEMAND_AND_GAP_MECHANISMS.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:01:36.309Z"
+    },
+    {
+      "id": "1fnzK0dJCe_N_D0CUGUgnaFBuTe5E8g033wtqKmZZ7WE",
+      "name": "NS-KB-03A_master-32-industry-matrix.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:51:20.617Z"
+    },
+    {
+      "id": "142KJkP0sQvGf7qV83bhOhgUR5drKY3ml4s4fSauvims",
+      "name": "NS-KB-03A_master-32-industry-matrix.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:20:44.622Z"
+    },
+    {
+      "id": "1rmy1UlQDNsTNmQXd3DLn5xc-pBLTe-Ub0ehL0KKdjvA",
+      "name": "NS-KB-03A_master-32-industry-matrix.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:02:56.454Z"
+    },
+    {
+      "id": "1oNJfucxH2DUAECc9iE_q9qeRJr394msQWw7x-F0WqOk",
+      "name": "NS-KB-03B_PART2_lga-774-constitutional-registry.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T05:09:11.937Z"
+    },
+    {
+      "id": "1W5zOTJlIvhF9LsygPHPKCQZB9kQHzTjDayj8-vJqKvY",
+      "name": "NS-KB-03B_lga-14-service-modules-spec.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T13:35:55.111Z"
+    },
+    {
+      "id": "1iPecKMLFVSNTXr3VRKKIC6PHWekS0dbCy8dim0GxFCI",
+      "name": "NS-KB-03B_lga-774-constitutional-registry.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T13:38:48.722Z"
+    },
+    {
+      "id": "1vD_WxXtjpjQdEbFzx4n7sx8PejnPU56ZVErMiC2Y180",
+      "name": "NS-KB-03B_lga-774-governance-stack-modules.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T05:11:28.406Z"
+    },
+    {
+      "id": "17OYLLVBbHaqWrpeS59wTwGRKblA3g_1ouO_-WrRyNLU",
+      "name": "NS-KB-03B_lga-774-governance-stack-modules.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T05:04:26.710Z"
+    },
+    {
+      "id": "1Q2dKcEoAHrufwD0Z1XDrjCweZib2I8LppIqMrsQ66QI",
+      "name": "NS-KB-03B_subnational-36states-fct-atlas.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T05:16:32.253Z"
+    },
+    {
+      "id": "1WWnTCGtV4G0ORWOcqSV4_0CXSA5ecATdCP7zMnAWXDA",
+      "name": "NS-KB-03B_subnational-36states-fct-atlas.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:20:48.127Z"
+    },
+    {
+      "id": "1kMpsB3bEPzlCgFiqRDI7N_CmvxNdb89T2Cdk-HFwOTg",
+      "name": "NS-KB-03B_subnational-36states-fct-atlas.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T14:02:42.792Z"
+    },
+    {
+      "id": "1mKAiCrMjJtDO3KHHMRLAMRA_0_qFkuuswojl_7pubws",
+      "name": "NS-KB-03C_lga-774-constitutional-registry.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T13:47:14.432Z"
+    },
+    {
+      "id": "161h7-tthvEd_QHeNOC5PNypF2Ph_f4zXuCD1G9eMm80",
+      "name": "NS-KB-03D_lga-14-service-modules-spec.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T13:48:46.435Z"
+    },
+    {
+      "id": "1jl_-6eHK7FEtRxPzQIptPbO8MYXBd03jkxUlnqaPc9g",
+      "name": "NS-KB-04A_nigeriastack.dtcg.tokens.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T15:24:36.621Z"
+    },
+    {
+      "id": "1cuJkCr9yOJoa-eWRhMrq_97SsPjSFg4X0fNvKmLQaTU",
+      "name": "NS-KB-04A_validate-tokens.sh",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-13T15:23:55.061Z"
+    },
+    {
+      "id": "1ZAwqty0Uj8MJhMvix3BSr4tGkq2jNBK2L-QGIXkzswI",
+      "name": "NS-KB-04B_IMPLEMENTATION_GUIDANCE_ARCHITECTURE.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T06:28:54.477Z"
+    },
+    {
+      "id": "1HJOQkMdZP513QXG-uR7I8U06U87z1MIIS5CR2AF9UJI",
+      "name": "NS-KB-05_CORE_NORMATIVE_RFCS_001_TO_005.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T06:26:28.319Z"
+    },
+    {
+      "id": "1_ks0wKRPQy1sYdU1317isPhFihUwWMSxuUCr2MwGEVs",
+      "name": "NS-KB-06_CONSENT_COMMERCE_AGENT_TREASURY_RFCS_006_TO_009.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T06:27:44.459Z"
+    },
+    {
+      "id": "11eodSs2ou9UA7kk4F__op_Gxy9IyPeGXpoPZ7CfjzS8",
+      "name": "NS-KB-07_SECTORAL_CORRIDOR_AND_774_LGA_RFCS_010_TO_014.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T06:29:45.596Z"
+    },
+    {
+      "id": "1fq4zfm4QKCIxm69y2m-XRjH12iDJFnWkSfjJlDgxBk0",
+      "name": "NS-KB-08_OPENAPI_3_1_AND_JSON_SCHEMA_2020_12_CONTRACTS.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T02:42:48.029Z"
+    },
+    {
+      "id": "19FPY2tTHJkK1l3njywVa636NuN8oxlaUaGiBibBQtRA",
+      "name": "NS-KB-09_CLEARAM_TEMPLATES_AND_GHERKIN_ITB_FIXTURES.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T02:28:10.967Z"
+    },
+    {
+      "id": "1Qfy_rEawqoiBO-uWCIh2y4HrAc24sUHR-UjxeGaWGdU",
+      "name": "NS-KB-10_webcopy-routes-01-to-04.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T07:58:56.372Z"
+    },
+    {
+      "id": "11-oggeyPe5j4GK5yfWrswG4fJS3leXijDRgmcpNxII0",
+      "name": "NS-KB-10_webcopy-routes-01-to-04.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T13:41:46.817Z"
+    },
+    {
+      "id": "1dKnqjL1G1CbehidfMIfn1qPMvKqBQG1r3gX1lBYPc6E",
+      "name": "NS-KB-11_webcopy-routes-05-to-07.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T07:57:40.650Z"
+    },
+    {
+      "id": "1Rh7vGUvAgaZJL_OU5tmciljgl1Zgd6z0Gs30GKubaCE",
+      "name": "NS-KB-11_webcopy-routes-05-to-07.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-14T13:43:26.784Z"
+    },
+    {
+      "id": "1LpPLGoeSoWKUYgQ0ByDQ-q6LNjFs6iInhjmSDT3o7lk",
+      "name": "NS-KB-12_audited-faq-nigeriastack-15.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T18:29:38.845Z"
+    },
+    {
+      "id": "1C5McOc2WuyVczZ1EI8WuFY7cL7dyvqcHqrIBEMoPja8",
+      "name": "NS-KB-12_authority-and-precedence.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T18:28:37.494Z"
+    },
+    {
+      "id": "1vM3g0bVIG4QHXf7xyXcJvTjcWlXWOx5PSRozOGMkybE",
+      "name": "NS-KB-13_rag-geo-aeo-15-benchmarks.json",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T07:57:43.940Z"
+    },
+    {
+      "id": "17V0uQ2dvhi1citBZiJYcMbGO9qMD-u7nCkUjzaViO5Y",
+      "name": "NS-KB-14_ascii-wireframes-routes-01-to-03.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T18:29:07.543Z"
+    },
+    {
+      "id": "1ldv91LBU0QNWj_iZkoBfVxnVxrvTXeCw3RnKGiMgXos",
+      "name": "NS-KB-15_ascii-wireframes-routes-04-to-07.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T09:25:50.303Z"
+    },
+    {
+      "id": "1kA_EnRyN6PWFJQugAyhup46Wb4ougxSN6vPrRYJraA8",
+      "name": "NS-KB-16_tokens.css_AND_DESIGN_SPEC.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T05:35:05.581Z"
+    },
+    {
+      "id": "1fafI1C52ciGGG2ieHfHyoBhZUERYlhGBdwcdidLZrGU",
+      "name": "NS-KB-17_batch1-architecture-sectors-protocols-rfcs.html",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T18:29:42.941Z"
+    },
+    {
+      "id": "1GjcoN6Y8cA2y8Iqn7bk33aDbo9ChfbWKRkL50TCoavw",
+      "name": "NS-KB-18_batch2-conformance-atlas-governance.html",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T18:29:29.126Z"
+    },
+    {
+      "id": "1wZBAdYuTm3oZqKkkyXunJtYOlJwaDoS8ZoyAfYa3ep8",
+      "name": "NS-KB-19_nigeriastack-viewport-telemetry.json_AND_assumptions.log",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T05:34:58.983Z"
+    },
+    {
+      "id": "11xgIecaV3ACD0l58B0T7l35PQIrKrxwa89txapg0Qo0",
+      "name": "NS-KB-20A_JOINBODY_REFERENCE_SDKS_AND_LGA_KIOSK_KIT.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T18:31:05.794Z"
+    },
+    {
+      "id": "1UfRH4PjVrlxhXBNm0ZR88LMaq1RFxu24yDAN-8AK66Y",
+      "name": "NS-KB-20B_CONFORMANCE_CLI_AND_NETWORK_CHAOS_RUNNER.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T08:49:56.396Z"
+    },
+    {
+      "id": "1ZJ9yCE9lSFPKw98GAenxrdvYkVe8Hz-swRNVKyHv8oM",
+      "name": "NS-KB-20C_TANSTACK_HONO_EDGE_PORTAL_AND_6_GATE_CICD.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-15T18:28:35.294Z"
+    },
+    {
+      "id": "1bmY7FtGdgcV9aWpd1llapJRLhuTkH3dcfxgBXa8j8_0",
+      "name": "NS-KB-21_ANTIGRAVITY_2_0_HANDOFF_AND_CLOUDFLARE_DEPLOYMENT_SPEC.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-16T04:34:11.133Z"
+    },
+    {
+      "id": "1M8s0i6z-hCigpDXSbX21rVGS_z4uUItoQQCVoq0f6AQ",
+      "name": "NS-KB-21_ANTIGRAVITY_2_0_HANDOFF_AND_CLOUDFLARE_DEPLOYMENT_SPEC.md",
+      "mimeType": "application/vnd.google-apps.document",
+      "modifiedTime": "2026-11-16T04:33:06.393Z"
+    }
+  ]
+}

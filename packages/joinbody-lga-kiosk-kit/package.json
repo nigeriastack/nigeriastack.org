@@ -1,0 +1,20 @@
+{
+  "name": "@nigeriastack/lga-kiosk-kit",
+  "version": "2026.6.5",
+  "description": "774-LGA Municipal Governance & SC/CV/343/2024 Zero-Escrow Reference Kit (NS-RFC-014)",
+  "license": "Apache-2.0 OR MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  }
+}

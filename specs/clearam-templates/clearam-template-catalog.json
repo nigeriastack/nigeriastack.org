@@ -1,0 +1,165 @@
+{
+  "$schema": "https://nigeriastack.org/schemas/v2026/ClearAmTemplateCatalog.schema.json",
+  "catalogVersion": "2026.6.2",
+  "governingStatute": "Nigeria Data Protection Act (NDPA) 2023 ss. 24, 25, 28, 30, 31, 37 & NDPC GAID 2025",
+  "templates": [
+    {
+      "templateId": "FIN-MSME-CREDIT-UNDERWRITING",
+      "targetIndustries": [
+        "IND-01",
+        "IND-02",
+        "IND-05",
+        "IND-21"
+      ],
+      "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+      "permittedProviderCategories": [
+        "CBN_OPEN_BANKING_FIP",
+        "NRS_TAX_EINVOICE",
+        "STATE_HIGH_COURT_REGISTRY",
+        "CAC_CORPORATE_REGISTRY"
+      ],
+      "permittedFieldScopes": [
+        "CASHFLOW_SUMMARY_90D",
+        "TAX_CLEARANCE_STATUS",
+        "ACTIVE_DEBT_OR_MAREVA_ENCUMBRANCE",
+        "COMPANY_ACTIVE_STATUS"
+      ],
+      "prohibitedScopes": [
+        "RAW_BVN_BIOMETRICS",
+        "MATRIMONIAL_OR_JUVENILE_DOCKETS",
+        "UNRELATED_PERSONAL_MESSAGES"
+      ],
+      "maxValidityHours": 72,
+      "maxRetentionDays": 30,
+      "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+    },
+    {
+      "templateId": "LAW-LITIGATION-CLEARANCE",
+      "targetIndustries": [
+        "IND-17",
+        "IND-21"
+      ],
+      "lawfulBasis": "OPEN_COURT_PUBLIC_INTEREST",
+      "permittedProviderCategories": [
+        "STATE_HIGH_COURT_REGISTRY",
+        "STATE_DEEDS_AND_GIS_REGISTRY",
+        "APPELLATE_COURT_REGISTRY"
+      ],
+      "permittedFieldScopes": [
+        "OPEN_COURT_HOLDING_AND_ORDERS",
+        "LIS_PENDENS_CAVEAT_STATUS",
+        "S84_CTC_DIGEST_VERIFICATION",
+        "APPELLATE_LINEAGE_STATUS"
+      ],
+      "prohibitedScopes": [
+        "INTERNAL_RESTRICTED_NDPA_DOCKETS",
+        "LAWYER_WIN_LOSS_RATIOS",
+        "JUDGE_BEHAVIORAL_PROFILING"
+      ],
+      "maxValidityHours": 24,
+      "maxRetentionDays": 90,
+      "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+    },
+    {
+      "templateId": "HLTH-PATIENT-RECORD-TRANSFER",
+      "targetIndustries": [
+        "IND-03",
+        "IND-19"
+      ],
+      "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+      "permittedProviderCategories": [
+        "FMOH_NDHX_FACILITY",
+        "STATE_PHC_KIOSKBASE",
+        "NHIA_HMO_CLEARING"
+      ],
+      "permittedFieldScopes": [
+        "FHIR_PATIENT_IPS_SUMMARY",
+        "ACTIVE_EPRESCRIPTION",
+        "IMMUNIZATION_CREDENTIAL_STATUS"
+      ],
+      "prohibitedScopes": [
+        "UNCONSENTED_HIV_OR_GENETIC_NOTES",
+        "EMPLOYER_HEALTH_SURVEILLANCE"
+      ],
+      "maxValidityHours": 12,
+      "maxRetentionDays": 14,
+      "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+    },
+    {
+      "templateId": "EDU-DEGREE-VERIFICATION",
+      "targetIndustries": [
+        "IND-08",
+        "IND-20"
+      ],
+      "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+      "permittedProviderCategories": [
+        "NUC_UNIVERSITY_REGISTRY",
+        "WAEC_NECO_BOARD",
+        "NYSC_DIRECTORATE",
+        "PROFESSIONAL_PRACTICE_ROLL"
+      ],
+      "permittedFieldScopes": [
+        "SURELEARN_DEGREE_VC_STATUS",
+        "GRADUATION_YEAR_AND_CLASS",
+        "PROFESSIONAL_ROLL_STANDING"
+      ],
+      "prohibitedScopes": [
+        "DISCIPLINARY_MEDICAL_EXCUSES",
+        "UNCONSENTED_FAMILY_FINANCIAL_AID"
+      ],
+      "maxValidityHours": 168,
+      "maxRetentionDays": 365,
+      "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+    },
+    {
+      "templateId": "AGRI-FARM-INPUT-FINANCING",
+      "targetIndustries": [
+        "IND-15",
+        "IND-17",
+        "IND-18"
+      ],
+      "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+      "permittedProviderCategories": [
+        "FMARD_FARMER_REGISTRY",
+        "STATE_LGA_AGRITRUST_NODE",
+        "CERTIFIED_WAREHOUSE_RECEIPT_ISSUER"
+      ],
+      "permittedFieldScopes": [
+        "FARM_GEOPOLYGON_BOUNDARY",
+        "CROP_ASSAY_WAREHOUSE_RECEIPT",
+        "NON_OVERLAP_CADASTRAL_ATTESTATION"
+      ],
+      "prohibitedScopes": [
+        "UNRELATED_HOUSEHOLD_BIOMETRICS"
+      ],
+      "maxValidityHours": 168,
+      "maxRetentionDays": 180,
+      "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+    },
+    {
+      "templateId": "LGA-INDIGENE-AND-VITAL-ATTESTATION",
+      "targetIndustries": [
+        "IND-07",
+        "IND-21",
+        "IND-28"
+      ],
+      "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+      "permittedProviderCategories": [
+        "LGA_774_VITALPROOF_REGISTRY",
+        "LGA_774_INDIGENEPROOF_REGISTRY",
+        "NPC_CRVS_BRIDGE"
+      ],
+      "permittedFieldScopes": [
+        "INDIGENE_ATTESTATION_S84_SEAL",
+        "BIRTH_OR_MARRIAGE_REGISTRATION_STATUS",
+        "WARD_RESIDENCY_GRID_CODE"
+      ],
+      "prohibitedScopes": [
+        "CUSTOMARY_COURT_MATRIMONIAL_RESTRICTED_FILES"
+      ],
+      "maxValidityHours": 72,
+      "maxRetentionDays": 60,
+      "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+    }
+  ]
+}

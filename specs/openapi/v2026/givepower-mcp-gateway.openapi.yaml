@@ -1,0 +1,26 @@
+openapi: 3.1.1
+info:
+  title: Nigeria Stack — GivePower Autonomous Agent Delegation & MCP Safety Contract
+  version: 2026.6.2
+  summary: Enforces READ_ONLY_DEFAULT sandboxing, NDPA s. 37 human countersignatures, and two-phase HTTP 402 escrow invariants (NS-RFC-008).
+  license:
+    name: Apache-2.0
+paths:
+  /v1/mcp/operations/{operationId}:
+    get:
+      operationId: getMcpOperationStatusReadOnly
+      summary: Read-only operation status lookup permitted for autonomous agents by default.
+      responses:
+        '200':
+          description: Deterministic operation status and SureEvidence digest reference.
+  /v1/mcp/mutating-actions:
+    post:
+      operationId: executeCounterSignedAgentMutation
+      summary: State-mutating agent call requiring a valid humanCountersignatureEd25519 header.
+      responses:
+        '202':
+          description: Counter-signed mutation accepted.
+        '402':
+          description: x402 Two-Phase Escrow challenge issued; funds release only upon verified 200 OK delivery.
+        '403':
+          description: Blocked — missing or invalid humanCountersignatureEd25519 under NDPA 2023 s. 37.

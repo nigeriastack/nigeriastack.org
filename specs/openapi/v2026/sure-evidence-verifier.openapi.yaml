@@ -1,0 +1,21 @@
+openapi: 3.1.1
+info:
+  title: Nigeria Stack — SureEvidence Section 84 Cryptographic Certificate Verifier Contract
+  version: 2026.6.2
+  summary: Open specification for verifying Evidence Act 2011 Section 84(4) hardware regularity certificates and 300-DPI Ed25519 QR seals (NS-RFC-005).
+  license:
+    name: Apache-2.0
+paths:
+  /v1/verify/{credentialUlid}:
+    get:
+      operationId: verifySureEvidenceCredential
+      parameters:
+        - name: credentialUlid
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: '^s84_[0-9A-HJKMNP-TV-Z]{26}$'
+      responses:
+        '200':
+          description: Returns cryptographic verification status, Section 84(4) device regularity attestation, and revocation state.

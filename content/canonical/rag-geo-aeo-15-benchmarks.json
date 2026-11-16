@@ -1,0 +1,129 @@
+{
+  "$schema": "https://nigeriastack.org/schemas/v2026/RagGeoAeoBenchmarks.schema.json",
+  "benchmarkSuiteId": "NS-RAG-GEO-AEO-15-V2026.6.3",
+  "license": "CC0-1.0",
+  "totalBenchmarks": 15,
+  "maxLeadAnswerWords": 65,
+  "benchmarks": [
+    {
+      "benchmarkId": "RAG-H2-01",
+      "boundRoute": "/",
+      "h2Heading": "What is Nigeria Stack and how does it stay independent of government agencies and private vendors?",
+      "leadAnswerUnder65Words": "Nigeria Stack (nigeriastack.org) is a CC0-1.0 Public Domain open technical specification and conformance commons for Nigeria's digital infrastructure across 32 industries and 774 Local Government Areas. Its Four-Wall Anti-Capture Firewall prevents it from processing payments, brokering paid APIs, impersonating public institutions, or selling proprietary software catalogs.",
+      "primarySources": ["NS-KB-01", "NS-RFC-001"],
+      "wordCount": 46
+    },
+    {
+      "benchmarkId": "RAG-H2-02",
+      "boundRoute": "/",
+      "h2Heading": "How do the five layers of the Nigeria Stack connect public registries and private sector apps without centralizing databases?",
+      "leadAnswerUnder65Words": "The 5-Layer Hourglass connects local apps and central systems without aggregating master databases. Layer 1 powers offline 2G/WASM apps; Layer 2 references statutory identity (NIN, BVN, TIN, CAC, SCN) and direct treasury routes; Layer 3 standardizes local registries and legal proof; Layer 4 handles async transport, consent, and market links; Layer 5 coordinates 32 sector networks.",
+      "primarySources": ["NS-RFC-001"],
+      "wordCount": 54
+    },
+    {
+      "benchmarkId": "RAG-H2-03",
+      "boundRoute": "/",
+      "h2Heading": "How does Nigeria Stack guarantee citizens' right to exit, open-source code, public audits, and self-hosting?",
+      "leadAnswerUnder65Words": "Nigeria Stack passes five DPI tests: 01 Exit (instant data export, under-60-second consent revocation, USSD non-exclusion), 02 Code (Public Domain specs and Apache-2.0 SDKs), 03 Audit (daily cryptographic proof logs), 04 Govern (transparent multi-stakeholder working groups), and 05 Fork (decentralized self-hosting), displaying Evidence, Components, Framework, and Methods on all specifications.",
+      "primarySources": ["NS-KB-01", "NS-RFC-002", "NS-RFC-005", "NS-RFC-009"],
+      "wordCount": 51
+    },
+    {
+      "benchmarkId": "RAG-H2-04",
+      "boundRoute": "/sectors",
+      "h2Heading": "What are the eight everyday digital bottlenecks slowing down Nigeria's 32 industries?",
+      "leadAnswerUnder65Words": "The stack solves eight systemic friction points: restricted data access (MECH-01), uneven state/LGA coverage (MECH-02), incompatible data formats (MECH-03), multi-party payment timeouts (MECH-04), weak digital evidence trust (MECH-05), offline network drops (MECH-06), high aggregator fees (MECH-07), and unindexed paper-based legal statutes (MECH-08).",
+      "primarySources": ["NS-KB-03A"],
+      "wordCount": 42
+    },
+    {
+      "benchmarkId": "RAG-H2-05",
+      "boundRoute": "/sectors",
+      "h2Heading": "How does Nigeria Stack work alongside existing Nigerian payment, identity, logistics, and health platforms?",
+      "leadAnswerUnder65Words": "Across 32 industries, Nigeria Stack builds on existing live services—such as NIBSS, Paystack, Moniepoint, Remita, Shipbubble, Termii, Dojah, Workpay, Curacel, Helium Health, and AFEX—providing open protocols for consent, verification, evidence generation, and multi-party settlement to bridge missing inter-platform links.",
+      "primarySources": ["NS-KB-03A"],
+      "wordCount": 42
+    },
+    {
+      "benchmarkId": "RAG-H2-06",
+      "boundRoute": "/protocols/sure-evidence",
+      "h2Heading": "How does SureEvidence make electronic court orders, land searches, and local council certificates admissible under Section 84 of the Evidence Act?",
+      "leadAnswerUnder65Words": "SureEvidence (NS-RFC-005) package digital copies, land registry filings, university diplomas, and municipal origin certificates into verifiable digital credentials. Each record contains a cryptographic hash, hardware signature, tamper-proof timestamp, statutory regularity declaration under Evidence Act Section 84(2)/(4), and an offline-scannable high-resolution QR code.",
+      "primarySources": ["NS-RFC-005"],
+      "wordCount": 44
+    },
+    {
+      "benchmarkId": "RAG-H2-07",
+      "boundRoute": "/protocols/clearam-consent",
+      "h2Heading": "How does ClearAm let citizens and businesses control their data and revoke consent in under 60 seconds under the NDPA 2023?",
+      "leadAnswerUnder65Words": "ClearAm (NS-RFC-006) attaches statutory privacy envelopes to data requests under the Nigeria Data Protection Act 2023. Requests specify exact purpose categories (finance, health, law, education, agriculture, municipal) and expiration times. If consent expires or is revoked by the user, gateway servers immediately block further access in under 60 seconds.",
+      "primarySources": ["NS-RFC-006", "NS-KB-09"],
+      "wordCount": 47
+    },
+    {
+      "benchmarkId": "RAG-H2-08",
+      "boundRoute": "/protocols/confluence-gateway",
+      "h2Heading": "How does Confluence prevent double debits and duplicate filings when Nigerian mobile networks drop?",
+      "leadAnswerUnder65Words": "Confluence (NS-RFC-002 & NS-RFC-003) uses signed asynchronous transaction states. When network connections drop mid-transaction, requests enter a locked verification state instead of failing blindly. Duplicate retries are held until reconciliation completes, ensuring users are never double-charged or issued duplicate filings during outages.",
+      "primarySources": ["NS-RFC-002", "NS-RFC-003"],
+      "wordCount": 44
+    },
+    {
+      "benchmarkId": "RAG-H2-09",
+      "boundRoute": "/protocols/marketlink-commerce",
+      "h2Heading": "How do MarketLink, PassCargo, and AgriTrust help merchants, clearing agents, and smallholder farmers trade without monopoly fees?",
+      "leadAnswerUnder65Words": "MarketLink (NS-RFC-007) connects product catalogs and delivery logistics without commission middleman markups; PassCargo (NS-RFC-010) streamlines customs, port, and health inspection clearances into instant exit tokens; and AgriTrust (NS-RFC-012) links digital farm boundary surveys directly to verifiable warehouse receipts for fair crop financing.",
+      "primarySources": ["NS-RFC-007", "NS-RFC-010", "NS-RFC-012"],
+      "wordCount": 44
+    },
+    {
+      "benchmarkId": "RAG-H2-10",
+      "boundRoute": "/protocols/givepower-agents",
+      "h2Heading": "How does GivePower keep AI assistants safe with mandatory human approval and protected micro-payments?",
+      "leadAnswerUnder65Words": "GivePower (NS-RFC-008) sets strict guardrails for automated AI tools: read-only default data access, explicit biometric or cryptographic human approval for official state actions under NDPA Section 37, and micro-payment escrows that release funds only after verified successful API completions.",
+      "primarySources": ["NS-RFC-008"],
+      "wordCount": 41
+    },
+    {
+      "benchmarkId": "RAG-H2-11",
+      "boundRoute": "/protocols/kioskbase-registries",
+      "h2Heading": "How does KioskBase keep local courts, primary health clinics, and council offices running during power and internet outages?",
+      "leadAnswerUnder65Words": "KioskBase (NS-RFC-004) packages a lightweight web app (under 35 KB) backed by an in-browser local database. Frontline staff in rural areas can log records offline; updates auto-synchronize without data loss once connection restores, while strict privacy locks shield sensitive patient and minor files.",
+      "primarySources": ["NS-RFC-004"],
+      "wordCount": 44
+    },
+    {
+      "benchmarkId": "RAG-H2-12",
+      "boundRoute": "/protocols/lawtree-ast",
+      "h2Heading": "How does LawTree publish up-to-date Nigerian federal and state laws with verified translations in Hausa, Yoruba, Igbo, and Pidgin?",
+      "leadAnswerUnder65Words": "LawTree (NS-RFC-013) parses Federal and State statutes into structured legal records linked directly to Official Gazette source citations. It tracks historical amendments accurately and ensures legal translations across English, Hausa, Yoruba, Igbo, and Pidgin undergo certified legal review before public display.",
+      "primarySources": ["NS-RFC-013"],
+      "wordCount": 43
+    },
+    {
+      "benchmarkId": "RAG-H2-13",
+      "boundRoute": "/protocols/lga-governance-stack",
+      "h2Heading": "How does the 774 Local Government Stack deliver constitutional municipal services and route revenue directly to local council treasuries?",
+      "leadAnswerUnder65Words": "LgaGovernanceStack (NS-RFC-014) standardizes 14 municipal service modules (from civic registry to street listing) across all 774 LGAs and Area Councils. In line with Supreme Court Ruling SC/CV/343/2024, local collection routes payments directly to official council accounts without intermediary diversion, offering USSD access (*347*LGA#) for non-smartphone users.",
+      "primarySources": ["NS-RFC-009", "NS-RFC-014", "NS-KB-03C", "NS-KB-03D"],
+      "wordCount": 48
+    },
+    {
+      "benchmarkId": "RAG-H2-14",
+      "boundRoute": "/conformance",
+      "h2Heading": "How can ministries, states, local councils, banks, and developers test and certify their systems for free in the browser?",
+      "leadAnswerUnder65Words": "Software builders and institutions can run real-time compliance tests inside a browser WebAssembly sandbox without storing data on central servers, or use open command-line tools against automated test suites. Conformance passes generate downloadable, cryptographically signed receipts instantly at no cost.",
+      "primarySources": ["NS-KB-04B", "NS-KB-09"],
+      "wordCount": 41
+    },
+    {
+      "benchmarkId": "RAG-H2-15",
+      "boundRoute": "/atlas",
+      "h2Heading": "How does the Sub-National Readiness Atlas track digital public services across all 36 States, the FCT, and 774 Local Government Areas without fabricated rankings?",
+      "leadAnswerUnder65Words": "The Sub-National Atlas (NS-KB-03B & NS-KB-03C) audits 36 States, the FCT, and 774 Local Government Areas across 8 digital infrastructure dimensions. Instead of subjective league tables, it reports verifiable status categories—Verified Live, Corroborated Pilot, Paper-Bound Gap, and Unassessed—ensuring transparent and factual public monitoring.",
+      "primarySources": ["NS-KB-03B", "NS-KB-03C"],
+      "wordCount": 45
+    }
+  ]
+}

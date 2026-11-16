@@ -1,0 +1,25 @@
+{
+  "templateId": "LGA-INDIGENE-AND-VITAL-ATTESTATION",
+  "targetIndustries": [
+    "IND-07",
+    "IND-21",
+    "IND-28"
+  ],
+  "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+  "permittedProviderCategories": [
+    "LGA_774_VITALPROOF_REGISTRY",
+    "LGA_774_INDIGENEPROOF_REGISTRY",
+    "NPC_CRVS_BRIDGE"
+  ],
+  "permittedFieldScopes": [
+    "INDIGENE_ATTESTATION_S84_SEAL",
+    "BIRTH_OR_MARRIAGE_REGISTRATION_STATUS",
+    "WARD_RESIDENCY_GRID_CODE"
+  ],
+  "prohibitedScopes": [
+    "CUSTOMARY_COURT_MATRIMONIAL_RESTRICTED_FILES"
+  ],
+  "maxValidityHours": 72,
+  "maxRetentionDays": 60,
+  "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+}

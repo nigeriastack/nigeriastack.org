@@ -1,0 +1,27 @@
+{
+  "templateId": "LAW-LITIGATION-CLEARANCE",
+  "targetIndustries": [
+    "IND-17",
+    "IND-21"
+  ],
+  "lawfulBasis": "OPEN_COURT_PUBLIC_INTEREST",
+  "permittedProviderCategories": [
+    "STATE_HIGH_COURT_REGISTRY",
+    "STATE_DEEDS_AND_GIS_REGISTRY",
+    "APPELLATE_COURT_REGISTRY"
+  ],
+  "permittedFieldScopes": [
+    "OPEN_COURT_HOLDING_AND_ORDERS",
+    "LIS_PENDENS_CAVEAT_STATUS",
+    "S84_CTC_DIGEST_VERIFICATION",
+    "APPELLATE_LINEAGE_STATUS"
+  ],
+  "prohibitedScopes": [
+    "INTERNAL_RESTRICTED_NDPA_DOCKETS",
+    "LAWYER_WIN_LOSS_RATIOS",
+    "JUDGE_BEHAVIORAL_PROFILING"
+  ],
+  "maxValidityHours": 24,
+  "maxRetentionDays": 90,
+  "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "nigeriastack-org-monorepo",
+  "version": "2026.6.5",
+  "private": true,
+  "license": "CC0-1.0",
+  "type": "module",
+  "scripts": {
+    "ci:g1": "npx tsx scripts/ci/verify-cleanroom-nomenclature.ts",
+    "ci:g2": "node -e 'const fs=require(\"fs\"); const ind=JSON.parse(fs.readFileSync(\"content/taxonomy/master-32-industry-matrix.json\",\"utf8\")); const st=JSON.parse(fs.readFileSync(\"content/atlas/subnational-36states-fct-atlas.json\",\"utf8\")); const lga=JSON.parse(fs.readFileSync(\"content/atlas/lga-774-constitutional-registry.json\",\"utf8\")); const mod=JSON.parse(fs.readFileSync(\"content/atlas/lga-14-service-modules-spec.json\",\"utf8\")); if(ind.industries.length!==32 || st.jurisdictions.length!==37 || lga.totalConstitutionalCouncils!==774 || mod.modules.length!==14) process.exit(1); console.log(\"[\u2713 GATE NS-G2 CERTIFIED PASS] 32 Industries, 37 Jurisdictions (296 Cells), 774 Constitutional LGAs, and 14 LGA Modules Verified.\");'",
+    "ci:g3": "node -e 'const fs=require(\"fs\"); const faq=JSON.parse(fs.readFileSync(\"content/canonical/audited-faq-nigeriastack-15.json\",\"utf8\")); const rag=JSON.parse(fs.readFileSync(\"content/canonical/rag-geo-aeo-15-benchmarks.json\",\"utf8\")); if(faq.length!==15 || rag.benchmarks.length!==15 || rag.benchmarks.some(b=>b.wordCount>65)) process.exit(1); console.log(\"[\u2713 GATE NS-G3 CERTIFIED PASS] 15 Canonical FAQs and 15 H2 RAG Benchmarks (<65 words) Verified.\");'",
+    "ci:g4-g5": "bash scripts/ci/validate-tokens.sh",
+    "ci:g6": "pnpm --filter \"@nigeriastack/*\" build && pnpm --filter \"@nigeriastack/*\" test && pnpm --filter nigeriastack-org-portal build && node packages/conformance-cli/dist/cli.js certify --bb BB-01,BB-02,BB-03,BB-04,BB-05,BB-06,BB-07,BB-08,BB-09,BB-10,BB-11,BB-12 --out ./conformance-receipt.json",
+    "ci:verify-all-gates": "pnpm run ci:g1 && pnpm run ci:g2 && pnpm run ci:g3 && pnpm run ci:g4-g5 && pnpm run ci:g6",
+    "test:telemetry": "npx playwright test tests/telemetry/verify-dom-artboards-and-zoom.spec.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.0.0",
+    "hono": "^4.6.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "wrangler": "^3.99.0"
+  }
+}

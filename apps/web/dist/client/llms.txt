@@ -1,0 +1,17 @@
+# Nigeria Stack (nigeriastack.org) — Whole-of-Economy Open Specification & Conformance Commons
+> Make Nigeria's digital systems work together without surrendering statutory authority, operational continuity, evidentiary integrity, or institutional independence.
+> License: CC0-1.0 Universal (Public Domain Dedication) for all specifications, RFCs, schemas, and datasets; Apache-2.0 OR MIT for JoinBody reference SDKs.
+> Non-Impersonation: Independent open specification commons; not a federal government portal, payment switch, commercial API marketplace, or vendor product catalogue.
+
+
+## Core Architecture & Governance (Board NS-1)
+- [Institutional Positioning Charter & Five Tests (`01 Exit`..`05 Fork`)](https://nigeriastack.org/governance): Four-Wall Anti-Capture Firewall, 6 Tripartite Working Groups (`WG-01..06`), and `dpi/build` Four-Pillar Evaluation Matrix.
+- [Pan-Nigerian Sovereign Naming & Protocol Glossary](https://nigeriastack.org/protocols): Clean-room protocol URIs (`SureEvidence`, `ClearAm`, `MarketLink`, `Confluence`, `GivePower`, `KioskBase`, `PassCargo`, `LawTree AST`, `LgaGovernanceStack`).
+- [32-Industry & 8-Mechanism Capability Ledger](https://nigeriastack.org/sectors): `master-32-industry-matrix.json` (`IND-01` to `IND-32` across `SECTOR_1` to `SECTOR_8`).
+- [36-States + FCT & 774-LGA Sub-National Readiness Atlas](https://nigeriastack.org/atlas): `subnational-36states-fct-atlas.json` (296 cells) + `lga-774-constitutional-registry.json` (768 State LGAs + 6 FCT Area Councils) + `lga-14-service-modules-spec.json` (`LGA-01` to `LGA-14`).
+
+
+## Normative Standards Track (`NS-RFC-001` to `NS-RFC-014` — Board NS-2)
+- [NS-RFC-001 to NS-RFC-005](https://nigeriastack.org/rfcs): 5-Layer Hourglass, `Confluence` Signed Async Transport (`did:web`), 6-State Safe Retry, `KioskBase` `<35 KB` SQLite WASM / HLC-CRDTs, and `SureEvidence` Evidence Act 2011 s. 84 Credentials + Merkle Logs.
+- [NS-RFC-006 to NS-RFC-009](https://nigeriastack.org/rfcs): `ClearAm` NDPA 2023 Consent Envelopes (`<60s` revocation), `MarketLink` Open Commerce, `GivePower` MCP Agent Sandbox & x402 Escrow, and `SplitDirect` Zero-Escrow Treasury Pass-Through (`CFRN s. 121(3)` & `SC/CV/343/2024`).
+- [NS-RFC-010 to NS-RFC-014](https://nigeriastack.org/rfcs): `PassCargo` Trade/Customs, `NDHX` FHIR Health & `SureLearn` Diplomas, `AgriTrust` Farm Polygons, `LawTree AST` 5-Locale Statutes, and `LgaGovernanceStack` (`774 LGAs` & `LGA-01..14`).

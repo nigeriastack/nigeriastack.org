@@ -1,0 +1,30 @@
+{
+  "templateId": "FIN-MSME-CREDIT-UNDERWRITING",
+  "targetIndustries": [
+    "IND-01",
+    "IND-02",
+    "IND-05",
+    "IND-21"
+  ],
+  "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+  "permittedProviderCategories": [
+    "CBN_OPEN_BANKING_FIP",
+    "NRS_TAX_EINVOICE",
+    "STATE_HIGH_COURT_REGISTRY",
+    "CAC_CORPORATE_REGISTRY"
+  ],
+  "permittedFieldScopes": [
+    "CASHFLOW_SUMMARY_90D",
+    "TAX_CLEARANCE_STATUS",
+    "ACTIVE_DEBT_OR_MAREVA_ENCUMBRANCE",
+    "COMPANY_ACTIVE_STATUS"
+  ],
+  "prohibitedScopes": [
+    "RAW_BVN_BIOMETRICS",
+    "MATRIMONIAL_OR_JUVENILE_DOCKETS",
+    "UNRELATED_PERSONAL_MESSAGES"
+  ],
+  "maxValidityHours": 72,
+  "maxRetentionDays": 30,
+  "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/LgaGovernanceServiceEnvelope.schema.json",
+  "title": "LgaGovernanceServiceEnvelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "envelopeUlid",
+    "lgaCode",
+    "moduleId",
+    "kioskBaseDeltaId",
+    "splitDirectTreasuryProof",
+    "sureEvidenceSealId"
+  ],
+  "properties": {
+    "envelopeUlid": { "type": "string", "pattern": "^cop_[0-9A-HJKMNP-TV-Z]{26}$" },
+    "lgaCode": { "type": "string", "pattern": "^[A-Z]{2}-LGA-[0-9]{2}$" },
+    "moduleId": {
+      "enum": [
+        "LGA-01", "LGA-02", "LGA-03", "LGA-04", "LGA-05", "LGA-06", "LGA-07",
+        "LGA-08", "LGA-09", "LGA-10", "LGA-11", "LGA-12", "LGA-13", "LGA-14"
+      ]
+    },
+    "kioskBaseDeltaId": { "type": "string", "pattern": "^kbd_[0-9A-HJKMNP-TV-Z]{26}$" },
+
+
+    "clockSyncStatus": { "enum": ["NTP_GPS_VERIFIED", "DEGRADED_LOCAL_HLC"] },
+    "visibilityTier": { "enum": ["PUBLIC_MUNICIPAL_RECORD", "CONSENT_RESTRICTED", "INTERNAL_RESTRICTED_NDPA"] },
+    "splitDirectTreasuryProof": {
+      "type": "object",
+      "required": ["platformEscrowAmountKobo", "stateIntermediaryEscrowKobo", "directLgaTreasuryAccountRef"],
+      "properties": {
+        "platformEscrowAmountKobo": { "const": 0 },
+        "stateIntermediaryEscrowKobo": { "const": 0 },
+        "directLgaTreasuryAccountRef": { "type": "string" },
+        "statutoryAmountKobo": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "sureEvidenceSealId": { "type": "string", "pattern": "^s84_[0-9A-HJKMNP-TV-Z]{26}$" }
+  }
+}

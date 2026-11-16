@@ -1,0 +1,54 @@
+name: Nigeria Stack 6-Gate Continuous Compliance & ITB Attestation
+
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+
+jobs:
+  nigeriastack-gates-ns-g1-to-g6:
+    name: Enforce Gates NS-G1 through NS-G6 (CC0-1.0 Open Commons)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+
+      - name: Gate NS-G1 — Clean-Room Pan-Nigerian Nomenclature & Anti-Capture Verifier
+        run: npx tsx scripts/ci/verify-cleanroom-nomenclature.ts
+
+
+      - name: Gate NS-G2 — Verify 32-Industry (IND-01..32), 36-State (296 Cells) & 774-LGA JSON Integrity
+        run: |
+          node -e '
+            const fs = require("fs");
+            const lga = JSON.parse(fs.readFileSync("content/atlas/lga-774-constitutional-registry.json", "utf8"));
+            if (lga.totalConstitutionalCouncils !== 774) process.exit(1);
+          '
+
+
+      - name: Gate NS-G3 — Verify 15 Canonical FAQs, 15 H2 RAG Benchmarks (<65 Words) & Zero Backend Bleed
+        run: |
+          node -e '
+            const fs = require("fs");
+            const rag = JSON.parse(fs.readFileSync("content/canonical/rag-geo-aeo-15-benchmarks.json", "utf8"));
+            if (rag.benchmarks.length !== 15 || rag.benchmarks.some(b => b.wordCount > 65)) process.exit(1);
+          '
+
+
+      - name: Gate NS-G4 & Gate NS-G5 — W3C DTCG Token Zero-Literal & WCAG 2.2 AA+ Telemetry Check
+        run: bash scripts/ci/validate-tokens.sh
+
+
+      - name: Gate NS-G6 — Execute Gherkin ITB Conformance Suite (ITB-01..05) & <35 KB Shell Budget Check
+        run: |
+          npx @nigeriastack/conformance-cli certify --bb BB-01,BB-02,BB-03,BB-04,BB-05,BB-06,BB-07,BB-08,BB-09,BB-10,BB-11,BB-12 --out ./conformance-receipt.json

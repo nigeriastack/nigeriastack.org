@@ -1,0 +1,25 @@
+{
+  "templateId": "AGRI-FARM-INPUT-FINANCING",
+  "targetIndustries": [
+    "IND-15",
+    "IND-17",
+    "IND-18"
+  ],
+  "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+  "permittedProviderCategories": [
+    "FMARD_FARMER_REGISTRY",
+    "STATE_LGA_AGRITRUST_NODE",
+    "CERTIFIED_WAREHOUSE_RECEIPT_ISSUER"
+  ],
+  "permittedFieldScopes": [
+    "FARM_GEOPOLYGON_BOUNDARY",
+    "CROP_ASSAY_WAREHOUSE_RECEIPT",
+    "NON_OVERLAP_CADASTRAL_ATTESTATION"
+  ],
+  "prohibitedScopes": [
+    "UNRELATED_HOUSEHOLD_BIOMETRICS"
+  ],
+  "maxValidityHours": 168,
+  "maxRetentionDays": 180,
+  "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+}

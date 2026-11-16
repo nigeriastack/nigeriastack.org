@@ -1,0 +1,20 @@
+{
+  "name": "@nigeriastack/confluence-transport",
+  "version": "2026.6.5",
+  "description": "Confluence Signed Asynchronous Webhook & 6-State Idempotent Retry SDK (NS-RFC-002 & NS-RFC-003)",
+  "license": "Apache-2.0 OR MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  }
+}

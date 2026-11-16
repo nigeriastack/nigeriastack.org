@@ -1,0 +1,16 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
+  ],
+  "id": "did:web:nigeriastack.org",
+  "forkableWithoutCentralPermission": true,
+  "verificationMethod": [
+    {
+      "id": "did:web:nigeriastack.org#wg02-sure-evidence-root-2026",
+      "type": "Ed25519VerificationKey2020",
+      "controller": "did:web:nigeriastack.org",
+      "publicKeyMultibase": "z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+    }
+  ]
+}

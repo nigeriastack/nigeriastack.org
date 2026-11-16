@@ -1,0 +1,29 @@
+# ==============================================================================
+# NIGERIASTACK.ORG — CONFIDENCE-GRADED ARCHITECTURAL & VISUAL CRAFT ASSUMPTIONS LOG
+# Canonical Path: docs/design-system/assumptions.log
+# Confidence Taxonomy: [VERIFIED] | [CORROBORATED] | [PRACTITIONER_REPORTED] | [HYPOTHESIS_REQUIRING_VALIDATION]
+# ==============================================================================
+
+
+[2026-11-15T05:30:00Z] [VERIFIED] [ID: ASSUMP-NS-01] [Statutory Fiscal Invariance]
+- Statement: Section 121(3) of the 1999 Constitution (as amended) and the Supreme Court of Nigeria judgment in AG Federation v. AG Abia State & 35 Ors (SC/CV/343/2024, July 11, 2024) mandate direct financial autonomy for State Judiciaries and all 774 Constitutional Local Government Areas.
+- Architectural Binding: Enforced in NS-RFC-009 and NS-RFC-014 via `platform_escrow_amount_kobo == 0` and `state_intermediary_escrow_kobo == 0` (tested in Scenario ITB-04).
+
+
+[2026-11-15T05:30:00Z] [VERIFIED] [ID: ASSUMP-NS-02] [Evidence Act 2011 Section 84 Admissibility]
+- Statement: Electronic computer printouts and digital certificates require a Certificate of Regularity attesting to the proper operating state of the computer device under Section 84(2) and (4) of the Evidence Act 2011.
+- Architectural Binding: Enforced in NS-RFC-005 (`SureEvidence` / `SureProof`) via hardware FIDO2 Ed25519 signatures and 300-DPI offline-verifiable QR seals (tested in Scenario ITB-03).
+
+
+[2026-11-15T05:30:00Z] [CORROBORATED] [ID: ASSUMP-NS-03] [Sub-National 774-LGA Digital Public Health Baseline]
+- Statement: eGov Foundation's DIGIT Health Campaign Management (HCM) platform has been piloted across Kebbi State's 21 Local Government Areas for Seasonal Malaria Chemoprevention (SMC), while 30+ states remain paper-bound across rural ward civil registration and customary courts.
+- Architectural Binding: Recorded in `subnational-36states-fct-atlas.json` (`NS-KB-03B`) and scaled vendor-neutrally via `LGA-11` (`WardPHC`) and `KioskBase` (`NS-RFC-004`).
+
+
+[2026-11-15T05:30:00Z] [PRACTITIONER_REPORTED] [ID: ASSUMP-NS-04] [Rural 2G Packet Loss, Power Outages & Clock Drift]
+- Statement: Rural courts, primary health clinics, and motor-park / market revenue kiosks frequently lose grid power for 8–72 hours, causing unpowered CMOS/RTC clocks on low-cost terminals to drift by >300 seconds.
+- Architectural Binding: Enforced in NS-RFC-004 (`KioskBase`) via `< 35 KB` OPFS SQLite WASM shells, Hybrid Logical Clock (HLC) CRDTs, and the mandatory `DEGRADED_LOCAL_HLC` flag when drift exceeds 300 seconds (`RED-CNT-04`).
+
+
+[2026-11-15T05:30:00Z] [HYPOTHESIS_REQUIRING_VALIDATION] [ID: ASSUMP-NS-05] [200-User Multi-Locale Comprehension Benchmark]
+- Statement: While all 5 locales (`en-NG`, `ha-NG`, `yo-NG`, `ig-NG`, `pcm-NG`) are gated by `reviewState == "LEGAL_SEMANTIC_REVIEW_APPROVED"` and +35% container expansion budgets (`Gate NS-G4`), live field comprehension testing across 200 grassroots traders, drivers, and court clerks remains a pre-ratification Stage 4 milestone.

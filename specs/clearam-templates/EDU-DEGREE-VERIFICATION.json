@@ -1,0 +1,26 @@
+{
+  "templateId": "EDU-DEGREE-VERIFICATION",
+  "targetIndustries": [
+    "IND-08",
+    "IND-20"
+  ],
+  "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+  "permittedProviderCategories": [
+    "NUC_UNIVERSITY_REGISTRY",
+    "WAEC_NECO_BOARD",
+    "NYSC_DIRECTORATE",
+    "PROFESSIONAL_PRACTICE_ROLL"
+  ],
+  "permittedFieldScopes": [
+    "SURELEARN_DEGREE_VC_STATUS",
+    "GRADUATION_YEAR_AND_CLASS",
+    "PROFESSIONAL_ROLL_STANDING"
+  ],
+  "prohibitedScopes": [
+    "DISCIPLINARY_MEDICAL_EXCUSES",
+    "UNCONSENTED_FAMILY_FINANCIAL_AID"
+  ],
+  "maxValidityHours": 168,
+  "maxRetentionDays": 365,
+  "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+}

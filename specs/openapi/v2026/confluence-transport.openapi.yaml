@@ -1,0 +1,76 @@
+openapi: 3.1.1
+info:
+  title: Nigeria Stack — Confluence Gateway Signed Asynchronous Transport Contract
+  version: 2026.6.2
+  summary: Vendor-neutral OpenAPI 3.1.1 specification for asynchronous request/callback pairing, idempotency, and 6-state operation recovery (NS-RFC-002 & NS-RFC-003).
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+components:
+  parameters:
+    NgStackOperationId:
+      name: X-NgStack-Operation-Id
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: '^cop_[0-9A-HJKMNP-TV-Z]{26}$'
+    NgStackIdempotencyKey:
+      name: X-NgStack-Idempotency-Key
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 16
+        maxLength: 128
+    NgStackSignatureEd25519:
+      name: X-NgStack-Signature-Ed25519
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: '^[A-Za-z0-9_-]{86}$'
+  schemas:
+    OperationLifecycleState:
+      type: string
+      enum:
+        - INITIATED
+        - ACCEPTED_PENDING
+        - UNKNOWN_TIMEOUT
+        - RESOLVED_SUCCESS
+        - RESOLVED_REVERSED
+        - FAILED_TERMINAL
+    ConfluenceAsyncAck:
+      type: object
+      required: [operationId, customerReference, state, acceptedAtUtc]
+      properties:
+        operationId:
+          type: string
+          pattern: '^cop_[0-9A-HJKMNP-TV-Z]{26}$'
+        customerReference:
+          type: string
+        state:
+          $ref: '#/components/schemas/OperationLifecycleState'
+        acceptedAtUtc:
+          type: string
+          format: date-time
+paths:
+  /v1/{sector}/{action}:
+    post:
+      operationId: initiateConfluenceOperation
+      summary: Initiates an idempotent asynchronous operation across any of the 32 industries.
+      parameters:
+        - $ref: '#/components/parameters/NgStackOperationId'
+        - $ref: '#/components/parameters/NgStackIdempotencyKey'
+        - $ref: '#/components/parameters/NgStackSignatureEd25519'
+      responses:
+        '202':
+          description: Operation accepted for asynchronous execution; final outcome delivered via /on_{action} webhook.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfluenceAsyncAck'
+        '403':
+          description: ClearAm consent token expired or out of scope (CLEARAM_ARTIFACT_EXPIRED).
+        '409':
+          description: Unsafe retry blocked while original operation remains in UNKNOWN_TIMEOUT (UNRESOLVED_OPERATION_LOCK).

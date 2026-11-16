@@ -1,0 +1,31 @@
+# File: apps/web/wrangler.toml
+name = "nigeriastack-org-portal"
+main = "src/worker.ts"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Custom Domain Routing (Zero Cross-Domain Bleed)
+routes = [
+  { pattern = "nigeriastack.org", custom_domain = true },
+  { pattern = "www.nigeriastack.org", custom_domain = true }
+]
+
+# Static Assets (< 35 KB Gzipped Shell + Offline WASM Verifiers + Public Domain Schemas)
+[assets]
+directory = "./dist/client"
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+not_found_handling = "single-page-application"
+
+# Cloudflare D1 FTS5 SQLite Binding
+[[d1_databases]]
+binding = "NGSTACK_D1"
+database_name = "nigeriastack-commons-d1-prod"
+database_id = "00000000-0000-0000-0000-ngstack2026d1"
+migrations_dir = "migrations"
+
+[vars]
+ENVIRONMENT = "production"
+COMMONS_VERSION = "v2026.6.5"
+LICENSE_SPDX = "CC0-1.0"
+SOVEREIGN_NON_IMPERSONATION_HEADER = "Independent Open Specification & Conformance Commons (CC0-1.0 Public Domain) — Not a Federal/State Executive Portal or Commercial API Gateway"

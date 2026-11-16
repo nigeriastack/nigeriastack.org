@@ -1,0 +1,20 @@
+{
+  "name": "@nigeriastack/sure-evidence-crypto",
+  "version": "2026.6.5",
+  "description": "Evidence Act 2011 s. 84 W3C VC Signing & <50ms Offline QR Verifier (NS-RFC-005)",
+  "license": "Apache-2.0 OR MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "ns": {
+    "$description": "Nigeria Stack (nigeriastack.org) W3C DTCG Sovereign Technical Blueprint Design Tokens v2026.6.2",
+    "primitive": {
+      "color": {
+        "parchment50": { "$value": "#F8FAF8", "$type": "color", "$description": "Sovereign Parchment primary blueprint canvas" },
+        "sheet0": { "$value": "#FFFFFF", "$type": "color", "$description": "Pure archival specification sheet" },
+        "gridSubtle100": { "$value": "#EEF3EF", "$type": "color", "$description": "Secondary schematic well & table header fill" },
+        "hairline200": { "$value": "#D4DDD7", "$type": "color", "$description": "1px Swiss technical grid hairline divider" },
+        "controlBorder500": { "$value": "#52665B", "$type": "color", "$description": "WCAG SC 1.4.11 >=3:1 interactive control border" },
+        "slate600": { "$value": "#3B4D44", "$type": "color", "$description": "Secondary technical metadata & URN ink (8.14:1)" },
+        "forestInk900": { "$value": "#0D1512", "$type": "color", "$description": "Primary archival charcoal ink & terminal canvas (18.2:1)" },
+        "terminalPanel850": { "$value": "#13201B", "$type": "color", "$description": "Dark-mode RFC & JSON-Schema inspector surface" },
+        "federalGreen600": { "$value": "#008751", "$type": "color", "$description": "Nigerian Sovereign Federal Green accent (4.64:1 on white)" },
+        "emeraldAction700": { "$value": "#0A5C36", "$type": "color", "$description": "Primary interactive CTA & focus ring (8.24:1 AAA on white)" },
+        "emeraldHover800": { "$value": "#064226", "$type": "color", "$description": "Primary interactive hover state (11.4:1 AAA on white)" },
+        "amberDraft100": { "$value": "#FEF3C7", "$type": "color", "$description": "Candidate / Draft RFC badge surface" },
+        "amberDraft800": { "$value": "#78350F", "$type": "color", "$description": "Candidate / Draft RFC badge ink (9.12:1)" },
+        "crimsonQuarantine100": { "$value": "#FEE2E2", "$type": "color", "$description": "Statutory Quarantine / Expired Consent surface" },
+        "crimsonQuarantine800": { "$value": "#7F1D1D", "$type": "color", "$description": "Statutory Quarantine / Expired Consent ink (9.85:1)" },
+        "violetRestricted100": { "$value": "#F3E8FF", "$type": "color", "$description": "NDPA s.30/31 Restricted Scope surface" },
+        "violetRestricted800": { "$value": "#4A1D6E", "$type": "color", "$description": "NDPA s.30/31 Restricted Scope ink (11.15:1)" }
+      },
+      "fontFamily": {
+        "serif": { "$value": "'Source Serif 4', Georgia, Cambria, serif", "$type": "fontFamily", "$description": "Normative RFC & Constitutional headings" },
+        "sans": { "$value": "'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", "$type": "fontFamily", "$description": "High-legibility civic & specification prose" },
+        "mono": { "$value": "'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace", "$type": "fontFamily", "$description": "Tabular numerals, SHA-256 digests, ULIDs, URNs & schemas" }
+      },
+      "spacing": {
+        "space0": { "$value": "0px", "$type": "dimension" },
+        "space1": { "$value": "4px", "$type": "dimension" },
+        "space2": { "$value": "8px", "$type": "dimension" },
+        "space3": { "$value": "12px", "$type": "dimension" },
+        "space4": { "$value": "16px", "$type": "dimension" },
+        "space6": { "$value": "24px", "$type": "dimension" },
+        "space8": { "$value": "32px", "$type": "dimension" },
+        "space12": { "$value": "48px", "$type": "dimension" },
+        "space16": { "$value": "64px", "$type": "dimension" },
+        "space24": { "$value": "96px", "$type": "dimension" }
+      },
+      "borderWidth": {
+        "hairline": { "$value": "1px", "$type": "dimension" },
+        "structural": { "$value": "2px", "$type": "dimension" },
+        "focusRing": { "$value": "3px", "$type": "dimension" }
+      },
+      "borderRadius": {
+        "sharp": { "$value": "0px", "$type": "dimension" },
+        "technical": { "$value": "2px", "$type": "dimension" },
+        "badge": { "$value": "4px", "$type": "dimension" }
+      }
+    },
+    "semantic": {
+      "surface": {
+        "canvas": { "$value": "{ns.primitive.color.parchment50}", "$type": "color" },
+        "panel": { "$value": "{ns.primitive.color.sheet0}", "$type": "color" },
+        "well": { "$value": "{ns.primitive.color.gridSubtle100}", "$type": "color" },
+        "terminal": { "$value": "{ns.primitive.color.forestInk900}", "$type": "color" },
+        "terminalElevated": { "$value": "{ns.primitive.color.terminalPanel850}", "$type": "color" }
+      },
+      "text": {
+        "primary": { "$value": "{ns.primitive.color.forestInk900}", "$type": "color" },
+        "secondary": { "$value": "{ns.primitive.color.slate600}", "$type": "color" },
+        "onPrimary": { "$value": "{ns.primitive.color.sheet0}", "$type": "color" },
+        "onTerminal": { "$value": "{ns.primitive.color.parchment50}", "$type": "color" }
+      },
+      "border": {
+        "gridHairline": { "$value": "{ns.primitive.color.hairline200}", "$type": "color" },
+        "control": { "$value": "{ns.primitive.color.controlBorder500}", "$type": "color" },
+        "structural": { "$value": "{ns.primitive.color.forestInk900}", "$type": "color" },
+        "focus": { "$value": "{ns.primitive.color.emeraldAction700}", "$type": "color" }
+      },
+      "action": {
+        "primaryBg": { "$value": "{ns.primitive.color.emeraldAction700}", "$type": "color" },
+        "primaryHoverBg": { "$value": "{ns.primitive.color.emeraldHover800}", "$type": "color" },
+        "brandAccent": { "$value": "{ns.primitive.color.federalGreen600}", "$type": "color" }
+      },
+      "status": {
+        "ratifiedStandard": {
+          "prefix": { "$value": "[✓ RATIFIED]", "$type": "string" },
+          "bg": { "$value": "{ns.primitive.color.gridSubtle100}", "$type": "color" },
+          "ink": { "$value": "{ns.primitive.color.emeraldAction700}", "$type": "color" },
+          "border": { "$value": "{ns.primitive.color.emeraldAction700}", "$type": "color" }
+        },
+        "candidateDraft": {
+          "prefix": { "$value": "[? DRAFT RFC]", "$type": "string" },
+          "bg": { "$value": "{ns.primitive.color.amberDraft100}", "$type": "color" },
+          "ink": { "$value": "{ns.primitive.color.amberDraft800}", "$type": "color" },
+          "border": { "$value": "{ns.primitive.color.amberDraft800}", "$type": "color" }
+        },
+        "statutoryRestricted": {
+          "prefix": { "$value": "[LOCK NDPA]", "$type": "string" },
+          "bg": { "$value": "{ns.primitive.color.violetRestricted100}", "$type": "color" },
+          "ink": { "$value": "{ns.primitive.color.violetRestricted800}", "$type": "color" },
+          "border": { "$value": "{ns.primitive.color.violetRestricted800}", "$type": "color" }
+        },
+        "conformanceFailed": {
+          "bg": { "$value": "{ns.primitive.color.crimsonQuarantine100}", "$type": "color" },
+          "ink": { "$value": "{ns.primitive.color.crimsonQuarantine800}", "$type": "color" },
+          "border": { "$value": "{ns.primitive.color.crimsonQuarantine800}", "$type": "color" }
+        }
+      },
+      "layout": {
+        "touchTargetMin": { "$value": "44px", "$type": "dimension", "$description": "WCAG 2.2 SC 2.5.8 & Mobile Tap Target minimum" },
+        "maxContentWidth": { "$value": "1440px", "$type": "dimension" },
+        "readingMeasureMax": { "$value": "68ch", "$type": "dimension" }
+      }
+    }
+  }
+}

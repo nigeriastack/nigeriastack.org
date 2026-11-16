@@ -1,0 +1,20 @@
+{
+  "name": "@nigeriastack/clearam-guard",
+  "version": "2026.6.5",
+  "description": "NDPA 2023 ss. 24-37 ClearAm Consent Envelope Validator & <60s Revocation Gate (NS-RFC-006)",
+  "license": "Apache-2.0 OR MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  }
+}

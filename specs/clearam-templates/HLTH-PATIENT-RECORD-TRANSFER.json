@@ -1,0 +1,25 @@
+{
+  "templateId": "HLTH-PATIENT-RECORD-TRANSFER",
+  "targetIndustries": [
+    "IND-03",
+    "IND-19"
+  ],
+  "lawfulBasis": "EXPLICIT_DATA_SUBJECT_CONSENT",
+  "permittedProviderCategories": [
+    "FMOH_NDHX_FACILITY",
+    "STATE_PHC_KIOSKBASE",
+    "NHIA_HMO_CLEARING"
+  ],
+  "permittedFieldScopes": [
+    "FHIR_PATIENT_IPS_SUMMARY",
+    "ACTIVE_EPRESCRIPTION",
+    "IMMUNIZATION_CREDENTIAL_STATUS"
+  ],
+  "prohibitedScopes": [
+    "UNCONSENTED_HIV_OR_GENETIC_NOTES",
+    "EMPLOYER_HEALTH_SURVEILLANCE"
+  ],
+  "maxValidityHours": 12,
+  "maxRetentionDays": 14,
+  "expiredFallback": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+}
