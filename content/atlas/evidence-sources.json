@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-17",
+  "sources": {
+    "NBS-GHSP-W5-LGA": {
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/82/variable/F93/V3866?name=lga",
+      "publisher": "National Bureau of Statistics",
+      "title": "General Household Survey Panel 2023–2024, Wave 5, LGA Code categories",
+      "retrievedOn": "2026-11-17",
+      "sourceType": "PRIMARY_STATISTICAL_METADATA",
+      "supports": "Council name corroboration and counts in survey metadata only.",
+      "limitations": "Survey categories contain spelling variants. Survey identifiers are not asserted to be official administrative codes; this is not a current consolidated constitutional schedule."
+    },
+    "FMOJ-CONSTITUTION-2020": {
+      "url": "https://justice.gov.ng/wp-content/uploads/2020/09/Nigerian-Constitution.pdf",
+      "publisher": "Federal Ministry of Justice",
+      "title": "Constitution of the Federal Republic of Nigeria 1999 with First, Second and Third Alterations",
+      "retrievedOn": "2026-11-17",
+      "sourceType": "PRIMARY_LEGAL_PUBLICATION",
+      "supports": "Section 3(6): 768 state local government areas and six FCT area councils; First Schedule Parts I and II.",
+      "limitations": "Publication contains only first three alterations. Extracted schedule text has OCR errors. Current law and later amendments require legal review."
+    },
+    "INEC-FCT-2026": {
+      "url": "https://wp1.inecnigeria.org/remarks-by-the-honourable-chairman-independent-national-electoral-commission-inec-prof-joash-amupitan-san-at-the-first-regular-consultative-meeting-with-media-executives-held-at-the-inec-confer/",
+      "publisher": "Independent National Electoral Commission",
+      "title": "Chairman remarks to media executives, 4 February 2026",
+      "retrievedOn": "2026-11-17",
+      "publishedOn": "2026-02-04",
+      "sourceType": "PRIMARY_OFFICIAL_STATEMENT",
+      "supports": "Names of the six FCT area councils.",
+      "limitations": "Electoral statement; does not attest to digital service readiness."
+    },
+    "INEC-ADAMAWA-LOCATOR": {
+      "url": "https://cvr.inecnigeria.org/locator/browse/state_id%3A2",
+      "publisher": "Independent National Electoral Commission",
+      "title": "CVR locator, Adamawa offices",
+      "retrievedOn": "2026-11-17",
+      "sourceType": "PRIMARY_OFFICIAL_DIRECTORY_SEARCH_EXCERPT",
+      "supports": "Girei and Guyuk council office names corroborate NBS categories.",
+      "limitations": "Search excerpt retrieved; direct page fetch returned HTTP 403. No operational readiness inference."
+    },
+    "LAGOS-LMPD-CANDIDATE": {
+      "url": "https://lmpd.lagosstate.gov.ng/",
+      "publisher": "Lagos State Government",
+      "title": "Lands Multipurpose Desk applicant portal",
+      "retrievedOn": "2026-11-17",
+      "sourceType": "PRIMARY_PORTAL_SEARCH_EXCERPT",
+      "supports": "Search excerpt describes online applications, payment and tracking for specified land services.",
+      "limitations": "Direct fetch returned 404. No transaction completed or operator verification obtained. Excerpt does not establish production operation, statewide coverage, open interfaces, interoperability or readiness."
+    }
+  }
+}

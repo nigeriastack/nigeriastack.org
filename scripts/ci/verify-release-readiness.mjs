@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+const blockers=[];
+const read=p=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):null;
+const source=read('verification-output/results.json');
+if(!source?.results?.length||source.results.some(c=>c.exitCode!==0))blockers.push('Source/reference verification incomplete');
+const browser=read('playwright-report/results.json');
+if(!browser?.stats||browser.stats.expected<62||browser.stats.unexpected||browser.stats.skipped||browser.stats.flaky)blockers.push('Current complete62-case browser evidence absent or failing');
+const zoom=read('verification-output/native-zoom-evidence.json');
+if(!zoom?.nativeZoomVerified||!zoom?.testedCommit||!zoom?.artifacts?.length)blockers.push('Actual native200%/400%zoom evidence absent');
+const access=read('verification-output/github-access.json');
+if(access?.write!=='VERIFIED')blockers.push('Actual GitHub write/readback not verified');
+const release=read('control/RELEASE-AUTHORIZATION.json');
+if(release?.publicReleaseAuthorized!==true||!release?.authorizationReference)blockers.push('Separate publicrelease authorization absent');
+const config=fs.readFileSync('apps/web/wrangler.toml','utf8');
+if(config.includes('00000000-0000-0000-0000-ngstack2026d1'))blockers.push('Cloudflare productionbinding is a placeholder');
+const report={status:blockers.length?'BLOCKED':'READY_FOR_OPERATOR_REVIEW',publicReleasePerformed:false,blockers};
+fs.mkdirSync('verification-output',{recursive:true});fs.writeFileSync('verification-output/release-readiness.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(blockers.length)process.exitCode=1;

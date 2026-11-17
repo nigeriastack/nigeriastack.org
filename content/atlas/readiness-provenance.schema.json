@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/readiness-provenance.schema.json",
+  "title": "Per-dimension readiness evidence record",
+  "type": "object",
+  "required": [
+    "assessmentState",
+    "reviewedOn",
+    "observedAt",
+    "sourceRefs",
+    "serviceScope",
+    "method",
+    "evidenceSummary",
+    "limitation"
+  ],
+  "properties": {
+    "assessmentState": {
+      "enum": [
+        "NOT_ASSESSED",
+        "UNKNOWN",
+        "VERIFIED_LIVE_PORTAL",
+        "CORROBORATED_PILOT",
+        "PAPER_BOUND_GAP"
+      ]
+    },
+    "reviewedOn": {
+      "type": "string",
+      "format": "date"
+    },
+    "observedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "sourceRefs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "candidateSourceRefs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "serviceScope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidenceSummary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limitation": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "assessmentState": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "observedAt": {
+            "type": "null"
+          },
+          "serviceScope": {
+            "type": "null"
+          },
+          "method": {
+            "type": "null"
+          },
+          "evidenceSummary": {
+            "type": "null"
+          },
+          "sourceRefs": {
+            "maxItems": 0
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "sourceRefs": {
+            "minItems": 1
+          },
+          "observedAt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "serviceScope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "method": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidenceSummary": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

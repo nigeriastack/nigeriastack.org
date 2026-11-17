@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "project": "nigeriastack-org",
+  "issues": [
+    {
+      "id": "P0-SOURCE",
+      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "owner": "source",
+      "acceptance": "Canonical precedence and attached v2.1 source hashes, governed H1s and independent institutional/spec/execution statuses"
+    },
+    {
+      "id": "P1-IA",
+      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "owner": "portal",
+      "acceptance": "All886 source record paths plus explicit intermediate inventory; actual H1-H4 templates and traceable answer bindings"
+    },
+    {
+      "id": "P2-SSR",
+      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "owner": "portal",
+      "acceptance": "GenuineStart SSR, metadata and canonical uniqueness, invalid paths404, deployment-gated noindex/sitemap"
+    },
+    {
+      "id": "P3-COPY",
+      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "owner": "source",
+      "acceptance": "15NSANSWER and15RAG traceable without blindduplication;15visibleFAQs, corrected institutional scope"
+    },
+    {
+      "id": "P4-JSONLD",
+      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "owner": "portal",
+      "acceptance": "Grounded Organization/WebSite and page visible matchingFAQ and breadcrumbs; preview graph remains unpublished"
+    },
+    {
+      "id": "P5-BROWSER",
+      "status": "BLOCKED",
+      "owner": "qa",
+      "acceptance": "RealChromium fourwidths and native200/400zoom, accessibility evidence",
+      "blockedBy": [
+        "local socketEPERM"
+      ],
+      "nextAction": "Run prepared suite in hosted GitHub CI; native zoom separately evidenced"
+    },
+    {
+      "id": "P6-GEO",
+      "status": "SUITE_PREPARED_EXTERNAL_BASELINE_NOT_RUN",
+      "owner": "root",
+      "acceptance": "60question dataset and repeatable evidence capture; external searchplatform results measured notfabricated"
+    },
+    {
+      "id": "P7-RELEASE",
+      "status": "BLOCKED",
+      "owner": "root",
+      "acceptance": "Required realquality evidence and separate publicrelease approval",
+      "blockedBy": [
+        "ACCESS-GH-CREATE",
+        "RELEASE-CF",
+        "P5-BROWSER"
+      ]
+    },
+    {
+      "id": "ITB-CANNED",
+      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "owner": "sdk",
+      "acceptance": "5parsedGherkin scenarios24executedsteps and honest reference scope"
+    },
+    {
+      "id": "DATA-PROVENANCE",
+      "status": "PARTIAL",
+      "owner": "data",
+      "acceptance": "296unknown cells explicit,677corroboratedcouncilnames97unresolved; no invented readiness"
+    },
+    {
+      "id": "ACCESS-GH-WRITE",
+      "status": "RESOLVED_WRITE_READBACK_VERIFIED",
+      "owner": "root",
+      "acceptance": "Actual authorized remote write/readback with correctintegration; metadata alone insufficient",
+      "evidence": "docs/handoff/evidence/github-access-restored-2026-11-17.json"
+    },
+    {
+      "id": "ACCESS-GH-CREATE",
+      "status": "BLOCKED",
+      "owner": "account-owner",
+      "acceptance": "Sixmissingrepositories created or exposed under correctowner and source manifests populated"
+    }
+  ]
+}

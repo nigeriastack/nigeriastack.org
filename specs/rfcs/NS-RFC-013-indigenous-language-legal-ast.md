@@ -16,6 +16,6 @@
 
 * Translations of statutory notices, court dispositions, `ClearAm` consent prompts, and 774-LGA service instructions across **`en-NG` (Nigerian English)**, **`ha-NG` (Hausa)**, **`yo-NG` (Yoruba)**, **`ig-NG` (Igbo)**, and **`pcm-NG` (Nigerian Pidgin)** MUST embed an explicit `reviewState` enum:  
   `"DRAFT_UNPUBLISHED"` \| `"LINGUISTIC_REVIEW_PASSED"` \| `"LEGAL_SEMANTIC_REVIEW_APPROVED"`.  
-* **Hard Guardrail:** Any locale string with `reviewState != "LEGAL_SEMANTIC_REVIEW_APPROVED"` MUST NOT render as authoritative legal or consent guidance without a visible machine-translation disclaimer banner.
+* **Hard Guardrail:** Any locale string with `reviewState != "LEGAL_SEMANTIC_REVIEW_APPROVED"` MUST show the reviewed English fallback where available and label any translated text as a preview. If no reviewed text is available, the interface must withhold authoritative guidance.
 
 ---

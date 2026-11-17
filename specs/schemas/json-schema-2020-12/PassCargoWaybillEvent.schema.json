@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/PassCargoWaybillEvent.schema.json",
+  "title": "PassCargoWaybillEvent",
+  "description": "Draft event for NS-RFC-010. A receiving agency independently verifies the referenced credentials and its authority to clear cargo.",
+  "type": "object",
+  "required": [
+    "operationId",
+    "namespace",
+    "eventType",
+    "manifestReference"
+  ],
+  "properties": {
+    "operationId": {
+      "type": "string",
+      "pattern": "^cop_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "namespace": {
+      "const": "urn:ngstack:passcargo:v2026"
+    },
+    "eventType": {
+      "enum": [
+        "CargoManifestRegistered",
+        "RegulatoryClearanceAttached",
+        "TerminalExitAndWaybillToken"
+      ]
+    },
+    "manifestReference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "billOfLadingSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sureEvidenceId": {
+      "type": "string",
+      "pattern": "^s84_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "previousEventSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "eventType": {
+            "const": "CargoManifestRegistered"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "billOfLadingSha256"
+        ]
+      },
+      "else": {
+        "required": [
+          "sureEvidenceId",
+          "previousEventSha256"
+        ]
+      }
+    }
+  ]
+}

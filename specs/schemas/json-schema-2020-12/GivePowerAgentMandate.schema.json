@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/GivePowerAgentMandate.schema.json",
+  "title": "GivePowerAgentMandate",
+  "description": "Unsigned, time-bounded mandate from the GivePower local reference profile. The gateway checks signature, grant, time bounds and nonce use separately.",
+  "type": "object",
+  "required": [
+    "agentId",
+    "audience",
+    "tool",
+    "parameters",
+    "principalId",
+    "keyId",
+    "nonce",
+    "issuedAtUtc",
+    "expiresAtUtc"
+  ],
+  "properties": {
+    "agentId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tool": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parameters": true,
+    "principalId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "keyId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nonce": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{16,128}$"
+    },
+    "issuedAtUtc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expiresAtUtc": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

@@ -2,9 +2,10 @@ openapi: 3.1.1
 info:
   title: Nigeria Stack — LgaGovernanceStack 774-LGA Municipal Services & Direct Treasury Contract
   version: 2026.6.2
-  summary: Open contract for the 14 Fourth-Schedule municipal modules (LGA-01 to LGA-14) enforcing Supreme Court SC/CV/343/2024 direct LGA treasury settlement (NS-RFC-014).
+  summary: Draft API for 14 proposed municipal service modules and project-defined SplitDirect settlement evidence (NS-RFC-014).
   license:
     name: Apache-2.0
+    identifier: Apache-2.0
 paths:
   /v1/lga/{lgaCode}/services/{moduleId}:
     post:
@@ -22,6 +23,15 @@ paths:
           schema:
             type: string
             enum: [LGA-01, LGA-02, LGA-03, LGA-04, LGA-05, LGA-06, LGA-07, LGA-08, LGA-09, LGA-10, LGA-11, LGA-12, LGA-13, LGA-14]
+      description: The body and route MUST identify the same council and module. The receiving service checks the council's authority and the destination for any fee.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '../../schemas/json-schema-2020-12/LgaGovernanceServiceEnvelope.schema.json'
       responses:
         '201':
           description: Service record or MarketCollect receipt sealed with KioskBase HLC-CRDT delta and SplitDirect zero-escrow treasury proof.
+        '422':
+          description: Council, module or settlement evidence failed validation.

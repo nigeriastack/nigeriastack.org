@@ -1,0 +1,1 @@
+Verified 934 actual compiled SSR responses: 886 source-record potential + 47 intermediate + 1 search utility. 12 unknown paths returned 404. Maximum critical gzip 14169/35840 bytes. HTTP_NETWORK; no live deployment claim.

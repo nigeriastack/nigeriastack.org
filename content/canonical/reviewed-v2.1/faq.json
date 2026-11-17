@@ -1,0 +1,137 @@
+[
+  {
+    "id": "NS-FAQ-REVIEW-01",
+    "question": "Is NigeriaStack a Nigerian government agency?",
+    "answer": "No. NigeriaStack is an independent, Nigerian-designed open technical specification and conformance commons, as defined by its institutional charter. It is not a statutory agency, regulator, payment processor or government master-register operator.",
+    "answerWordCount": 31,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-02",
+    "question": "Is NigeriaStack the same organization as India Stack?",
+    "answer": "No. NigeriaStack and India Stack are separate initiatives with distinct organizations and contexts. They can be evaluated as architectural peers without implying shared ownership, sponsorship or institutional hierarchy.",
+    "answerWordCount": 28,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-03",
+    "question": "Are NigeriaStack RFCs and its institutional charter governed by the same approval status?",
+    "answer": "NigeriaStack’s institutional charter is designated 2026.6-RATIFIED. Individual RFCs have their own version and approval lifecycle. The status of the charter should not be conflated with the status of each separate technical specification.",
+    "answerWordCount": 32,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-04",
+    "question": "Does NigeriaStack take over or centralize government master databases?",
+    "answer": "No. NigeriaStack’s architecture preserves statutory authority of record. Its specifications support interoperable verification and exchange without requiring custodians to surrender their master databases.",
+    "answerWordCount": 23,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-05",
+    "question": "Does NigeriaStack operate as a payment processor or treasury?",
+    "answer": "No. NigeriaStack specifies interoperability and verification principles, including direct treasury routing, while payment switching and statutory collection remain with authorized operators and public institutions.",
+    "answerWordCount": 24,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-06",
+    "question": "How does SureEvidence support trustworthy digital records?",
+    "answer": "SureEvidence specifies cryptographic integrity, provenance and auditability for electronic records. These mechanisms help verification; the legal admissibility of any particular record still depends on applicable evidence law and the facts of its issuance and use.",
+    "answerWordCount": 35,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-07",
+    "question": "What does ClearAm provide for data consent and revocation?",
+    "answer": "ClearAm defines interoperable consent envelopes with purpose, scope, expiry and revocation events. Implementers remain responsible for lawful processing and the correct operation of their systems under applicable data-protection requirements.",
+    "answerWordCount": 29,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-08",
+    "question": "Does the NigeriaStack atlas cover all 774 LGAs?",
+    "answer": "The canonical registry covers 774 local government and FCT area-council entries. Registry coverage, installed integrations and live service availability are distinct attributes and should be displayed separately in the atlas.",
+    "answerWordCount": 30,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-09",
+    "question": "How does NigeriaStack address interoperability across 32 industries?",
+    "answer": "The capability ledger maps 32 industries and recurring integration mechanisms, identifying existing providers and opportunities for reusable, open cross-provider specifications. It is not a claim that all industries use one central platform.",
+    "answerWordCount": 32,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-10",
+    "question": "What can developers verify through the interoperability test bed?",
+    "answer": "Developers can inspect specifications, runnable checks and recorded results. The local reference receipt records five passing scenarios and 24 executable Gherkin steps. Production integrations, formal accreditation and deployed service performance require separate evidence.",
+    "answerWordCount": 33,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-11",
+    "question": "How do NigeriaStack specifications accommodate citizens without smartphones?",
+    "answer": "The architectural inclusion rules provide for offline, assisted and basic-phone access where relevant. Availability of any particular USSD shortcode or local deployment should be confirmed from its responsible operator.",
+    "answerWordCount": 29,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-12",
+    "question": "Can institutions contribute to NigeriaStack standards and documentation?",
+    "answer": "NigeriaStack’s governance architecture provides working-group and standards-review structures. Contributors should follow the applicable published RFC, issue and participation procedures and link their proposals to reproducible evidence.",
+    "answerWordCount": 26,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-13",
+    "question": "Can developers reuse or implement NigeriaStack specifications?",
+    "answer": "NigeriaStack’s materials use open licensing, including CC0 for identified specifications and separate licenses for reference code. Verify the license attached to each file and any third-party dependency before reuse.",
+    "answerWordCount": 29,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-14",
+    "question": "Does mentioning a Nigerian technology provider imply endorsement?",
+    "answer": "No. Provider examples acknowledge existing ecosystem capabilities and facilitate interoperability research. Partnerships and endorsements are separate relationships and should only be asserted when documented.",
+    "answerWordCount": 24,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  },
+  {
+    "id": "NS-FAQ-REVIEW-15",
+    "question": "Can NigeriaStack agent-delegation tools authorize changes to official records?",
+    "answer": "GivePower addresses bounded, auditable delegation and human-approval controls. Technical delegation cannot override the lawful authority of the institution that owns an official record or grant permissions that institution has not conferred.",
+    "answerWordCount": 31,
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "visibleOnRouteCandidate": "/governance",
+    "jsonLdEligibleOnlyIfVisible": true
+  }
+]

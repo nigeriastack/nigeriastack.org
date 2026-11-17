@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "NS-ROUTE-GROUPS-v2.1",
+  "status": "EDITORIAL_IA_BINDING_NOT_EMPIRICAL_MATURITY",
+  "groups": [
+    {
+      "name": "Finance, revenue & fiscal systems",
+      "industryIds": [
+        "IND-01",
+        "IND-02",
+        "IND-03",
+        "IND-04",
+        "IND-05",
+        "IND-06"
+      ]
+    },
+    {
+      "name": "Identity, civil registration & labour",
+      "industryIds": [
+        "IND-07",
+        "IND-08"
+      ]
+    },
+    {
+      "name": "Commerce, logistics & transport",
+      "industryIds": [
+        "IND-09",
+        "IND-10",
+        "IND-11",
+        "IND-13",
+        "IND-14",
+        "IND-22",
+        "IND-23"
+      ]
+    },
+    {
+      "name": "Healthcare, education & creative industries",
+      "industryIds": [
+        "IND-19",
+        "IND-20",
+        "IND-24"
+      ]
+    },
+    {
+      "name": "Agriculture, land & environment",
+      "industryIds": [
+        "IND-15",
+        "IND-17",
+        "IND-18"
+      ]
+    },
+    {
+      "name": "Energy, industry & digital addressing",
+      "industryIds": [
+        "IND-12",
+        "IND-16",
+        "IND-28"
+      ]
+    },
+    {
+      "name": "Telecommunications, cybersecurity & infrastructure",
+      "industryIds": [
+        "IND-25",
+        "IND-26",
+        "IND-29",
+        "IND-30"
+      ]
+    },
+    {
+      "name": "Justice, legal records & digital governance",
+      "industryIds": [
+        "IND-21",
+        "IND-27",
+        "IND-31",
+        "IND-32"
+      ]
+    }
+  ]
+}

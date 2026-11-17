@@ -1,0 +1,127 @@
+{
+  "runtime": "Python sqlite3 in-memory; not Cloudflare D1 runtime",
+  "sqliteVersion": "3.53.1",
+  "schemaSha256": "42136279a26b5101cc01c2ca41457f874962159abc6a36cc2c49c7f3c8351c8e",
+  "seedSha256": "6ef3ee669fb37c2bd9646550371f4e495c984ee9f8ee5254c9c385fbbd28a3cc",
+  "countsFirstRun": {
+    "normative_rfcs": 14,
+    "industry_capability_ledger": 32,
+    "subnational_state_atlas": 37,
+    "constitutional_lga_774_registry": 774,
+    "lga_service_modules_14": 14,
+    "daily_merkle_audit_roots": 0,
+    "ngstack_global_search_fts": 901
+  },
+  "countsSecondRun": {
+    "normative_rfcs": 14,
+    "industry_capability_ledger": 32,
+    "subnational_state_atlas": 37,
+    "constitutional_lga_774_registry": 774,
+    "lga_service_modules_14": 14,
+    "daily_merkle_audit_roots": 0,
+    "ngstack_global_search_fts": 901
+  },
+  "idempotentLogicalRows": true,
+  "foreignKeyCheck": [],
+  "integrityCheck": "ok",
+  "readinessCellsNotAssessed": 296,
+  "unknownVerificationDates": 37,
+  "ftsQueries": {
+    "SureEvidence": [
+      [
+        "RFC",
+        "NS-RFC-001",
+        "The Sovereign 5-Layer Hourglass & 12 Building Blocks Reference Model"
+      ],
+      [
+        "RFC",
+        "NS-RFC-003",
+        "Deterministic Workflow State Machine & Safe Same-Reference Retry"
+      ],
+      [
+        "RFC",
+        "NS-RFC-005",
+        "SureEvidence Cryptographic Regularity & Evidence Act 2011 Section 84 Credentials (SureProof)"
+      ],
+      [
+        "RFC",
+        "NS-RFC-007",
+        "OpenMarket (MarketLink) Decentralized Commerce, Catalog & Haulage Protocol"
+      ],
+      [
+        "RFC",
+        "NS-RFC-008",
+        "Warrant & Mandate (GivePower) Autonomous Agent Delegation & MCP Safety Protocol"
+      ]
+    ],
+    "Aba": [
+      [
+        "LGA",
+        "AB-LGA-01",
+        "Aba North"
+      ],
+      [
+        "LGA",
+        "AB-LGA-02",
+        "Aba South"
+      ]
+    ],
+    "treasury": [
+      [
+        "RFC",
+        "NS-RFC-001",
+        "The Sovereign 5-Layer Hourglass & 12 Building Blocks Reference Model"
+      ],
+      [
+        "RFC",
+        "NS-RFC-009",
+        "SplitDirect Public Treasury Pass-Through & Fiscal Invariance Protocol"
+      ],
+      [
+        "RFC",
+        "NS-RFC-014",
+        "LgaGovernanceStack \u2014 774 Constitutional Local Government Areas & 6 FCT Area Councils Municipal Specification"
+      ],
+      [
+        "INDUSTRY",
+        "IND-05",
+        "Tax, e-Invoicing and Treasury IGR"
+      ],
+      [
+        "INDUSTRY",
+        "IND-06",
+        "Accounting, ERP and Corporate Treasury"
+      ]
+    ],
+    "\"NS-RFC-005\"": [
+      [
+        "RFC",
+        "NS-RFC-005",
+        "SureEvidence Cryptographic Regularity & Evidence Act 2011 Section 84 Credentials (SureProof)"
+      ],
+      [
+        "FAQ",
+        "NS-FAQ-02",
+        "Do government agencies like NIMC, CAC, NIBSS, NRS, or State Land Registries have to hand over their databases to use Nigeria Stack?"
+      ],
+      [
+        "FAQ",
+        "NS-FAQ-03",
+        "How does a Digital Evidence Seal (SureEvidence) make electronic court orders, land searches, and council certificates valid in court under Section 84 of the Evidence Act?"
+      ],
+      [
+        "FAQ",
+        "NS-FAQ-07",
+        "How does Digital Indigene & Residency Attestation (IndigeneProof) end forged paper letters and weeks of waiting at local council headquarters?"
+      ],
+      [
+        "FAQ",
+        "NS-FAQ-14",
+        "How does Nigeria Stack meet the Five Public Safeguards of Open Digital Infrastructure (Freedom to Exit, Open Source Code, Verifiable Audit, Inclusive Governance, and Freedom to Replicate)?"
+      ]
+    ]
+  },
+  "rfcBodiesAndDigestsMatchSources": true,
+  "mirrorsIdentical": true,
+  "auditEvidence": "No audit roots supplied or inserted; source hashes are not audit roots."
+}

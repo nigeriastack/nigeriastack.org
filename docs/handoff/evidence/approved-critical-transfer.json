@@ -1,0 +1,105 @@
+{
+  "budget": 35840,
+  "method": "sum of gzip HTML plus all linked CSS and script assets; verifier imported only after user action",
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "criticalGzipBytes": 8248,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/sectors",
+      "status": 200,
+      "criticalGzipBytes": 11778,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/protocols",
+      "status": 200,
+      "criticalGzipBytes": 9269,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/rfcs",
+      "status": 200,
+      "criticalGzipBytes": 8127,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/conformance",
+      "status": 200,
+      "criticalGzipBytes": 7590,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/atlas/states",
+      "status": 200,
+      "criticalGzipBytes": 9882,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/atlas/lga-774",
+      "status": 200,
+      "criticalGzipBytes": 12052,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/governance",
+      "status": 200,
+      "criticalGzipBytes": 13806,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/atlas/states/AB",
+      "status": 200,
+      "criticalGzipBytes": 10823,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/atlas/lga-774/AB/AB-LGA-01",
+      "status": 200,
+      "criticalGzipBytes": 10569,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    },
+    {
+      "route": "/rfcs/NS-RFC-014",
+      "status": 200,
+      "criticalGzipBytes": 17595,
+      "assets": [
+        "/assets/portal-BpFpNcrX.css",
+        "/enhance.js"
+      ]
+    }
+  ]
+}

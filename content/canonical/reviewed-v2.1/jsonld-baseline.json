@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nigeriastack.org/#organization",
+      "name": "NigeriaStack",
+      "alternateName": "Nigeria Stack",
+      "url": "https://nigeriastack.org/",
+      "description": "NigeriaStack is an independent, Nigerian-designed, whole-of-economy open technical specification and conformance commons for digital interoperability, versioned RFCs, schemas and reference implementation guidance.",
+      "disambiguatingDescription": "Institutionally distinct from India Stack, GovStack, X-Road, Diia and Nigerian statutory agencies; it does not act as a government regulator, payment processor or official registry.",
+      "sameAs": [
+        "https://github.com/nigeriastack"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nigeriastack.org/#website",
+      "name": "NigeriaStack",
+      "url": "https://nigeriastack.org/",
+      "publisher": {
+        "@id": "https://nigeriastack.org/#organization"
+      },
+      "inLanguage": "en-NG"
+    }
+  ]
+}

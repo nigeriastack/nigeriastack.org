@@ -27,6 +27,7 @@ export interface CryptographicSealBlock {
   issuedAtUtc: string;
 }
 
+/** Local SDK helper DTO; distinct from the published v2026 JSON Schema wire envelope. */
 export interface SureEvidenceCredential {
   "@context": ["https://www.w3.org/ns/credentials/v2", "https://nigeriastack.org/contexts/sure-evidence/v2026"];
   credentialId: string;
@@ -51,6 +52,20 @@ export function canonicalizeJson(input: unknown): string {
     (k) => `${JSON.stringify(k)}:${canonicalizeJson((input as Record<string, unknown>)[k])}`
   );
   return `{${entries.join(",")}}`;
+}
+
+/** Portable base64url codec for Web Crypto callers in browsers and Node. */
+export function encodeBase64Url(bytes: Uint8Array): string {
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+export function decodeBase64Url(text: string): Uint8Array {
+  if (!/^[A-Za-z0-9_-]+$/.test(text)) throw new Error("INVALID_BASE64URL");
+  const binary = atob(text.replace(/-/g, "+").replace(/_/g, "/"));
+  const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
+  if (encodeBase64Url(bytes) !== text) throw new Error("INVALID_BASE64URL");
+  return bytes;
 }
 
 export async function sha256Hex(payloadBytes: Uint8Array): Promise<string> {
@@ -115,7 +130,7 @@ export async function signSureEvidenceCredential(params: {
     params.ed25519PrivateKeyPkcs8,
     new TextEncoder().encode(signingPayload)
   );
-  const signatureBase64Url = Buffer.from(signatureBuffer).toString("base64url");
+  const signatureBase64Url = encodeBase64Url(new Uint8Array(signatureBuffer));
 
   const credential: SureEvidenceCredential = {
     "@context": [
@@ -170,12 +185,18 @@ export async function verifySureEvidenceOffline(params: {
     issuedAtUtc: params.credential.cryptographicSeal.issuedAtUtc,
   });
 
-  const sigBytes = new Uint8Array(Buffer.from(params.credential.cryptographicSeal.signatureBase64Url, "base64url"));
+  let sigBytes: Uint8Array;
+  try {
+    sigBytes = decodeBase64Url(params.credential.cryptographicSeal.signatureBase64Url);
+    if (sigBytes.length !== 64 || params.credential.cryptographicSeal.signatureAlgorithm !== "Ed25519" || params.issuerPublicKeySpki.algorithm.name !== "Ed25519") throw new Error("S84_INVALID_SIGNATURE");
+  } catch {
+    return { verified: false, code: "S84_INVALID_ED25519_SIGNATURE", elapsedMs: Number((performance.now() - start).toFixed(2)) };
+  }
 
   const isValid = await crypto.subtle.verify(
     { name: "Ed25519" },
     params.issuerPublicKeySpki,
-    sigBytes,
+    sigBytes as BufferSource,
     new TextEncoder().encode(signingPayload)
   );
 

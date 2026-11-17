@@ -7,6 +7,7 @@
 export type VisibilityTier = "PUBLIC_OPEN_COMMONS" | "INSTITUTIONAL_CONSENTED" | "INTERNAL_RESTRICTED_NDPA";
 export type ClockSyncStatus = "NTP_GPS_VERIFIED" | "DEGRADED_LOCAL_HLC";
 
+/** Local SDK helper DTO; distinct from the published v2026 JSON Schema wire envelope. */
 export interface KioskBaseCrdtDelta<T = Record<string, unknown>> {
   deltaId: string;
   recordId: string;
@@ -28,12 +29,13 @@ export function evaluateClockSyncAndQuarantine(params: {
   clockSyncStatus: ClockSyncStatus;
   driftSeconds: number;
   allowPublicOutboxSync: boolean;
+  allowFinalEnrolledSealing: boolean;
   quarantineReason?: "NDPA_S30_RESTRICTED_RECORD_QUARANTINE" | "CLOCK_DRIFT_STAGING_HOLD";
 } {
   const driftMs = Math.abs(params.delta.deviceClockEpochMs - params.referenceNtpOrGpsEpochMs);
   const driftSeconds = Math.round(driftMs / 1000);
   const clockSyncStatus: ClockSyncStatus =
-    driftMs > MAX_CLOCK_DRIFT_MS ? "DEGRADED_LOCAL_HLC" : "NTP_GPS_VERIFIED";
+    !Number.isFinite(driftMs) || driftMs > MAX_CLOCK_DRIFT_MS ? "DEGRADED_LOCAL_HLC" : "NTP_GPS_VERIFIED";
 
   if (
     params.delta.visibilityTier === "INTERNAL_RESTRICTED_NDPA" ||
@@ -43,6 +45,7 @@ export function evaluateClockSyncAndQuarantine(params: {
       clockSyncStatus,
       driftSeconds,
       allowPublicOutboxSync: false,
+      allowFinalEnrolledSealing: false,
       quarantineReason: "NDPA_S30_RESTRICTED_RECORD_QUARANTINE",
     };
   }
@@ -50,6 +53,7 @@ export function evaluateClockSyncAndQuarantine(params: {
   return {
     clockSyncStatus,
     driftSeconds,
+    allowFinalEnrolledSealing: clockSyncStatus === "NTP_GPS_VERIFIED",
     allowPublicOutboxSync: clockSyncStatus === "NTP_GPS_VERIFIED",
     quarantineReason: clockSyncStatus === "DEGRADED_LOCAL_HLC" ? "CLOCK_DRIFT_STAGING_HOLD" : undefined,
   };

@@ -1,0 +1,547 @@
+# NigeriaStack.org — Corrected P0–P7 Implementation Recommendation v2.1
+**Date:** 17 November 2026  
+**Status:** Pre-execution recommendation and IA regeneration contract. No GitHub, Drive, DNS, Cloudflare, or production changes authorized or performed.  
+**Basis:** Corrected Research Package Version 2 plus its canonically referenced current GitHub source documents `NS-KB-12`, `NS-KB-10`, `NS-KB-11`, `NS-KB-13` and source registries. This supplements, and corrects the IA deficiency in, `NigeriaStack_Implementation_Recommendation_v2_2026-11-17.md`.
+## 1. Correction of the scope error
+The former priority recommendation reduced the IA to 7 index routes, 7 H1s, and 15 H2 answer units. That omitted the governed descendant paths and H3–H4 requirements. `NS-KB-12` explicitly governs a master sitemap with dynamic route families and `Gate NS-G3` H1–H4 / `{copy_slot}` binding. The observed 102,855-character shell had 7 H1, 12 H2, 3 H3 and 1 H4 (source-string count, not a live browser certification).
+The 15 `NS-ANSWER` headings from the Version 2 package do not replace the repo’s separate 15 canonical `RAG-H2` benchmarks. Both sets must be reconciled by semantic intent, hierarchy and authority; do not blindly concatenate duplicates or demote existing canonical sections.
+## 2. Source-precedence conflict to resolve at P0
+The seven Version 2 SEO metadata records contain H1 candidate strings that differ from H1 strings already locked via `NS-KB-12` / `NS-KB-10` / `NS-KB-11` `{copy_slot}` contracts. Under the established five-level source hierarchy, no new candidate automatically supersedes governed copy. Compare exact strings, retain the authoritative version until governed review changes it, and record any approved revised binding. Use the Version 2 SEO title, description and canonical candidates separately from H1 replacement decisions.
+## 3. Master route architecture — 7 navigational sections, 7 dynamic families
+| Page family | Bound/source-driven multiplicity | Template rule |
+|---|---:|---|
+| Seven section roots (`/`, `/sectors`, `/protocols`, `/rfcs`, `/conformance`, `/atlas`, `/governance`) | 7 | One independent HTML index per section |
+| `/sectors/:sector_slug/:industry_id` | 32 | H1–H4 pattern and source data, with individual canonical if published |
+| `/protocols/:protocol_slug` | 7 | H1–H4 pattern and source data, with individual canonical if published |
+| `/protocols/lga-governance-stack` | 1 | H1–H4 pattern and source data, with individual canonical if published |
+| `/protocols/lga-governance-stack/:lga_module_slug` | 14 | H1–H4 pattern and source data, with individual canonical if published |
+| `/rfcs/:rfc_id` | 14 | H1–H4 pattern and source data, with individual canonical if published |
+| `/atlas/states/:state_code` | 37 | H1–H4 pattern and source data, with individual canonical if published |
+| `/atlas/lga-774/:state_code/:lga_code` | 774 | H1–H4 pattern and source data, with individual canonical if published |
+| **Potential source-record page inventory** | **886** | **Not 886 confirmed live URLs: inventory upper-level planning count before actual route/coverage checks** |
+Additional possible intermediate index URLs (`/atlas/states`, `/atlas/lga-774`, `/atlas/lga-774/:state_code`, sector landing pages) occur in source decks or navigation references but are not all unambiguously established as independently canonical. Inventory and resolve them under P0 before publication or sitemap generation.
+**Distinguish IA sitemap vs. XML sitemap.** The IA represents all governed page types, including planned and unpublished templates. `sitemap.xml` must include only implemented, canonical, indexable public URLs that pass real HTTP checks; never automatically advertise all 774 LGA records as deployed service pages.
+## 4. Whole-of-site H1–H4 hierarchy for the seven section roots
+**Legend:** `H1 SOURCE` = currently governed from NS-KB-12, `H1 V2` = Version 2 alternative editorial candidate; `NS-ANSWER` = exact V2 H2; remaining H3/H4 strings are design/IA candidates unless explicitly attributed to NS-KB-10/11. H4 is required only where content legitimately has a fourth heading level.
+### `/` — NigeriaStack | Open DPI Specifications & Conformance Commons
+- **H1 SOURCE:** Make Nigeria's digital systems work together without surrendering statutory authority, operational continuity, evidentiary integrity, or institutional independence
+- **H1 V2:** NigeriaStack — Independent Open Technical Specification and Conformance Commons (reconcile at P0; do not overwrite source by default)
+- **SEO candidate:** `https://nigeriastack.org/`; unique title/description from V2 metadata
+  - **H2 `NS-ANSWER-01`:** What is NigeriaStack, and how is its institutional independence defined?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2 `NS-ANSWER-02`:** How does NigeriaStack complement operating digital public infrastructure?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2:** Interactive 5-Layer Sovereign Architecture Explorer
+    - **H3:** Layer 5 — Whole-of-Economy Open Sectoral Networks & Life-Event Flows (8 Macro-Sectors • 32 Industries • 14 Local Government Modules)
+      - **H4 candidate:** Source-of-authority and integration references
+      - **H4 candidate:** Related RFC and conformance evidence
+    - **H3:** Layer 4 — Reliable Data Messaging, Personal Data Consent, Open Commerce & Safe Digital Agents
+      - **H4 candidate:** Source-of-authority and integration references
+      - **H4 candidate:** Related RFC and conformance evidence
+    - **H3:** Layer 3 — Offline-First Base Registries, Digital Laws & Legally Admissible Digital Certificates
+      - **H4 candidate:** Source-of-authority and integration references
+      - **H4 candidate:** Related RFC and conformance evidence
+    - **H3:** Layer 2 — Federated Statutory Identity Verification & Direct Public Treasury Pass-Through
+      - **H4 candidate:** Source-of-authority and integration references
+      - **H4 candidate:** Related RFC and conformance evidence
+    - **H3:** Layer 1 — Local Edge Computing, Basic Feature Phone Access & Domestic Data Hosting
+      - **H4 candidate:** Source-of-authority and integration references
+      - **H4 candidate:** Related RFC and conformance evidence
+  - **H2:** Five Tests of Open-Commons DPI
+    - **H3:** Freedom to Exit
+      - **H4 candidate:** Published standard
+      - **H4 candidate:** Test or governance evidence
+    - **H3:** Open Code and Reuse
+      - **H4 candidate:** Published standard
+      - **H4 candidate:** Test or governance evidence
+    - **H3:** Verifiable Public Audit
+      - **H4 candidate:** Published standard
+      - **H4 candidate:** Test or governance evidence
+    - **H3:** Inclusive Standards Governance
+      - **H4 candidate:** Published standard
+      - **H4 candidate:** Test or governance evidence
+    - **H3:** Freedom to Replicate and Self-Host
+      - **H4 candidate:** Published standard
+      - **H4 candidate:** Test or governance evidence
+  - **H2:** Explore NigeriaStack resources
+    - **H3:** Industry capability ledger
+      - **H4 candidate:** Read the source
+      - **H4 candidate:** Inspect implementation evidence
+    - **H3:** Protocol library and RFC registry
+      - **H4 candidate:** Read the source
+      - **H4 candidate:** Inspect implementation evidence
+    - **H3:** Interoperability test bed
+      - **H4 candidate:** Read the source
+      - **H4 candidate:** Inspect implementation evidence
+    - **H3:** State and LGA atlas
+      - **H4 candidate:** Read the source
+      - **H4 candidate:** Inspect implementation evidence
+### `/sectors` — 32-Industry Interoperability Atlas | NigeriaStack
+- **H1 SOURCE:** Whole-of-economy 32-industry digital capability directory and integration ledger
+- **H1 V2:** Interoperability Across 32 Nigerian Industries (reconcile at P0; do not overwrite source by default)
+- **SEO candidate:** `https://nigeriastack.org/sectors`; unique title/description from V2 metadata
+  - **H2 `NS-ANSWER-03`:** Which digital interoperability problems recur across Nigeria’s 32 mapped industries?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2 `NS-ANSWER-04`:** Which interoperability needs are already served by existing Nigerian platforms?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2 `NS-ANSWER-05`:** How are residual interoperability opportunities evaluated?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2:** Browse the eight macro-sectors and 32 industries
+    - **H3:** Finance, Revenue & Fiscal Systems
+      - **H4 candidate:** {{industry_name}} — industry detail link
+      - **H4 candidate:** Evidence provenance and coverage status
+    - **H3:** Identity, Civil Registration & Labor
+      - **H4 candidate:** {{industry_name}} — industry detail link
+      - **H4 candidate:** Evidence provenance and coverage status
+    - **H3:** Commerce, Logistics & Transport
+      - **H4 candidate:** {{industry_name}} — industry detail link
+      - **H4 candidate:** Evidence provenance and coverage status
+    - **H3:** Healthcare, Education & Creative Industries
+      - **H4 candidate:** {{industry_name}} — industry detail link
+      - **H4 candidate:** Evidence provenance and coverage status
+    - **H3:** Agriculture, Land & Environment
+      - **H4 candidate:** {{industry_name}} — industry detail link
+      - **H4 candidate:** Evidence provenance and coverage status
+    - **H3:** Energy, Industry & Digital Addressing
+      - **H4 candidate:** {{industry_name}} — industry detail link
+      - **H4 candidate:** Evidence provenance and coverage status
+    - **H3:** Telecommunications, Cybersecurity & Infrastructure
+      - **H4 candidate:** {{industry_name}} — industry detail link
+      - **H4 candidate:** Evidence provenance and coverage status
+    - **H3:** Justice, Legal Records & Digital Governance
+      - **H4 candidate:** {{industry_name}} — industry detail link
+      - **H4 candidate:** Evidence provenance and coverage status
+  - **H2:** How to read the industry evidence ledger
+    - **H3:** Existing domestic platforms
+      - **H4 candidate:** Source date and coverage
+      - **H4 candidate:** Unresolved validation questions
+    - **H3:** Residual cross-provider integration requirements
+      - **H4 candidate:** Source date and coverage
+      - **H4 candidate:** Unresolved validation questions
+    - **H3:** Specification and conformance references
+      - **H4 candidate:** Source date and coverage
+      - **H4 candidate:** Unresolved validation questions
+### `/protocols` — NigeriaStack Protocols | Sovereign Interoperability Standards
+- **H1 SOURCE:** Open pan-Nigerian protocols and the 14 Local Government digital service standards
+- **H1 V2:** NigeriaStack Interoperability Protocols (reconcile at P0; do not overwrite source by default)
+- **SEO candidate:** `https://nigeriastack.org/protocols`; unique title/description from V2 metadata
+  - **H2 `NS-ANSWER-06`:** What do the NigeriaStack interoperability protocols specify?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2 `NS-ANSWER-07`:** How does NigeriaStack preserve evidence continuity across statutory registries?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2 `NS-ANSWER-08`:** How do NigeriaStack consent and agent-delegation protocols govern access?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2:** Browse pan-Nigerian interoperability protocols
+    - **H3:** Digital Evidence (SureEvidence)
+      - **H4 candidate:** Governing RFC and version
+      - **H4 candidate:** Schemas and conformance tests
+    - **H3:** Personal Data Consent (ClearAm)
+      - **H4 candidate:** Governing RFC and version
+      - **H4 candidate:** Schemas and conformance tests
+    - **H3:** Safe Asynchronous Exchange (Confluence)
+      - **H4 candidate:** Governing RFC and version
+      - **H4 candidate:** Schemas and conformance tests
+    - **H3:** Open Commerce (MarketLink)
+      - **H4 candidate:** Governing RFC and version
+      - **H4 candidate:** Schemas and conformance tests
+    - **H3:** Agent Delegation (GivePower)
+      - **H4 candidate:** Governing RFC and version
+      - **H4 candidate:** Schemas and conformance tests
+    - **H3:** Offline Registries (KioskBase)
+      - **H4 candidate:** Governing RFC and version
+      - **H4 candidate:** Schemas and conformance tests
+    - **H3:** Digital Statutes (LawTree)
+      - **H4 candidate:** Governing RFC and version
+      - **H4 candidate:** Schemas and conformance tests
+  - **H2:** Local Government Digital Service Suite
+    - **H3:** CouncilComplain
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** BuildClear
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** WashConnect
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** ShopPermit
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** VitalProof
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** IndigeneProof
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** SafetyNOC
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** WardWorks
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** TenementRate
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** MarketCollect
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** WardPHC
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** CouncilLedger
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** CustomaryDocket
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+    - **H3:** StreetGrid
+      - **H4 candidate:** Service authority and interface
+      - **H4 candidate:** Module evidence and tests
+### `/rfcs` — NigeriaStack RFC Registry | Open Technical Specifications
+- **H1 SOURCE:** Nigeria Stack Open Standards Registry & Public Specifications (Plain-Language Overview on Left + Technical Schema Drawer on Right)
+- **H1 V2:** NigeriaStack RFCs: Specifications, Versions and Conformance (reconcile at P0; do not overwrite source by default)
+- **SEO candidate:** `https://nigeriastack.org/rfcs`; unique title/description from V2 metadata
+  - **H2 `NS-ANSWER-09`:** How are NigeriaStack RFC versions, approvals and implementations distinguished?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2 `NS-ANSWER-10`:** How are statutory requirements distinguished from NigeriaStack technical specifications?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2:** Browse NS-RFC-001 to NS-RFC-014
+    - **H3:** {{rfc_id}} — {{rfc_title}}
+      - **H4 candidate:** Version and lifecycle state
+      - **H4 candidate:** Schemas, test cases and public discussion
+  - **H2:** How to implement a NigeriaStack RFC
+    - **H3:** Read the normative specification
+      - **H4 candidate:** Conformance receipt reference
+      - **H4 candidate:** Open issue or review discussion
+    - **H3:** Inspect machine-readable contracts
+      - **H4 candidate:** Conformance receipt reference
+      - **H4 candidate:** Open issue or review discussion
+    - **H3:** Run the relevant tests
+      - **H4 candidate:** Conformance receipt reference
+      - **H4 candidate:** Open issue or review discussion
+### `/conformance` — NigeriaStack Interoperability Test Bed | Conformance
+- **H1 SOURCE:** National Interoperability Test Bed: Free browser-based verification and offline network testing
+- **H1 V2:** Verify Interoperability with NigeriaStack Conformance Tools (reconcile at P0; do not overwrite source by default)
+- **SEO candidate:** `https://nigeriastack.org/conformance`; unique title/description from V2 metadata
+  - **H2 `NS-ANSWER-11`:** What has the NigeriaStack interoperability test bed verified?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2 `NS-ANSWER-12`:** What is the difference between a conformance test and formal accreditation?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2:** Run interoperability verification suites
+    - **H3:** Digital evidence integrity
+      - **H4 candidate:** Input example
+      - **H4 candidate:** Expected result
+      - **H4 candidate:** Observed receipt and environment
+    - **H3:** Consent and delegated permissions
+      - **H4 candidate:** Input example
+      - **H4 candidate:** Expected result
+      - **H4 candidate:** Observed receipt and environment
+    - **H3:** Direct-treasury workflow rules
+      - **H4 candidate:** Input example
+      - **H4 candidate:** Expected result
+      - **H4 candidate:** Observed receipt and environment
+    - **H3:** Asynchronous retries and offline resilience
+      - **H4 candidate:** Input example
+      - **H4 candidate:** Expected result
+      - **H4 candidate:** Observed receipt and environment
+  - **H2:** Inspect test coverage and receipts
+    - **H3:** Completed local reference tests
+      - **H4 candidate:** Test ID and commit
+      - **H4 candidate:** Run date, environment and artifacts
+    - **H3:** Unexecuted and unresolved scenarios
+      - **H4 candidate:** Test ID and commit
+      - **H4 candidate:** Run date, environment and artifacts
+    - **H3:** Reproducible run instructions
+      - **H4 candidate:** Test ID and commit
+      - **H4 candidate:** Run date, environment and artifacts
+### `/atlas` — NigeriaStack State & LGA Interoperability Atlas
+- **H1 SOURCE:** Sub-National Digital Infrastructure Atlas: 36 States, FCT, and 774 Local Government Areas service readiness explorer
+- **H1 V2:** State and LGA Interoperability Atlas (reconcile at P0; do not overwrite source by default)
+- **SEO candidate:** `https://nigeriastack.org/atlas`; unique title/description from V2 metadata
+  - **H2 `NS-ANSWER-13`:** What does the NigeriaStack 774-LGA registry and atlas cover?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2:** Browse the 36 states and FCT
+    - **H3:** State directory
+      - **H4 candidate:** {{state_name}} profile
+      - **H4 candidate:** Source, status and checked date
+    - **H3:** Eight service-readiness dimensions
+      - **H4 candidate:** {{state_name}} profile
+      - **H4 candidate:** Source, status and checked date
+  - **H2:** Browse the 774 local-government and area-council entries
+    - **H3:** Council directory by state
+      - **H4 candidate:** {{lga_name}} profile
+      - **H4 candidate:** Registry entry versus deployment evidence
+    - **H3:** Municipal service module readiness
+      - **H4 candidate:** {{lga_name}} profile
+      - **H4 candidate:** Registry entry versus deployment evidence
+### `/governance` — NigeriaStack Governance | Independence, Standards & FAQs
+- **H1 SOURCE:** Ecosystem governance, institutional safeguards framework, open public standards, and collaborative working groups
+- **H1 V2:** NigeriaStack Governance and Open-Commons Safeguards (reconcile at P0; do not overwrite source by default)
+- **SEO candidate:** `https://nigeriastack.org/governance`; unique title/description from V2 metadata
+  - **H2 `NS-ANSWER-14`:** How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2 `NS-ANSWER-15`:** How can institutions contribute to and verify NigeriaStack specifications?
+    - **H3:** Source authority and scope
+      - **H4 candidate:** Applicable source references and verification status
+    - **H3:** Related standards and documentation
+      - **H4 candidate:** Applicable source references and verification status
+  - **H2:** The institutional charter and anti-capture safeguards
+    - **H3:** Authority-of-record boundaries
+      - **H4 candidate:** Controlling clause and source link
+      - **H4 candidate:** Independence and conflict-of-interest controls
+    - **H3:** No regulatory or sovereign impersonation
+      - **H4 candidate:** Controlling clause and source link
+      - **H4 candidate:** Independence and conflict-of-interest controls
+    - **H3:** Open standards and governance responsibilities
+      - **H4 candidate:** Controlling clause and source link
+      - **H4 candidate:** Independence and conflict-of-interest controls
+  - **H2:** Five tests of open-commons DPI
+    - **H3:** Exit
+      - **H4 candidate:** Test criteria
+      - **H4 candidate:** Published evidence or open issue
+    - **H3:** Code
+      - **H4 candidate:** Test criteria
+      - **H4 candidate:** Published evidence or open issue
+    - **H3:** Audit
+      - **H4 candidate:** Test criteria
+      - **H4 candidate:** Published evidence or open issue
+    - **H3:** Governance
+      - **H4 candidate:** Test criteria
+      - **H4 candidate:** Published evidence or open issue
+    - **H3:** Fork
+      - **H4 candidate:** Test criteria
+      - **H4 candidate:** Published evidence or open issue
+  - **H2:** Working groups and adoption playbooks
+    - **H3:** Working Groups WG-01 to WG-06
+      - **H4 candidate:** Charter and participation process
+      - **H4 candidate:** Decision logs and public outputs
+    - **H3:** Implementation Playbooks A to E
+      - **H4 candidate:** Charter and participation process
+      - **H4 candidate:** Decision logs and public outputs
+  - **H2:** Frequently asked questions
+    - **H3:** Is NigeriaStack a Nigerian government agency?
+    - **H3:** Is NigeriaStack the same organization as India Stack?
+    - **H3:** Are NigeriaStack RFCs and its institutional charter governed by the same approval status?
+    - **H3:** Does NigeriaStack take over or centralize government master databases?
+    - **H3:** Does NigeriaStack operate as a payment processor or treasury?
+    - **H3:** How does SureEvidence support trustworthy digital records?
+    - **H3:** What does ClearAm provide for data consent and revocation?
+    - **H3:** Does the NigeriaStack atlas cover all 774 LGAs?
+    - **H3:** How does NigeriaStack address interoperability across 32 industries?
+    - **H3:** What can developers verify through the interoperability test bed?
+    - **H3:** How do NigeriaStack specifications accommodate citizens without smartphones?
+    - **H3:** Can institutions contribute to NigeriaStack standards and documentation?
+    - **H3:** Can developers reuse or implement NigeriaStack specifications?
+    - **H3:** Does mentioning a Nigerian technology provider imply endorsement?
+    - **H3:** Can NigeriaStack agent-delegation tools authorize changes to official records?
+## 5. H1–H4 contracts for all descendant route families
+### `/sectors/:sector_slug/:industry_id` — 32 source records
+- **H1 candidate template:** {{industry_name}} — Interoperability standards and integration profile
+- **Source:** `content/taxonomy/master-32-industry-matrix.json`
+- **Title template:** {{industry_name}} Interoperability Standards | NigeriaStack
+- **Meta description template:** Explore existing services, interoperability requirements, relevant NigeriaStack protocols and evidence for {{industry_name}}.
+- **Canonical template:** `https://nigeriastack.org/sectors/{{sector_slug}}/{{industry_id}}` (only when public/indexable)
+  - **H2:** Existing Nigerian services and authority of record
+    - **H3:** Current providers and source authorities
+      - **H4 candidate:** Source link and dated evidence
+  - **H2:** Cross-provider interoperability requirements
+    - **H3:** Recurring bottlenecks and residual gaps
+      - **H4 candidate:** Mechanism evidence and maturity tier
+  - **H2:** Relevant open specifications
+    - **H3:** Linked protocols and RFCs
+      - **H4 candidate:** Schema and conformance references
+  - **H2:** Industry evidence ledger
+    - **H3:** Verified coverage and open validation questions
+      - **H4 candidate:** Source status and last checked date
+### `/protocols/:protocol_slug` — 7 source records
+- **H1 candidate template:** {{protocol_name}} — {{public_facing_function}}
+- **Source:** `NS-KB-12 plus NS-RFC-002..013`
+- **Title template:** {{protocol_name}} Specification & Conformance | NigeriaStack
+- **Meta description template:** Understand {{protocol_name}}, its governing RFC, schemas, implementation guidance and recorded conformance evidence.
+- **Canonical template:** `https://nigeriastack.org/protocols/{{protocol_slug}}` (only when public/indexable)
+  - **H2:** What does {{protocol_name}} specify?
+    - **H3:** Civic purpose and supported use cases
+      - **H4 candidate:** Boundary, source and prerequisites
+  - **H2:** Protocol contract
+    - **H3:** Schema and message model
+      - **H4 candidate:** Field or workflow rule with normative reference
+    - **H3:** Security and authority of record
+      - **H4 candidate:** Field or workflow rule with normative reference
+  - **H2:** Implementation and conformance
+    - **H3:** Reference examples and compatible interfaces
+      - **H4 candidate:** Test ID and verified result
+### `/protocols/lga-governance-stack` — 1 source records
+- **H1 candidate template:** Local Government Digital Service Suite — 14 interoperable modules
+- **Source:** `content/atlas/lga-14-service-modules-spec.json`
+- **Title template:** Local Government Interoperability Standards | NigeriaStack
+- **Meta description template:** Browse the 14 NigeriaStack municipal service modules, governing interfaces, statutory boundaries and conformance evidence.
+- **Canonical template:** `https://nigeriastack.org/protocols/lga-governance-stack` (only when public/indexable)
+  - **H2:** How do the municipal interoperability modules work?
+    - **H3:** Constitutional functions and municipal service boundaries
+      - **H4 candidate:** Service-source authority and legal citation
+  - **H2:** Browse the 14 service modules
+    - **H3:** {{module_name}} — service overview
+      - **H4 candidate:** Service data contract and module status
+  - **H2:** Verification and implementation
+    - **H3:** Reference architectures and tests
+      - **H4 candidate:** Evidence and adoption status
+### `/protocols/lga-governance-stack/:lga_module_slug` — 14 source records
+- **H1 candidate template:** {{module_name}} — Local Government service interoperability standard
+- **Source:** `content/atlas/lga-14-service-modules-spec.json`
+- **Title template:** {{module_name}} Municipal Standard | NigeriaStack
+- **Meta description template:** Inspect {{module_name}} requirements, official source authority, technical interfaces and test evidence.
+- **Canonical template:** `https://nigeriastack.org/protocols/lga-governance-stack/{{lga_module_slug}}` (only when public/indexable)
+  - **H2:** What does this municipal service cover?
+    - **H3:** Citizen-facing service scenarios
+      - **H4 candidate:** Access channel and statutory limit
+  - **H2:** Who owns the official record?
+    - **H3:** Custodian and permitted interfaces
+      - **H4 candidate:** Source authority and delegation boundary
+  - **H2:** What do implementations exchange?
+    - **H3:** Schema, workflow and signatures
+      - **H4 candidate:** Versioned contract and test case
+  - **H2:** Evidence and conformance
+    - **H3:** Test results and implementation examples
+      - **H4 candidate:** Environment, receipt and unresolved gaps
+### `/rfcs/:rfc_id` — 14 source records
+- **H1 candidate template:** {{rfc_id}} — {{rfc_title}}
+- **Source:** `specs/rfcs/NS-RFC-001..014`
+- **Title template:** {{rfc_id}} — {{rfc_title}} | NigeriaStack
+- **Meta description template:** Read {{rfc_id}}, its normative requirements, version status, schemas and conformance references.
+- **Canonical template:** `https://nigeriastack.org/rfcs/{{rfc_id}}` (only when public/indexable)
+  - **H2:** Specification overview
+    - **H3:** Purpose, scope and interoperability problem
+      - **H4 candidate:** Applicability and cited authority
+  - **H2:** Normative requirements
+    - **H3:** Requirement groups from source RFC
+      - **H4 candidate:** RFC 2119 requirement heading when warranted
+  - **H2:** Schemas, examples and version history
+    - **H3:** Technical artifacts and examples
+      - **H4 candidate:** Revision, compatibility and source anchors
+  - **H2:** Conformance and governance
+    - **H3:** Recorded status and test coverage
+      - **H4 candidate:** Review decision, issue and evidence
+### `/atlas/states/:state_code` — 37 source records
+- **H1 candidate template:** {{state_name}} — Digital public-service interoperability profile
+- **Source:** `content/atlas/subnational-36states-fct-atlas.json`
+- **Title template:** {{state_name}} Service Readiness Atlas | NigeriaStack
+- **Meta description template:** Explore source-linked public service readiness dimensions and interoperability records for {{state_name}}.
+- **Canonical template:** `https://nigeriastack.org/atlas/states/{{state_code}}` (only when public/indexable)
+  - **H2:** State service-readiness profile
+    - **H3:** Eight audited dimensions
+      - **H4 candidate:** Status value, source and audit date
+  - **H2:** Local government areas
+    - **H3:** Council directory for {{state_name}}
+      - **H4 candidate:** Constitutional registry link
+  - **H2:** Interoperability gaps and opportunities
+    - **H3:** Documented systems and priority gaps
+      - **H4 candidate:** Related standards and evidence limits
+### `/atlas/lga-774/:state_code/:lga_code` — 774 source records
+- **H1 candidate template:** {{lga_name}} — Local Government interoperability profile
+- **Source:** `content/atlas/lga-774-constitutional-registry.json`
+- **Title template:** {{lga_name}} Interoperability Profile | NigeriaStack
+- **Meta description template:** Examine the council registry entry, interoperable municipal service standards, evidence status and related RFCs for {{lga_name}}.
+- **Canonical template:** `https://nigeriastack.org/atlas/lga-774/{{state_code}}/{{lga_code}}` (only when public/indexable)
+  - **H2:** Jurisdiction and authority of record
+    - **H3:** State, council identifier and statutory references
+      - **H4 candidate:** Canonical registry record
+  - **H2:** Readiness across municipal services
+    - **H3:** Fourteen municipal module categories
+      - **H4 candidate:** Verified deployment status and source
+  - **H2:** Technical standards and verification
+    - **H3:** Related RFCs, schemas and evidence
+      - **H4 candidate:** Checked date and outstanding validation
+### Exact 14 local-government module paths in canonical module data
+- `/protocols/lga-governance-stack/lga-01-council-complain` — CouncilComplain
+- `/protocols/lga-governance-stack/lga-02-build-clear` — BuildClear
+- `/protocols/lga-governance-stack/lga-03-wash-connect` — WashConnect
+- `/protocols/lga-governance-stack/lga-04-shop-permit` — ShopPermit
+- `/protocols/lga-governance-stack/lga-05-vital-proof` — VitalProof
+- `/protocols/lga-governance-stack/lga-06-indigene-proof` — IndigeneProof
+- `/protocols/lga-governance-stack/lga-07-safety-noc` — SafetyNOC
+- `/protocols/lga-governance-stack/lga-08-ward-works` — WardWorks
+- `/protocols/lga-governance-stack/lga-09-tenement-rate` — TenementRate
+- `/protocols/lga-governance-stack/lga-10-market-collect` — MarketCollect
+- `/protocols/lga-governance-stack/lga-11-ward-phc` — WardPHC
+- `/protocols/lga-governance-stack/lga-12-council-ledger` — CouncilLedger
+- `/protocols/lga-governance-stack/lga-13-customary-docket` — CustomaryDocket
+- `/protocols/lga-governance-stack/lga-14-street-grid` — StreetGrid
+## 6. Explicit reconciliation of the two 15-H2 suites
+| Version 2 unit | Editorial target route | Canonical benchmark treatment |
+|---|---|---|
+| `NS-ANSWER-01` | `/` | Review for overlap with home RAG-H2-01..03 |
+| `NS-ANSWER-02` | `/` | Review for overlap with home RAG-H2-01..03 |
+| `NS-ANSWER-03` | `/sectors` | Review for overlap with sector RAG-H2-04..05 |
+| `NS-ANSWER-04` | `/sectors` | Review for overlap with sector RAG-H2-04..05 |
+| `NS-ANSWER-05` | `/sectors` | Review for overlap with sector RAG-H2-04..05 |
+| `NS-ANSWER-06` | `/protocols` | Version 2 parent-page unit; canonical RAG-H2-06..13 remain on protocol/LGA leaf pages |
+| `NS-ANSWER-07` | `/protocols` | Version 2 parent-page unit; canonical RAG-H2-06..13 remain on protocol/LGA leaf pages |
+| `NS-ANSWER-08` | `/protocols` | Version 2 parent-page unit; canonical RAG-H2-06..13 remain on protocol/LGA leaf pages |
+| `NS-ANSWER-09` | `/rfcs` | RFC-registry unit; maintain normative RFC heading structures |
+| `NS-ANSWER-10` | `/rfcs` | RFC-registry unit; maintain normative RFC heading structures |
+| `NS-ANSWER-11` | `/conformance` | Review for overlap with RAG-H2-14 |
+| `NS-ANSWER-12` | `/conformance` | Review for overlap with RAG-H2-14 |
+| `NS-ANSWER-13` | `/atlas` | Review for overlap with RAG-H2-15 |
+| `NS-ANSWER-14` | `/governance` | Governance unit; FAQ questions become H3 under FAQ H2 |
+| `NS-ANSWER-15` | `/governance` | Governance unit; FAQ questions become H3 under FAQ H2 |
+Do not equate a benchmark identifier with a physical HTML heading count. Deduplicate overlapping topics while preserving both content record IDs and source links; assign a canonical target anchor and record any redirect or equivalence mapping.
+## 7. Mandatory per-page SEO, accessibility and knowledge graph fields
+For every routable document, not just the seven roots: `routePattern`, resolved pathname, route type, dataset key, stable entity ID, primary audience, navigation parent, breadcrumb chain, title, meta description, one intentional H1, ordered H2/H3/H4 node tree, unique stable heading IDs, source document/`copy_slot`, answer-unit IDs, claim evidence/status, canonical URL, robots/index status, language, locale review status, Open Graph and social metadata where appropriate, and appropriate page-matched structured-data node IDs.
+Heading levels are semantic, not decorative: never skip H2→H4, never use a heading solely to style a card, never emit all seven section H1s in a single indexed document, and resolve one semantic H1 per distinct canonical page. FAQ questions under the governance H2 can be H3; the published `FAQPage` graph must match visible answers exactly.
+## 8. Corrected sequential priority gates
+| Gate | Revised implementation and acceptance test |
+|---|---|
+| **P0 — IA/source baseline** | Reconcile live Git HEAD, `NS-KB-12`, webcopy/wireframes, 32-industry/37-jurisdiction/774-LGA/14-module/14-RFC inventories, H1 conflicts, existing RAG-H2-01..15 and Version 2 NS-ANSWER-01..15; write authoritative copy-slot precedence matrix and current URL inventory. No content overwrite or public changes. |
+| **P1 — Full IA and headings** | Define and review the complete 7-root + 7-family route/heading manifest; supply exact canonical H1, all meaningful H2/H3/H4 branches, page title/description, breadcrumbs, anchors and internal linking. Resolve intermediate index routes and template exceptions. |
+| **P2 — Render/indexability** | Render independently fetchable HTML for each approved indexable route; ensure unique metadata and one H1; correct heading nesting, answer binding, canonical URL, robots directive and generated XML sitemap; confirm JS-disabled access and truthful 404/redirect behavior. |
+| **P3 — Answers and evidence** | Integrate Version 2 15 H2 answers with canonical RAG suite, deduplicate by meaning, preserve traceable IDs and source links, render 15 governance FAQs visibly, and home executive TL;DR. |
+| **P4 — Entities and structured data** | Deploy grounded Organization/WebSite, page-specific breadcrumb/entity and conditional FAQPage; defer unverified SoftwareApplication/WebAPI deployment-specific properties. |
+| **P5 — Design/accessibility** | Bind visual typography to semantic H1–H4 structure; validate responsive reflow, keyboard, forced color, real 200%/400% zoom, AA contrast and brand concept review. |
+| **P6 — Crawlers/GEO** | Test HTTP crawl and WAF/robots distinctions; 60-query baseline and repeatable citations, accuracy and route retrieval checks across the nominated systems. |
+| **P7 — Integrated QA/release** | CI route/tree/dataset checks, browser renders, structured-data and evidence receipts; code review/PR; release only on separate approval. |
+## 9. Deterministic CI acceptance contract
+For **all approved, indexable generated URLs**: status 200; canonical self-consistent; exactly one H1; H2/H3/H4 appear only as logically nested levels; no empty/duplicate fragment IDs; title/description are route-unique; breadcrumb links resolve; H2 answer IDs map to the correct anchor; canonical `RAG-H2` and V2 `NS-ANSWER` IDs remain traceable; every statement with a factual status has a source; FAQPage only when 15 exact visible FAQ pairs are present; `sitemap.xml` equals the public-canonical route set; URL templates 404 for unknown state/LGA/industry/RFC; no unpublished URL is claimed live; test at 1440/768/390/320 and JS-disabled HTTP fetch.
+This is a suggested site-quality and provenance contract, not an algorithmic guarantee for Google AI Overviews, ChatGPT, Bing/Copilot or Perplexity.
+## 10. Approval boundary
+**Recommendation correction only.** This v2.1 document is intended for consideration *before* P0 execution. No connected repository or public site has been modified. Institutional identity remains fixed by the ratified charter; technical/source evidence and per-RFC lifecycle statuses are reported independently.

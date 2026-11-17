@@ -1,5 +1,5 @@
 -- File: apps/web/migrations/0001_ngstack_d1_fts5_schema.sql
--- Governing Card: NS-KB-20C / NS-KB-21
+-- Governing Card: NS-KB-20C / NS-KB-21-ASTRA
 -- Target Runtime: Cloudflare D1 (SQLite 3.45+ with FTS5 & Strict Tables)
 
 PRAGMA foreign_keys = ON;
@@ -27,9 +27,9 @@ CREATE TABLE IF NOT EXISTS industry_capability_ledger (
   macro_sector TEXT NOT NULL,
   industry_name TEXT NOT NULL,
   civic_bottleneck_summary TEXT NOT NULL,
-  primary_gap_mechanisms_json TEXT NOT NULL,
-  building_blocks_json TEXT NOT NULL,
-  protocols_json TEXT NOT NULL,
+  primary_gap_mechanisms_json TEXT NOT NULL, -- JSON array of MECH-01..08
+  building_blocks_json TEXT NOT NULL,        -- JSON array of BB-01..12
+  protocols_json TEXT NOT NULL,              -- SureEvidence, ClearAm, MarketLink, etc.
   evidence_confidence TEXT NOT NULL CHECK (evidence_confidence IN ('VERIFIED', 'CORROBORATED', 'INFERRED', 'UNRESOLVED')),
   documented_incumbents_json TEXT NOT NULL,
   statutory_regulators_json TEXT NOT NULL
@@ -56,13 +56,13 @@ CREATE TABLE IF NOT EXISTS subnational_state_atlas (
 
 -- 4. 774 Constitutional LGAs & 6 FCT Area Councils Registry (SC/CV/343/2024 Direct Treasury Pass-Through)
 CREATE TABLE IF NOT EXISTS constitutional_lga_774_registry (
-  lga_code TEXT PRIMARY KEY,
+  lga_code TEXT PRIMARY KEY, -- e.g., LA-LGA-11, FC-LGA-02
   state_code TEXT NOT NULL REFERENCES subnational_state_atlas(state_code),
   lga_name TEXT NOT NULL,
   constitutional_schedule_ref TEXT NOT NULL DEFAULT '1999 CFRN First Schedule Part I/II & Fourth Schedule',
   sc_cv_343_2024_direct_treasury_status TEXT NOT NULL CHECK (sc_cv_343_2024_direct_treasury_status IN ('DIRECT_TSA_CRF_ACTIVE', 'TRANSITION_ENROLLED', 'PAPER_CASH_BOUND', 'NOT_ASSESSED')),
   kioskbase_offline_node_status TEXT NOT NULL CHECK (kioskbase_offline_node_status IN ('LIVE_DIGITAL', 'ACTIVE_PILOT', 'PAPER_ONLY', 'NOT_ASSESSED')),
-  active_lga_modules_json TEXT NOT NULL
+  active_lga_modules_json TEXT NOT NULL -- Subset of LGA-01..LGA-14
 ) STRICT;
 
 -- 5. 14 Standardized Municipal Service Modules (LGA-01 to LGA-14)
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS lga_service_modules_14 (
 
 -- 6. Daily Cryptographic Merkle Audit Log (Test 03: Audit & Zero-Escrow Verification)
 CREATE TABLE IF NOT EXISTS daily_merkle_audit_roots (
-  epoch_date TEXT PRIMARY KEY,
+  epoch_date TEXT PRIMARY KEY, -- YYYY-MM-DD
   merkle_root_sha256 TEXT NOT NULL,
   specification_commit_sha TEXT NOT NULL,
   verified_zero_escrow_invariant INTEGER NOT NULL CHECK (verified_zero_escrow_invariant = 1),
@@ -91,9 +91,9 @@ CREATE TABLE IF NOT EXISTS daily_merkle_audit_roots (
 
 -- 7. Unified FTS5 Full-Text Search Virtual Table (Sub-15ms Edge Querying)
 CREATE VIRTUAL TABLE IF NOT EXISTS ngstack_global_search_fts USING fts5(
-  entity_type,
-  entity_id,
-  canonical_url,
+  entity_type,      -- 'RFC' | 'INDUSTRY' | 'STATE' | 'LGA' | 'LGA_MODULE' | 'FAQ' | 'RAG_BENCHMARK'
+  entity_id,        -- e.g., 'NS-RFC-005', 'IND-05', 'LA-LGA-11', 'LGA-10', 'NS-FAQ-01'
+  canonical_url,    -- e.g., '/rfcs/NS-RFC-005', '/protocols/lga-governance-stack/lga-10-market-collect'
   title_civic,
   body_searchable,
   statutory_tags,

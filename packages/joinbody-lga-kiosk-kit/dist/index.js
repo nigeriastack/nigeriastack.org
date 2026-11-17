@@ -11,6 +11,7 @@ export function validateLgaTreasuryInvariance(envelope) {
     const proof = envelope.splitDirectTreasuryProof;
     if (proof.platformEscrowAmountKobo !== 0 ||
         proof.stateIntermediaryEscrowKobo !== 0 ||
+        !Number.isSafeInteger(proof.statutoryAmountKobo) ||
         proof.statutoryAmountKobo <= 0 ||
         !proof.directLgaTreasuryAccountRef.startsWith("CBN-LGA-")) {
         return {
@@ -21,33 +22,45 @@ export function validateLgaTreasuryInvariance(envelope) {
     }
     return { valid: true, httpStatus: 200 };
 }
+/** Illustrative menu only; the legacy function name does not identify an allocated shortcode. */
 export function renderUssd347Menu(locale = "en-NG") {
     const menus = {
-        "en-NG": "CON Welcome to 774-LGA Public Service (*347*LGA#)\n" +
+        "en-NG": "CON ILLUSTRATIVE MENU: Welcome to 774-LGA Public Service\n" +
             "1. Report Road/Water Fault (CouncilComplain)\n" +
             "2. Pay Market/Motor-Park Ticket (100% Direct to LGA)\n" +
             "3. Verify Inter-LGA Commercial Transit Pass\n" +
             "4. Track 72h Indigene Certificate (IndigeneProof)",
-        "pcm-NG": "CON Welcome to 774 Local Govt Service (*347*LGA#)\n" +
+        "pcm-NG": "CON ILLUSTRATIVE MENU: Welcome to 774 Local Govt Service\n" +
             "1. Report Bad Road or Pipe (CouncilComplain)\n" +
             "2. Pay Market/Park Ticket Direct to Council\n" +
             "3. Check Inter-LGA Motor Transit Pass\n" +
             "4. Check 72-Hour Indigene Certificate",
-        "ha-NG": "CON Barka da zuwa Hidimar Kananan Hukumomi 774 (*347*LGA#)\n" +
+        "ha-NG": "CON ILLUSTRATIVE MENU: Barka da zuwa Hidimar Kananan Hukumomi 774\n" +
             "1. Kai Rahoton Matsalar Hanya ko Ruwa\n" +
             "2. Biyan Harajin Kasuwa/Tasha Kai Tsaye\n" +
             "3. Tantance Izinin Motar Kasuwanci\n" +
             "4. Duba Takardar Dan Asalin Karamar Hukuma (72h)",
-        "yo-NG": "CON E kaabo si Ise Ijoba Ibile 774 (*347*LGA#)\n" +
+        "yo-NG": "CON ILLUSTRATIVE MENU: E kaabo si Ise Ijoba Ibile 774\n" +
             "1. Fi Esun Oju-Ona tabi Omi Re Sile\n" +
             "2. San Owo Oja tabi Ibudo Moto Taara si Ijoba Ibile\n" +
             "3. Daju Iwe-Irinaoko Ero/Eru\n" +
             "4. Bere Iwe Eri Omo Ibile (Wakati 72)",
-        "ig-NG": "CON Nnoo na Oru Okpuru Ochichi 774 (*347*LGA#)\n" +
+        "ig-NG": "CON ILLUSTRATIVE MENU: Nnoo na Oru Okpuru Ochichi 774\n" +
             "1. Kpesa Nsogbu Uzo ma obu Mmiri\n" +
             "2. Kwuo Ugwo Ahia/Ogige Ugboala Ozugbo\n" +
             "3. Nyochaa Akwukwo Ngafe Ugboala\n" +
             "4. Lelee Asambodo Nwa Afo (Aka 72)",
     };
     return menus[locale];
+}
+/** Local routing plan using a caller-supplied trusted account registry; no transfer is executed. */
+export function planDirectTreasuryRouting(envelope, verifiedTreasuryAccounts) {
+    const result = validateLgaTreasuryInvariance(envelope);
+    if (!result.valid)
+        return { valid: false, httpStatus: 422, errorCode: result.errorCode };
+    const proof = envelope.splitDirectTreasuryProof;
+    if (verifiedTreasuryAccounts.get(envelope.lgaCode) !== proof.directLgaTreasuryAccountRef) {
+        return { valid: false, httpStatus: 422, errorCode: "TREASURY_ACCOUNT_NOT_VERIFIED" };
+    }
+    return { valid: true, httpStatus: 200, transfers: [{ accountRef: proof.directLgaTreasuryAccountRef, amountKobo: proof.statutoryAmountKobo }] };
 }

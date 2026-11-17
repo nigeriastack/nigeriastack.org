@@ -27,3 +27,14 @@
 
 [2026-11-15T05:30:00Z] [HYPOTHESIS_REQUIRING_VALIDATION] [ID: ASSUMP-NS-05] [200-User Multi-Locale Comprehension Benchmark]
 - Statement: While all 5 locales (`en-NG`, `ha-NG`, `yo-NG`, `ig-NG`, `pcm-NG`) are gated by `reviewState == "LEGAL_SEMANTIC_REVIEW_APPROVED"` and +35% container expansion budgets (`Gate NS-G4`), live field comprehension testing across 200 grassroots traders, drivers, and court clerks remains a pre-ratification Stage 4 milestone.
+
+2026-11-17 continuation (supersedes any earlier broad execution claims):
+VERIFIED: portal baseline 2083b50267c4fc1af5f41692a96658c37d6b4723 cloned cleanly; connected account pull=true, push=false. Six sibling repository metadata calls returned 404 (absence versus access restriction unresolved).
+VERIFIED: existing conformance receipts used hardcoded PASS statuses; replaced by scoped measured SDK assertions, ITB-05 NOT_RUN.
+VERIFIED: source state atlas has 296 status cells but no per-jurisdiction evidence links or last-verification dates; new D1 seeds use NOT_ASSESSED and unknown dates. Original source files preserved. Structural completeness does not establish provenance.
+INFERRED: CANDIDATE STANDARD (Stage 3) maps to DRAFT_STANDARD in the requested D1 enum. Missing industry macro-sector/layer metadata remains empty, confidence UNRESOLVED. Detailed mappings: docs/handoff/d1-seed-verification-ledger.md.
+VERIFIED: local initial migration changed to the supplied NS-KB-21 schema. No remote migration was applied; an already migrated production database would require a forward migration after inspecting its schema, never rewriting its applied migration record.
+VERIFIED: Chromium launch denied socket creation; viewport widths and root-font changes are proxies, not proof of native browser zoom or zero typos. Current report records 16 launch failures.
+VERIFIED: no verified publication keys or audit publication pipeline available; unverified public key and static daily audit claims removed from Worker. Endpoints return unavailable.
+VERIFIED: portal build is static HTML copying plus Hono Worker typechecking, not an implemented TanStack Start integration; shell gzip 28690 bytes measured locally. Edge latency unmeasured.
+VERIFIED: runtime Node 24.22.1 / pnpm 11.25.0 differs from requested Node22.11 / pnpm9.14; no claim of target-runtime equivalence.

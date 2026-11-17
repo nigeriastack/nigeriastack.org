@@ -1,0 +1,60 @@
+{
+  "project": "nigeriastack-org",
+  "date": "2026-11-17",
+  "mode": "IMPLEMENTATION_AUTHORIZED_PUBLIC_RELEASE_UNAUTHORIZED",
+  "currentWork": "Publish corrected v2.1 implementation and obtain hosted CI evidence",
+  "blockingExternalPrerequisites": [
+    {
+      "id": "ACCESS-GH-CREATE",
+      "state": "BLOCKED",
+      "evidence": "Six named repositories still require provisioning or verified discovery; app installation currently selects portal only. Browser authenticated as nigeriastack; connector has no repository-creation action.",
+      "blocks": [
+        "provisioning six repositories"
+      ],
+      "doesNotBlock": [
+        "source exports",
+        "repository migration manifests"
+      ]
+    },
+    {
+      "id": "RELEASE-CF",
+      "state": "BLOCKED",
+      "evidence": "production resource binding placeholder and no release approval",
+      "blocks": [
+        "production rollout"
+      ],
+      "doesNotBlock": [
+        "local D1",
+        "SSR build",
+        "dry run",
+        "preview packaging"
+      ]
+    }
+  ],
+  "noDeadlockRules": [
+    "Run independent ready tasks while external prerequisites are blocked.",
+    "Bound verification command timeouts and retain failure logs.",
+    "Do not retry external mutations without readback.",
+    "Do not weaken a failed gate or forge receipts to advance status.",
+    "Persist commits, issue status and recoverable checkpoint before pausing."
+  ],
+  "checkpointState": "LOCAL_IMPLEMENTATION_VERIFIED_GITHUB_WRITE_RESTORED",
+  "resolvedPrerequisites": [
+    {
+      "id": "ACCESS-GH-WRITE",
+      "state": "VERIFIED",
+      "evidence": "Connector installation183083839 selected portal; actual branch creation and matching SHA readback succeeded in this Work session",
+      "blocks": [
+        "remote branch writes",
+        "pull requests",
+        "hosted CI"
+      ],
+      "doesNotBlock": [
+        "local code",
+        "tests",
+        "source review",
+        "patch checkpoint"
+      ]
+    }
+  ]
+}

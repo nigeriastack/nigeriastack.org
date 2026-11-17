@@ -1,0 +1,57 @@
+$ pnpm run ci:g1 && pnpm run ci:g2 && pnpm run ci:g3 && pnpm run ci:g4-g5 && pnpm run ci:opa && pnpm run test:telemetry && pnpm run ci:g6
+$ node --import tsx scripts/ci/verify-cleanroom-nomenclature.ts
+[✓ GATE NS-G1 CERTIFIED PASS] Audited 128 files: 0 foreign clones, 0 sectional terms, 0 vendor-in-layer-headings.
+$ node scripts/ci/verify-dataset-integrity.mjs
+{
+  "structuralCounts": {
+    "industries": 32,
+    "jurisdictions": 37,
+    "councils": 774,
+    "modules": 14,
+    "cells": 296
+  },
+  "missingCells": [],
+  "missingProvenance": [
+    "AB",
+    "AD",
+    "AK",
+    "AN",
+    "BA",
+    "BY",
+    "BE",
+    "BO",
+    "CR",
+    "DE",
+    "EB",
+    "ED",
+    "EK",
+    "EN",
+    "FC",
+    "GO",
+    "IM",
+    "JI",
+    "KD",
+    "KN",
+    "KT",
+    "KE",
+    "KO",
+    "KW",
+    "LA",
+    "NA",
+    "NI",
+    "OG",
+    "ON",
+    "OS",
+    "OY",
+    "PL",
+    "RI",
+    "SO",
+    "TA",
+    "YO",
+    "ZA"
+  ],
+  "provenanceVerified": false
+}
+NS-G2 BLOCKED: state readiness claims lack per-jurisdiction evidence links and verification timestamps.
+[ELIFECYCLE] Command failed with exit code 1.
+[ELIFECYCLE] Command failed with exit code 1.

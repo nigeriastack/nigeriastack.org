@@ -1,0 +1,11 @@
+naming: PASS
+contracts: PASS
+data: PASS
+content: PASS
+content-negative-controls: PASS
+tokens: PASS
+policy: PASS
+sdk-build: PASS
+sdk-test: PASS
+gherkin: PASS
+portal-build: PASS

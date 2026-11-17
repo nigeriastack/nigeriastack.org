@@ -1,2 +1,17 @@
 node_modules/
 .wrangler/
+
+# Generated build, seed and verification artifacts are reproducible from source.
+**/dist/
+apps/web/.tanstack/
+apps/web/.output/
+playwright-output/
+playwright-report/
+verification-output/
+test-results/
+scripts/seed-d1-from-canonical-json.sql
+apps/web/scripts/seed-d1-from-canonical-json.sql
+
+repository-exports/
+
+repository-exports*/

@@ -1,0 +1,58 @@
+[
+  {
+    "route": "/",
+    "title": "NigeriaStack | Open DPI Specifications & Conformance Commons",
+    "h1": "NigeriaStack — Independent Open Technical Specification and Conformance Commons",
+    "metaDescription": "NigeriaStack is Nigeria’s independent, open technical specification and conformance commons. Explore sovereign protocols, reference implementations, RFCs and verification resources.",
+    "canonicalCandidate": "https://nigeriastack.org/",
+    "status": "LOCAL_METADATA_REVIEW_APPROVED_H1_SOURCE_RETAINED"
+  },
+  {
+    "route": "/sectors",
+    "title": "32-Industry Interoperability Atlas | NigeriaStack",
+    "h1": "Interoperability Across 32 Nigerian Industries",
+    "metaDescription": "Explore NigeriaStack’s 32-industry capability ledger, existing ecosystem services, recurring interoperability challenges and reusable technical standards.",
+    "canonicalCandidate": "https://nigeriastack.org/sectors",
+    "status": "LOCAL_METADATA_REVIEW_APPROVED_H1_SOURCE_RETAINED"
+  },
+  {
+    "route": "/protocols",
+    "title": "NigeriaStack Protocols | Sovereign Interoperability Standards",
+    "h1": "NigeriaStack Interoperability Protocols",
+    "metaDescription": "Discover open interoperability specifications for consent, cryptographic evidence, safe asynchronous transport, commerce, agent delegation and offline registries.",
+    "canonicalCandidate": "https://nigeriastack.org/protocols",
+    "status": "LOCAL_METADATA_REVIEW_APPROVED_H1_SOURCE_RETAINED"
+  },
+  {
+    "route": "/rfcs",
+    "title": "NigeriaStack RFC Registry | Open Technical Specifications",
+    "h1": "NigeriaStack RFCs: Specifications, Versions and Conformance",
+    "metaDescription": "Browse NigeriaStack RFCs, versioned specifications, schema contracts and the per-RFC governance, review and implementation statuses.",
+    "canonicalCandidate": "https://nigeriastack.org/rfcs",
+    "status": "LOCAL_METADATA_REVIEW_APPROVED_H1_SOURCE_RETAINED"
+  },
+  {
+    "route": "/conformance",
+    "title": "NigeriaStack Interoperability Test Bed | Conformance",
+    "h1": "Verify Interoperability with NigeriaStack Conformance Tools",
+    "metaDescription": "Explore executable interoperability tests, reference implementation results, test receipts and reproducible validation guidance.",
+    "canonicalCandidate": "https://nigeriastack.org/conformance",
+    "status": "LOCAL_METADATA_REVIEW_APPROVED_H1_SOURCE_RETAINED"
+  },
+  {
+    "route": "/atlas",
+    "title": "NigeriaStack State & LGA Interoperability Atlas",
+    "h1": "State and LGA Interoperability Atlas",
+    "metaDescription": "Navigate NigeriaStack’s state, FCT and 774-LGA registry, with research sources, standards coverage and separately recorded deployment evidence.",
+    "canonicalCandidate": "https://nigeriastack.org/atlas",
+    "status": "LOCAL_METADATA_REVIEW_APPROVED_H1_SOURCE_RETAINED"
+  },
+  {
+    "route": "/governance",
+    "title": "NigeriaStack Governance | Independence, Standards & FAQs",
+    "h1": "NigeriaStack Governance and Open-Commons Safeguards",
+    "metaDescription": "Read NigeriaStack’s ratified institutional charter, independence safeguards, working-group framework, governance information and FAQs.",
+    "canonicalCandidate": "https://nigeriastack.org/governance",
+    "status": "LOCAL_METADATA_REVIEW_APPROVED_H1_SOURCE_RETAINED"
+  }
+]

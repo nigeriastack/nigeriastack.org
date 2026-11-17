@@ -1,0 +1,13 @@
+{
+  "text": "NigeriaStack is an independent, Nigerian-designed, whole-of-economy open technical specification and conformance commons. It develops interoperable standards, RFCs, reference implementations and verification resources that help Nigeria’s digital systems work together while preserving statutory authority, operational continuity, evidentiary integrity and institutional independence.\n\nIts technical architecture spans asynchronous information exchange, consent, digital evidence, open commerce, agent delegation, offline-first registries and cross-sector interoperability. A 32-industry capability ledger and state/LGA atlas organize supporting research and highlight where standards can complement existing Nigerian public and private operators.\n\nNigeriaStack does not replace statutory registries, exercise governmental regulatory powers or process public revenue as a payment switch. Its open-commons governance, versioned specifications and conformance methods make responsibilities and technical expectations inspectable. Each individual RFC, implementation or integration carries its own documented version, approval and test status.\n\nStart with the governance charter, explore the protocol and industry directories, inspect the RFC registry, and use the interoperability test bed to examine executable verification evidence.",
+  "wordCount": 154,
+  "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+  "sourceSnapshot": "07-first-200-word-executive-tldr-candidate.md",
+  "sourceSha256": "f0bee9135f0aa0fef0349aaef7e478d541aecb2cf78f0ce47831078d9a450959",
+  "sourceIds": [
+    "NS-KB-01",
+    "NS-KB-03A",
+    "NS-KB-21"
+  ],
+  "publishedAt": null
+}

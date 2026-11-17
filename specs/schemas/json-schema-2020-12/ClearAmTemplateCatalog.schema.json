@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/ClearAmTemplateCatalog.schema.json",
+  "title": "ClearAmTemplateCatalog",
+  "type": "object",
+  "required": [
+    "$schema",
+    "catalogVersion",
+    "governingStatute",
+    "templates"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://nigeriastack.org/schemas/v2026/ClearAmTemplateCatalog.schema.json"
+    },
+    "catalogVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "governingStatute": {
+      "type": "string",
+      "minLength": 1
+    },
+    "templates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/template"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "template": {
+      "type": "object",
+      "required": [
+        "templateId",
+        "targetIndustries",
+        "lawfulBasis",
+        "permittedProviderCategories",
+        "permittedFieldScopes",
+        "prohibitedScopes",
+        "maxValidityHours",
+        "maxRetentionDays",
+        "expiredFallback"
+      ],
+      "properties": {
+        "templateId": {
+          "type": "string",
+          "pattern": "^[A-Z0-9]+(-[A-Z0-9]+)+$"
+        },
+        "targetIndustries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^IND-(0[1-9]|[12][0-9]|3[0-2])$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "lawfulBasis": {
+          "$ref": "https://nigeriastack.org/schemas/v2026/ClearAmConsentEnvelope.schema.json#/properties/lawfulBasisAndPurpose/properties/lawfulBasis"
+        },
+        "permittedProviderCategories": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "permittedFieldScopes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "prohibitedScopes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "maxValidityHours": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxRetentionDays": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 365
+        },
+        "expiredFallback": {
+          "const": "HTTP_403_CLEARAM_ARTIFACT_EXPIRED"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

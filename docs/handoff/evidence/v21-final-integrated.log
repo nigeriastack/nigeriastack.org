@@ -1,0 +1,15 @@
+naming: PASS
+contracts: PASS
+data: PASS
+content: PASS
+content-negative-controls: PASS
+tokens: PASS
+edge-trust: PASS
+policy: PASS
+sdk-build: PASS
+sdk-test: PASS
+gherkin: PASS
+portal-build: PASS
+full-route-inventory: PASS
+seed-generate: PASS
+sqlite-seed: PASS

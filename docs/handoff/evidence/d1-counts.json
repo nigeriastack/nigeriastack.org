@@ -1,0 +1,7 @@
+Proxy environment variables detected. We'll use your proxy for fetch requests.
+
+{
+  "error": {
+    "text": "too many terms in compound SELECT: SQLITE_ERROR"
+  }
+}

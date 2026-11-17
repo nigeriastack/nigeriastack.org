@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/SubNationalDpiAtlas.schema.json",
+  "title": "SubNationalDpiAtlas",
+  "type": "object",
+  "required": [
+    "$schema",
+    "atlasId",
+    "dimensions",
+    "jurisdictions"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://nigeriastack.org/schemas/v2026/SubNationalDpiAtlas.schema.json"
+    },
+    "atlasId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "judiciaryAndMagistracyStatus",
+          "landAndDeedsRegistryStatus",
+          "stateRevenueAndTreasuryPassthroughStatus",
+          "healthAndSocialRegistryStatus",
+          "crvsAndLocalCouncilsStatus",
+          "openContractingProcurementStatus",
+          "agriculturalExtensionRegistryStatus",
+          "fiberRowAndSovereignHostingStatus"
+        ]
+      },
+      "uniqueItems": true,
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "jurisdictions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "name",
+          "zone",
+          "judiciaryAndMagistracyStatus",
+          "landAndDeedsRegistryStatus",
+          "stateRevenueAndTreasuryPassthroughStatus",
+          "healthAndSocialRegistryStatus",
+          "crvsAndLocalCouncilsStatus",
+          "openContractingProcurementStatus",
+          "agriculturalExtensionRegistryStatus",
+          "fiberRowAndSovereignHostingStatus",
+          "assessmentProvenance"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "zone": {
+            "type": "string",
+            "minLength": 1
+          },
+          "judiciaryAndMagistracyStatus": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN",
+              "VERIFIED_LIVE_PORTAL",
+              "CORROBORATED_PILOT",
+              "PAPER_BOUND_GAP"
+            ]
+          },
+          "landAndDeedsRegistryStatus": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN",
+              "VERIFIED_LIVE_PORTAL",
+              "CORROBORATED_PILOT",
+              "PAPER_BOUND_GAP"
+            ]
+          },
+          "stateRevenueAndTreasuryPassthroughStatus": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN",
+              "VERIFIED_LIVE_PORTAL",
+              "CORROBORATED_PILOT",
+              "PAPER_BOUND_GAP"
+            ]
+          },
+          "healthAndSocialRegistryStatus": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN",
+              "VERIFIED_LIVE_PORTAL",
+              "CORROBORATED_PILOT",
+              "PAPER_BOUND_GAP"
+            ]
+          },
+          "crvsAndLocalCouncilsStatus": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN",
+              "VERIFIED_LIVE_PORTAL",
+              "CORROBORATED_PILOT",
+              "PAPER_BOUND_GAP"
+            ]
+          },
+          "openContractingProcurementStatus": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN",
+              "VERIFIED_LIVE_PORTAL",
+              "CORROBORATED_PILOT",
+              "PAPER_BOUND_GAP"
+            ]
+          },
+          "agriculturalExtensionRegistryStatus": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN",
+              "VERIFIED_LIVE_PORTAL",
+              "CORROBORATED_PILOT",
+              "PAPER_BOUND_GAP"
+            ]
+          },
+          "fiberRowAndSovereignHostingStatus": {
+            "enum": [
+              "NOT_ASSESSED",
+              "UNKNOWN",
+              "VERIFIED_LIVE_PORTAL",
+              "CORROBORATED_PILOT",
+              "PAPER_BOUND_GAP"
+            ]
+          },
+          "assessmentProvenance": {
+            "type": "object",
+            "required": [
+              "judiciaryAndMagistracyStatus",
+              "landAndDeedsRegistryStatus",
+              "stateRevenueAndTreasuryPassthroughStatus",
+              "healthAndSocialRegistryStatus",
+              "crvsAndLocalCouncilsStatus",
+              "openContractingProcurementStatus",
+              "agriculturalExtensionRegistryStatus",
+              "fiberRowAndSovereignHostingStatus"
+            ],
+            "properties": {
+              "judiciaryAndMagistracyStatus": {
+                "$ref": "https://nigeriastack.org/schemas/readiness-provenance.schema.json"
+              },
+              "landAndDeedsRegistryStatus": {
+                "$ref": "https://nigeriastack.org/schemas/readiness-provenance.schema.json"
+              },
+              "stateRevenueAndTreasuryPassthroughStatus": {
+                "$ref": "https://nigeriastack.org/schemas/readiness-provenance.schema.json"
+              },
+              "healthAndSocialRegistryStatus": {
+                "$ref": "https://nigeriastack.org/schemas/readiness-provenance.schema.json"
+              },
+              "crvsAndLocalCouncilsStatus": {
+                "$ref": "https://nigeriastack.org/schemas/readiness-provenance.schema.json"
+              },
+              "openContractingProcurementStatus": {
+                "$ref": "https://nigeriastack.org/schemas/readiness-provenance.schema.json"
+              },
+              "agriculturalExtensionRegistryStatus": {
+                "$ref": "https://nigeriastack.org/schemas/readiness-provenance.schema.json"
+              },
+              "fiberRowAndSovereignHostingStatus": {
+                "$ref": "https://nigeriastack.org/schemas/readiness-provenance.schema.json"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "minItems": 37,
+      "maxItems": 37
+    }
+  }
+}

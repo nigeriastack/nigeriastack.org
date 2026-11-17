@@ -1,0 +1,9 @@
+/.well-known/ngstack-keys.json 503 NOT_PROVISIONED
+/v1/audit/merkle-root 503 NOT_PUBLISHED
+/v1/audit/treasury-merkle-root 503 NOT_PUBLISHED
+/api/v1/summary 503 DATABASE_UNAVAILABLE
+/api/v1/rfcs 503 DATABASE_UNAVAILABLE
+/api/v1/industries 503 DATABASE_UNAVAILABLE
+/api/v1/states 503 DATABASE_UNAVAILABLE
+/api/v1/lga-modules 503 DATABASE_UNAVAILABLE
+/api/v1/search?q=treasury 503 DATABASE_UNAVAILABLE

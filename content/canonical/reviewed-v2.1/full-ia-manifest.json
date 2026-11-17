@@ -1,0 +1,3363 @@
+{
+  "schemaVersion": "NS-IA-H1-H4-IMPLEMENTATION-CANDIDATE-2026.11.17-v2.1",
+  "documentStatus": "RECOMMENDATION_ONLY_NO_REMOTE_WRITES",
+  "institutionalIdentity": "Independent, Nigerian-designed, whole-of-economy open specification and conformance commons",
+  "sourceAuthority": [
+    "NS-GOV-2026-KB01-V2",
+    "NS-KB-12",
+    "NS-KB-10",
+    "NS-KB-11",
+    "NS-KB-13",
+    "Corrected RAG/GEO/AEO Package v2"
+  ],
+  "sourceBoundaries": {
+    "canonicalCharter": "Preserved",
+    "institutionalRatification": "Not conditioned on site implementation",
+    "existingCanonicalH2Benchmarks": "RAG-H2-01..15; route placement must remain traceable",
+    "newV2AnswerUnits": "NS-ANSWER-01..15, additional editorial candidate set; do not silently override canonical RAG-H2 suite",
+    "faqUnits": "15, proposed H3 under governance H2 FAQ parent",
+    "h3h4Candidates": "proposed when not already explicitly source-bound"
+  },
+  "baseSectionCount": 7,
+  "families": [
+    {
+      "routePattern": "/sectors/:sector_slug/:industry_id",
+      "dataset": "content/taxonomy/master-32-industry-matrix.json",
+      "expectedRecords": 32,
+      "h1": "{{industry_name}} — Interoperability standards and integration profile",
+      "sections": [
+        {
+          "h2": "Existing Nigerian services and authority of record",
+          "h3": [
+            "Current providers and source authorities"
+          ],
+          "h4": [
+            "Source link and dated evidence"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Cross-provider interoperability requirements",
+          "h3": [
+            "Recurring bottlenecks and residual gaps"
+          ],
+          "h4": [
+            "Mechanism evidence and maturity tier"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Relevant open specifications",
+          "h3": [
+            "Linked protocols and RFCs"
+          ],
+          "h4": [
+            "Schema and conformance references"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Industry evidence ledger",
+          "h3": [
+            "Verified coverage and open validation questions"
+          ],
+          "h4": [
+            "Source status and last checked date"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        }
+      ],
+      "basis": "NS-KB-03A and NS-KB-12; string candidates",
+      "publicationStatus": "ROUTE_MUST_BE_VERIFIED_BEFORE_SITEMAP_INCLUSION",
+      "titleCandidateTemplate": "{{industry_name}} Interoperability Standards | NigeriaStack",
+      "metaDescriptionCandidateTemplate": "Explore existing services, interoperability requirements, relevant NigeriaStack protocols and evidence for {{industry_name}}.",
+      "canonicalCandidateTemplate": "https://nigeriastack.org/sectors/{{sector_slug}}/{{industry_id}}",
+      "breadcrumbAncestorRouteTemplates": [
+        "/",
+        "/sectors"
+      ],
+      "headingTree": {
+        "level": 1,
+        "text": "{{industry_name}} — Interoperability standards and integration profile",
+        "sourceBinding": "DYNAMIC_TEMPLATE_UNRESOLVED",
+        "children": [
+          {
+            "level": 2,
+            "text": "Existing Nigerian services and authority of record",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Current providers and source authorities",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source link and dated evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Cross-provider interoperability requirements",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Recurring bottlenecks and residual gaps",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Mechanism evidence and maturity tier",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Relevant open specifications",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Linked protocols and RFCs",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Schema and conformance references",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Industry evidence ledger",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Verified coverage and open validation questions",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source status and last checked date",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "routePattern": "/protocols/:protocol_slug",
+      "dataset": "NS-KB-12 plus NS-RFC-002..013",
+      "expectedRecords": 7,
+      "h1": "{{protocol_name}} — {{public_facing_function}}",
+      "sections": [
+        {
+          "h2": "What does {{protocol_name}} specify?",
+          "h3": [
+            "Civic purpose and supported use cases"
+          ],
+          "h4": [
+            "Boundary, source and prerequisites"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Protocol contract",
+          "h3": [
+            "Schema and message model",
+            "Security and authority of record"
+          ],
+          "h4": [
+            "Field or workflow rule with normative reference"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Implementation and conformance",
+          "h3": [
+            "Reference examples and compatible interfaces"
+          ],
+          "h4": [
+            "Test ID and verified result"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        }
+      ],
+      "basis": "NS-KB-12 RAG-H2-06..12 + NS-KB-10; maintain original canonical leaf H2 bindings after reconciliation",
+      "publicationStatus": "ROUTE_MUST_BE_VERIFIED_BEFORE_SITEMAP_INCLUSION",
+      "titleCandidateTemplate": "{{protocol_name}} Specification & Conformance | NigeriaStack",
+      "metaDescriptionCandidateTemplate": "Understand {{protocol_name}}, its governing RFC, schemas, implementation guidance and recorded conformance evidence.",
+      "canonicalCandidateTemplate": "https://nigeriastack.org/protocols/{{protocol_slug}}",
+      "breadcrumbAncestorRouteTemplates": [
+        "/",
+        "/protocols"
+      ],
+      "headingTree": {
+        "level": 1,
+        "text": "{{protocol_name}} — {{public_facing_function}}",
+        "sourceBinding": "DYNAMIC_TEMPLATE_UNRESOLVED",
+        "children": [
+          {
+            "level": 2,
+            "text": "What does {{protocol_name}} specify?",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Civic purpose and supported use cases",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Boundary, source and prerequisites",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Protocol contract",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Schema and message model",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Field or workflow rule with normative reference",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Security and authority of record",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Field or workflow rule with normative reference",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Implementation and conformance",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Reference examples and compatible interfaces",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test ID and verified result",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "routePattern": "/protocols/lga-governance-stack",
+      "dataset": "content/atlas/lga-14-service-modules-spec.json",
+      "expectedRecords": 1,
+      "h1": "Local Government Digital Service Suite — 14 interoperable modules",
+      "sections": [
+        {
+          "h2": "How do the municipal interoperability modules work?",
+          "h3": [
+            "Constitutional functions and municipal service boundaries"
+          ],
+          "h4": [
+            "Service-source authority and legal citation"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Browse the 14 service modules",
+          "h3": [
+            "{{module_name}} — service overview"
+          ],
+          "h4": [
+            "Service data contract and module status"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Verification and implementation",
+          "h3": [
+            "Reference architectures and tests"
+          ],
+          "h4": [
+            "Evidence and adoption status"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        }
+      ],
+      "basis": "NS-KB-12 RAG-H2-13 and NS-RFC-014; candidate subheads",
+      "publicationStatus": "ROUTE_MUST_BE_VERIFIED_BEFORE_SITEMAP_INCLUSION",
+      "titleCandidateTemplate": "Local Government Interoperability Standards | NigeriaStack",
+      "metaDescriptionCandidateTemplate": "Browse the 14 NigeriaStack municipal service modules, governing interfaces, statutory boundaries and conformance evidence.",
+      "canonicalCandidateTemplate": "https://nigeriastack.org/protocols/lga-governance-stack",
+      "breadcrumbAncestorRouteTemplates": [
+        "/",
+        "/protocols"
+      ],
+      "headingTree": {
+        "level": 1,
+        "text": "Local Government Digital Service Suite — 14 interoperable modules",
+        "sourceBinding": "DYNAMIC_TEMPLATE_UNRESOLVED",
+        "children": [
+          {
+            "level": 2,
+            "text": "How do the municipal interoperability modules work?",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Constitutional functions and municipal service boundaries",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service-source authority and legal citation",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Browse the 14 service modules",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "{{module_name}} — service overview",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service data contract and module status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Verification and implementation",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Reference architectures and tests",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence and adoption status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "routePattern": "/protocols/lga-governance-stack/:lga_module_slug",
+      "dataset": "content/atlas/lga-14-service-modules-spec.json",
+      "expectedRecords": 14,
+      "h1": "{{module_name}} — Local Government service interoperability standard",
+      "sections": [
+        {
+          "h2": "What does this municipal service cover?",
+          "h3": [
+            "Citizen-facing service scenarios"
+          ],
+          "h4": [
+            "Access channel and statutory limit"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Who owns the official record?",
+          "h3": [
+            "Custodian and permitted interfaces"
+          ],
+          "h4": [
+            "Source authority and delegation boundary"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "What do implementations exchange?",
+          "h3": [
+            "Schema, workflow and signatures"
+          ],
+          "h4": [
+            "Versioned contract and test case"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Evidence and conformance",
+          "h3": [
+            "Test results and implementation examples"
+          ],
+          "h4": [
+            "Environment, receipt and unresolved gaps"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        }
+      ],
+      "basis": "14 exact module paths in source JSON; headings candidates",
+      "publicationStatus": "ROUTE_MUST_BE_VERIFIED_BEFORE_SITEMAP_INCLUSION",
+      "titleCandidateTemplate": "{{module_name}} Municipal Standard | NigeriaStack",
+      "metaDescriptionCandidateTemplate": "Inspect {{module_name}} requirements, official source authority, technical interfaces and test evidence.",
+      "canonicalCandidateTemplate": "https://nigeriastack.org/protocols/lga-governance-stack/{{lga_module_slug}}",
+      "breadcrumbAncestorRouteTemplates": [
+        "/",
+        "/protocols",
+        "/protocols/lga-governance-stack"
+      ],
+      "headingTree": {
+        "level": 1,
+        "text": "{{module_name}} — Local Government service interoperability standard",
+        "sourceBinding": "DYNAMIC_TEMPLATE_UNRESOLVED",
+        "children": [
+          {
+            "level": 2,
+            "text": "What does this municipal service cover?",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Citizen-facing service scenarios",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Access channel and statutory limit",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Who owns the official record?",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Custodian and permitted interfaces",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source authority and delegation boundary",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "What do implementations exchange?",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Schema, workflow and signatures",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Versioned contract and test case",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Evidence and conformance",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Test results and implementation examples",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Environment, receipt and unresolved gaps",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "routePattern": "/rfcs/:rfc_id",
+      "dataset": "specs/rfcs/NS-RFC-001..014",
+      "expectedRecords": 14,
+      "h1": "{{rfc_id}} — {{rfc_title}}",
+      "sections": [
+        {
+          "h2": "Specification overview",
+          "h3": [
+            "Purpose, scope and interoperability problem"
+          ],
+          "h4": [
+            "Applicability and cited authority"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Normative requirements",
+          "h3": [
+            "Requirement groups from source RFC"
+          ],
+          "h4": [
+            "RFC 2119 requirement heading when warranted"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Schemas, examples and version history",
+          "h3": [
+            "Technical artifacts and examples"
+          ],
+          "h4": [
+            "Revision, compatibility and source anchors"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Conformance and governance",
+          "h3": [
+            "Recorded status and test coverage"
+          ],
+          "h4": [
+            "Review decision, issue and evidence"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        }
+      ],
+      "basis": "NS-KB-12 + canonical RFC markdown; NEVER auto-rename normative RFC headings",
+      "publicationStatus": "ROUTE_MUST_BE_VERIFIED_BEFORE_SITEMAP_INCLUSION",
+      "titleCandidateTemplate": "{{rfc_id}} — {{rfc_title}} | NigeriaStack",
+      "metaDescriptionCandidateTemplate": "Read {{rfc_id}}, its normative requirements, version status, schemas and conformance references.",
+      "canonicalCandidateTemplate": "https://nigeriastack.org/rfcs/{{rfc_id}}",
+      "breadcrumbAncestorRouteTemplates": [
+        "/",
+        "/rfcs"
+      ],
+      "headingTree": {
+        "level": 1,
+        "text": "{{rfc_id}} — {{rfc_title}}",
+        "sourceBinding": "DYNAMIC_TEMPLATE_UNRESOLVED",
+        "children": [
+          {
+            "level": 2,
+            "text": "Specification overview",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Purpose, scope and interoperability problem",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicability and cited authority",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Normative requirements",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Requirement groups from source RFC",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "RFC 2119 requirement heading when warranted",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Schemas, examples and version history",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Technical artifacts and examples",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Revision, compatibility and source anchors",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Conformance and governance",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Recorded status and test coverage",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Review decision, issue and evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "routePattern": "/atlas/states/:state_code",
+      "dataset": "content/atlas/subnational-36states-fct-atlas.json",
+      "expectedRecords": 37,
+      "h1": "{{state_name}} — Digital public-service interoperability profile",
+      "sections": [
+        {
+          "h2": "State service-readiness profile",
+          "h3": [
+            "Eight audited dimensions"
+          ],
+          "h4": [
+            "Status value, source and audit date"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Local government areas",
+          "h3": [
+            "Council directory for {{state_name}}"
+          ],
+          "h4": [
+            "Constitutional registry link"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Interoperability gaps and opportunities",
+          "h3": [
+            "Documented systems and priority gaps"
+          ],
+          "h4": [
+            "Related standards and evidence limits"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        }
+      ],
+      "basis": "NS-KB-03B + NS-KB-12; not a claim of deployed coverage",
+      "publicationStatus": "ROUTE_MUST_BE_VERIFIED_BEFORE_SITEMAP_INCLUSION",
+      "titleCandidateTemplate": "{{state_name}} Service Readiness Atlas | NigeriaStack",
+      "metaDescriptionCandidateTemplate": "Explore source-linked public service readiness dimensions and interoperability records for {{state_name}}.",
+      "canonicalCandidateTemplate": "https://nigeriastack.org/atlas/states/{{state_code}}",
+      "breadcrumbAncestorRouteTemplates": [
+        "/",
+        "/atlas"
+      ],
+      "headingTree": {
+        "level": 1,
+        "text": "{{state_name}} — Digital public-service interoperability profile",
+        "sourceBinding": "DYNAMIC_TEMPLATE_UNRESOLVED",
+        "children": [
+          {
+            "level": 2,
+            "text": "State service-readiness profile",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Eight audited dimensions",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Status value, source and audit date",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Local government areas",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Council directory for {{state_name}}",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Constitutional registry link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Interoperability gaps and opportunities",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Documented systems and priority gaps",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Related standards and evidence limits",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "routePattern": "/atlas/lga-774/:state_code/:lga_code",
+      "dataset": "content/atlas/lga-774-constitutional-registry.json",
+      "expectedRecords": 774,
+      "h1": "{{lga_name}} — Local Government interoperability profile",
+      "sections": [
+        {
+          "h2": "Jurisdiction and authority of record",
+          "h3": [
+            "State, council identifier and statutory references"
+          ],
+          "h4": [
+            "Canonical registry record"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Readiness across municipal services",
+          "h3": [
+            "Fourteen municipal module categories"
+          ],
+          "h4": [
+            "Verified deployment status and source"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        },
+        {
+          "h2": "Technical standards and verification",
+          "h3": [
+            "Related RFCs, schemas and evidence"
+          ],
+          "h4": [
+            "Checked date and outstanding validation"
+          ],
+          "origin": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1"
+        }
+      ],
+      "basis": "NS-KB-03C + NS-RFC-014; not a claim of deployed coverage",
+      "publicationStatus": "ROUTE_MUST_BE_VERIFIED_BEFORE_SITEMAP_INCLUSION",
+      "titleCandidateTemplate": "{{lga_name}} Interoperability Profile | NigeriaStack",
+      "metaDescriptionCandidateTemplate": "Examine the council registry entry, interoperable municipal service standards, evidence status and related RFCs for {{lga_name}}.",
+      "canonicalCandidateTemplate": "https://nigeriastack.org/atlas/lga-774/{{state_code}}/{{lga_code}}",
+      "breadcrumbAncestorRouteTemplates": [
+        "/",
+        "/atlas"
+      ],
+      "headingTree": {
+        "level": 1,
+        "text": "{{lga_name}} — Local Government interoperability profile",
+        "sourceBinding": "DYNAMIC_TEMPLATE_UNRESOLVED",
+        "children": [
+          {
+            "level": 2,
+            "text": "Jurisdiction and authority of record",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "State, council identifier and statutory references",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Canonical registry record",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Readiness across municipal services",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Fourteen municipal module categories",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Verified deployment status and source",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Technical standards and verification",
+            "answerId": null,
+            "source": "IA EDITORIAL CANDIDATE; BIND TO SOURCE AT P0/P1",
+            "children": [
+              {
+                "level": 3,
+                "text": "Related RFCs, schemas and evidence",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Checked date and outstanding validation",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "rootRoutes": [
+    {
+      "route": "/",
+      "pageType": "canonical_section_index",
+      "existingH1FromNSKB12": "Make Nigeria's digital systems work together without surrendering statutory authority, operational continuity, evidentiary integrity, or institutional independence",
+      "v2EditorialH1Candidate": "NigeriaStack — Independent Open Technical Specification and Conformance Commons",
+      "v2TitleCandidate": "NigeriaStack | Open DPI Specifications & Conformance Commons",
+      "v2MetaDescriptionCandidate": "NigeriaStack is Nigeria’s independent, open technical specification and conformance commons. Explore sovereign protocols, reference implementations, RFCs and verification resources.",
+      "v2CanonicalUrlCandidate": "https://nigeriastack.org/",
+      "h1BindingStatus": "P0_SOURCE_PRECEDENCE_RECONCILIATION_REQUIRED",
+      "sections": [
+        {
+          "h2": "What is NigeriaStack, and how is its institutional independence defined?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-01",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "How does NigeriaStack complement operating digital public infrastructure?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-02",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "Interactive 5-Layer Sovereign Architecture Explorer",
+          "h3": [
+            "Layer 5 — Whole-of-Economy Open Sectoral Networks & Life-Event Flows (8 Macro-Sectors • 32 Industries • 14 Local Government Modules)",
+            "Layer 4 — Reliable Data Messaging, Personal Data Consent, Open Commerce & Safe Digital Agents",
+            "Layer 3 — Offline-First Base Registries, Digital Laws & Legally Admissible Digital Certificates",
+            "Layer 2 — Federated Statutory Identity Verification & Direct Public Treasury Pass-Through",
+            "Layer 1 — Local Edge Computing, Basic Feature Phone Access & Domestic Data Hosting"
+          ],
+          "h4": [
+            "Source-of-authority and integration references",
+            "Related RFC and conformance evidence"
+          ],
+          "origin": "NS-KB-10:H2/H3; H4 editorial candidate"
+        },
+        {
+          "h2": "Five Tests of Open-Commons DPI",
+          "h3": [
+            "Freedom to Exit",
+            "Open Code and Reuse",
+            "Verifiable Public Audit",
+            "Inclusive Standards Governance",
+            "Freedom to Replicate and Self-Host"
+          ],
+          "h4": [
+            "Published standard",
+            "Test or governance evidence"
+          ],
+          "origin": "NS-KB-01; NS-KB-10; H3/H4 editorial candidate"
+        },
+        {
+          "h2": "Explore NigeriaStack resources",
+          "h3": [
+            "Industry capability ledger",
+            "Protocol library and RFC registry",
+            "Interoperability test bed",
+            "State and LGA atlas"
+          ],
+          "h4": [
+            "Read the source",
+            "Inspect implementation evidence"
+          ],
+          "origin": "IA candidate"
+        }
+      ],
+      "publicationStatus": "INVENTORY_REVIEW_REQUIRED",
+      "headingTree": {
+        "level": 1,
+        "text": "Make Nigeria's digital systems work together without surrendering statutory authority, operational continuity, evidentiary integrity, or institutional independence",
+        "sourceBinding": "home.hero.h1",
+        "children": [
+          {
+            "level": 2,
+            "text": "What is NigeriaStack, and how is its institutional independence defined?",
+            "answerId": "NS-ANSWER-01",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "How does NigeriaStack complement operating digital public infrastructure?",
+            "answerId": "NS-ANSWER-02",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Interactive 5-Layer Sovereign Architecture Explorer",
+            "answerId": null,
+            "source": "NS-KB-10:H2/H3; H4 editorial candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Layer 5 — Whole-of-Economy Open Sectoral Networks & Life-Event Flows (8 Macro-Sectors • 32 Industries • 14 Local Government Modules)",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source-of-authority and integration references",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Related RFC and conformance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Layer 4 — Reliable Data Messaging, Personal Data Consent, Open Commerce & Safe Digital Agents",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source-of-authority and integration references",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Related RFC and conformance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Layer 3 — Offline-First Base Registries, Digital Laws & Legally Admissible Digital Certificates",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source-of-authority and integration references",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Related RFC and conformance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Layer 2 — Federated Statutory Identity Verification & Direct Public Treasury Pass-Through",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source-of-authority and integration references",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Related RFC and conformance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Layer 1 — Local Edge Computing, Basic Feature Phone Access & Domestic Data Hosting",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source-of-authority and integration references",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Related RFC and conformance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Five Tests of Open-Commons DPI",
+            "answerId": null,
+            "source": "NS-KB-01; NS-KB-10; H3/H4 editorial candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Freedom to Exit",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Published standard",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Test or governance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Open Code and Reuse",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Published standard",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Test or governance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Verifiable Public Audit",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Published standard",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Test or governance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Inclusive Standards Governance",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Published standard",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Test or governance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Freedom to Replicate and Self-Host",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Published standard",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Test or governance evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Explore NigeriaStack resources",
+            "answerId": null,
+            "source": "IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Industry capability ledger",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Read the source",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Inspect implementation evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Protocol library and RFC registry",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Read the source",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Inspect implementation evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Interoperability test bed",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Read the source",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Inspect implementation evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "State and LGA atlas",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Read the source",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Inspect implementation evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "route": "/sectors",
+      "pageType": "canonical_section_index",
+      "existingH1FromNSKB12": "Whole-of-economy 32-industry digital capability directory and integration ledger",
+      "v2EditorialH1Candidate": "Interoperability Across 32 Nigerian Industries",
+      "v2TitleCandidate": "32-Industry Interoperability Atlas | NigeriaStack",
+      "v2MetaDescriptionCandidate": "Explore NigeriaStack’s 32-industry capability ledger, existing ecosystem services, recurring interoperability challenges and reusable technical standards.",
+      "v2CanonicalUrlCandidate": "https://nigeriastack.org/sectors",
+      "h1BindingStatus": "P0_SOURCE_PRECEDENCE_RECONCILIATION_REQUIRED",
+      "sections": [
+        {
+          "h2": "Which digital interoperability problems recur across Nigeria’s 32 mapped industries?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-03",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "Which interoperability needs are already served by existing Nigerian platforms?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-04",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "How are residual interoperability opportunities evaluated?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-05",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "Browse the eight macro-sectors and 32 industries",
+          "h3": [
+            "Finance, Revenue & Fiscal Systems",
+            "Identity, Civil Registration & Labor",
+            "Commerce, Logistics & Transport",
+            "Healthcare, Education & Creative Industries",
+            "Agriculture, Land & Environment",
+            "Energy, Industry & Digital Addressing",
+            "Telecommunications, Cybersecurity & Infrastructure",
+            "Justice, Legal Records & Digital Governance"
+          ],
+          "h4": [
+            "{{industry_name}} — industry detail link",
+            "Evidence provenance and coverage status"
+          ],
+          "origin": "NS-KB-10 macro-sector names; H2/H4 editorial candidate"
+        },
+        {
+          "h2": "How to read the industry evidence ledger",
+          "h3": [
+            "Existing domestic platforms",
+            "Residual cross-provider integration requirements",
+            "Specification and conformance references"
+          ],
+          "h4": [
+            "Source date and coverage",
+            "Unresolved validation questions"
+          ],
+          "origin": "NS-KB-03A; IA candidate"
+        }
+      ],
+      "publicationStatus": "INVENTORY_REVIEW_REQUIRED",
+      "headingTree": {
+        "level": 1,
+        "text": "Whole-of-economy 32-industry digital capability directory and integration ledger",
+        "sourceBinding": "sectors.header.h1",
+        "children": [
+          {
+            "level": 2,
+            "text": "Which digital interoperability problems recur across Nigeria’s 32 mapped industries?",
+            "answerId": "NS-ANSWER-03",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Which interoperability needs are already served by existing Nigerian platforms?",
+            "answerId": "NS-ANSWER-04",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "How are residual interoperability opportunities evaluated?",
+            "answerId": "NS-ANSWER-05",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Browse the eight macro-sectors and 32 industries",
+            "answerId": null,
+            "source": "NS-KB-10 macro-sector names; H2/H4 editorial candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Finance, Revenue & Fiscal Systems",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{industry_name}} — industry detail link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence provenance and coverage status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Identity, Civil Registration & Labor",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{industry_name}} — industry detail link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence provenance and coverage status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Commerce, Logistics & Transport",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{industry_name}} — industry detail link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence provenance and coverage status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Healthcare, Education & Creative Industries",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{industry_name}} — industry detail link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence provenance and coverage status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Agriculture, Land & Environment",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{industry_name}} — industry detail link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence provenance and coverage status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Energy, Industry & Digital Addressing",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{industry_name}} — industry detail link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence provenance and coverage status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Telecommunications, Cybersecurity & Infrastructure",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{industry_name}} — industry detail link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence provenance and coverage status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Justice, Legal Records & Digital Governance",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{industry_name}} — industry detail link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Evidence provenance and coverage status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "How to read the industry evidence ledger",
+            "answerId": null,
+            "source": "NS-KB-03A; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Existing domestic platforms",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source date and coverage",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Unresolved validation questions",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Residual cross-provider integration requirements",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source date and coverage",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Unresolved validation questions",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Specification and conformance references",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Source date and coverage",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Unresolved validation questions",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "route": "/protocols",
+      "pageType": "canonical_section_index",
+      "existingH1FromNSKB12": "Open pan-Nigerian protocols and the 14 Local Government digital service standards",
+      "v2EditorialH1Candidate": "NigeriaStack Interoperability Protocols",
+      "v2TitleCandidate": "NigeriaStack Protocols | Sovereign Interoperability Standards",
+      "v2MetaDescriptionCandidate": "Discover open interoperability specifications for consent, cryptographic evidence, safe asynchronous transport, commerce, agent delegation and offline registries.",
+      "v2CanonicalUrlCandidate": "https://nigeriastack.org/protocols",
+      "h1BindingStatus": "P0_SOURCE_PRECEDENCE_RECONCILIATION_REQUIRED",
+      "sections": [
+        {
+          "h2": "What do the NigeriaStack interoperability protocols specify?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-06",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "How does NigeriaStack preserve evidence continuity across statutory registries?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-07",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "How do NigeriaStack consent and agent-delegation protocols govern access?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-08",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "Browse pan-Nigerian interoperability protocols",
+          "h3": [
+            "Digital Evidence (SureEvidence)",
+            "Personal Data Consent (ClearAm)",
+            "Safe Asynchronous Exchange (Confluence)",
+            "Open Commerce (MarketLink)",
+            "Agent Delegation (GivePower)",
+            "Offline Registries (KioskBase)",
+            "Digital Statutes (LawTree)"
+          ],
+          "h4": [
+            "Governing RFC and version",
+            "Schemas and conformance tests"
+          ],
+          "origin": "NS-KB-10; H2/H4 editorial candidate"
+        },
+        {
+          "h2": "Local Government Digital Service Suite",
+          "h3": [
+            "CouncilComplain",
+            "BuildClear",
+            "WashConnect",
+            "ShopPermit",
+            "VitalProof",
+            "IndigeneProof",
+            "SafetyNOC",
+            "WardWorks",
+            "TenementRate",
+            "MarketCollect",
+            "WardPHC",
+            "CouncilLedger",
+            "CustomaryDocket",
+            "StreetGrid"
+          ],
+          "h4": [
+            "Service authority and interface",
+            "Module evidence and tests"
+          ],
+          "origin": "NS-RFC-014; lga-14-service-modules-spec.json; H2/H4 editorial candidate"
+        }
+      ],
+      "publicationStatus": "INVENTORY_REVIEW_REQUIRED",
+      "headingTree": {
+        "level": 1,
+        "text": "Open pan-Nigerian protocols and the 14 Local Government digital service standards",
+        "sourceBinding": "protocols.header.h1",
+        "children": [
+          {
+            "level": 2,
+            "text": "What do the NigeriaStack interoperability protocols specify?",
+            "answerId": "NS-ANSWER-06",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "How does NigeriaStack preserve evidence continuity across statutory registries?",
+            "answerId": "NS-ANSWER-07",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "How do NigeriaStack consent and agent-delegation protocols govern access?",
+            "answerId": "NS-ANSWER-08",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Browse pan-Nigerian interoperability protocols",
+            "answerId": null,
+            "source": "NS-KB-10; H2/H4 editorial candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Digital Evidence (SureEvidence)",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Governing RFC and version",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Schemas and conformance tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Personal Data Consent (ClearAm)",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Governing RFC and version",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Schemas and conformance tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Safe Asynchronous Exchange (Confluence)",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Governing RFC and version",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Schemas and conformance tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Open Commerce (MarketLink)",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Governing RFC and version",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Schemas and conformance tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Agent Delegation (GivePower)",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Governing RFC and version",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Schemas and conformance tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Offline Registries (KioskBase)",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Governing RFC and version",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Schemas and conformance tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Digital Statutes (LawTree)",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Governing RFC and version",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Schemas and conformance tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Local Government Digital Service Suite",
+            "answerId": null,
+            "source": "NS-RFC-014; lga-14-service-modules-spec.json; H2/H4 editorial candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "CouncilComplain",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "BuildClear",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "WashConnect",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "ShopPermit",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "VitalProof",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "IndigeneProof",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "SafetyNOC",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "WardWorks",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "TenementRate",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "MarketCollect",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "WardPHC",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "CouncilLedger",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "CustomaryDocket",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "StreetGrid",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Service authority and interface",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Module evidence and tests",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "route": "/rfcs",
+      "pageType": "canonical_section_index",
+      "existingH1FromNSKB12": "Nigeria Stack Open Standards Registry & Public Specifications (Plain-Language Overview on Left + Technical Schema Drawer on Right)",
+      "v2EditorialH1Candidate": "NigeriaStack RFCs: Specifications, Versions and Conformance",
+      "v2TitleCandidate": "NigeriaStack RFC Registry | Open Technical Specifications",
+      "v2MetaDescriptionCandidate": "Browse NigeriaStack RFCs, versioned specifications, schema contracts and the per-RFC governance, review and implementation statuses.",
+      "v2CanonicalUrlCandidate": "https://nigeriastack.org/rfcs",
+      "h1BindingStatus": "P0_SOURCE_PRECEDENCE_RECONCILIATION_REQUIRED",
+      "sections": [
+        {
+          "h2": "How are NigeriaStack RFC versions, approvals and implementations distinguished?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-09",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "How are statutory requirements distinguished from NigeriaStack technical specifications?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-10",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "Browse NS-RFC-001 to NS-RFC-014",
+          "h3": [
+            "{{rfc_id}} — {{rfc_title}}"
+          ],
+          "h4": [
+            "Version and lifecycle state",
+            "Schemas, test cases and public discussion"
+          ],
+          "origin": "NS-KB-12; IA candidate"
+        },
+        {
+          "h2": "How to implement a NigeriaStack RFC",
+          "h3": [
+            "Read the normative specification",
+            "Inspect machine-readable contracts",
+            "Run the relevant tests"
+          ],
+          "h4": [
+            "Conformance receipt reference",
+            "Open issue or review discussion"
+          ],
+          "origin": "IA candidate"
+        }
+      ],
+      "publicationStatus": "INVENTORY_REVIEW_REQUIRED",
+      "headingTree": {
+        "level": 1,
+        "text": "Nigeria Stack Open Standards Registry & Public Specifications (Plain-Language Overview on Left + Technical Schema Drawer on Right)",
+        "sourceBinding": "rfcs.header.h1",
+        "children": [
+          {
+            "level": 2,
+            "text": "How are NigeriaStack RFC versions, approvals and implementations distinguished?",
+            "answerId": "NS-ANSWER-09",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "How are statutory requirements distinguished from NigeriaStack technical specifications?",
+            "answerId": "NS-ANSWER-10",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Browse NS-RFC-001 to NS-RFC-014",
+            "answerId": null,
+            "source": "NS-KB-12; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "{{rfc_id}} — {{rfc_title}}",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Version and lifecycle state",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Schemas, test cases and public discussion",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "How to implement a NigeriaStack RFC",
+            "answerId": null,
+            "source": "IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Read the normative specification",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Conformance receipt reference",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Open issue or review discussion",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Inspect machine-readable contracts",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Conformance receipt reference",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Open issue or review discussion",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Run the relevant tests",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Conformance receipt reference",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Open issue or review discussion",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "route": "/conformance",
+      "pageType": "canonical_section_index",
+      "existingH1FromNSKB12": "National Interoperability Test Bed: Free browser-based verification and offline network testing",
+      "v2EditorialH1Candidate": "Verify Interoperability with NigeriaStack Conformance Tools",
+      "v2TitleCandidate": "NigeriaStack Interoperability Test Bed | Conformance",
+      "v2MetaDescriptionCandidate": "Explore executable interoperability tests, reference implementation results, test receipts and reproducible validation guidance.",
+      "v2CanonicalUrlCandidate": "https://nigeriastack.org/conformance",
+      "h1BindingStatus": "P0_SOURCE_PRECEDENCE_RECONCILIATION_REQUIRED",
+      "sections": [
+        {
+          "h2": "What has the NigeriaStack interoperability test bed verified?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-11",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "What is the difference between a conformance test and formal accreditation?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-12",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "Run interoperability verification suites",
+          "h3": [
+            "Digital evidence integrity",
+            "Consent and delegated permissions",
+            "Direct-treasury workflow rules",
+            "Asynchronous retries and offline resilience"
+          ],
+          "h4": [
+            "Input example",
+            "Expected result",
+            "Observed receipt and environment"
+          ],
+          "origin": "NS-KB-11; IA candidate"
+        },
+        {
+          "h2": "Inspect test coverage and receipts",
+          "h3": [
+            "Completed local reference tests",
+            "Unexecuted and unresolved scenarios",
+            "Reproducible run instructions"
+          ],
+          "h4": [
+            "Test ID and commit",
+            "Run date, environment and artifacts"
+          ],
+          "origin": "NS-KB-21 ledger; IA candidate"
+        }
+      ],
+      "publicationStatus": "INVENTORY_REVIEW_REQUIRED",
+      "headingTree": {
+        "level": 1,
+        "text": "National Interoperability Test Bed: Free browser-based verification and offline network testing",
+        "sourceBinding": "conformance.header.h1",
+        "children": [
+          {
+            "level": 2,
+            "text": "What has the NigeriaStack interoperability test bed verified?",
+            "answerId": "NS-ANSWER-11",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "What is the difference between a conformance test and formal accreditation?",
+            "answerId": "NS-ANSWER-12",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Run interoperability verification suites",
+            "answerId": null,
+            "source": "NS-KB-11; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Digital evidence integrity",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Input example",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Expected result",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Observed receipt and environment",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Consent and delegated permissions",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Input example",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Expected result",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Observed receipt and environment",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Direct-treasury workflow rules",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Input example",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Expected result",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Observed receipt and environment",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Asynchronous retries and offline resilience",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Input example",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Expected result",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Observed receipt and environment",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Inspect test coverage and receipts",
+            "answerId": null,
+            "source": "NS-KB-21 ledger; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Completed local reference tests",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test ID and commit",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Run date, environment and artifacts",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Unexecuted and unresolved scenarios",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test ID and commit",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Run date, environment and artifacts",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Reproducible run instructions",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test ID and commit",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Run date, environment and artifacts",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "route": "/atlas",
+      "pageType": "canonical_section_index",
+      "existingH1FromNSKB12": "Sub-National Digital Infrastructure Atlas: 36 States, FCT, and 774 Local Government Areas service readiness explorer",
+      "v2EditorialH1Candidate": "State and LGA Interoperability Atlas",
+      "v2TitleCandidate": "NigeriaStack State & LGA Interoperability Atlas",
+      "v2MetaDescriptionCandidate": "Navigate NigeriaStack’s state, FCT and 774-LGA registry, with research sources, standards coverage and separately recorded deployment evidence.",
+      "v2CanonicalUrlCandidate": "https://nigeriastack.org/atlas",
+      "h1BindingStatus": "P0_SOURCE_PRECEDENCE_RECONCILIATION_REQUIRED",
+      "sections": [
+        {
+          "h2": "What does the NigeriaStack 774-LGA registry and atlas cover?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-13",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "Browse the 36 states and FCT",
+          "h3": [
+            "State directory",
+            "Eight service-readiness dimensions"
+          ],
+          "h4": [
+            "{{state_name}} profile",
+            "Source, status and checked date"
+          ],
+          "origin": "NS-KB-03B; IA candidate"
+        },
+        {
+          "h2": "Browse the 774 local-government and area-council entries",
+          "h3": [
+            "Council directory by state",
+            "Municipal service module readiness"
+          ],
+          "h4": [
+            "{{lga_name}} profile",
+            "Registry entry versus deployment evidence"
+          ],
+          "origin": "NS-KB-03C; IA candidate"
+        }
+      ],
+      "publicationStatus": "INVENTORY_REVIEW_REQUIRED",
+      "headingTree": {
+        "level": 1,
+        "text": "Sub-National Digital Infrastructure Atlas: 36 States, FCT, and 774 Local Government Areas service readiness explorer",
+        "sourceBinding": "atlas.states.h1",
+        "children": [
+          {
+            "level": 2,
+            "text": "What does the NigeriaStack 774-LGA registry and atlas cover?",
+            "answerId": "NS-ANSWER-13",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Browse the 36 states and FCT",
+            "answerId": null,
+            "source": "NS-KB-03B; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "State directory",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{state_name}} profile",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Source, status and checked date",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Eight service-readiness dimensions",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{state_name}} profile",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Source, status and checked date",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Browse the 774 local-government and area-council entries",
+            "answerId": null,
+            "source": "NS-KB-03C; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Council directory by state",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{lga_name}} profile",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Registry entry versus deployment evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Municipal service module readiness",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "{{lga_name}} profile",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Registry entry versus deployment evidence",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "route": "/governance",
+      "pageType": "canonical_section_index",
+      "existingH1FromNSKB12": "Ecosystem governance, institutional safeguards framework, open public standards, and collaborative working groups",
+      "v2EditorialH1Candidate": "NigeriaStack Governance and Open-Commons Safeguards",
+      "v2TitleCandidate": "NigeriaStack Governance | Independence, Standards & FAQs",
+      "v2MetaDescriptionCandidate": "Read NigeriaStack’s ratified institutional charter, independence safeguards, working-group framework, governance information and FAQs.",
+      "v2CanonicalUrlCandidate": "https://nigeriastack.org/governance",
+      "h1BindingStatus": "P0_SOURCE_PRECEDENCE_RECONCILIATION_REQUIRED",
+      "sections": [
+        {
+          "h2": "How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-14",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "How can institutions contribute to and verify NigeriaStack specifications?",
+          "h3": [
+            "Source authority and scope",
+            "Related standards and documentation"
+          ],
+          "h4": [
+            "Applicable source references and verification status"
+          ],
+          "answerId": "NS-ANSWER-15",
+          "origin": "V2 exact H2; H3/H4 editorial candidates"
+        },
+        {
+          "h2": "The institutional charter and anti-capture safeguards",
+          "h3": [
+            "Authority-of-record boundaries",
+            "No regulatory or sovereign impersonation",
+            "Open standards and governance responsibilities"
+          ],
+          "h4": [
+            "Controlling clause and source link",
+            "Independence and conflict-of-interest controls"
+          ],
+          "origin": "NS-KB-01; IA candidate"
+        },
+        {
+          "h2": "Five tests of open-commons DPI",
+          "h3": [
+            "Exit",
+            "Code",
+            "Audit",
+            "Governance",
+            "Fork"
+          ],
+          "h4": [
+            "Test criteria",
+            "Published evidence or open issue"
+          ],
+          "origin": "NS-KB-01; IA candidate"
+        },
+        {
+          "h2": "Working groups and adoption playbooks",
+          "h3": [
+            "Working Groups WG-01 to WG-06",
+            "Implementation Playbooks A to E"
+          ],
+          "h4": [
+            "Charter and participation process",
+            "Decision logs and public outputs"
+          ],
+          "origin": "NS-KB-11; IA candidate"
+        },
+        {
+          "h2": "Frequently asked questions",
+          "h3": [
+            "Is NigeriaStack a Nigerian government agency?",
+            "Is NigeriaStack the same organization as India Stack?",
+            "Are NigeriaStack RFCs and its institutional charter governed by the same approval status?",
+            "Does NigeriaStack take over or centralize government master databases?",
+            "Does NigeriaStack operate as a payment processor or treasury?",
+            "How does SureEvidence support trustworthy digital records?",
+            "What does ClearAm provide for data consent and revocation?",
+            "Does the NigeriaStack atlas cover all 774 LGAs?",
+            "How does NigeriaStack address interoperability across 32 industries?",
+            "What can developers verify through the interoperability test bed?",
+            "How do NigeriaStack specifications accommodate citizens without smartphones?",
+            "Can institutions contribute to NigeriaStack standards and documentation?",
+            "Can developers reuse or implement NigeriaStack specifications?",
+            "Does mentioning a Nigerian technology provider imply endorsement?",
+            "Can NigeriaStack agent-delegation tools authorize changes to official records?"
+          ],
+          "h4": [],
+          "origin": "15 V2 governed FAQs; H3 placement candidate"
+        }
+      ],
+      "publicationStatus": "INVENTORY_REVIEW_REQUIRED",
+      "headingTree": {
+        "level": 1,
+        "text": "Ecosystem governance, institutional safeguards framework, open public standards, and collaborative working groups",
+        "sourceBinding": "governance.header.h1",
+        "children": [
+          {
+            "level": 2,
+            "text": "How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?",
+            "answerId": "NS-ANSWER-14",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "How can institutions contribute to and verify NigeriaStack specifications?",
+            "answerId": "NS-ANSWER-15",
+            "source": "V2 exact H2; H3/H4 editorial candidates",
+            "children": [
+              {
+                "level": 3,
+                "text": "Source authority and scope",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Related standards and documentation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Applicable source references and verification status",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "The institutional charter and anti-capture safeguards",
+            "answerId": null,
+            "source": "NS-KB-01; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Authority-of-record boundaries",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Controlling clause and source link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Independence and conflict-of-interest controls",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "No regulatory or sovereign impersonation",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Controlling clause and source link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Independence and conflict-of-interest controls",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Open standards and governance responsibilities",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Controlling clause and source link",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Independence and conflict-of-interest controls",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Five tests of open-commons DPI",
+            "answerId": null,
+            "source": "NS-KB-01; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Exit",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test criteria",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Published evidence or open issue",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Code",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test criteria",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Published evidence or open issue",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Audit",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test criteria",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Published evidence or open issue",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Governance",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test criteria",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Published evidence or open issue",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Fork",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Test criteria",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Published evidence or open issue",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Working groups and adoption playbooks",
+            "answerId": null,
+            "source": "NS-KB-11; IA candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Working Groups WG-01 to WG-06",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Charter and participation process",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Decision logs and public outputs",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              },
+              {
+                "level": 3,
+                "text": "Implementation Playbooks A to E",
+                "children": [
+                  {
+                    "level": 4,
+                    "textTemplate": "Charter and participation process",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  },
+                  {
+                    "level": 4,
+                    "textTemplate": "Decision logs and public outputs",
+                    "status": "EDITORIAL_CANDIDATE_NOT_APPROVED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "text": "Frequently asked questions",
+            "answerId": null,
+            "source": "15 V2 governed FAQs; H3 placement candidate",
+            "children": [
+              {
+                "level": 3,
+                "text": "Is NigeriaStack a Nigerian government agency?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Is NigeriaStack the same organization as India Stack?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Are NigeriaStack RFCs and its institutional charter governed by the same approval status?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Does NigeriaStack take over or centralize government master databases?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Does NigeriaStack operate as a payment processor or treasury?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "How does SureEvidence support trustworthy digital records?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "What does ClearAm provide for data consent and revocation?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Does the NigeriaStack atlas cover all 774 LGAs?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "How does NigeriaStack address interoperability across 32 industries?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "What can developers verify through the interoperability test bed?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "How do NigeriaStack specifications accommodate citizens without smartphones?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Can institutions contribute to NigeriaStack standards and documentation?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Can developers reuse or implement NigeriaStack specifications?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Does mentioning a Nigerian technology provider imply endorsement?",
+                "children": []
+              },
+              {
+                "level": 3,
+                "text": "Can NigeriaStack agent-delegation tools authorize changes to official records?",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "enumeratedModulePaths": [
+    {
+      "route": "/protocols/lga-governance-stack/lga-01-council-complain",
+      "moduleName": "CouncilComplain"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-02-build-clear",
+      "moduleName": "BuildClear"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-03-wash-connect",
+      "moduleName": "WashConnect"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-04-shop-permit",
+      "moduleName": "ShopPermit"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-05-vital-proof",
+      "moduleName": "VitalProof"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-06-indigene-proof",
+      "moduleName": "IndigeneProof"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-07-safety-noc",
+      "moduleName": "SafetyNOC"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-08-ward-works",
+      "moduleName": "WardWorks"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-09-tenement-rate",
+      "moduleName": "TenementRate"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-10-market-collect",
+      "moduleName": "MarketCollect"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-11-ward-phc",
+      "moduleName": "WardPHC"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-12-council-ledger",
+      "moduleName": "CouncilLedger"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-13-customary-docket",
+      "moduleName": "CustomaryDocket"
+    },
+    {
+      "route": "/protocols/lga-governance-stack/lga-14-street-grid",
+      "moduleName": "StreetGrid"
+    }
+  ],
+  "familyRecordCount": 879,
+  "expectedPotentialDocuments": 886,
+  "indexingRules": [
+    "xml sitemap covers only successfully rendered public indexable canonical URLs",
+    "each leaf uses unique resolved H1/title/description/canonical and breadcrumb",
+    "headings follow DOM tree not just visual typography",
+    "H4 occurs only under a valid H3 and when semantic subdivision exists",
+    "staging or unpublished pages are not treated as live"
+  ],
+  "conflictNote": "NS-KB-12 copy_slot-bound H1s differ from V2 metadata H1s. Do not overwrite either without authority-preserving P0 reconciliation.",
+  "sourceSnapshot": "GitHub source inspected November 17, 2026; reconcile current HEAD at implementation start."
+}

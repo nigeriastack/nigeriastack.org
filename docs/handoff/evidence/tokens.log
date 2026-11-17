@@ -1,0 +1,66 @@
+==================================================================
+[GATE NS-G5] Running Nigeria Stack Zero-Literal & Anti-Slop Audit
+==================================================================
+[✓ PASS] Found canonical W3C DTCG token source: /workspace/scratch/9d2277dd6412/nigeriastack-org/design-system/tokens/nigeriastack.dtcg.tokens.json
+[X FAIL] Hardcoded hex literal detected outside :root in /workspace/scratch/9d2277dd6412/nigeriastack-org/design-system/hifi-artboards/batch1-architecture-sectors-protocols-rfcs.html:
+9:      --ns-primitive-color-parchment-50: #F8FAF8;
+10:      --ns-primitive-color-sheet-0: #FFFFFF;
+11:      --ns-primitive-color-grid-subtle-100: #EEF3EF;
+12:      --ns-primitive-color-hairline-200: #D4DDD7;
+13:      --ns-primitive-color-control-border-500: #52665B;
+14:      --ns-primitive-color-slate-600: #3B4D44;
+15:      --ns-primitive-color-forest-ink-900: #0D1512;
+16:      --ns-primitive-color-terminal-panel-850: #13201B;
+17:      --ns-primitive-color-federal-green-600: #008751;
+18:      --ns-primitive-color-emerald-action-700: #0A5C36;
+19:      --ns-primitive-color-emerald-hover-800: #064226;
+20:      --ns-primitive-color-amber-draft-100: #FEF3C7;
+21:      --ns-primitive-color-amber-draft-800: #78350F;
+[X FAIL] Hardcoded hex literal detected outside :root in /workspace/scratch/9d2277dd6412/nigeriastack-org/design-system/hifi-artboards/batch2-conformance-atlas-governance.html:
+8:     --ns-primitive-color-parchment-50: #F8FAF8;
+9:     --ns-primitive-color-sheet-0: #FFFFFF;
+10:     --ns-primitive-color-grid-subtle-100: #EEF3EF;
+11:     --ns-primitive-color-hairline-200: #D4DDD7;
+12:     --ns-primitive-color-control-border-500: #52665B;
+13:     --ns-primitive-color-slate-600: #3B4D44;
+14:     --ns-primitive-color-forest-ink-900: #0D1512;
+15:     --ns-primitive-color-emerald-action-700: #0A5C36;
+16:     --ns-primitive-color-amber-draft-100: #FEF3C7;
+17:     --ns-primitive-color-amber-draft-800: #78350F;
+18:     --ns-primitive-color-crimson-quarantine-100: #FEE2E2;
+19:     --ns-primitive-color-crimson-quarantine-800: #7F1D1D;
+[X FAIL] Hardcoded hex literal detected outside :root in /workspace/scratch/9d2277dd6412/nigeriastack-org/apps/web/dist/client/index.html:
+10:      --ns-primitive-color-parchment-50: #F8FAF8;
+11:      --ns-primitive-color-sheet-0: #FFFFFF;
+12:      --ns-primitive-color-grid-subtle-100: #EEF3EF;
+13:      --ns-primitive-color-hairline-200: #D4DDD7;
+14:      --ns-primitive-color-control-border-500: #52665B;
+15:      --ns-primitive-color-slate-600: #3B4D44;
+16:      --ns-primitive-color-forest-ink-900: #0D1512;
+17:      --ns-primitive-color-terminal-panel-850: #13201B;
+18:      --ns-primitive-color-federal-green-600: #008751;
+19:      --ns-primitive-color-emerald-action-700: #0A5C36;
+20:      --ns-primitive-color-emerald-hover-800: #064226;
+21:      --ns-primitive-color-amber-draft-100: #FEF3C7;
+22:      --ns-primitive-color-amber-draft-800: #78350F;
+23:      --ns-primitive-color-crimson-quarantine-100: #FEE2E2;
+24:      --ns-primitive-color-crimson-quarantine-800: #7F1D1D;
+[X FAIL] Hardcoded hex literal detected outside :root in /workspace/scratch/9d2277dd6412/nigeriastack-org/apps/web/src/shell.html:
+10:      --ns-primitive-color-parchment-50: #F8FAF8;
+11:      --ns-primitive-color-sheet-0: #FFFFFF;
+12:      --ns-primitive-color-grid-subtle-100: #EEF3EF;
+13:      --ns-primitive-color-hairline-200: #D4DDD7;
+14:      --ns-primitive-color-control-border-500: #52665B;
+15:      --ns-primitive-color-slate-600: #3B4D44;
+16:      --ns-primitive-color-forest-ink-900: #0D1512;
+17:      --ns-primitive-color-terminal-panel-850: #13201B;
+18:      --ns-primitive-color-federal-green-600: #008751;
+19:      --ns-primitive-color-emerald-action-700: #0A5C36;
+20:      --ns-primitive-color-emerald-hover-800: #064226;
+21:      --ns-primitive-color-amber-draft-100: #FEF3C7;
+22:      --ns-primitive-color-amber-draft-800: #78350F;
+23:      --ns-primitive-color-crimson-quarantine-100: #FEE2E2;
+24:      --ns-primitive-color-crimson-quarantine-800: #7F1D1D;
+==================================================================
+[X GATE NS-G5 FAILED] 4 token or anti-slop violation(s) found.
+==================================================================

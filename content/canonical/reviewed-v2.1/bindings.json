@@ -1,0 +1,388 @@
+{
+  "schemaVersion": "NS-LOCAL-CONTENT-BINDINGS-v2.1",
+  "institutionalStatus": "2026.6-RATIFIED",
+  "institutionalStatusIndependentOfExecution": true,
+  "sourceCopies": [
+    {
+      "file": "faq.json",
+      "sourceSnapshot": "06-15-faq-review-candidate-1-.json",
+      "sourceSha256": "1f96dcbc9e475d6565ddb6d685da35447eda5acecd04568c42c7bb6dc11fb848",
+      "reviewedSha256": "8edc7ac3a5f656786f2a5803bfd9561e5f372e5fa92dd3d47bd50545a9463db1",
+      "decision": "APPROVED_LOCAL_COPY_WITH_RECORDED_ADJUSTMENTS"
+    },
+    {
+      "file": "answer-units.json",
+      "sourceSnapshot": "10-15-h2-answer-units-candidate-1-.json",
+      "sourceSha256": "84f54c7a6989302554aec7387672bae9928eacdd9d7f1e232d64ae07588fcf85",
+      "reviewedSha256": "7f045351c19ec6d9557f723e3271ea339e15986ebd41ed61a43c39ea39c5292e",
+      "decision": "APPROVED_LOCAL_COPY_WITH_RECORDED_ADJUSTMENTS"
+    },
+    {
+      "file": "seo-metadata.json",
+      "sourceSnapshot": "11-seo-route-metadata-candidate-1-.json",
+      "sourceSha256": "dfd9d98f7974dc466d53d991271450c940bfe2ea4c93b4c7089378680cd695bd",
+      "reviewedSha256": "3d331af7e4183c5a3ae68b8100b9bce0e122637cac19adbb01dc48f04c6f5773",
+      "decision": "APPROVED_LOCAL_COPY_WITH_RECORDED_ADJUSTMENTS"
+    },
+    {
+      "file": "jsonld-baseline.json",
+      "sourceSnapshot": "04-jsonld-organization-website-baseline.json",
+      "sourceSha256": "0a699c6a2a3e84d1a25e0e6d0e52abc50bcb39ceb67e406f888c52cda54145b2",
+      "reviewedSha256": "0a699c6a2a3e84d1a25e0e6d0e52abc50bcb39ceb67e406f888c52cda54145b2",
+      "decision": "APPROVED_LOCAL_COPY_WITH_RECORDED_ADJUSTMENTS"
+    },
+    {
+      "file": "full-ia-manifest.json",
+      "sourceSnapshot": "13-NigeriaStack_Full_IA_H1-H4_Route_Manifest_v2.1-1-1-.json",
+      "sourceSha256": "4353c12368fb570b70f227d23fe2cfb0473145bdd3c06f2b2de9b52b230124d8",
+      "reviewedSha256": "4353c12368fb570b70f227d23fe2cfb0473145bdd3c06f2b2de9b52b230124d8",
+      "decision": "SOURCE_MANIFEST_PRESERVED_CANDIDATE_STATUS_DECISIONS_IN_BINDINGS"
+    },
+    {
+      "file": "executive-tldr.json",
+      "sourceSnapshot": "07-first-200-word-executive-tldr-candidate.md",
+      "sourceSha256": "f0bee9135f0aa0fef0349aaef7e478d541aecb2cf78f0ce47831078d9a450959",
+      "reviewedSha256": "043856ccd868c48b58c6e41a0a8d204a695f8815207f1328369ba4f0d10a8f9c",
+      "decision": "APPROVED_LOCAL_COPY_PRESERVE_SOURCE_PROSE"
+    }
+  ],
+  "h1Bindings": [
+    {
+      "route": "/",
+      "copySlot": "home.hero.h1",
+      "approvedText": "Make Nigeria's digital systems work together without surrendering statutory authority, operational continuity, evidentiary integrity, or institutional independence",
+      "candidateText": "NigeriaStack — Independent Open Technical Specification and Conformance Commons",
+      "decision": "RETAIN_GOVERNED_SOURCE_H1",
+      "candidateDecision": "NOT_APPROVED_AS_H1_REPLACEMENT"
+    },
+    {
+      "route": "/sectors",
+      "copySlot": "sectors.header.h1",
+      "approvedText": "Whole-of-economy 32-industry digital capability directory and integration ledger",
+      "candidateText": "Interoperability Across 32 Nigerian Industries",
+      "decision": "RETAIN_GOVERNED_SOURCE_H1",
+      "candidateDecision": "NOT_APPROVED_AS_H1_REPLACEMENT"
+    },
+    {
+      "route": "/protocols",
+      "copySlot": "protocols.header.h1",
+      "approvedText": "Open pan-Nigerian protocols and the 14 Local Government digital service standards",
+      "candidateText": "NigeriaStack Interoperability Protocols",
+      "decision": "RETAIN_GOVERNED_SOURCE_H1",
+      "candidateDecision": "NOT_APPROVED_AS_H1_REPLACEMENT"
+    },
+    {
+      "route": "/rfcs",
+      "copySlot": "rfcs.header.h1",
+      "approvedText": "Nigeria Stack Open Standards Registry & Public Specifications (Plain-Language Overview on Left + Technical Schema Drawer on Right)",
+      "candidateText": "NigeriaStack RFCs: Specifications, Versions and Conformance",
+      "decision": "RETAIN_GOVERNED_SOURCE_H1",
+      "candidateDecision": "NOT_APPROVED_AS_H1_REPLACEMENT"
+    },
+    {
+      "route": "/conformance",
+      "copySlot": "conformance.header.h1",
+      "approvedText": "National Interoperability Test Bed: Free browser-based verification and offline network testing",
+      "candidateText": "Verify Interoperability with NigeriaStack Conformance Tools",
+      "decision": "RETAIN_GOVERNED_SOURCE_H1",
+      "candidateDecision": "NOT_APPROVED_AS_H1_REPLACEMENT"
+    },
+    {
+      "route": "/atlas",
+      "copySlot": "atlas.states.h1",
+      "approvedText": "Sub-National Digital Infrastructure Atlas: 36 States, FCT, and 774 Local Government Areas service readiness explorer",
+      "candidateText": "State and LGA Interoperability Atlas",
+      "decision": "RETAIN_GOVERNED_SOURCE_H1",
+      "candidateDecision": "NOT_APPROVED_AS_H1_REPLACEMENT"
+    },
+    {
+      "route": "/governance",
+      "copySlot": "governance.header.h1",
+      "approvedText": "Ecosystem governance, institutional safeguards framework, open public standards, and collaborative working groups",
+      "candidateText": "NigeriaStack Governance and Open-Commons Safeguards",
+      "decision": "RETAIN_GOVERNED_SOURCE_H1",
+      "candidateDecision": "NOT_APPROVED_AS_H1_REPLACEMENT"
+    }
+  ],
+  "answerCrosswalk": [
+    {
+      "answerId": "NS-ANSWER-01",
+      "route": "/",
+      "h2": "What is NigeriaStack, and how is its institutional independence defined?",
+      "relatedRagIds": [
+        "RAG-H2-01"
+      ],
+      "decision": "SHARED_SEMANTIC_SECTION_WITH_TRACEABLE_ALIASES",
+      "renderWithRagId": "RAG-H2-01",
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-02",
+      "route": "/",
+      "h2": "How does NigeriaStack complement operating digital public infrastructure?",
+      "relatedRagIds": [
+        "RAG-H2-02"
+      ],
+      "decision": "SHARED_SEMANTIC_SECTION_WITH_TRACEABLE_ALIASES",
+      "renderWithRagId": "RAG-H2-02",
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-03",
+      "route": "/sectors",
+      "h2": "Which digital interoperability problems recur across Nigeria’s 32 mapped industries?",
+      "relatedRagIds": [
+        "RAG-H2-04"
+      ],
+      "decision": "SHARED_SEMANTIC_SECTION_WITH_TRACEABLE_ALIASES",
+      "renderWithRagId": "RAG-H2-04",
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-04",
+      "route": "/sectors",
+      "h2": "Which interoperability needs are already served by existing Nigerian platforms?",
+      "relatedRagIds": [
+        "RAG-H2-05"
+      ],
+      "decision": "SHARED_SEMANTIC_SECTION_WITH_TRACEABLE_ALIASES",
+      "renderWithRagId": "RAG-H2-05",
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-05",
+      "route": "/sectors",
+      "h2": "How are residual interoperability opportunities evaluated?",
+      "relatedRagIds": [],
+      "decision": "ADDITIONAL_DISTINCT_H2",
+      "renderWithRagId": null,
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-06",
+      "route": "/protocols",
+      "h2": "What do the NigeriaStack interoperability protocols specify?",
+      "relatedRagIds": [],
+      "decision": "ADDITIONAL_DISTINCT_H2",
+      "renderWithRagId": null,
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-07",
+      "route": "/protocols",
+      "h2": "How does NigeriaStack preserve evidence continuity across statutory registries?",
+      "relatedRagIds": [
+        "RAG-H2-06"
+      ],
+      "decision": "DISTINCT_H2_WITH_RELATED_CANONICAL_REFERENCES",
+      "renderWithRagId": null,
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-08",
+      "route": "/protocols",
+      "h2": "How do NigeriaStack consent and agent-delegation protocols govern access?",
+      "relatedRagIds": [
+        "RAG-H2-07",
+        "RAG-H2-10"
+      ],
+      "decision": "DISTINCT_H2_WITH_RELATED_CANONICAL_REFERENCES",
+      "renderWithRagId": null,
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-09",
+      "route": "/rfcs",
+      "h2": "How are NigeriaStack RFC versions, approvals and implementations distinguished?",
+      "relatedRagIds": [],
+      "decision": "ADDITIONAL_DISTINCT_H2",
+      "renderWithRagId": null,
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-10",
+      "route": "/rfcs",
+      "h2": "How are statutory requirements distinguished from NigeriaStack technical specifications?",
+      "relatedRagIds": [],
+      "decision": "ADDITIONAL_DISTINCT_H2",
+      "renderWithRagId": null,
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-11",
+      "route": "/conformance",
+      "h2": "What has the NigeriaStack interoperability test bed verified?",
+      "relatedRagIds": [
+        "RAG-H2-14"
+      ],
+      "decision": "SHARED_SEMANTIC_SECTION_WITH_TRACEABLE_ALIASES",
+      "renderWithRagId": "RAG-H2-14",
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-12",
+      "route": "/conformance",
+      "h2": "What is the difference between a conformance test and formal accreditation?",
+      "relatedRagIds": [
+        "RAG-H2-14"
+      ],
+      "decision": "SHARED_SEMANTIC_SECTION_WITH_TRACEABLE_ALIASES",
+      "renderWithRagId": "RAG-H2-14",
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-13",
+      "route": "/atlas",
+      "h2": "What does the NigeriaStack 774-LGA registry and atlas cover?",
+      "relatedRagIds": [
+        "RAG-H2-15"
+      ],
+      "decision": "SHARED_SEMANTIC_SECTION_WITH_TRACEABLE_ALIASES",
+      "renderWithRagId": "RAG-H2-15",
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-14",
+      "route": "/governance",
+      "h2": "How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?",
+      "relatedRagIds": [],
+      "decision": "ADDITIONAL_DISTINCT_H2",
+      "renderWithRagId": null,
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    },
+    {
+      "answerId": "NS-ANSWER-15",
+      "route": "/governance",
+      "h2": "How can institutions contribute to and verify NigeriaStack specifications?",
+      "relatedRagIds": [],
+      "decision": "ADDITIONAL_DISTINCT_H2",
+      "renderWithRagId": null,
+      "status": "APPROVED_LOCAL_INTEGRATION"
+    }
+  ],
+  "ragBindings": [
+    {
+      "benchmarkId": "RAG-H2-01",
+      "route": "/",
+      "h2": "What is Nigeria Stack and how does it stay independent of government agencies and private vendors?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-02",
+      "route": "/",
+      "h2": "How do the five layers of the Nigeria Stack connect public registries and private sector apps without centralizing databases?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-03",
+      "route": "/",
+      "h2": "How does Nigeria Stack guarantee citizens' right to exit, open-source code, public audits, and self-hosting?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-04",
+      "route": "/sectors",
+      "h2": "What are the eight everyday digital bottlenecks slowing down Nigeria's 32 industries?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-05",
+      "route": "/sectors",
+      "h2": "How does Nigeria Stack work alongside existing Nigerian payment, identity, logistics, and health platforms?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-06",
+      "route": "/protocols/sure-evidence",
+      "h2": "How does SureEvidence make electronic court orders, land searches, and local council certificates admissible under Section 84 of the Evidence Act?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-07",
+      "route": "/protocols/clearam-consent",
+      "h2": "How does ClearAm let citizens and businesses control their data and revoke consent in under 60 seconds under the NDPA 2023?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-08",
+      "route": "/protocols/confluence-gateway",
+      "h2": "How does Confluence prevent double debits and duplicate filings when Nigerian mobile networks drop?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-09",
+      "route": "/protocols/marketlink-commerce",
+      "h2": "How do MarketLink, PassCargo, and AgriTrust help merchants, clearing agents, and smallholder farmers trade without monopoly fees?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-10",
+      "route": "/protocols/givepower-agents",
+      "h2": "How does GivePower keep AI assistants safe with mandatory human approval and protected micro-payments?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-11",
+      "route": "/protocols/kioskbase-registries",
+      "h2": "How does KioskBase keep local courts, primary health clinics, and council offices running during power and internet outages?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-12",
+      "route": "/protocols/lawtree-ast",
+      "h2": "How does LawTree publish up-to-date Nigerian federal and state laws with verified translations in Hausa, Yoruba, Igbo, and Pidgin?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-13",
+      "route": "/protocols/lga-governance-stack",
+      "h2": "How does the 774 Local Government Stack deliver constitutional municipal services and route revenue directly to local council treasuries?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-14",
+      "route": "/conformance",
+      "h2": "How can ministries, states, local councils, banks, and developers test and certify their systems for free in the browser?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    },
+    {
+      "benchmarkId": "RAG-H2-15",
+      "route": "/atlas",
+      "h2": "How does the Sub-National Readiness Atlas track digital public services across all 36 States, the FCT, and 774 Local Government Areas without fabricated rankings?",
+      "decision": "PRESERVE_CANONICAL_HEADING_AND_ROUTE",
+      "bodyDecision": "QUALIFY_IMPLEMENTATION_CLAIMS_USING_ACTUAL_LOCAL_EVIDENCE"
+    }
+  ],
+  "faqDecision": {
+    "legacyCollection": "audited-faq-nigeriastack-15.json",
+    "reviewedCollection": "faq.json",
+    "decision": "RENDER_REVIEWED_15_AT_GOVERNANCE_RETAIN_LEGACY_FOR_AUDIT",
+    "headingLevel": 3,
+    "parentHeading": "Frequently asked questions"
+  },
+  "potentialInventory": {
+    "roots": 7,
+    "familyRecordCount": 879,
+    "total": 886,
+    "meaning": "POTENTIAL_SOURCE_RECORDS_NOT_LIVE_URLS"
+  },
+  "executionEvidence": {
+    "receipt": "local-conformance-receipt.json",
+    "scope": "LOCAL_REFERENCE_SDK_ONLY",
+    "productionAccreditation": false
+  }
+}

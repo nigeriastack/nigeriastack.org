@@ -4,6 +4,7 @@
  * @normative NS-RFC-006 (ClearAm NDPA 2023 Consent Envelopes & <60s Revocation Gate)
  */
 export type ApprovedPurposeCode = "FIN-MSME-CREDIT-UNDERWRITING" | "LAW-LITIGATION-CLEARANCE" | "HLTH-PATIENT-RECORD-TRANSFER" | "EDU-DEGREE-VERIFICATION" | "AGRI-FARM-INPUT-FINANCING" | "LGA-INDIGENE-AND-VITAL-ATTESTATION";
+/** Local SDK helper DTO; distinct from the published v2026 JSON Schema wire envelope. */
 export interface ClearAmConsentEnvelope {
     consentId: string;
     dataPrincipal: {
@@ -37,3 +38,8 @@ export declare function validateClearAmEnvelope(params: {
     revokedConsentIds: ReadonlySet<string>;
     nowUtcIso?: string;
 }): ClearAmValidationResult;
+/** Run the provider query only after the perimeter gate accepts the envelope. */
+export declare function executeClearAmQuery<T>(params: Parameters<typeof validateClearAmEnvelope>[0], query: () => Promise<T>): Promise<{
+    validation: ClearAmValidationResult;
+    result?: T;
+}>;

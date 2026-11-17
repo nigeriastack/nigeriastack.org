@@ -1,0 +1,19 @@
+Scope: all 8 workspace projects
+✓ Lockfile passes supply-chain policies (verified 1m ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 3, reused 3, downloaded 0, added 0
+Progress: resolved 4, reused 3, downloaded 0, added 0
+Progress: resolved 6, reused 5, downloaded 0, added 0
+Progress: resolved 6, reused 6, downloaded 0, added 0
+Progress: resolved 7, reused 6, downloaded 0, added 0
+Progress: resolved 41, reused 40, downloaded 0, added 0
+Progress: resolved 92, reused 79, downloaded 0, added 0
+Progress: resolved 94, reused 81, downloaded 0, added 0
+Progress: resolved 95, reused 81, downloaded 0, added 0
+[WARN] 2 deprecated subdependencies found: rollup-plugin-inject@3.0.2, sourcemap-codec@1.4.8
+Already up to date
+Progress: resolved 228, reused 111, downloaded 2, added 0, done
+
+Done in 19.5s using pnpm v11.25.0
+$ node scripts/build.mjs && tsc --noEmit
+[BUILD] nigeriastack-org-portal built -> dist/client/index.html (28690 bytes gzipped)

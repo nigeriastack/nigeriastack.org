@@ -186,7 +186,7 @@ details.ns-faq-item {
    <button class="ns-btn" onclick="setViewport('1440px')" aria-pressed="true" id="vp-1440">[1440px Desktop]</button>
    <button class="ns-btn" onclick="setViewport('768px')" aria-pressed="false" id="vp-768">[768px Tablet]</button>
    <button class="ns-btn" onclick="setViewport('390px')" aria-pressed="false" id="vp-390">[390px Mobile]</button>
-   <button class="ns-btn" onclick="setViewport('320px')" aria-pressed="false" id="vp-320">[320px 2G Lite / 400% Zoom]</button>
+   <button class="ns-btn" onclick="setViewport('320px')" aria-pressed="false" id="vp-320">[320px reflow viewport]</button>
  </aside>
  <aside role="region" aria-label="Sovereign Non-Impersonation Notice" data-slot-id="ngstack.global.non_impersonation_banner" class="ns-non-impersonation-bar">
    <strong>[✓ OPEN STANDARDS COMMONS • CC0-1.0 PUBLIC DOMAIN]</strong>
@@ -446,7 +446,7 @@ details.ns-faq-item {
     <details class="ns-tech-drawer"><summary>View Bound RFCs &amp; Gates</summary><div>Bound RFCs: NS-RFC-010 | Bound Gates: Gate NS-G3</div></details>
   </details>
 </section>
-<!-- EMBEDDED NS-KB-19 4-VIEWPORT TELEMETRY INSPECTOR --><section id="ns-kb-19-telemetry" style="margin-top:32px;border:2px solid var(--ns-border-structural);padding:16px;background-color:var(--ns-surface-panel);"><h2 style="margin-top:0;">NS-KB-19 4-Viewport Telemetry Inspector (v2026.6.5)</h2><table class="ns-grid-table" role="grid" aria-label="Viewport Telemetry Report"><thead><tr><th>Viewport</th><th>Horizontal Overflow (px)</th><th>Tap Target Violations (&lt;44px)</th><th>Raw Hex Literals Outside Root</th><th>Craft Score</th></tr></thead><tbody><tr><td>1440px Desktop</td><td>0</td><td>0</td><td>0</td><td>97/100</td></tr><tr><td>768px Tablet</td><td>0</td><td>0</td><td>0</td><td>97/100</td></tr><tr><td>390px Mobile</td><td>0</td><td>0</td><td>0</td><td>97/100</td></tr><tr><td>320px 2G Lite / 400% Zoom</td><td>0</td><td>0</td><td>0</td><td>97/100</td></tr></tbody></table></section>
+<section id="ns-kb-19-telemetry"><h2>Viewport verification</h2><p>Browser measurements are pending. A 320 CSS-pixel viewport checks reflow; it does not measure browser zoom.</p></section>
 
   </main>  <script>
    function setViewport(size) {

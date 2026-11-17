@@ -177,3 +177,8 @@ https://nigeriastack.org/
 ### **Route 7 (/governance)**
 
 * **H1:** Ecosystem governance, institutional safeguards framework, open public standards, and collaborative working groups
+
+
+## v2.1 local implementation reconciliation — 17 November 2026
+
+The source hierarchy above remains controlling. [The P0 binding matrix](v2.1-binding-reconciliation.md) records the exact retained source H1 decisions, the distinct canonical RAG and Version 2 NS-ANSWER identities, governance FAQ placement, and the complete root/descendant IA inventory. Machine-readable decisions live in `content/canonical/reviewed-v2.1/bindings.json`. Institutional identity remains `2026.6-RATIFIED`; per-RFC lifecycle, local tests and deployment evidence remain separate. The 886 potential source-record pages are not a verified live URL count.

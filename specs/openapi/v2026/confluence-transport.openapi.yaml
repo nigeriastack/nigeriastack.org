@@ -30,47 +30,82 @@ components:
       schema:
         type: string
         pattern: '^[A-Za-z0-9_-]{86}$'
+    NgStackTimestamp:
+      name: X-NgStack-Timestamp-Utc
+      in: header
+      required: true
+      schema: { type: string, format: date-time }
+    NgStackKeyId:
+      name: X-NgStack-Key-Id
+      in: header
+      required: true
+      schema: { type: string, format: uri }
+    Sector:
+      name: sector
+      in: path
+      required: true
+      schema: { type: string, minLength: 1 }
+    Action:
+      name: action
+      in: path
+      required: true
+      schema: { type: string, minLength: 1 }
   schemas:
-    OperationLifecycleState:
-      type: string
-      enum:
-        - INITIATED
-        - ACCEPTED_PENDING
-        - UNKNOWN_TIMEOUT
-        - RESOLVED_SUCCESS
-        - RESOLVED_REVERSED
-        - FAILED_TERMINAL
     ConfluenceAsyncAck:
-      type: object
-      required: [operationId, customerReference, state, acceptedAtUtc]
-      properties:
-        operationId:
-          type: string
-          pattern: '^cop_[0-9A-HJKMNP-TV-Z]{26}$'
-        customerReference:
-          type: string
-        state:
-          $ref: '#/components/schemas/OperationLifecycleState'
-        acceptedAtUtc:
-          type: string
-          format: date-time
+      $ref: '../../schemas/json-schema-2020-12/ConfluenceAsyncEnvelope.schema.json'
 paths:
   /v1/{sector}/{action}:
     post:
       operationId: initiateConfluenceOperation
-      summary: Initiates an idempotent asynchronous operation across any of the 32 industries.
+      summary: Submit an operation using its original customer reference and idempotency key.
       parameters:
+        - $ref: '#/components/parameters/Sector'
+        - $ref: '#/components/parameters/Action'
         - $ref: '#/components/parameters/NgStackOperationId'
         - $ref: '#/components/parameters/NgStackIdempotencyKey'
+        - $ref: '#/components/parameters/NgStackTimestamp'
+        - $ref: '#/components/parameters/NgStackKeyId'
         - $ref: '#/components/parameters/NgStackSignatureEd25519'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [customerReference]
+              properties:
+                customerReference: { type: string, minLength: 1 }
       responses:
         '202':
-          description: Operation accepted for asynchronous execution; final outcome delivered via /on_{action} webhook.
+          description: Operation acknowledged for asynchronous processing.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ConfluenceAsyncAck'
         '403':
-          description: ClearAm consent token expired or out of scope (CLEARAM_ARTIFACT_EXPIRED).
+          description: ClearAm artifact expired or outside its scope.
         '409':
-          description: Unsafe retry blocked while original operation remains in UNKNOWN_TIMEOUT (UNRESOLVED_OPERATION_LOCK).
+          description: Retry rejected because the original operation remains unresolved.
+  /v1/{sector}/on_{action}:
+    post:
+      operationId: receiveConfluenceOutcome
+      summary: Deliver the signed operation outcome to the registered participant.
+      parameters:
+        - $ref: '#/components/parameters/Sector'
+        - $ref: '#/components/parameters/Action'
+        - $ref: '#/components/parameters/NgStackOperationId'
+        - $ref: '#/components/parameters/NgStackIdempotencyKey'
+        - $ref: '#/components/parameters/NgStackTimestamp'
+        - $ref: '#/components/parameters/NgStackKeyId'
+        - $ref: '#/components/parameters/NgStackSignatureEd25519'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfluenceAsyncAck'
+      responses:
+        '204':
+          description: Participant recorded the outcome.
+        '403':
+          description: Callback signature or sender authorization failed.

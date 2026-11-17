@@ -20,5 +20,12 @@
   "bin": {
     "conformance-cli": "./dist/cli.js",
     "@nigeriastack/conformance-cli": "./dist/cli.js"
+  },
+  "dependencies": {
+    "@nigeriastack/clearam-guard": "workspace:*",
+    "@nigeriastack/confluence-transport": "workspace:*",
+    "@nigeriastack/sure-evidence-crypto": "workspace:*",
+    "@nigeriastack/kioskbase-crdt": "workspace:*",
+    "@nigeriastack/lga-kiosk-kit": "workspace:*"
   }
 }

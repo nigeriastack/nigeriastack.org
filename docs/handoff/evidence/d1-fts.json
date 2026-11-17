@@ -1,0 +1,31 @@
+Proxy environment variables detected. We'll use your proxy for fetch requests.
+[
+  {
+    "results": [
+      {
+        "entity_type": "RFC",
+        "entity_id": "NS-RFC-001"
+      },
+      {
+        "entity_type": "RFC",
+        "entity_id": "NS-RFC-009"
+      },
+      {
+        "entity_type": "RFC",
+        "entity_id": "NS-RFC-014"
+      },
+      {
+        "entity_type": "INDUSTRY",
+        "entity_id": "IND-05"
+      },
+      {
+        "entity_type": "INDUSTRY",
+        "entity_id": "IND-06"
+      }
+    ],
+    "success": true,
+    "meta": {
+      "duration": 1
+    }
+  }
+]

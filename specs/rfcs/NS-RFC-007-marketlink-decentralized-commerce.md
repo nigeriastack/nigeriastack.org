@@ -8,7 +8,7 @@
 
 ## **2.1 Unbundling Buyer, Seller, and Logistics Networks**
 
-To prevent 20–30% aggregator commissions from excluding Nigerian MSMEs, independent kitchens (`IND-23`), retail merchants (`IND-11`), and interstate haulage fleets (IND-09), MarketLink decouples commerce into three independent, interoperable participant roles over Confluence asynchronous pairs:
+To support direct participation by Nigerian MSMEs, independent kitchens (`IND-23`), retail merchants (`IND-11`), and interstate haulage fleets (IND-09), MarketLink decouples commerce into three independent, interoperable participant roles over Confluence asynchronous pairs:
 
 1. **Buyer-Finder Node (`BFN`):** Consumer or B2B procurement interface broadcasting `/discover` queries.  
 2. **Merchant-Catalog Node (`MCN`):** Storefront, farm cooperative, or kitchen responding via `/on_discover`, `/quote`, `/on_quote`, `/order`, and `/on_order`.  

@@ -12,6 +12,7 @@ export type ApprovedPurposeCode =
   | "AGRI-FARM-INPUT-FINANCING"
   | "LGA-INDIGENE-AND-VITAL-ATTESTATION";
 
+/** Local SDK helper DTO; distinct from the published v2026 JSON Schema wire envelope. */
 export interface ClearAmConsentEnvelope {
   consentId: string;
   dataPrincipal: {
@@ -86,7 +87,7 @@ export function validateClearAmEnvelope(params: {
   }
   const nowMs = Date.parse(params.nowUtcIso ?? new Date().toISOString());
   const expiryMs = Date.parse(envelope.temporalBoundsAndExpiry.validUntilUtc);
-  if (Number.isNaN(expiryMs) || expiryMs < nowMs) {
+  if (!Number.isFinite(nowMs) || !Number.isFinite(expiryMs) || expiryMs <= nowMs) {
     return {
       allowed: false,
       httpStatus: 403,
@@ -107,4 +108,12 @@ export function validateClearAmEnvelope(params: {
     httpStatus: 200,
     zeroDatabaseQueriesExecuted: false,
   };
+}
+
+/** Run the provider query only after the perimeter gate accepts the envelope. */
+export async function executeClearAmQuery<T>(
+  params: Parameters<typeof validateClearAmEnvelope>[0], query: () => Promise<T>,
+): Promise<{ validation: ClearAmValidationResult; result?: T }> {
+  const validation = validateClearAmEnvelope(params);
+  return validation.allowed ? { validation, result: await query() } : { validation };
 }

@@ -1,0 +1,24 @@
+{
+  "sqliteVersion": "3.53.1",
+  "seedSha256": "61b60eb436c13f313dbb6b610633f414fe94fcff5b476724c10f2d6badba8638",
+  "rowCounts": {
+    "normative_rfcs": 14,
+    "industry_capability_ledger": 32,
+    "subnational_state_atlas": 37,
+    "constitutional_lga_774_registry": 774,
+    "lga_service_modules_14": 14,
+    "daily_merkle_audit_roots": 0,
+    "ngstack_global_search_fts": 901
+  },
+  "logicalIdempotence": true,
+  "foreignKeyCheck": "PASS",
+  "integrityCheck": "ok",
+  "seedMirrorsIdentical": true,
+  "unknownReadinessCells": 296,
+  "mutationChecks": [
+    "assessed status without sources/date rejected",
+    "missing cell provenance rejected",
+    "portal discovery cannot establish readiness",
+    "unknown cell with invented observation rejected"
+  ]
+}

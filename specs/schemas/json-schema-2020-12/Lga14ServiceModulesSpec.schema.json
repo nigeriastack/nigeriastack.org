@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/Lga14ServiceModulesSpec.schema.json",
+  "title": "Lga14ServiceModulesSpec",
+  "type": "object",
+  "required": [
+    "$schema",
+    "specId",
+    "governingRfc",
+    "modules"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://nigeriastack.org/schemas/v2026/Lga14ServiceModulesSpec.schema.json"
+    },
+    "specId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "governingRfc": {
+      "const": "NS-RFC-014"
+    },
+    "modules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "moduleId",
+          "canonicalName",
+          "route",
+          "fourthScheduleMandate",
+          "channels",
+          "buildingBlocks",
+          "stateMachine",
+          "claimReview"
+        ],
+        "properties": {
+          "moduleId": {
+            "type": "string",
+            "pattern": "^LGA-(0[1-9]|1[0-4])$"
+          },
+          "canonicalName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "route": {
+            "type": "string",
+            "pattern": "^/protocols/lga-governance-stack/lga-[0-9]{2}-.+$"
+          },
+          "fourthScheduleMandate": {
+            "type": "string",
+            "minLength": 1
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "buildingBlocks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "stateMachine": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "claimReview": {
+            "type": "object"
+          }
+        }
+      },
+      "minItems": 14,
+      "maxItems": 14
+    }
+  }
+}

@@ -24,4 +24,18 @@ export declare function validateLgaTreasuryInvariance(envelope: LgaGovernanceSer
     httpStatus: 200 | 422;
     errorCode?: "INVALID_CONSTITUTIONAL_LGA_CODE" | "TREASURY_PASSTHROUGH_INVARIANCE_BREACH";
 };
+/** Illustrative menu only; the legacy function name does not identify an allocated shortcode. */
 export declare function renderUssd347Menu(locale?: "en-NG" | "ha-NG" | "yo-NG" | "ig-NG" | "pcm-NG"): string;
+/** Local routing plan using a caller-supplied trusted account registry; no transfer is executed. */
+export declare function planDirectTreasuryRouting(envelope: LgaGovernanceServiceEnvelope, verifiedTreasuryAccounts: ReadonlyMap<string, string>): {
+    valid: false;
+    httpStatus: 422;
+    errorCode: string;
+} | {
+    valid: true;
+    httpStatus: 200;
+    transfers: {
+        accountRef: string;
+        amountKobo: number;
+    }[];
+};

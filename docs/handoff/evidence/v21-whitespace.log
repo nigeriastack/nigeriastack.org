@@ -1,0 +1,82 @@
+apps/web/scripts/seed-d1-from-canonical-json.sql:112: trailing whitespace.
++* `X-NgStack-Signature-Ed25519`: Base64URL-encoded Ed25519 signature over `CanonicalJSON(unsigned headers + body)`.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:139: trailing whitespace.
++* `X-NgStack-Signature-Ed25519`: Base64URL-encoded Ed25519 signature over `CanonicalJSON(unsigned headers + body)`.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:286: trailing whitespace.
++2. **`lawfulBasisAndPurpose` (project purpose declaration):**  
+apps/web/scripts/seed-d1-from-canonical-json.sql:288: trailing whitespace.
++   * `purposeCode`: Must match a registered template in the repository’s `specs/clearam-templates/clearam-template-catalog.json` (e.g., `FIN-MSME-CREDIT-UNDERWRITING`, `LAW-LITIGATION-CLEARANCE`, `HLTH-PATIENT-RECORD-TRANSFER`, `EDU-DEGREE-VERIFICATION`, `AGRI-FARM-INPUT-FINANCING`, `LGA-INDIGENE-AND-VITAL-ATTESTATION`).  
+apps/web/scripts/seed-d1-from-canonical-json.sql:290: trailing whitespace.
++   * Explicit allow-list of target `providerCategory` nodes and field-level `permittedScopes` (e.g., `["CASHFLOW_SUMMARY_90D"]` for the finance template).  
+apps/web/scripts/seed-d1-from-canonical-json.sql:292: trailing whitespace.
++   * `issuedAtUtc`, `validUntilUtc`, `maxRetentionDays`, and the mandatory expiry rejection action. Gateways may also impose a query-frequency limit.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:317: trailing whitespace.
++2. **`lawfulBasisAndPurpose` (project purpose declaration):**  
+apps/web/scripts/seed-d1-from-canonical-json.sql:319: trailing whitespace.
++   * `purposeCode`: Must match a registered template in the repository’s `specs/clearam-templates/clearam-template-catalog.json` (e.g., `FIN-MSME-CREDIT-UNDERWRITING`, `LAW-LITIGATION-CLEARANCE`, `HLTH-PATIENT-RECORD-TRANSFER`, `EDU-DEGREE-VERIFICATION`, `AGRI-FARM-INPUT-FINANCING`, `LGA-INDIGENE-AND-VITAL-ATTESTATION`).  
+apps/web/scripts/seed-d1-from-canonical-json.sql:321: trailing whitespace.
++   * Explicit allow-list of target `providerCategory` nodes and field-level `permittedScopes` (e.g., `["CASHFLOW_SUMMARY_90D"]` for the finance template).  
+apps/web/scripts/seed-d1-from-canonical-json.sql:323: trailing whitespace.
++   * `issuedAtUtc`, `validUntilUtc`, `maxRetentionDays`, and the mandatory expiry rejection action. Gateways may also impose a query-frequency limit.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:390: trailing whitespace.
++2. **Guardrail 2 — Cryptographic Human Countersignature (GivePower design requirement):** Any state-mutating agent action (initiating a funds transfer, lodging a court filing, modifying a registry record, or granting consent) MUST include a non-expired `humanCountersignatureEd25519` signed by the delegating human principal''s FIDO2/WebAuthn key over the exact action parameters.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:413: trailing whitespace.
++2. **Guardrail 2 — Cryptographic Human Countersignature (GivePower design requirement):** Any state-mutating agent action (initiating a funds transfer, lodging a court filing, modifying a registry record, or granting consent) MUST include a non-expired `humanCountersignatureEd25519` signed by the delegating human principal''s FIDO2/WebAuthn key over the exact action parameters.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:437: trailing whitespace.
++   * `statutoryPrincipalSplit`: `100%` of the statutory fee schedule routed directly to the account independently verified for this beneficiary and revenue stream.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:457: trailing whitespace.
++   * `statutoryPrincipalSplit`: `100%` of the statutory fee schedule routed directly to the account independently verified for this beneficiary and revenue stream.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:511: trailing whitespace.
++1. **Mandatory `ClearAm` Sensitive-Data Gate:** No hospital EMR, HMO, pharmacy, or diagnostic lab MAY exchange patient summaries, e-prescriptions (`eRx`), or NHIA/HMO e-claims without a valid `ClearAm` token (`clm_` ULID) carrying `purposeCode: "HLTH-PATIENT-RECORD-TRANSFER"`. Emergency or other non-consent exchange requires a separately authorized profile outside this catalog.  
+apps/web/scripts/seed-d1-from-canonical-json.sql:532: trailing whitespace.
++1. **Mandatory `ClearAm` Sensitive-Data Gate:** No hospital EMR, HMO, pharmacy, or diagnostic lab MAY exchange patient summaries, e-prescriptions (`eRx`), or NHIA/HMO e-claims without a valid `ClearAm` token (`clm_` ULID) carrying `purposeCode: "HLTH-PATIENT-RECORD-TRANSFER"`. Emergency or other non-consent exchange requires a separately authorized profile outside this catalog.  
+docs/design-system/DESIGN.md:193: trailing whitespace.
++1. **Aesthetic Direction:** Swiss Technical Specification Blueprint (`IETF Datatracker` \+ `W3C TR` \+ `GOV.UK / USWDS` tabular clarity) anchored in **Sovereign Parchment (`#F8FAF8`)**, **Archival Forest Ink (`#0D1512`, `17.67:1` AAA)**, and **Deep Emerald Action (`#0A5C36`, `8.09:1` AAA)**.  
+scripts/seed-d1-from-canonical-json.sql:112: trailing whitespace.
++* `X-NgStack-Signature-Ed25519`: Base64URL-encoded Ed25519 signature over `CanonicalJSON(unsigned headers + body)`.  
+scripts/seed-d1-from-canonical-json.sql:139: trailing whitespace.
++* `X-NgStack-Signature-Ed25519`: Base64URL-encoded Ed25519 signature over `CanonicalJSON(unsigned headers + body)`.  
+scripts/seed-d1-from-canonical-json.sql:286: trailing whitespace.
++2. **`lawfulBasisAndPurpose` (project purpose declaration):**  
+scripts/seed-d1-from-canonical-json.sql:288: trailing whitespace.
++   * `purposeCode`: Must match a registered template in the repository’s `specs/clearam-templates/clearam-template-catalog.json` (e.g., `FIN-MSME-CREDIT-UNDERWRITING`, `LAW-LITIGATION-CLEARANCE`, `HLTH-PATIENT-RECORD-TRANSFER`, `EDU-DEGREE-VERIFICATION`, `AGRI-FARM-INPUT-FINANCING`, `LGA-INDIGENE-AND-VITAL-ATTESTATION`).  
+scripts/seed-d1-from-canonical-json.sql:290: trailing whitespace.
++   * Explicit allow-list of target `providerCategory` nodes and field-level `permittedScopes` (e.g., `["CASHFLOW_SUMMARY_90D"]` for the finance template).  
+scripts/seed-d1-from-canonical-json.sql:292: trailing whitespace.
++   * `issuedAtUtc`, `validUntilUtc`, `maxRetentionDays`, and the mandatory expiry rejection action. Gateways may also impose a query-frequency limit.  
+scripts/seed-d1-from-canonical-json.sql:317: trailing whitespace.
++2. **`lawfulBasisAndPurpose` (project purpose declaration):**  
+scripts/seed-d1-from-canonical-json.sql:319: trailing whitespace.
++   * `purposeCode`: Must match a registered template in the repository’s `specs/clearam-templates/clearam-template-catalog.json` (e.g., `FIN-MSME-CREDIT-UNDERWRITING`, `LAW-LITIGATION-CLEARANCE`, `HLTH-PATIENT-RECORD-TRANSFER`, `EDU-DEGREE-VERIFICATION`, `AGRI-FARM-INPUT-FINANCING`, `LGA-INDIGENE-AND-VITAL-ATTESTATION`).  
+scripts/seed-d1-from-canonical-json.sql:321: trailing whitespace.
++   * Explicit allow-list of target `providerCategory` nodes and field-level `permittedScopes` (e.g., `["CASHFLOW_SUMMARY_90D"]` for the finance template).  
+scripts/seed-d1-from-canonical-json.sql:323: trailing whitespace.
++   * `issuedAtUtc`, `validUntilUtc`, `maxRetentionDays`, and the mandatory expiry rejection action. Gateways may also impose a query-frequency limit.  
+scripts/seed-d1-from-canonical-json.sql:390: trailing whitespace.
++2. **Guardrail 2 — Cryptographic Human Countersignature (GivePower design requirement):** Any state-mutating agent action (initiating a funds transfer, lodging a court filing, modifying a registry record, or granting consent) MUST include a non-expired `humanCountersignatureEd25519` signed by the delegating human principal''s FIDO2/WebAuthn key over the exact action parameters.  
+scripts/seed-d1-from-canonical-json.sql:413: trailing whitespace.
++2. **Guardrail 2 — Cryptographic Human Countersignature (GivePower design requirement):** Any state-mutating agent action (initiating a funds transfer, lodging a court filing, modifying a registry record, or granting consent) MUST include a non-expired `humanCountersignatureEd25519` signed by the delegating human principal''s FIDO2/WebAuthn key over the exact action parameters.  
+scripts/seed-d1-from-canonical-json.sql:437: trailing whitespace.
++   * `statutoryPrincipalSplit`: `100%` of the statutory fee schedule routed directly to the account independently verified for this beneficiary and revenue stream.  
+scripts/seed-d1-from-canonical-json.sql:457: trailing whitespace.
++   * `statutoryPrincipalSplit`: `100%` of the statutory fee schedule routed directly to the account independently verified for this beneficiary and revenue stream.  
+scripts/seed-d1-from-canonical-json.sql:511: trailing whitespace.
++1. **Mandatory `ClearAm` Sensitive-Data Gate:** No hospital EMR, HMO, pharmacy, or diagnostic lab MAY exchange patient summaries, e-prescriptions (`eRx`), or NHIA/HMO e-claims without a valid `ClearAm` token (`clm_` ULID) carrying `purposeCode: "HLTH-PATIENT-RECORD-TRANSFER"`. Emergency or other non-consent exchange requires a separately authorized profile outside this catalog.  
+scripts/seed-d1-from-canonical-json.sql:532: trailing whitespace.
++1. **Mandatory `ClearAm` Sensitive-Data Gate:** No hospital EMR, HMO, pharmacy, or diagnostic lab MAY exchange patient summaries, e-prescriptions (`eRx`), or NHIA/HMO e-claims without a valid `ClearAm` token (`clm_` ULID) carrying `purposeCode: "HLTH-PATIENT-RECORD-TRANSFER"`. Emergency or other non-consent exchange requires a separately authorized profile outside this catalog.  
+specs/rfcs/NS-RFC-002-confluence-signed-async-transport.md:22: trailing whitespace.
++* `X-NgStack-Signature-Ed25519`: Base64URL-encoded Ed25519 signature over `CanonicalJSON(unsigned headers + body)`.  
+specs/rfcs/NS-RFC-006-clearam-consent-envelopes.md:16: trailing whitespace.
++2. **`lawfulBasisAndPurpose` (project purpose declaration):**  
+specs/rfcs/NS-RFC-006-clearam-consent-envelopes.md:18: trailing whitespace.
++   * `purposeCode`: Must match a registered template in the repository’s `specs/clearam-templates/clearam-template-catalog.json` (e.g., `FIN-MSME-CREDIT-UNDERWRITING`, `LAW-LITIGATION-CLEARANCE`, `HLTH-PATIENT-RECORD-TRANSFER`, `EDU-DEGREE-VERIFICATION`, `AGRI-FARM-INPUT-FINANCING`, `LGA-INDIGENE-AND-VITAL-ATTESTATION`).  
+specs/rfcs/NS-RFC-006-clearam-consent-envelopes.md:20: trailing whitespace.
++   * Explicit allow-list of target `providerCategory` nodes and field-level `permittedScopes` (e.g., `["CASHFLOW_SUMMARY_90D"]` for the finance template).  
+specs/rfcs/NS-RFC-006-clearam-consent-envelopes.md:22: trailing whitespace.
++   * `issuedAtUtc`, `validUntilUtc`, `maxRetentionDays`, and the mandatory expiry rejection action. Gateways may also impose a query-frequency limit.  
+specs/rfcs/NS-RFC-008-givepower-agent-delegation-protocol.md:14: trailing whitespace.
++2. **Guardrail 2 — Cryptographic Human Countersignature (GivePower design requirement):** Any state-mutating agent action (initiating a funds transfer, lodging a court filing, modifying a registry record, or granting consent) MUST include a non-expired `humanCountersignatureEd25519` signed by the delegating human principal's FIDO2/WebAuthn key over the exact action parameters.  
+specs/rfcs/NS-RFC-009-treasury-passthrough-invariance.md:15: trailing whitespace.
++   * `statutoryPrincipalSplit`: `100%` of the statutory fee schedule routed directly to the account independently verified for this beneficiary and revenue stream.  
+specs/rfcs/NS-RFC-011-ndhx-fhir-health-data-profile.md:11: trailing whitespace.
++1. **Mandatory `ClearAm` Sensitive-Data Gate:** No hospital EMR, HMO, pharmacy, or diagnostic lab MAY exchange patient summaries, e-prescriptions (`eRx`), or NHIA/HMO e-claims without a valid `ClearAm` token (`clm_` ULID) carrying `purposeCode: "HLTH-PATIENT-RECORD-TRANSFER"`. Emergency or other non-consent exchange requires a separately authorized profile outside this catalog.  
