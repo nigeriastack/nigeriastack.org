@@ -1,0 +1,204 @@
+[
+  {
+    "id": "NS-ANSWER-01",
+    "route": "/",
+    "h2": "What is NigeriaStack, and how is its institutional independence defined?",
+    "leadAnswer": "NigeriaStack is an independent, Nigerian-designed, whole-of-economy open specification and conformance commons. Its ratified institutional charter defines governance and separation from statutory agencies, payment operators and proprietary marketplaces. This identity is distinct from the individual maturity and testing status of its technical components.",
+    "wordCount": 42,
+    "sourceIds": [
+      "NS-KB-01"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-02",
+    "route": "/",
+    "h2": "How does NigeriaStack complement operating digital public infrastructure?",
+    "leadAnswer": "NigeriaStack develops open interoperability specifications, reference implementations and conformance resources that complement existing statutory registries and operational providers. Institutions retain their own mandates and records. Technical integrations are assessed individually for interoperability, deployment coverage and evidence continuity.",
+    "wordCount": 37,
+    "sourceIds": [
+      "NS-KB-01",
+      "NS-KB-21"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-03",
+    "route": "/sectors",
+    "h2": "Which digital interoperability problems recur across Nigeria’s 32 mapped industries?",
+    "leadAnswer": "NigeriaStack maps recurring access, coverage, semantic, workflow, provenance, offline, procurement and implementation challenges across 32 industries. The capability ledger distinguishes existing solutions from residual opportunities and links each assessment to supporting research and its verification status.",
+    "wordCount": 36,
+    "sourceIds": [
+      "NS-KB-03A"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-04",
+    "route": "/sectors",
+    "h2": "Which interoperability needs are already served by existing Nigerian platforms?",
+    "leadAnswer": "Nigerian statutory authorities, banks, fintechs, logistics providers and other operators already deliver critical digital services. NigeriaStack complements these ecosystems by documenting cross-provider interfaces, evidence requirements and reusable specifications rather than duplicating existing operational services.",
+    "wordCount": 34,
+    "sourceIds": [
+      "NS-KB-03A"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-05",
+    "route": "/sectors",
+    "h2": "How are residual interoperability opportunities evaluated?",
+    "leadAnswer": "NigeriaStack evaluates opportunities against statutory source authority, independent institutional demand, documented cross-provider friction, existing alternatives and achievable conformance. This process helps prioritize interoperability standards where the evidence indicates a shared unresolved need.",
+    "wordCount": 32,
+    "sourceIds": [
+      "NS-KB-03A",
+      "NS-KB-01"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-06",
+    "route": "/protocols",
+    "h2": "What do the NigeriaStack interoperability protocols specify?",
+    "leadAnswer": "NigeriaStack’s protocol portfolio specifies interoperable approaches to asynchronous exchange, consent, verifiable evidence, commerce, agent delegation and offline-first registries. Each protocol links its governing RFC, schemas, implementation guidance and relevant conformance tests. Version and approval status are stated per specification, without changing NigeriaStack’s institutional identity.",
+    "wordCount": 44,
+    "sourceIds": [
+      "NS-KB-02",
+      "NS-KB-21"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-07",
+    "route": "/protocols",
+    "h2": "How does NigeriaStack preserve evidence continuity across statutory registries?",
+    "leadAnswer": "SureEvidence and related specifications describe provenance references, issuer authority, cryptographic integrity, timestamps and audit trails while preserving the statutory custodian as authority of record. Each deployment must establish its own lawful access, evidence handling and applicable legal requirements.",
+    "wordCount": 38,
+    "sourceIds": [
+      "NS-RFC-005"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-08",
+    "route": "/protocols",
+    "h2": "How do NigeriaStack consent and agent-delegation protocols govern access?",
+    "leadAnswer": "ClearAm defines scoped consent envelopes and revocation evidence, while GivePower addresses delegated agent permissions, human approval and auditability. These technical controls support accountable interoperability; operational implementations must still satisfy their applicable data-protection and institutional requirements.",
+    "wordCount": 35,
+    "sourceIds": [
+      "NS-RFC-006",
+      "NS-RFC-008"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-09",
+    "route": "/rfcs",
+    "h2": "How are NigeriaStack RFC versions, approvals and implementations distinguished?",
+    "leadAnswer": "NigeriaStack separates its ratified institutional charter from the lifecycle of individual RFCs. The RFC registry should show version, status, governance decision, linked evidence, tests and implementation references so readers can distinguish specifications, tested implementations and adopted deployments.",
+    "wordCount": 37,
+    "sourceIds": [
+      "NS-KB-01",
+      "NS-KB-21"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-10",
+    "route": "/rfcs",
+    "h2": "How are statutory requirements distinguished from NigeriaStack technical specifications?",
+    "leadAnswer": "NigeriaStack’s content-precedence charter places constitutional and statutory authority above technical specifications, datasets and interface copy. Pages should cite primary legal sources, preserve jurisdiction and verification dates, and label technical interpretations separately from authoritative legal text.",
+    "wordCount": 35,
+    "sourceIds": [
+      "NS-KB-12"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-11",
+    "route": "/conformance",
+    "h2": "What has the NigeriaStack interoperability test bed verified?",
+    "leadAnswer": "The local reference receipt records five passing executable scenarios, ITB-01 through ITB-05, covering 24 Gherkin steps. These checks exercise SDK fixtures in a local process. They do not establish production deployment, statutory approval or formal accreditation.",
+    "wordCount": 36,
+    "sourceIds": [
+      "NS-KB-21",
+      "NS-COMPLETION-LEDGER-2026-11-17"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-12",
+    "route": "/conformance",
+    "h2": "What is the difference between a conformance test and formal accreditation?",
+    "leadAnswer": "A reproducible conformance test demonstrates that the stated checks passed in a recorded environment. Formal accreditation, statutory approval and deployed service performance are separate determinations. NigeriaStack can report verified test results without conflating these distinctions.",
+    "wordCount": 35,
+    "sourceIds": [
+      "NS-KB-21"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-13",
+    "route": "/atlas",
+    "h2": "What does the NigeriaStack 774-LGA registry and atlas cover?",
+    "leadAnswer": "NigeriaStack maintains research and reference records covering 36 states, the Federal Capital Territory and 774 local-government or area-council entries. The atlas separates documented jurisdiction coverage from evidence of individual service deployments, integrations and local operating conditions.",
+    "wordCount": 36,
+    "sourceIds": [
+      "NS-KB-03A",
+      "NS-COMPLETION-LEDGER-2026-11-17"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-14",
+    "route": "/governance",
+    "h2": "How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?",
+    "leadAnswer": "NigeriaStack is an independent Nigerian open specifications and conformance commons. India Stack spans DPI frameworks and products; GovStack emphasizes reusable building-block specifications; X-Road provides secure data-exchange software; and Diia operates government digital services. These are peer reference models with different institutional functions.",
+    "wordCount": 42,
+    "sourceIds": [
+      "NS-KB-01"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  },
+  {
+    "id": "NS-ANSWER-15",
+    "route": "/governance",
+    "h2": "How can institutions contribute to and verify NigeriaStack specifications?",
+    "leadAnswer": "Institutions can examine the published governance charter, RFCs, issue histories, source datasets and conformance artifacts to assess interoperability requirements and propose improvements. Participation and acceptance are governed by the applicable documented process, with review evidence and decisions traceable to the relevant specification.",
+    "wordCount": 42,
+    "sourceIds": [
+      "NS-KB-01"
+    ],
+    "claimStatus": "LOCAL_COPY_REVIEW_APPROVED",
+    "verifiedAt": null,
+    "publishedAt": null
+  }
+]

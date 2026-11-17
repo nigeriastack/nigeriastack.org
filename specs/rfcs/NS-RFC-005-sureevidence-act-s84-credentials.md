@@ -6,22 +6,14 @@
 * **Statutory Anchor:** Evidence Act 2011, Section 84(1)–(4) & Section 106; W3C Verifiable Credentials Data Model 2.0.  
 * **Target Gap Mechanism:** `MECH-05` (Trust & Evidentiary Provenance Gap)
 
-## **5.1 Mandatory Section 84(4) Certificate Structure**
+## 5.1 Certificate and verification scope
 
-To prevent electronic printouts, Certified True Copies (CTCs), tax receipts, medical claims, land search certificates, or LGA Indigene certificates (IndigeneProof) from being rejected in Nigerian courts under Section 84 of the Evidence Act 2011, every `SureEvidence` credential (`s84_` ULID) MUST embed three normative blocks:
+Section 84 of the Evidence Act 2011, as amended in 2023, addresses computer-generated statements. A section 84(4) certificate identifies the document, explains its production, describes relevant devices and addresses applicable operating conditions. A responsible person supplies the certification. Courts assess admissibility in the circumstances of the proceeding. [Evidence Act 2011, s. 84](https://www.wipo.int/wipolex/en/legislation/details/22677) · [Evidence (Amendment) Act 2023](https://www.wipo.int/wipolex/en/legislation/details/22678)
 
-1. **`issuingAuthority`:** `jurisdictionSlug` (e.g., `highcourt.lagosstate.gov.ng` or `amac.fct.gov.ng`), `divisionOrDepartment`, `certifyingOfficerName`, `certifyingOfficerRole`, and `fido2KeyId`.  
-2. **`deviceRegularityAttestation` (Section 84(2) & (4) Compliance):**  
-   * `hardwareFingerprintSha256`: 64-char hex digest of the certifying workstation/HSM.  
-   * `operatingConditionState`: `"NORMAL_CONTINUOUS_OPERATION"` or `"RECOVERED_OFFLINE_SYNC"`.  
-   * `monotonicSealCounter`: Strictly increasing integer per hardware key.  
-   * `clockSyncSource`: `"GPS_HARDWARE_RTC"` or `"CELLULAR_NTP_VERIFIED"`.  
-   * `statutoryDeclarationText`: Verbatim statutory attestation under Section 84(4) Evidence Act 2011 stating that the computer device was operating properly at all material times.  
-3. **`cryptographicSeal`:**  
-   * `payloadSha256Digest`: 64-char hex SHA-256 digest of the canonical document bytes.  
-   * `signatureAlgorithm`: `"Ed25519"` or `"ECDSA_P256_FIDO2"`.  
-   * `signatureBase64Url`: Cryptographic signature verifiable offline against the issuer's public key encoded inside a 300-DPI QR code (`ngstack://verify/s84_{ulid}?sig=...`).
+The published `SureEvidenceCredential` envelope MUST identify the issuing authority, device attestation, document and cryptographic seal. The issuer records the facts it can attest. `statutoryDeclarationText` is the issuer’s factual account. A QR code, minimum character count and hardware fingerprint are project fields and cannot establish those facts.
 
-## **5.2 Append-Only Merkle Transparency Log & Independent Public Auditability (RED-AUDIT-03)**
+The local JoinBody SDK emits the separate `SureEvidenceSdkCredential` representation. Its verifier checks the document digest and signature against a caller-supplied trusted key. Consumers MUST verify the original signed representation. Copying fields between representations changes the signing input. Fresh revocation information, officer authority and the full evidentiary foundation need independent verification. The example declaration in the SDK requires case-specific review before evidentiary use.
 
-* Every `SureEvidence` registry node MUST publish a daily signed SHA-256 Merkle root (`GET /v1/audit/merkle-root`) over all issued `s84_` credential digests and revocation events, enabling external researchers, auditors, and citizens to verify zero silent record alteration without privileged database access.
+## 5.2 Transparency log
+
+Each participating registry SHOULD publish a daily signed commitment to issued credentials and revocation events at `GET /v1/audit/merkle-root`. An auditor needs the signed root, authenticated issuer identity and inclusion or consistency evidence for the entries examined. The public log MUST exclude personal document contents.

@@ -1,0 +1,81 @@
+{
+  "attestationId": "att_60470fcb-e53c-4202-85f9-aeb3768a73f0",
+  "specVersion": "2026.6.5",
+  "license": "CC0-1.0",
+  "verificationScope": "LOCAL_REFERENCE_SDK_ONLY",
+  "targetBuildingBlocks": [],
+  "executedAtUtc": "2026-11-17T19:30:41.928Z",
+  "featureSha256Digest": "d113e265ed0ee13e0cc9efc7a24348cb7fae44985d1b40adce027127fc6f02d8",
+  "allScenariosPassed": true,
+  "scenarios": [
+    {
+      "scenarioId": "ITB-01",
+      "title": "Confluence Asynchronous Timeout Preserves UNKNOWN_TIMEOUT and Blocks Double-Debit Retry (NS-RFC-003)",
+      "governingRfc": "NS-RFC-003",
+      "status": "PASS",
+      "deterministicAssertion": "5 Gherkin steps executed against local SDK fixtures.",
+      "executedSteps": 5,
+      "limitations": [
+        "Local state machine; no upstream network or payment execution."
+      ],
+      "elapsedMs": 16.108169999999973
+    },
+    {
+      "scenarioId": "ITB-02",
+      "title": "ClearAm Expired Consent Artifact Triggers Immediate HTTP 403 Without Payload Introspection (NS-RFC-006 / RED-CNT-02)",
+      "governingRfc": "NS-RFC-006",
+      "status": "PASS",
+      "deterministicAssertion": "5 Gherkin steps executed against local SDK fixtures.",
+      "executedSteps": 5,
+      "limitations": [
+        "Local perimeter/query callback only; consent signatures and distributed revocation are not verified."
+      ],
+      "elapsedMs": 3.4702689999999734
+    },
+    {
+      "scenarioId": "ITB-03",
+      "title": "SureEvidence Section 84 Credential Rejects Single-Byte Payload Tampering and Clock Drift > 300s (NS-RFC-004 & NS-RFC-005)",
+      "governingRfc": "NS-RFC-004 & NS-RFC-005",
+      "status": "PASS",
+      "deterministicAssertion": "5 Gherkin steps executed against local SDK fixtures.",
+      "executedSteps": 5,
+      "limitations": [
+        "Ephemeral fixture key; no registrar identity, physical FIDO2 device, PDF parser, QR scanner, or enrolled sealing service verified."
+      ],
+      "elapsedMs": 16.69586099999998
+    },
+    {
+      "scenarioId": "ITB-04",
+      "title": "SplitDirect Enforces Zero Platform or SJLGA Escrow for Courts and 774 LGAs (NS-RFC-009 & NS-RFC-014)",
+      "governingRfc": "NS-RFC-009 & NS-RFC-014",
+      "status": "PASS",
+      "deterministicAssertion": "4 Gherkin steps executed against local SDK fixtures.",
+      "executedSteps": 4,
+      "limitations": [
+        "Local routing plan against a fixture account registry; no external account ownership or settlement verified."
+      ],
+      "elapsedMs": 1.0431140000000028
+    },
+    {
+      "scenarioId": "ITB-05",
+      "title": "GivePower Agent Sandbox Blocks Un-Countersigned Mutation and Protects x402 Two-Phase Escrow (NS-RFC-008 / RED-CNT-03)",
+      "governingRfc": "NS-RFC-008",
+      "status": "PASS",
+      "deterministicAssertion": "5 Gherkin steps executed against local SDK fixtures.",
+      "executedSteps": 5,
+      "limitations": [
+        "Local reference envelope profile and in-memory replay/ledger only; ephemeral keys do not verify human presence, WebAuthn ceremony, real wallets, deployed relays, or payment settlement."
+      ],
+      "elapsedMs": 4.8264879999999835
+    }
+  ],
+  "treasuryMerkleAuditSample": {
+    "logDateUtc": "2026-11-17",
+    "leafCount": 1,
+    "merkleRootSha256": "6f8f9aa0f061d3bbde1f865a6d2be5e73ac3d71a54b27f42bcb829143dc19c22",
+    "totalStatutoryKoboSettledDirect": 50000,
+    "totalPlatformEscrowKobo": 0,
+    "totalStateIntermediaryEscrowKobo": 0
+  },
+  "attestationSha256Digest": "3621d780d9c6d964a1dff3b94c883e0b80ba0778339499969ec5392792738ed8"
+}

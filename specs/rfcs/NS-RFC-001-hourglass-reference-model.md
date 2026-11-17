@@ -12,7 +12,7 @@
    * **Layer 3:** Verifiable Base Registries, Statutory ASTs & Cryptographic Evidentiary Trust (`SureEvidence` Section 84 credentials, `KioskBase` state schemas, `LawTree AST` \[`urn:ngstack:lawtree:v2026`\]).  
    * **Layer 4 (The Narrow Waist):** Asynchronous Data Exchange (`Confluence` / `Junction`), Statutory Consent (`ClearanceMesh` / `ClearAm`), Decentralized Commerce (`OpenMarket` / `MarketLink`), Cross-Border Trade (`TradeCorridor` / `PassCargo`), and Agentic Delegation (`Warrant & Mandate` / `GivePower`).  
    * **Layer 5:** Whole-of-Economy Sectoral Networks across all 8 Macro-Sectors, 32 Industries (`IND-01` to `IND-32`), 36 States \+ FCT, and 774 Constitutional LGAs (`LgaGovernanceStack`).  
-2. **Prohibition of Master-Database Duplication:** Participating nodes MUST NOT construct centralized shadow copies of statutory master registries (NIMC, CAC, NIBSS, State Land Bureaus, or Court Dockets). All verifications SHALL operate via federated zero-knowledge hash checks or issuer-signed `SureEvidence` credentials.
+2. **Prohibition of Master-Database Duplication:** Participating nodes MUST NOT construct centralized shadow copies of statutory master registries (NIMC, CAC, NIBSS, State Land Bureaus, or Court Dockets). All verifications SHALL operate via authorized, federated digest checks or issuer-signed `SureEvidence` credentials.
 
 ## **1.2 Architectural Layer Summary**
 
@@ -20,6 +20,6 @@
 | :---- | :---- | :---- | :---- |
 | **Layer 5** | Sectoral Applications | Macro-Sectors, `IND-01` to `IND-32`, `LgaGovernanceStack` | Strict local domain autonomy |
 | **Layer 4** | The Narrow Waist | `Confluence`, `ClearanceMesh`, `OpenMarket`, `TradeCorridor`, `Warrant & Mandate` | Standardized, open protocol interfaces |
-| **Layer 3** | Verifiable Trust & ASTs | `SureEvidence`, `KioskBase` Schemas, `LawTree AST` | Strictly compliant with Evidence Act Section 84 |
+| **Layer 3** | Verifiable Trust & ASTs | `SureEvidence`, `KioskBase` Schemas, `LawTree AST` | Provenance information for Section 84 review |
 | **Layer 2** | Statutory Identity & Bridges | NIMC `NIN`, CAC `RC`, NIBSS `BVN`/`NIP`, NRS `TIN`, `SplitDirect` | Federated statutory authority |
 | **Layer 1** | Physical Infrastructure | Tier-III Data Centers, IXPN Peering, `KioskBase` Nodes | Sovereign in-country data residency |

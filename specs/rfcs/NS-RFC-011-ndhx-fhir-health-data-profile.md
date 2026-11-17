@@ -8,12 +8,12 @@
 
 ## **2.1 `NDHX` Patient-Consented HL7 FHIR R4 Profile (`IND-19`)**
 
-1. **Mandatory `ClearAm` Sensitive-Data Gate:** No hospital EMR, HMO, pharmacy, or diagnostic lab MAY exchange patient summaries, e-prescriptions (`eRx`), or NHIA/HMO e-claims without a valid `ClearAm` token (`clm_` ULID) carrying `purposeCode: "HLTH-PATIENT-RECORD-TRANSFER"` or `"EMERGENCY_VITAL_CARE"`.  
+1. **Mandatory `ClearAm` Sensitive-Data Gate:** No hospital EMR, HMO, pharmacy, or diagnostic lab MAY exchange patient summaries, e-prescriptions (`eRx`), or NHIA/HMO e-claims without a valid `ClearAm` token (`clm_` ULID) carrying `purposeCode: "HLTH-PATIENT-RECORD-TRANSFER"`. Emergency or other non-consent exchange requires a separately authorized profile outside this catalog.  
 2. **Offline Ward PHC Synchronization:** Rural Primary Healthcare Centres (PHCs) operating under `LGA-11` (`WardPHC`) MUST support offline `KioskBase` immunization and maternal-health encounter capture with automatic HLC-CRDT sync.
 
 ## **2.2 `SureLearn` W3C Verifiable Academic & Professional Credentials (`IND-20`)**
 
 * Universities, Polytechnics, WAEC, NECO, JAMB, NYSC, and professional bodies (NBA, MDCN, COREN, ICAN, TRCN) SHALL issue degree transcripts, discharge certificates, and practicing licenses as W3C Verifiable Credentials v2.0 wrapped in a `SureEvidence` (`s84_` ULID) hardware signature.  
-* Employers and foreign embassies verify authenticity offline via the embedded Ed25519 public key without paying recurring scratch-card or manual postal verification fees.
+* A verifier can check the signature offline using an independently trusted issuer key. Credential acceptance, current revocation status and actual verification charges depend on the receiving institution.
 
 ---

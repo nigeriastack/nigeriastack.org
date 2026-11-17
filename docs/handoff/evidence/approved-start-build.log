@@ -1,0 +1,61 @@
+$ vite build && node scripts/build.mjs && tsc --noEmit
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 178 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/assets/portal-BpFpNcrX.css          11.17 kB │ gzip:   2.90 kB
+dist/client/assets/atlas_.lga-774-2G3XePQi.js    0.16 kB │ gzip:   0.15 kB
+dist/client/assets/atlas-D6fK2RI2.js             0.17 kB │ gzip:   0.16 kB
+dist/client/assets/atlas_.states-BVo-63_V.js     0.17 kB │ gzip:   0.15 kB
+dist/client/assets/conformance-C3p3n-_g.js       0.17 kB │ gzip:   0.16 kB
+dist/client/assets/governance-DSFR922T.js        0.17 kB │ gzip:   0.16 kB
+dist/client/assets/protocols-BPQPe2s6.js         0.17 kB │ gzip:   0.16 kB
+dist/client/assets/rfcs-BJLfxsuk.js              0.17 kB │ gzip:   0.15 kB
+dist/client/assets/routes-BBzlUg4z.js            0.17 kB │ gzip:   0.16 kB
+dist/client/assets/search-CTVUO4l-.js            0.17 kB │ gzip:   0.15 kB
+dist/client/assets/sectors-YA6fX4vR.js           0.17 kB │ gzip:   0.15 kB
+dist/client/assets/_-B6uiPYHR.js                 0.18 kB │ gzip:   0.16 kB
+dist/client/assets/portal-page-DzUbR7JH.js      29.67 kB │ gzip:   8.39 kB
+dist/client/assets/index--OLpRpJE.js           351.83 kB │ gzip: 113.68 kB
+
+✓ built in 754ms
+vite v8.3.8 building ssr environment for production...
+transforming...
+✓ 167 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/server/assets/empty-plugin-adapters-BsRz-CQL.js         0.26 kB │ gzip:  0.17 kB
+dist/server/assets/start-ECsHYxCu.js                         0.27 kB │ gzip:  0.19 kB
+dist/server/assets/_-DlUrJ19d.js                             0.31 kB │ gzip:  0.23 kB
+dist/server/assets/rfcs-CdmPCaSx.js                          0.32 kB │ gzip:  0.23 kB
+dist/server/assets/atlas-jgoS88LW.js                         0.33 kB │ gzip:  0.23 kB
+dist/server/assets/routes-Czlx6olx.js                        0.33 kB │ gzip:  0.23 kB
+dist/server/assets/search-CpEKTi32.js                        0.33 kB │ gzip:  0.23 kB
+dist/server/assets/sectors-w1DtwLm5.js                       0.33 kB │ gzip:  0.23 kB
+dist/server/assets/protocols-ehG_reBx.js                     0.33 kB │ gzip:  0.23 kB
+dist/server/assets/governance-TJ_0ufBv.js                    0.33 kB │ gzip:  0.24 kB
+dist/server/assets/conformance-spEwYHwt.js                   0.33 kB │ gzip:  0.24 kB
+dist/server/assets/atlas_.states-CcwmGs8E.js                 0.33 kB │ gzip:  0.24 kB
+dist/server/assets/atlas_.lga-774-CM8dQ6DF.js                0.33 kB │ gzip:  0.24 kB
+dist/server/assets/page-data-BoqH3xhP.js                     0.76 kB │ gzip:  0.47 kB
+dist/server/assets/page-data-DVgMOMoA.js                     0.97 kB │ gzip:  0.54 kB
+dist/server/assets/_tanstack-start-manifest_v-BxsC137S.js    2.92 kB │ gzip:  0.62 kB
+dist/server/assets/router-Xff3_824.js                       12.90 kB │ gzip:  3.32 kB
+dist/server/assets/portal-page-BSTIMEOK.js                  39.28 kB │ gzip:  9.58 kB
+dist/server/server.js                                      270.65 kB │ gzip: 65.99 kB
+dist/server/assets/content.server-B1IfNxQH.js              699.60 kB │ gzip: 65.73 kB
+
+✓ built in 342ms
+vite v8.3.8 building client environment for production...
+
+ WARN  inlineDynamicImports option is deprecated, please use codeSplitting: false instead.
+
+transforming...
+✓ 7 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/verifier.js  14.66 kB │ gzip: 4.99 kB
+
+✓ built in 58ms
+Critical transfer budget: /=8248, /sectors=11778, /protocols=9269, /rfcs=8127, /conformance=7590, /atlas/states=9882, /atlas/lga-774=12052, /governance=13806, /atlas/states/AB=10823, /atlas/lga-774/AB/AB-LGA-01=10569, /rfcs/NS-RFC-014=17595

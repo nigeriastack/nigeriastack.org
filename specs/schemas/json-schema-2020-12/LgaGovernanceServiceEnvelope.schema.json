@@ -9,8 +9,7 @@
     "lgaCode",
     "moduleId",
     "kioskBaseDeltaId",
-    "splitDirectTreasuryProof",
-    "sureEvidenceSealId"
+    "clockSyncStatus"
   ],
   "properties": {
     "envelopeUlid": { "type": "string", "pattern": "^cop_[0-9A-HJKMNP-TV-Z]{26}$" },
@@ -22,20 +21,28 @@
       ]
     },
     "kioskBaseDeltaId": { "type": "string", "pattern": "^kbd_[0-9A-HJKMNP-TV-Z]{26}$" },
-
-
     "clockSyncStatus": { "enum": ["NTP_GPS_VERIFIED", "DEGRADED_LOCAL_HLC"] },
     "visibilityTier": { "enum": ["PUBLIC_MUNICIPAL_RECORD", "CONSENT_RESTRICTED", "INTERNAL_RESTRICTED_NDPA"] },
     "splitDirectTreasuryProof": {
       "type": "object",
-      "required": ["platformEscrowAmountKobo", "stateIntermediaryEscrowKobo", "directLgaTreasuryAccountRef"],
+      "required": ["platformEscrowAmountKobo", "stateIntermediaryEscrowKobo", "directLgaTreasuryAccountRef", "statutoryAmountKobo"],
       "properties": {
         "platformEscrowAmountKobo": { "const": 0 },
         "stateIntermediaryEscrowKobo": { "const": 0 },
-        "directLgaTreasuryAccountRef": { "type": "string" },
-        "statutoryAmountKobo": { "type": "integer", "minimum": 0 }
+        "directLgaTreasuryAccountRef": { "type": "string", "minLength": 1 },
+        "statutoryAmountKobo": { "type": "integer", "minimum": 1 }
       }
     },
     "sureEvidenceSealId": { "type": "string", "pattern": "^s84_[0-9A-HJKMNP-TV-Z]{26}$" }
-  }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "moduleId": { "enum": ["LGA-09", "LGA-10"] } } },
+      "then": { "required": ["splitDirectTreasuryProof"] }
+    },
+    {
+      "if": { "properties": { "clockSyncStatus": { "const": "DEGRADED_LOCAL_HLC" } } },
+      "then": { "not": { "required": ["sureEvidenceSealId"] } }
+    }
+  ]
 }

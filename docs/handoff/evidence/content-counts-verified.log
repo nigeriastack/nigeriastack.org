@@ -1,0 +1,69 @@
+Scope: all 8 workspace projects
+Already up to date
+Done in 851ms using pnpm v11.25.0
+$ node scripts/ci/verify-content-counts.mjs
+{
+  "scope": "FAQ and benchmark counts plus computed answer word limits only",
+  "counts": [
+    {
+      "id": "RAG-H2-01",
+      "words": 46
+    },
+    {
+      "id": "RAG-H2-02",
+      "words": 56
+    },
+    {
+      "id": "RAG-H2-03",
+      "words": 50
+    },
+    {
+      "id": "RAG-H2-04",
+      "words": 42
+    },
+    {
+      "id": "RAG-H2-05",
+      "words": 39
+    },
+    {
+      "id": "RAG-H2-06",
+      "words": 42
+    },
+    {
+      "id": "RAG-H2-07",
+      "words": 49
+    },
+    {
+      "id": "RAG-H2-08",
+      "words": 42
+    },
+    {
+      "id": "RAG-H2-09",
+      "words": 42
+    },
+    {
+      "id": "RAG-H2-10",
+      "words": 39
+    },
+    {
+      "id": "RAG-H2-11",
+      "words": 43
+    },
+    {
+      "id": "RAG-H2-12",
+      "words": 41
+    },
+    {
+      "id": "RAG-H2-13",
+      "words": 46
+    },
+    {
+      "id": "RAG-H2-14",
+      "words": 40
+    },
+    {
+      "id": "RAG-H2-15",
+      "words": 43
+    }
+  ]
+}

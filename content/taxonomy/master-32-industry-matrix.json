@@ -15,25 +15,11 @@
     {
       "industryId": "IND-01",
       "name": "Payments and Money Movement",
-      "statutoryStewards": [
-        "Central Bank of Nigeria (CBN)",
-        "NIBSS"
-      ],
-      "documentedDomesticSupply": [
-        "NIBSS NIP",
-        "Paystack",
-        "Flutterwave",
-        "Moniepoint",
-        "Interswitch",
-        "Remita"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-04",
-        "MECH-07"
-      ],
-      "concreteFailureMode": "Single-leg transfers work, but asynchronous network timeouts leave operations in ambiguous states risking double-debits on retry, and card rails are unviable for sub-cent machine/agent transactions.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-03",
@@ -50,28 +36,45 @@
         ],
         "deliverable": "Deterministic operation state machines preserving UNKNOWN_TIMEOUT states, idempotent reference locks, and HTTP 402 micro-settlement verification schemas."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "NIBSS NIP",
+          "Paystack",
+          "Flutterwave",
+          "Moniepoint",
+          "Interswitch",
+          "Remita"
+        ],
+        "statutoryStewards": [
+          "Central Bank of Nigeria (CBN)",
+          "NIBSS"
+        ],
+        "concreteFailureMode": "Single-leg transfers work, but asynchronous network timeouts leave operations in ambiguous states risking double-debits on retry, and card rails are unviable for sub-cent machine/agent transactions.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-04",
+          "MECH-07"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-02",
       "name": "Banking, Lending and Open Finance",
-      "statutoryStewards": [
-        "Central Bank of Nigeria (CBN)",
-        "NDPC"
-      ],
-      "documentedDomesticSupply": [
-        "CBN Open Banking Registry",
-        "Mono",
-        "Stitch",
-        "OnePipe",
-        "Lendsqr"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Bank cash-flow APIs are siloed from pending High Court debt suits, Mareva injunctions, corporate solvency filings, and land title encumbrances.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-04",
@@ -86,27 +89,43 @@
         ],
         "deliverable": "Multi-sector ClearAm consent envelopes joining CBN Open Banking feeds with court litigation clearance and CAC status under a single NDPA-compliant purpose token."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "CBN Open Banking Registry",
+          "Mono",
+          "Stitch",
+          "OnePipe",
+          "Lendsqr"
+        ],
+        "statutoryStewards": [
+          "Central Bank of Nigeria (CBN)",
+          "NDPC"
+        ],
+        "concreteFailureMode": "Bank cash-flow APIs are siloed from pending High Court debt suits, Mareva injunctions, corporate solvency filings, and land title encumbrances.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-03",
       "name": "Insurance and Micro-Claims",
-      "statutoryStewards": [
-        "NAICOM",
-        "NHIA"
-      ],
-      "documentedDomesticSupply": [
-        "Curacel",
-        "Turaco",
-        "Reliance Health",
-        "Leadway"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Digital policy issuance exists, but hospital discharge summaries, police accident extracts, and death certificates circulate as unverified scans vulnerable to fraud and Section 84 admissibility rejection.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -122,31 +141,43 @@
         ],
         "deliverable": "Hardware-signed SureEvidence claim attestations binding clinical and incident records to Ed25519 issuer seals."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Curacel",
+          "Turaco",
+          "Reliance Health",
+          "Leadway"
+        ],
+        "statutoryStewards": [
+          "NAICOM",
+          "NHIA"
+        ],
+        "concreteFailureMode": "Digital policy issuance exists, but hospital discharge summaries, police accident extracts, and death certificates circulate as unverified scans vulnerable to fraud and Section 84 admissibility rejection.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-04",
       "macroSector": "SECTOR_1_FINANCE_REVENUE",
       "name": "Investment, Capital Markets and Funds",
-      "statutoryStewards": [
-        "Securities and Exchange Commission (SEC)",
-        "NGX",
-        "FMDQ",
-        "CSCS"
-      ],
-      "documentedDomesticSupply": [
-        "CSCS Depository",
-        "Bamboo",
-        "Chaka",
-        "Trove"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-03",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Listed retail equities are digitized, but unlisted MSME debt notes, sub-national municipal bonds, and infrastructure concession instruments lack standardized programmatic issuance and lien verification.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -157,29 +188,45 @@
         ],
         "deliverable": "Machine-readable debt covenant schemas and cryptographic lien-registry verification contracts."
       },
-      "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "CSCS Depository",
+          "Bamboo",
+          "Chaka",
+          "Trove"
+        ],
+        "statutoryStewards": [
+          "Securities and Exchange Commission (SEC)",
+          "NGX",
+          "FMDQ",
+          "CSCS"
+        ],
+        "concreteFailureMode": "Listed retail equities are digitized, but unlisted MSME debt notes, sub-national municipal bonds, and infrastructure concession instruments lack standardized programmatic issuance and lien verification.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-03",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-05",
       "name": "Tax, e-Invoicing and Treasury IGR",
-      "statutoryStewards": [
-        "Nigeria Revenue Service (NRS / FIRS)",
-        "Joint Tax Board (JTB)",
-        "36 State IRS"
-      ],
-      "documentedDomesticSupply": [
-        "NRS ATRS e-Invoicing API",
-        "Remita",
-        "Interswitch PayDirect",
-        "Digitax"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-02",
-        "MECH-04",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "36 State IRS collection portals are fragmented; public registries (courts, land bureaus) face audit liability when private vendors escrow statutory fees instead of direct treasury pass-through.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -194,29 +241,45 @@
         ],
         "deliverable": "Section 121(3) CFRN zero-escrow split-routing specification and cryptographically signed fiscal receipt schemas."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "NRS ATRS e-Invoicing API",
+          "Remita",
+          "Interswitch PayDirect",
+          "Digitax"
+        ],
+        "statutoryStewards": [
+          "Nigeria Revenue Service (NRS / FIRS)",
+          "Joint Tax Board (JTB)",
+          "36 State IRS"
+        ],
+        "concreteFailureMode": "36 State IRS collection portals are fragmented; public registries (courts, land bureaus) face audit liability when private vendors escrow statutory fees instead of direct treasury pass-through.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-02",
+          "MECH-04",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-06",
       "macroSector": "SECTOR_1_FINANCE_REVENUE",
       "name": "Accounting, ERP and Corporate Treasury",
-      "statutoryStewards": [
-        "Financial Reporting Council (FRC)",
-        "NRS",
-        "CAC"
-      ],
-      "documentedDomesticSupply": [
-        "Sage Nigeria",
-        "QuickBooks",
-        "Zoho Books",
-        "Accounteer"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-08"
-      ],
-      "concreteFailureMode": "SME accounting software lacks native Nigerian statutory tax-code mappings (WHT, VAT splits, Stamp Duty) and automated e-invoice reconciliation.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-03",
@@ -227,31 +290,43 @@
         ],
         "deliverable": "Canonical Nigerian Fiscal Chart-of-Accounts JSON schema and automated tax-rule policy modules."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Sage Nigeria",
+          "QuickBooks",
+          "Zoho Books",
+          "Accounteer"
+        ],
+        "statutoryStewards": [
+          "Financial Reporting Council (FRC)",
+          "NRS",
+          "CAC"
+        ],
+        "concreteFailureMode": "SME accounting software lacks native Nigerian statutory tax-code mappings (WHT, VAT splits, Stamp Duty) and automated e-invoice reconciliation.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-08"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-07",
       "name": "Identity, Biometrics and KYB/KYC",
-      "statutoryStewards": [
-        "NIMC",
-        "CAC",
-        "NIBSS",
-        "NDPC"
-      ],
-      "documentedDomesticSupply": [
-        "NIMC NIN",
-        "CAC Portal",
-        "Dojah",
-        "Prembly (Identitypass)",
-        "Youverify",
-        "Smile ID"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Commercial KYC aggregators act as thin wrappers that fail when agency portals drop, expose raw PII unnecessarily, and lack statutory professional roll verification (NBA SCN, MDCN, COREN).",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-01",
@@ -268,32 +343,47 @@
         ],
         "deliverable": "Zero-knowledge identity and professional roll attestation credentials preventing raw NIN/BVN over-retention under NDPA 2023."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "NIMC NIN",
+          "CAC Portal",
+          "Dojah",
+          "Prembly (Identitypass)",
+          "Youverify",
+          "Smile ID"
+        ],
+        "statutoryStewards": [
+          "NIMC",
+          "CAC",
+          "NIBSS",
+          "NDPC"
+        ],
+        "concreteFailureMode": "Commercial KYC aggregators act as thin wrappers that fail when agency portals drop, expose raw PII unnecessarily, and lack statutory professional roll verification (NBA SCN, MDCN, COREN).",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-08",
       "macroSector": "SECTOR_2_IDENTITY_GOVERNANCE",
       "name": "Employment, Payroll and Pensions",
-      "statutoryStewards": [
-        "PENCOM",
-        "Federal Ministry of Labour",
-        "ITF",
-        "NSITF",
-        "State IRS"
-      ],
-      "documentedDomesticSupply": [
-        "SeamlessHR",
-        "Workpay",
-        "Bento Africa",
-        "Pension Fund Custodians"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-02",
-        "MECH-03",
-        "MECH-04"
-      ],
-      "concreteFailureMode": "Payroll calculation works, but statutory PAYE tax, pension (RSA), and housing deductions require fragmented manual uploads across 36 different state portals.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-03",
@@ -309,30 +399,46 @@
         ],
         "deliverable": "Unified multi-agency statutory remittance payload routing PENCOM, NHF, and state PAYE atomically."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "SeamlessHR",
+          "Workpay",
+          "Bento Africa",
+          "Pension Fund Custodians"
+        ],
+        "statutoryStewards": [
+          "PENCOM",
+          "Federal Ministry of Labour",
+          "ITF",
+          "NSITF",
+          "State IRS"
+        ],
+        "concreteFailureMode": "Payroll calculation works, but statutory PAYE tax, pension (RSA), and housing deductions require fragmented manual uploads across 36 different state portals.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-02",
+          "MECH-03",
+          "MECH-04"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-09",
       "name": "Logistics, Courier and Haulage",
-      "statutoryStewards": [
-        "NIPOST",
-        "FRSC",
-        "NPA"
-      ],
-      "documentedDomesticSupply": [
-        "Shipbubble",
-        "Bob Go",
-        "Kobo360",
-        "GIGL",
-        "Topship"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-05",
-        "MECH-06"
-      ],
-      "concreteFailureMode": "Urban courier aggregators work, but inter-state heavy haulage lacks standardized electronic waybills, offline rural handoff proofs, and Section 84 admissible loss/damage evidence.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -348,30 +454,45 @@
         ],
         "deliverable": "Offline-capable geo-stamped proof-of-delivery credentials and unified fulfillment state schemas."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Shipbubble",
+          "Bob Go",
+          "Kobo360",
+          "GIGL",
+          "Topship"
+        ],
+        "statutoryStewards": [
+          "NIPOST",
+          "FRSC",
+          "NPA"
+        ],
+        "concreteFailureMode": "Urban courier aggregators work, but inter-state heavy haulage lacks standardized electronic waybills, offline rural handoff proofs, and Section 84 admissible loss/damage evidence.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-05",
+          "MECH-06"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-10",
       "name": "Cross-Border Trade, Customs and Ports",
-      "statutoryStewards": [
-        "Nigeria Customs Service (NCS)",
-        "NPA",
-        "SON",
-        "NAFDAC",
-        "NEPC"
-      ],
-      "documentedDomesticSupply": [
-        "NCS B'Odogwu Single Window",
-        "NPA Port Community",
-        "SONCAP"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-03",
-        "MECH-04"
-      ],
-      "concreteFailureMode": "Exporters and clearing agents re-key identical manifest data across NCS, SON, NAFDAC, and terminal operators, causing port demurrage and ECOWAS ETLS border delays.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -386,29 +507,45 @@
         ],
         "deliverable": "Signed multi-agency cargo event chain linking bill-of-lading, regulatory certificates, and terminal release tokens."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "NCS B'Odogwu Single Window",
+          "NPA Port Community",
+          "SONCAP"
+        ],
+        "statutoryStewards": [
+          "Nigeria Customs Service (NCS)",
+          "NPA",
+          "SON",
+          "NAFDAC",
+          "NEPC"
+        ],
+        "concreteFailureMode": "Exporters and clearing agents re-key identical manifest data across NCS, SON, NAFDAC, and terminal operators, causing port demurrage and ECOWAS ETLS border delays.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-03",
+          "MECH-04"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-11",
       "name": "Retail and Open Digital Commerce",
-      "statutoryStewards": [
-        "FCCPC",
-        "FMCIDE",
-        "Standards Organisation of Nigeria (SON)"
-      ],
-      "documentedDomesticSupply": [
-        "Jumia",
-        "Konga",
-        "Omnibiz",
-        "TradeDepot",
-        "Bumpa"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-04",
-        "MECH-07"
-      ],
-      "concreteFailureMode": "Centralized marketplaces charge 15–25% commissions and lock merchant catalogs and reputation inside closed silos.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-07"
@@ -421,30 +558,44 @@
         ],
         "deliverable": "Unbundled catalog discovery, order negotiation, and fulfillment protocols allowing any buyer app to transact with any merchant."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Jumia",
+          "Konga",
+          "Omnibiz",
+          "TradeDepot",
+          "Bumpa"
+        ],
+        "statutoryStewards": [
+          "FCCPC",
+          "FMCIDE",
+          "Standards Organisation of Nigeria (SON)"
+        ],
+        "concreteFailureMode": "Centralized marketplaces charge 15–25% commissions and lock merchant catalogs and reputation inside closed silos.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-04",
+          "MECH-07"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-12",
       "name": "Energy, Smart Grids and Utilities",
-      "statutoryStewards": [
-        "NERC",
-        "TCN",
-        "REA",
-        "11 Electricity DisCos"
-      ],
-      "documentedDomesticSupply": [
-        "BuyPower",
-        "Baxi",
-        "SparkMeter",
-        "SteamaCo"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-03",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Prepaid vending APIs exist, but DisCo feeder telemetry, mini-grid generation data, and smart-meter consumption logs lack open interoperability and tamper-evident billing audit trails.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -459,28 +610,45 @@
         ],
         "deliverable": "Standardized smart-meter telemetry and automated DisCo/mini-grid settlement verification schemas."
       },
-      "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "BuyPower",
+          "Baxi",
+          "SparkMeter",
+          "SteamaCo"
+        ],
+        "statutoryStewards": [
+          "NERC",
+          "TCN",
+          "REA",
+          "11 Electricity DisCos"
+        ],
+        "concreteFailureMode": "Prepaid vending APIs exist, but DisCo feeder telemetry, mini-grid generation data, and smart-meter consumption logs lack open interoperability and tamper-evident billing audit trails.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-03",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-13",
       "name": "Connected Vehicles and Fleets",
-      "statutoryStewards": [
-        "FRSC",
-        "State VIOs",
-        "Federal Ministry of Transportation"
-      ],
-      "documentedDomesticSupply": [
-        "Autochek",
-        "MAX.ng",
-        "Local GPS Telematics Providers"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-05",
-        "MECH-06"
-      ],
-      "concreteFailureMode": "Commercial fleet GPS data is locked in proprietary hardware vendors; interstate cargo manifests and roadworthiness certificates cannot be verified offline at highway checkpoints.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -496,27 +664,43 @@
         ],
         "deliverable": "Offline-verifiable QR transit manifests and standardized fleet telemetry event schemas."
       },
-      "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Autochek",
+          "MAX.ng",
+          "Local GPS Telematics Providers"
+        ],
+        "statutoryStewards": [
+          "FRSC",
+          "State VIOs",
+          "Federal Ministry of Transportation"
+        ],
+        "concreteFailureMode": "Commercial fleet GPS data is locked in proprietary hardware vendors; interstate cargo manifests and roadworthiness certificates cannot be verified offline at highway checkpoints.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-05",
+          "MECH-06"
+        ],
+        "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-14",
       "name": "Mobility, Mass Transit and Ticketing",
-      "statutoryStewards": [
-        "LAMATA",
-        "Nigerian Railway Corporation (NRC)",
-        "NIWA"
-      ],
-      "documentedDomesticSupply": [
-        "Cowry Card (Touch and Pay)",
-        "NRC e-Ticketing"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-02",
-        "MECH-03",
-        "MECH-04"
-      ],
-      "concreteFailureMode": "Transit smartcards are closed-loop per state/operator; commuters cannot book or clear single-ticket multi-modal journeys across BRT, rail, and inland waterways.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-06",
@@ -531,29 +715,42 @@
         ],
         "deliverable": "Interoperable transit fare clearing and signed QR ticket validation protocol."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Cowry Card (Touch and Pay)",
+          "NRC e-Ticketing"
+        ],
+        "statutoryStewards": [
+          "LAMATA",
+          "Nigerian Railway Corporation (NRC)",
+          "NIWA"
+        ],
+        "concreteFailureMode": "Transit smartcards are closed-loop per state/operator; commuters cannot book or clear single-ticket multi-modal journeys across BRT, rail, and inland waterways.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-02",
+          "MECH-03",
+          "MECH-04"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-15",
       "name": "Agriculture, Inputs and Food Security",
-      "statutoryStewards": [
-        "Federal Ministry of Agriculture (FMARD)",
-        "NIRSAL",
-        "SEC (Commodities)"
-      ],
-      "documentedDomesticSupply": [
-        "AFEX",
-        "ThriveAgric",
-        "Hello Tractor",
-        "Crop2Cash"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-02",
-        "MECH-05",
-        "MECH-06"
-      ],
-      "concreteFailureMode": "Smallholder farmers lack standardized farm-boundary polygons, and electronic warehouse receipts lack cryptographic title provenance accepted by commercial banks for inventory credit.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-02",
@@ -571,26 +768,44 @@
         ],
         "deliverable": "Offline-capturable smallholder geopolygon schema and Section 84 signed electronic warehouse receipt credentials."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "AFEX",
+          "ThriveAgric",
+          "Hello Tractor",
+          "Crop2Cash"
+        ],
+        "statutoryStewards": [
+          "Federal Ministry of Agriculture (FMARD)",
+          "NIRSAL",
+          "SEC (Commodities)"
+        ],
+        "concreteFailureMode": "Smallholder farmers lack standardized farm-boundary polygons, and electronic warehouse receipts lack cryptographic title provenance accepted by commercial banks for inventory credit.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-02",
+          "MECH-05",
+          "MECH-06"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-16",
       "name": "Manufacturing and Industrial IoT",
-      "statutoryStewards": [
-        "SON",
-        "NESREA",
-        "Federal Ministry of Industry, Trade & Investment"
-      ],
-      "documentedDomesticSupply": [
-        "Industrial PLC/SCADA Installations (Tier-1 Plants)"
-      ],
-      "evidenceStatus": "UNRESOLVED_AVAILABILITY",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-05",
-        "MECH-08"
-      ],
-      "concreteFailureMode": "Factory quality-control and effluent/emissions sensors are air-gapped; regulators and supply-chain buyers lack tamper-evident telemetry proving batch quality or environmental compliance.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -601,27 +816,41 @@
         ],
         "deliverable": "Hardware-signed edge telemetry attestation schema for industrial quality and NESREA environmental audit logs."
       },
-      "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Industrial PLC/SCADA Installations (Tier-1 Plants)"
+        ],
+        "statutoryStewards": [
+          "SON",
+          "NESREA",
+          "Federal Ministry of Industry, Trade & Investment"
+        ],
+        "concreteFailureMode": "Factory quality-control and effluent/emissions sensors are air-gapped; regulators and supply-chain buyers lack tamper-evident telemetry proving batch quality or environmental compliance.",
+        "evidenceStatus": "UNRESOLVED_AVAILABILITY",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-05",
+          "MECH-08"
+        ],
+        "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-17",
       "name": "Construction, Land and Property Titles",
-      "statutoryStewards": [
-        "36 State Land Bureaus (LAGIS, AGIS, RIVGIS)",
-        "State High Courts"
-      ],
-      "documentedDomesticSupply": [
-        "LAGIS",
-        "AGIS",
-        "Private PropTech Listing Portals"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-02",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "30+ state deeds registries remain paper-based; even in digitized states, land searches do not cross-check active High Court lis pendens caveats, causing fraudulent double-sales.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-02",
@@ -639,27 +868,42 @@
         ],
         "deliverable": "Unified cadastral parcel AST bridging State Deeds Registries with court lis pendens caveats and s. 84 verified search certificates."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "LAGIS",
+          "AGIS",
+          "Private PropTech Listing Portals"
+        ],
+        "statutoryStewards": [
+          "36 State Land Bureaus (LAGIS, AGIS, RIVGIS)",
+          "State High Courts"
+        ],
+        "concreteFailureMode": "30+ state deeds registries remain paper-based; even in digitized states, land searches do not cross-check active High Court lis pendens caveats, causing fraudulent double-sales.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-02",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-18",
       "name": "Climate, Weather and Environmental Data",
-      "statutoryStewards": [
-        "NiMet",
-        "NIHSA (Hydrological Services)",
-        "NESREA"
-      ],
-      "documentedDomesticSupply": [
-        "NiMet Seasonal Bulletins",
-        "Global Satellite Feeds"
-      ],
-      "evidenceStatus": "UNRESOLVED_AVAILABILITY",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-02",
-        "MECH-03"
-      ],
-      "concreteFailureMode": "Hyper-local ground weather and river-gauge telemetry is published in static PDF bulletins rather than machine-readable geo-alert feeds for flood early warning and parametric crop insurance.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-03",
@@ -675,30 +919,42 @@
         ],
         "deliverable": "Machine-readable CAP (Common Alerting Protocol) and hyper-local agro-meteorological JSON telemetry schema."
       },
-      "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "NiMet Seasonal Bulletins",
+          "Global Satellite Feeds"
+        ],
+        "statutoryStewards": [
+          "NiMet",
+          "NIHSA (Hydrological Services)",
+          "NESREA"
+        ],
+        "concreteFailureMode": "Hyper-local ground weather and river-gauge telemetry is published in static PDF bulletins rather than machine-readable geo-alert feeds for flood early warning and parametric crop insurance.",
+        "evidenceStatus": "UNRESOLVED_AVAILABILITY",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-02",
+          "MECH-03"
+        ],
+        "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-19",
       "name": "Healthcare, EMRs and e-Prescriptions",
-      "statutoryStewards": [
-        "Federal Ministry of Health (FMOH / NDHI)",
-        "NHIA",
-        "NAFDAC",
-        "NDPC"
-      ],
-      "documentedDomesticSupply": [
-        "Helium Health",
-        "Wellahealth",
-        "Remedial Health",
-        "CarePay"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-03",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Patient medical histories are trapped inside individual hospital EMRs; transferring referrals or verifying prescriptions across facilities lacks patient-controlled NDPA consent and HL7 FHIR standardization.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-04",
@@ -716,32 +972,46 @@
         ],
         "deliverable": "Clean-room Nigerian HL7 FHIR patient summary profile governed by ClearAm patient consent tokens."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Helium Health",
+          "Wellahealth",
+          "Remedial Health",
+          "CarePay"
+        ],
+        "statutoryStewards": [
+          "Federal Ministry of Health (FMOH / NDHI)",
+          "NHIA",
+          "NAFDAC",
+          "NDPC"
+        ],
+        "concreteFailureMode": "Patient medical histories are trapped inside individual hospital EMRs; transferring referrals or verifying prescriptions across facilities lacks patient-controlled NDPA consent and HL7 FHIR standardization.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-03",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-20",
       "macroSector": "SECTOR_4_HEALTH_EDUCATION",
       "name": "Education, Credentials and Skilling",
-      "statutoryStewards": [
-        "NUC",
-        "NBTE",
-        "WAEC",
-        "JAMB",
-        "TRCN"
-      ],
-      "documentedDomesticSupply": [
-        "WAEC Scratch/Verify Portal",
-        "JAMB e-Facility",
-        "uLesson",
-        "AltSchool"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-05",
-        "MECH-07"
-      ],
-      "concreteFailureMode": "University transcripts and degree verifications take months of manual postal/email verification; employers and foreign institutions lack cryptographic W3C Verifiable Credentials.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -757,31 +1027,46 @@
         ],
         "deliverable": "W3C Verifiable Credential profile for Nigerian university degrees, NYSC discharge certificates, and WAEC/NECO records."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "WAEC Scratch/Verify Portal",
+          "JAMB e-Facility",
+          "uLesson",
+          "AltSchool"
+        ],
+        "statutoryStewards": [
+          "NUC",
+          "NBTE",
+          "WAEC",
+          "JAMB",
+          "TRCN"
+        ],
+        "concreteFailureMode": "University transcripts and degree verifications take months of manual postal/email verification; employers and foreign institutions lack cryptographic W3C Verifiable Credentials.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-05",
+          "MECH-07"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-21",
       "name": "Judiciary, Justice and Legal Practice",
-      "statutoryStewards": [
-        "National Judicial Council (NJC)",
-        "36 State Judiciaries",
-        "Nigerian Bar Association (NBA)"
-      ],
-      "documentedDomesticSupply": [
-        "NJC NCMS (Federal/Superior Gated)",
-        "Lagos CoMiS",
-        "Rivers RivCoMiS",
-        "LawPavilion",
-        "Legalpedia"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-02",
-        "MECH-05",
-        "MECH-06",
-        "MECH-08"
-      ],
-      "concreteFailureMode": "30+ State High Courts and 1,000+ Magistracies are offline; scanned PDFs face Section 84 admissibility challenges; namesake counsel cause homonym attribution errors; lawyer rankings violate RPC 2023 Rule 39.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-01",
@@ -798,28 +1083,46 @@
         ],
         "deliverable": "Offline-first <35 KB court registry kernel, Ed25519 s.84 CTC seals, neutral 13-code procedural disposition taxonomy, and bi-temporal statutory ASTs."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "NJC NCMS (Federal/Superior Gated)",
+          "Lagos CoMiS",
+          "Rivers RivCoMiS",
+          "LawPavilion",
+          "Legalpedia"
+        ],
+        "statutoryStewards": [
+          "National Judicial Council (NJC)",
+          "36 State Judiciaries",
+          "Nigerian Bar Association (NBA)"
+        ],
+        "concreteFailureMode": "30+ State High Courts and 1,000+ Magistracies are offline; scanned PDFs face Section 84 admissibility challenges; namesake counsel cause homonym attribution errors; lawyer rankings violate RPC 2023 Rule 39.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-02",
+          "MECH-05",
+          "MECH-06",
+          "MECH-08"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-22",
       "name": "Travel, Tourism and Hospitality",
-      "statutoryStewards": [
-        "NCAA",
-        "FAAN",
-        "NTDC",
-        "Nigeria Immigration Service (NIS)"
-      ],
-      "documentedDomesticSupply": [
-        "Wakanow",
-        "Travelstart",
-        "Hotels.ng"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-04",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Hotel guest identity check-in relies on unverified physical photocopies, and domestic tour/transport operators lack multi-party escrow settlement.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-01",
@@ -837,28 +1140,43 @@
         ],
         "deliverable": "Privacy-preserving guest check-in verification token and multi-vendor itinerary settlement schema."
       },
-      "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Wakanow",
+          "Travelstart",
+          "Hotels.ng"
+        ],
+        "statutoryStewards": [
+          "NCAA",
+          "FAAN",
+          "NTDC",
+          "Nigeria Immigration Service (NIS)"
+        ],
+        "concreteFailureMode": "Hotel guest identity check-in relies on unverified physical photocopies, and domestic tour/transport operators lack multi-party escrow settlement.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-04",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-23",
       "name": "Food Service and Hyperlocal Delivery",
-      "statutoryStewards": [
-        "NAFDAC",
-        "FCCPC",
-        "State Environmental Health Agencies"
-      ],
-      "documentedDomesticSupply": [
-        "Chowdeck",
-        "Glovo Nigeria",
-        "FoodCourt",
-        "Eden Life"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-07"
-      ],
-      "concreteFailureMode": "Independent kitchens face 25–30% aggregator platform fees and cannot broadcast live inventory across competing last-mile rider networks.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-07"
@@ -871,28 +1189,43 @@
         ],
         "deliverable": "Open menu syndication and hyperlocal rider dispatch contract decoupling kitchen catalogs from single delivery apps."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Chowdeck",
+          "Glovo Nigeria",
+          "FoodCourt",
+          "Eden Life"
+        ],
+        "statutoryStewards": [
+          "NAFDAC",
+          "FCCPC",
+          "State Environmental Health Agencies"
+        ],
+        "concreteFailureMode": "Independent kitchens face 25–30% aggregator platform fees and cannot broadcast live inventory across competing last-mile rider networks.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-07"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-24",
       "name": "Media, Creative Rights and Entertainment",
-      "statutoryStewards": [
-        "Nigerian Copyright Commission (NCC)",
-        "NBC",
-        "COSON",
-        "AVRS"
-      ],
-      "documentedDomesticSupply": [
-        "Boomplay",
-        "Mdundo",
-        "Audiomack"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-04",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Terrestrial broadcasters and venues lack automated, tamper-evident airplay logging, causing massive royalty disputes and copyright infringement litigation.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-05",
@@ -907,28 +1240,43 @@
         ],
         "deliverable": "Cryptographic media fingerprint attestation and automated royalty split-settlement ledger schema."
       },
-      "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Boomplay",
+          "Mdundo",
+          "Audiomack"
+        ],
+        "statutoryStewards": [
+          "Nigerian Copyright Commission (NCC)",
+          "NBC",
+          "COSON",
+          "AVRS"
+        ],
+        "concreteFailureMode": "Terrestrial broadcasters and venues lack automated, tamper-evident airplay logging, causing massive royalty disputes and copyright infringement litigation.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-04",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_3_RESEARCH_CHARTER"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-25",
       "name": "Communications and Telecom Network APIs",
-      "statutoryStewards": [
-        "Nigerian Communications Commission (NCC)"
-      ],
-      "documentedDomesticSupply": [
-        "Termii",
-        "Africa's Talking",
-        "MTN Chenosis",
-        "Airtel",
-        "Glo",
-        "9mobile"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-04"
-      ],
-      "concreteFailureMode": "SMS/USSD aggregators exist, but carrier-level network capabilities (SIM-swap velocity, silent number verification, device roaming status) lack unified open interfaces across all 4 Nigerian MNOs.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-01",
@@ -944,27 +1292,43 @@
         ],
         "deliverable": "Normalized cross-MNO carrier verification and asynchronous delivery-receipt state contracts."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Termii",
+          "Africa's Talking",
+          "MTN Chenosis",
+          "Airtel",
+          "Glo",
+          "9mobile"
+        ],
+        "statutoryStewards": [
+          "Nigerian Communications Commission (NCC)"
+        ],
+        "concreteFailureMode": "SMS/USSD aggregators exist, but carrier-level network capabilities (SIM-swap velocity, silent number verification, device roaming status) lack unified open interfaces across all 4 Nigerian MNOs.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-04"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-26",
       "name": "Network Intelligence and Anti-Fraud",
-      "statutoryStewards": [
-        "NCC",
-        "CBN",
-        "NFIU",
-        "ONSA"
-      ],
-      "documentedDomesticSupply": [
-        "NFIU goAML",
-        "Commercial Fraud APIs (Smile ID, Dojah)"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-01",
-        "MECH-05"
-      ],
-      "concreteFailureMode": "Banks and fintechs cannot share real-time mule-account and SIM-swap fraud signals across institutions without breaching NDPA 2023 customer confidentiality.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-03",
@@ -979,28 +1343,42 @@
         ],
         "deliverable": "Zero-knowledge hashed fraud-signal exchange schema compliant with NDPA statutory public-interest exemptions."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "NFIU goAML",
+          "Commercial Fraud APIs (Smile ID, Dojah)"
+        ],
+        "statutoryStewards": [
+          "NCC",
+          "CBN",
+          "NFIU",
+          "ONSA"
+        ],
+        "concreteFailureMode": "Banks and fintechs cannot share real-time mule-account and SIM-swap fraud signals across institutions without breaching NDPA 2023 customer confidentiality.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-01",
+          "MECH-05"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-27",
       "name": "AI and Nigerian Indigenous Languages",
-      "statutoryStewards": [
-        "FMCIDE National AI Strategy",
-        "NITDA",
-        "NINLAN"
-      ],
-      "documentedDomesticSupply": [
-        "Awarri",
-        "Masakhane",
-        "Lelapa AI",
-        "N-ATLAS"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-08"
-      ],
-      "concreteFailureMode": "General NLP models exist for Hausa, Yoruba, Igbo, and Pidgin, but lack deterministic statutory, judicial, and medical glossaries with mandatory human semantic review flags.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-11"
@@ -1010,27 +1388,43 @@
         ],
         "deliverable": "Versioned 5-locale (en-NG, ha-NG, yo-NG, ig-NG, pcm-NG) statutory and civic terminology ASTs with semantic approval gates."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Awarri",
+          "Masakhane",
+          "Lelapa AI",
+          "N-ATLAS"
+        ],
+        "statutoryStewards": [
+          "FMCIDE National AI Strategy",
+          "NITDA",
+          "NINLAN"
+        ],
+        "concreteFailureMode": "General NLP models exist for Hausa, Yoruba, Igbo, and Pidgin, but lack deterministic statutory, judicial, and medical glossaries with mandatory human semantic review flags.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-08"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-28",
       "name": "Geospatial, Maps and Digital Addressing",
-      "statutoryStewards": [
-        "OSGOF",
-        "NIPOST",
-        "36 State GIS Bureaus"
-      ],
-      "documentedDomesticSupply": [
-        "NIPOST Digital Postcode",
-        "Google Maps",
-        "OpenStreetMap Nigeria"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-02",
-        "MECH-06"
-      ],
-      "concreteFailureMode": "Informal settlements, rural farms, and new peri-urban layouts lack verifiable street addresses, blocking KYC address verification and last-mile delivery.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-02",
@@ -1045,27 +1439,42 @@
         ],
         "deliverable": "Offline-computable hierarchical grid-code addressing schema linked to State GIS cadastral boundaries."
       },
-      "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "NIPOST Digital Postcode",
+          "Google Maps",
+          "OpenStreetMap Nigeria"
+        ],
+        "statutoryStewards": [
+          "OSGOF",
+          "NIPOST",
+          "36 State GIS Bureaus"
+        ],
+        "concreteFailureMode": "Informal settlements, rural farms, and new peri-urban layouts lack verifiable street addresses, blocking KYC address verification and last-mile delivery.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-02",
+          "MECH-06"
+        ],
+        "maturityTier": "TIER_2_NORMATIVE_DRAFT"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-29",
       "name": "Security, Authentication and PKI Cryptography",
-      "statutoryStewards": [
-        "NITDA",
-        "NDPC",
-        "ONSA (ngCERT)"
-      ],
-      "documentedDomesticSupply": [
-        "Commercial SSL/TLS CAs",
-        "Remita PKI",
-        "eTranzact"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-05",
-        "MECH-07"
-      ],
-      "concreteFailureMode": "State ministries and courts cannot afford proprietary foreign HSMs, leaving digital documents unsigned or signed with insecure passwords rather than hardware-backed keys.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-01",
@@ -1080,25 +1489,42 @@
         ],
         "deliverable": "FIDO2 WebAuthn and Ed25519 public-key pinning specification for low-cost hardware security keys."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Commercial SSL/TLS CAs",
+          "Remita PKI",
+          "eTranzact"
+        ],
+        "statutoryStewards": [
+          "NITDA",
+          "NDPC",
+          "ONSA (ngCERT)"
+        ],
+        "concreteFailureMode": "State ministries and courts cannot afford proprietary foreign HSMs, leaving digital documents unsigned or signed with insecure passwords rather than hardware-backed keys.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-05",
+          "MECH-07"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-30",
       "name": "Developer Infrastructure, Testing and Chaos Simulation",
-      "statutoryStewards": [
-        "NITDA IT Project Clearance"
-      ],
-      "documentedDomesticSupply": [
-        "Cloudflare Workers",
-        "AWS",
-        "GitHub"
-      ],
-      "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
-      "residualGapMechanisms": [
-        "MECH-06",
-        "MECH-08"
-      ],
-      "concreteFailureMode": "Provider sandboxes (e.g., Paystack/Termii test modes) always return instant HTTP 200 success, leaving developer apps untested against real-world delayed callbacks, reversals, and 2G drops.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-03"
@@ -1112,29 +1538,40 @@
         ],
         "deliverable": "Executable Gherkin BDD failure-recovery scenario packs and CLI conformance runner (`@nigeriastack/conformance-cli`)."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Cloudflare Workers",
+          "AWS",
+          "GitHub"
+        ],
+        "statutoryStewards": [
+          "NITDA IT Project Clearance"
+        ],
+        "concreteFailureMode": "Provider sandboxes (e.g., Paystack/Termii test modes) always return instant HTTP 200 success, leaving developer apps untested against real-world delayed callbacks, reversals, and 2G drops.",
+        "evidenceStatus": "DOCUMENTED_DOMESTIC_SUPPLY",
+        "residualGapMechanisms": [
+          "MECH-06",
+          "MECH-08"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-31",
       "name": "Data Products, Statutory ASTs and Search",
-      "statutoryStewards": [
-        "NBS",
-        "CBN",
-        "National Assembly / State Houses of Assembly"
-      ],
-      "documentedDomesticSupply": [
-        "Stears",
-        "Briter Bridges",
-        "Dataphyte",
-        "NBS Data Portal"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-03",
-        "MECH-05",
-        "MECH-08"
-      ],
-      "concreteFailureMode": "Nigerian statutes, gazettes, and regulatory circulars are published as unindexed PDFs without point-in-time amendment history or cryptographic provenance.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-11"
@@ -1144,28 +1581,44 @@
         ],
         "deliverable": "Bi-temporal Akoma Ntoso 3.0 XML/JSON statutory tree standard (`urn:lex:ng:*`) with verbatim span bounding-box grounding."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "Stears",
+          "Briter Bridges",
+          "Dataphyte",
+          "NBS Data Portal"
+        ],
+        "statutoryStewards": [
+          "NBS",
+          "CBN",
+          "National Assembly / State Houses of Assembly"
+        ],
+        "concreteFailureMode": "Nigerian statutes, gazettes, and regulatory circulars are published as unindexed PDFs without point-in-time amendment history or cryptographic provenance.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-03",
+          "MECH-05",
+          "MECH-08"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     },
     {
       "industryId": "IND-32",
       "name": "Autonomous Agent Governance and MCP Safety",
-      "statutoryStewards": [
-        "FMCIDE",
-        "NITDA",
-        "NDPC"
-      ],
-      "documentedDomesticSupply": [
-        "AAIF Model Context Protocol (MCP)",
-        "Anthropic Claude",
-        "LangChain"
-      ],
-      "evidenceStatus": "PARTIAL_COVERAGE",
-      "residualGapMechanisms": [
-        "MECH-04",
-        "MECH-05",
-        "MECH-08"
-      ],
-      "concreteFailureMode": "Community MCP tools suffer from prompt-injection flaws, lack NDPA 2023 s. 37 human-oversight gates, and have no standardized micro-settlement or delegation mandate.",
+      "statutoryStewards": [],
+      "documentedDomesticSupply": [],
+      "evidenceStatus": "UNRESOLVED",
+      "residualGapMechanisms": [],
+      "concreteFailureMode": "Not yet assessed. Service coverage and sector-specific gaps require evidence review.",
       "nigeriaStackIntervention": {
         "buildingBlocks": [
           "BB-04",
@@ -1180,7 +1633,35 @@
         ],
         "deliverable": "Read-only default MCP tool profiles, cryptographic human countersignatures, and two-phase HTTP 402 escrow rules."
       },
-      "maturityTier": "TIER_1_LIVE_ANCHOR"
+      "maturityTier": "RESEARCH_PROPOSAL",
+      "unverifiedSourceAssertions": {
+        "documentedDomesticSupply": [
+          "AAIF Model Context Protocol (MCP)",
+          "Anthropic Claude",
+          "LangChain"
+        ],
+        "statutoryStewards": [
+          "FMCIDE",
+          "NITDA",
+          "NDPC"
+        ],
+        "concreteFailureMode": "Community MCP tools suffer from prompt-injection flaws, lack NDPA 2023 s. 37 human-oversight gates, and have no standardized micro-settlement or delegation mandate.",
+        "evidenceStatus": "PARTIAL_COVERAGE",
+        "residualGapMechanisms": [
+          "MECH-04",
+          "MECH-05",
+          "MECH-08"
+        ],
+        "maturityTier": "TIER_1_LIVE_ANCHOR"
+      },
+      "assessmentProvenance": {
+        "assessmentState": "NOT_ASSESSED",
+        "sourceRefs": [],
+        "observedAt": null,
+        "reviewedOn": "2026-11-17",
+        "limitation": "No primary evidence bundle supports the legacy empirical assertions. Proposed interventions are normative research proposals."
+      }
     }
-  ]
+  ],
+  "methodologyNotice": "32 proposed industry research categories. Legacy supply, regulator, coverage and failure assertions have not been substantiated and are retained only as withdrawn research inputs. Proposed protocol interventions are specifications, not deployed capabilities."
 }

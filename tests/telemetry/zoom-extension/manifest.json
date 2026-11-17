@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "NigeriaStack ephemeral native zoom verifier",
+  "version": "1.0.0",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

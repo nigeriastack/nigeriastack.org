@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-17",
+  "repository": "nigeriastack/nigeriastack.org",
+  "connectionAccount": "nigeriastack",
+  "installationId": 183083839,
+  "read": true,
+  "write": "VERIFIED",
+  "administration": "NOT_GRANTED_BY_APP",
+  "probeBranch": "repair/corrected-p0-p7-v2-1",
+  "readbackSha": "2083b50267c4fc1af5f41692a96658c37d6b4723",
+  "method": "GitHub connector create_branch followed by fetch ref in the same Work session",
+  "installationRepositoryScope": [
+    "nigeriastack/nigeriastack.org"
+  ],
+  "permissions": {
+    "read": [
+      "checks",
+      "commit statuses",
+      "metadata"
+    ],
+    "readWrite": [
+      "actions",
+      "code",
+      "issues",
+      "pull requests",
+      "workflows"
+    ]
+  },
+  "rootCause": "GitHub identity authorized without repository-owner app installation; installation and actual branch write/readback now verified",
+  "remoteImplementationMerged": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "publicReleasePerformed": false,
+  "blockers": [
+    "Current complete62-case browser evidence absent or failing",
+    "Actual native200%/400%zoom evidence absent",
+    "Actual GitHub write/readback not verified",
+    "Separate publicrelease authorization absent",
+    "Cloudflare productionbinding is a placeholder"
+  ]
+}

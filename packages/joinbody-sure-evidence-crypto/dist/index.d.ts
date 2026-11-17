@@ -23,6 +23,7 @@ export interface CryptographicSealBlock {
     signatureBase64Url: string;
     issuedAtUtc: string;
 }
+/** Local SDK helper DTO; distinct from the published v2026 JSON Schema wire envelope. */
 export interface SureEvidenceCredential {
     "@context": ["https://www.w3.org/ns/credentials/v2", "https://nigeriastack.org/contexts/sure-evidence/v2026"];
     credentialId: string;
@@ -32,6 +33,9 @@ export interface SureEvidenceCredential {
     cryptographicSeal: CryptographicSealBlock;
 }
 export declare function canonicalizeJson(input: unknown): string;
+/** Portable base64url codec for Web Crypto callers in browsers and Node. */
+export declare function encodeBase64Url(bytes: Uint8Array): string;
+export declare function decodeBase64Url(text: string): Uint8Array;
 export declare function sha256Hex(payloadBytes: Uint8Array): Promise<string>;
 export declare function buildSection84Declaration(officerName: string, officerRole: string, jurisdictionSlug: string, hardwareFingerprintSha256: string): string;
 export declare function signSureEvidenceCredential(params: {

@@ -1,0 +1,2 @@
+$ node -e 'const fs=require("fs"); const faq=JSON.parse(fs.readFileSync("content/canonical/audited-faq-nigeriastack-15.json","utf8")); const rag=JSON.parse(fs.readFileSync("content/canonical/rag-geo-aeo-15-benchmarks.json","utf8")); if(faq.length!==15 || rag.benchmarks.length!==15 || rag.benchmarks.some(b=>b.wordCount>65)) process.exit(1); console.log("[✓ GATE NS-G3 CERTIFIED PASS] 15 Canonical FAQs and 15 H2 RAG Benchmarks (<65 words) Verified.");'
+[✓ GATE NS-G3 CERTIFIED PASS] 15 Canonical FAQs and 15 H2 RAG Benchmarks (<65 words) Verified.

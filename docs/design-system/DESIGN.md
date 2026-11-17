@@ -14,8 +14,8 @@
 | `Key` | `Specification Attribute` | `Value` |
 | :---- | :---- | :---- |
 | 01 | Primary Surface Tone | Sovereign Parchment (`#F8FAF8`) |
-| 02 | Primary Text Tone | Archival Forest Ink (`#0D1512`, Contrast Ratio 16.82:1 AAA) |
-| 03 | Accent & Primary Action Tone | Deep Emerald Action (`#0A5C36`, Contrast Ratio 8.24:1 AAA) |
+| 02 | Primary Text Tone | Archival Forest Ink (`#0D1512`, Contrast Ratio 17.67:1 AAA) |
+| 03 | Accent & Primary Action Tone | Deep Emerald Action (`#0A5C36`, Contrast Ratio 8.09:1 AAA) |
 | 04 | Brand Accent Baseline | Federal Green (`#008751`) |
 | 05 | Layout & Typography Foundation | Swiss Technical Blueprint / IETF Datatracker Paradigm |
 
@@ -190,7 +190,7 @@ button, a.ns-btn, select, input, summary {
 
 ## **2.1 Visual Identity & Anti-Slop Craft Rules**
 
-1. **Aesthetic Direction:** Swiss Technical Specification Blueprint (`IETF Datatracker` \+ `W3C TR` \+ `GOV.UK / USWDS` tabular clarity) anchored in **Sovereign Parchment (`#F8FAF8`)**, **Archival Forest Ink (`#0D1512`, `16.82:1` AAA)**, and **Deep Emerald Action (`#0A5C36`, `8.24:1` AAA)**.  
+1. **Aesthetic Direction:** Swiss Technical Specification Blueprint (`IETF Datatracker` \+ `W3C TR` \+ `GOV.UK / USWDS` tabular clarity) anchored in **Sovereign Parchment (`#F8FAF8`)**, **Archival Forest Ink (`#0D1512`, `17.67:1` AAA)**, and **Deep Emerald Action (`#0A5C36`, `8.09:1` AAA)**.  
 2. **Prohibited SaaS AI-Slop Patterns (`Gate NS-G5` Blocked):** Zero purple/indigo/pink neon gradients, zero `backdrop-filter: blur(24px)` glassmorphism blobs, zero floating 3D isometric illustrations, zero unverified marketing counters, and zero rounded pill cards (`border-radius > 4px`).  
 3. **Shape-Prefixed Status Semantics (WCAG 2.2 SC 1.4.1 Use of Color):** Every status badge pairs its high-contrast semantic token with an explicit ASCII/Unicode shape prefix:  
    * `[✓ RATIFIED]` (`--ns-status-ratified-*`)  
@@ -256,3 +256,8 @@ button, a.ns-btn, select, input, summary {
   </g>
 </svg>
 ```
+
+
+## Corrected v2.1 contrast boundary — 17 November 2026
+
+The token-pair calculations in `contrast-measurements-2026-11-17.csv` replace the earlier numerical ratios. Federal green #008751 against parchment #F8FAF8 is approximately4.37:1 and fails AA for normal-sized text; reserve it for appropriate non-text/large-use contexts. White on deep emerald is approximately8.09:1. A token-pair calculation is not component-level accessibility certification. Browser measurements for focus, hover, forced colors, fonts and native200%/400%zoom remain separate evidence requirements. The44px target policy exceeds some WCAG minimum cases; it is a project policy, not a blanket statement of WCAG2.2AA. SVG basic-phone dial strings in historical design examples are unverified examples and are not provisioned services.

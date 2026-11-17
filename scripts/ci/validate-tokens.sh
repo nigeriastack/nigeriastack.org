@@ -48,7 +48,7 @@ scan_target_files() {
     # Strip the :root { ... } token declaration block before checking for raw hex literals
     local stripped_content
     stripped_content="$(awk '
-      /:root\s*\{/ { in_root=1; next }
+      /:root[[:space:]]*\{/ { in_root=1; next }
       in_root && /\}/ { in_root=0; next }
       !in_root { print NR ":" $0 }
     ' "${file}")"

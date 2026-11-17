@@ -1,0 +1,24 @@
+Scope: all 8 workspace projects
+? Verifying lockfile against supply-chain policies (368 entries)...
+Lockfile is up to date, resolution step is skipped
+Already up to date
+✓ Lockfile passes supply-chain policies (368 entries in 14.9s)
+
+Done in 16.4s using pnpm v11.25.0
+Proxy environment variables detected. We'll use your proxy for fetch requests.
+
+ ⛅️ wrangler 3.114.17
+---------------------
+
+Total Upload: 2548.72 KiB / gzip: 402.62 KiB
+Your worker has access to the following bindings:
+- D1 Databases:
+  - NGSTACK_D1: nigeriastack-commons-d1-prod (00000000-0000-0000-0000-ngstack2026d1)
+- Vars:
+  - ENVIRONMENT: "staging"
+  - COMMONS_VERSION: "v2026.6.5"
+  - LICENSE_SPDX: "CC0-1.0"
+  - SOVEREIGN_NON_IMPERSONATION_HEADER: "Independent Open Specification & Conf..."
+--dry-run: exiting now.
+
+Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md

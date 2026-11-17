@@ -1,0 +1,180 @@
+/**
+ * NIGERIASTACK.ORG — COMPILED W3C DTCG TWO-LAYER CSS CUSTOM PROPERTIES
+ * Canonical Path: design-system/tokens/tokens.css
+ * Source Authority: design-system/tokens/nigeriastack.dtcg.tokens.json (NS-KB-04A)
+ * Verification Gate: Gate NS-G5 (scripts/ci/validate-tokens.sh)
+ * License: CC0-1.0 Universal (Public Domain Dedication)
+ */
+
+
+:root {
+  /* ==========================================================================
+   * LAYER 1: PRIMITIVE TOKENS (Resolved ONLY inside :root — Never consumed directly in UI rules)
+   * ========================================================================== */
+  --ns-primitive-color-parchment-50: #F8FAF8;
+  --ns-primitive-color-sheet-0: #FFFFFF;
+  --ns-primitive-color-grid-subtle-100: #EEF3EF;
+  --ns-primitive-color-hairline-200: #D4DDD7;
+  --ns-primitive-color-control-border-500: #52665B;
+  --ns-primitive-color-slate-600: #3B4D44;
+  --ns-primitive-color-forest-ink-900: #0D1512;
+  --ns-primitive-color-terminal-panel-850: #13201B;
+  --ns-primitive-color-federal-green-600: #008751;
+  --ns-primitive-color-emerald-action-700: #0A5C36;
+  --ns-primitive-color-emerald-hover-800: #064226;
+  --ns-primitive-color-amber-draft-100: #FEF3C7;
+  --ns-primitive-color-amber-draft-800: #78350F;
+  --ns-primitive-color-crimson-quarantine-100: #FEE2E2;
+  --ns-primitive-color-crimson-quarantine-800: #7F1D1D;
+  --ns-primitive-color-violet-restricted-100: #F3E8FF;
+  --ns-primitive-color-violet-restricted-800: #4A1D6E;
+
+
+  --ns-primitive-font-serif: 'Source Serif 4', Georgia, Cambria, serif;
+  --ns-primitive-font-sans: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ns-primitive-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+
+
+  --ns-primitive-space-0: 0px;
+  --ns-primitive-space-1: 4px;
+  --ns-primitive-space-2: 8px;
+  --ns-primitive-space-3: 12px;
+  --ns-primitive-space-4: 16px;
+  --ns-primitive-space-6: 24px;
+  --ns-primitive-space-8: 32px;
+  --ns-primitive-space-12: 48px;
+  --ns-primitive-space-16: 64px;
+  --ns-primitive-space-24: 96px;
+
+
+  --ns-primitive-border-hairline: 1px;
+  --ns-primitive-border-structural: 2px;
+  --ns-primitive-border-focus: 3px;
+
+
+  --ns-primitive-radius-sharp: 0px;
+  --ns-primitive-radius-technical: 2px;
+  --ns-primitive-radius-badge: 4px;
+
+
+  /* ==========================================================================
+   * LAYER 2: SEMANTIC TOKENS (Consumed across all UI components & HTML5 artboards)
+   * ========================================================================== */
+  --ns-surface-canvas: var(--ns-primitive-color-parchment-50);
+  --ns-surface-panel: var(--ns-primitive-color-sheet-0);
+  --ns-surface-well: var(--ns-primitive-color-grid-subtle-100);
+  --ns-surface-terminal: var(--ns-primitive-color-forest-ink-900);
+  --ns-surface-terminal-elevated: var(--ns-primitive-color-terminal-panel-850);
+
+
+  --ns-text-primary: var(--ns-primitive-color-forest-ink-900);
+  --ns-text-secondary: var(--ns-primitive-color-slate-600);
+  --ns-text-on-primary: var(--ns-primitive-color-sheet-0);
+  --ns-text-on-terminal: var(--ns-primitive-color-parchment-50);
+
+
+  --ns-border-grid-hairline: var(--ns-primitive-color-hairline-200);
+  --ns-border-control: var(--ns-primitive-color-control-border-500);
+  --ns-border-structural: var(--ns-primitive-color-forest-ink-900);
+  --ns-border-focus: var(--ns-primitive-color-emerald-action-700);
+
+
+  --ns-action-primary-bg: var(--ns-primitive-color-emerald-action-700);
+  --ns-action-primary-hover-bg: var(--ns-primitive-color-emerald-hover-800);
+  --ns-brand-accent: var(--ns-primitive-color-federal-green-600);
+
+
+  --ns-status-ratified-bg: var(--ns-primitive-color-grid-subtle-100);
+  --ns-status-ratified-ink: var(--ns-primitive-color-emerald-action-700);
+  --ns-status-ratified-border: var(--ns-primitive-color-emerald-action-700);
+
+
+  --ns-status-draft-bg: var(--ns-primitive-color-amber-draft-100);
+  --ns-status-draft-ink: var(--ns-primitive-color-amber-draft-800);
+  --ns-status-draft-border: var(--ns-primitive-color-amber-draft-800);
+
+
+  --ns-status-restricted-bg: var(--ns-primitive-color-violet-restricted-100);
+  --ns-status-restricted-ink: var(--ns-primitive-color-violet-restricted-800);
+  --ns-status-restricted-border: var(--ns-primitive-color-violet-restricted-800);
+
+
+  --ns-status-failed-bg: var(--ns-primitive-color-crimson-quarantine-100);
+  --ns-status-failed-ink: var(--ns-primitive-color-crimson-quarantine-800);
+  --ns-status-failed-border: var(--ns-primitive-color-crimson-quarantine-800);
+
+
+  --ns-font-heading: var(--ns-primitive-font-serif);
+  --ns-font-body: var(--ns-primitive-font-sans);
+  --ns-font-code: var(--ns-primitive-font-mono);
+
+
+  --ns-touch-target-min: 44px;
+  --ns-layout-max-width: 1440px;
+  --ns-reading-measure: 65ch;
+}
+
+
+/* ============================================================================
+ * MANDATORY WCAG 2.2 ACCESSIBILITY & ANTI-SLOP STRUCTURAL RULES
+ * ============================================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: var(--ns-primitive-space-0);
+  background-color: var(--ns-surface-canvas);
+  color: var(--ns-text-primary);
+  font-family: var(--ns-font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+code, pre, .ns-tabular-mono {
+  font-family: var(--ns-font-code);
+  font-variant-numeric: tabular-nums;
+}
+
+
+button, a.ns-btn, select, input, summary {
+  min-height: var(--ns-touch-target-min);
+  border-radius: var(--ns-primitive-radius-technical);
+}
+
+
+:focus-visible {
+  outline: var(--ns-primitive-border-focus) solid var(--ns-border-focus);
+  outline-offset: var(--ns-primitive-space-1);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+@media (forced-colors: active) {
+  .ns-non-impersonation-bar,
+  .ns-card,
+  .ns-badge,
+  button,
+  select,
+  input,
+  table,
+  th,
+  td {
+    forced-color-adjust: auto;
+    border: 1px solid CanvasText !important;
+  }
+  :focus-visible {
+    outline: 3px solid Highlight !important;
+  }
+}

@@ -10,6 +10,6 @@
 
 1. Every smallholder farm boundary registered by an extension worker or cooperative MUST be encoded as a closed GeoJSON `Polygon` (WGS84 `EPSG:4326`) with minimum 4 vertex coordinates, captured offline via `KioskBase` (`kbd_` ULID) and linked to a salted hash of the farmer's `NIN` and `LandGuard` 3×3m grid code.  
 2. **Anti-Overlap Cadastral Check:** Before issuing an input-financing or warehouse-receipt credential, the state/LGA node MUST verify zero polygon intersection against conflicting claims or active High Court / Customary Court *lis pendens* encumbrances.  
-3. **Negotiable Electronic Warehouse Receipt (`e-WR`):** Certified commodities warehouses (e.g., AFEX, NCX, or state grain silos) seal Assay & Weight certificates with a `SureEvidence` (`s84_` ULID) hardware key so commercial banks can perfect collateral liens programmatically under CBN/SEC rules.
+3. **Negotiable Electronic Warehouse Receipt (`e-WR`):** Certified commodities warehouses (e.g., AFEX, NCX, or state grain silos) seal Assay & Weight certificates with a `SureEvidence` (`s84_` ULID) hardware key to supply provenance for collateral review. A lender must separately establish the applicable conditions for lien creation, registration and perfection.
 
 ---

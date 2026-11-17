@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/IndustryCapabilityLedger.schema.json",
+  "title": "IndustryCapabilityLedger",
+  "type": "object",
+  "required": [
+    "$schema",
+    "ledgerId",
+    "version",
+    "totalIndustries",
+    "macroSectors",
+    "industries"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://nigeriastack.org/schemas/v2026/IndustryCapabilityLedger.schema.json"
+    },
+    "ledgerId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "totalIndustries": {
+      "const": 32
+    },
+    "macroSectors": {
+      "const": 8
+    },
+    "industries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "industryId",
+          "name",
+          "statutoryStewards",
+          "documentedDomesticSupply",
+          "evidenceStatus",
+          "residualGapMechanisms",
+          "concreteFailureMode",
+          "nigeriaStackIntervention",
+          "maturityTier",
+          "assessmentProvenance"
+        ],
+        "properties": {
+          "industryId": {
+            "type": "string",
+            "pattern": "^IND-(0[1-9]|[12][0-9]|3[0-2])$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "statutoryStewards": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "documentedDomesticSupply": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "evidenceStatus": {
+            "type": "string",
+            "minLength": 1
+          },
+          "residualGapMechanisms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "concreteFailureMode": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nigeriaStackIntervention": {
+            "type": "object",
+            "required": [
+              "buildingBlocks",
+              "rfcs",
+              "deliverable"
+            ],
+            "properties": {
+              "buildingBlocks": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "protocols": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "rfcs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "deliverable": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "maturityTier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assessmentProvenance": {
+            "type": "object"
+          }
+        }
+      },
+      "minItems": 32,
+      "maxItems": 32
+    }
+  }
+}

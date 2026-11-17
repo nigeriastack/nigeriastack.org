@@ -1,0 +1,24 @@
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:13:
+data.nigeriastack.clearam.guard.test_missing_input_denied: PASS (880.525µs)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:14:
+data.nigeriastack.clearam.guard.test_unknown_visibility_denied: PASS (1.893049ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:21:
+data.nigeriastack.clearam.guard.test_restricted_denied: PASS (1.674265ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:22:
+data.nigeriastack.clearam.guard.test_agent_mutation_denied_even_with_header: PASS (5.826921ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:17:
+data.nigeriastack.clearam.guard.test_invalid_timestamp_denied: PASS (5.615405ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:12:
+data.nigeriastack.clearam.guard.test_valid_read: PASS (4.882848ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:16:
+data.nigeriastack.clearam.guard.test_offset_time_compared_as_instants: PASS (6.365019ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:15:
+data.nigeriastack.clearam.guard.test_expiry_boundary_denied: PASS (3.689051ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:20:
+data.nigeriastack.clearam.guard.test_intermediary_denied: PASS (6.768691ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:18:
+data.nigeriastack.clearam.guard.test_positive_escrow_denied: PASS (6.982377ms)
+tests/conformance-itb/validation/ndpa-statutory-boundary-rules_test.rego:19:
+data.nigeriastack.clearam.guard.test_negative_escrow_denied: PASS (8.139488ms)
+--------------------------------------------------------------------------------
+PASS: 11/11

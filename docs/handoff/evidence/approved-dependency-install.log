@@ -1,0 +1,27 @@
+Scope: all 8 workspace projects
+? Verifying lockfile against supply-chain policies (228 entries)...
+
+   ╭──────────────────────────────────────────────────────────────────────╮
+   │                                                                      │
+   │                 Update available! 11.25.0 → 12.21.0.                 │
+   │                 Changelog: https://pnpm.io/v/12.21.0                 │
+   │   To update, run: curl -fsSL https://get.pnpm.io/install.sh | sh -   │
+   │                                                                      │
+   ╰──────────────────────────────────────────────────────────────────────╯
+
+✓ Lockfile passes supply-chain policies (228 entries in 10.8s)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 13, reused 0, downloaded 9, added 0
+Progress: resolved 16, reused 0, downloaded 15, added 0
+Progress: resolved 70, reused 0, downloaded 67, added 0
+Progress: resolved 181, reused 0, downloaded 94, added 0
+Progress: resolved 225, reused 0, downloaded 119, added 0
+Progress: resolved 258, reused 0, downloaded 140, added 0
+Progress: resolved 332, reused 0, downloaded 184, added 0
+Progress: resolved 354, reused 0, downloaded 214, added 0
+[WARN] 2 deprecated subdependencies found: rollup-plugin-inject@3.0.2, sourcemap-codec@1.4.8
+Packages: +100 -4
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+Progress: resolved 354, reused 0, downloaded 214, added 100, done
+
+Done in 21.6s using pnpm v11.25.0

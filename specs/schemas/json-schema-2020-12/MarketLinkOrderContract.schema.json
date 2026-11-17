@@ -11,8 +11,7 @@
     "merchantCatalogNodeId",
     "haulageFulfillmentNodeId",
     "orderState",
-    "antiMonopolyAttestation",
-    "deliverySureEvidenceId"
+    "antiMonopolyAttestation"
   ],
   "properties": {
     "orderOperationId": { "type": "string", "pattern": "^cop_[0-9A-HJKMNP-TV-Z]{26}$" },
@@ -32,5 +31,7 @@
       }
     },
     "deliverySureEvidenceId": { "type": "string", "pattern": "^s84_[0-9A-HJKMNP-TV-Z]{26}$" }
-  }
+  },
+  "if": { "properties": { "orderState": { "const": "DELIVERED_VERIFIED" } } },
+  "then": { "required": ["deliverySureEvidenceId"] }
 }

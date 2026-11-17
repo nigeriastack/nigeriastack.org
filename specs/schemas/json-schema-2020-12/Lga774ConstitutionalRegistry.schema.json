@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/Lga774ConstitutionalRegistry.schema.json",
+  "title": "Lga774ConstitutionalRegistry",
+  "type": "object",
+  "required": [
+    "$schema",
+    "registryId",
+    "totalConstitutionalCouncils",
+    "stateLgasCount",
+    "fctAreaCouncilsCount",
+    "statesAndTerritory"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://nigeriastack.org/schemas/v2026/Lga774ConstitutionalRegistry.schema.json"
+    },
+    "registryId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "totalConstitutionalCouncils": {
+      "const": 774
+    },
+    "stateLgasCount": {
+      "const": 768
+    },
+    "fctAreaCouncilsCount": {
+      "const": 6
+    },
+    "statesAndTerritory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stateCode",
+          "stateName",
+          "zone",
+          "capital",
+          "lgaCount",
+          "lgas",
+          "councilType",
+          "identityAudit"
+        ],
+        "properties": {
+          "stateCode": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "stateName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "zone": {
+            "type": "string",
+            "minLength": 1
+          },
+          "capital": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lgaCount": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "lgas": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}-LGA-[0-9]{2}:.+$"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "councilType": {
+            "enum": [
+              "STATE_LOCAL_GOVERNMENT_AREA",
+              "FCT_AREA_COUNCIL"
+            ]
+          },
+          "identityAudit": {
+            "type": "object"
+          }
+        }
+      },
+      "minItems": 37,
+      "maxItems": 37
+    }
+  }
+}

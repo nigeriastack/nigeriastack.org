@@ -16,168 +16,537 @@
       "canonicalName": "CouncilComplain",
       "route": "/protocols/lga-governance-stack/lga-01-council-complain",
       "fourthScheduleMandate": "Fourth Schedule Para 1(b), (e), (h): Public roads, drains, refuse disposal, and primary facility upkeep.",
-      "targetPersonaClusters": ["CLUSTER_6_CITIZENS_TRADERS", "CLUSTER_3_LGA_CHAIRMEN_DIRECTORS"],
-      "gapMechanismsSolved": ["MECH-02", "MECH-06"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_CITIZENS_TRADERS",
+        "CLUSTER_3_LGA_CHAIRMEN_DIRECTORS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-02",
+        "MECH-06"
+      ],
       "painPointSolved": "Citizens lack an offline channel to report burst pipes, blocked drainages, or clinic closures; Chairmen cannot verify if contractors fixed the fault.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "USSD_347_LGA", "SMS_5_LOCALE", "PAPER_COUNTER_ASSIST"],
-      "buildingBlocks": ["BB-02", "BB-05"],
-      "stateMachine": ["FILED_OFFLINE", "ASSIGNED_WARD_OFFICER", "GEO_PHOTO_ATTESTED_S84", "CITIZEN_CLOSED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "SMS_5_LOCALE",
+        "PAPER_COUNTER_ASSIST"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05"
+      ],
+      "stateMachine": [
+        "FILED_OFFLINE",
+        "ASSIGNED_WARD_OFFICER",
+        "GEO_PHOTO_ATTESTED_S84",
+        "CITIZEN_CLOSED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-02",
       "canonicalName": "BuildClear",
       "route": "/protocols/lga-governance-stack/lga-02-build-clear",
       "fourthScheduleMandate": "Fourth Schedule Para 1(f) & 2(d): Local building setback, culvert, and commercial stall erection approval.",
-      "targetPersonaClusters": ["CLUSTER_6_PROPERTY_OWNERS", "CLUSTER_3_TOWN_PLANNERS"],
-      "gapMechanismsSolved": ["MECH-03", "MECH-05"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_PROPERTY_OWNERS",
+        "CLUSTER_3_TOWN_PLANNERS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-03",
+        "MECH-05"
+      ],
       "painPointSolved": "Eliminates extortion by unverified field inspectors and coordinates local setback permits with State GIS parcels.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "QR_OFFLINE_VERIFIER"],
-      "buildingBlocks": ["BB-02", "BB-05", "BB-10"],
-      "stateMachine": ["APPLICATION_LOGGED", "LANDGUARD_GRID_CHECKED", "SETBACK_INSPECTED", "S84_QR_PERMIT_SEALED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "QR_OFFLINE_VERIFIER"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "stateMachine": [
+        "APPLICATION_LOGGED",
+        "LANDGUARD_GRID_CHECKED",
+        "SETBACK_INSPECTED",
+        "S84_QR_PERMIT_SEALED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-03",
       "canonicalName": "WashConnect",
       "route": "/protocols/lga-governance-stack/lga-03-wash-connect",
       "fourthScheduleMandate": "Fourth Schedule Para 1(h): Public conveniences, sewage, faecal sludge management (FSM), and rural borehole O&M.",
-      "targetPersonaClusters": ["CLUSTER_6_HOUSEHOLDS", "CLUSTER_3_WASH_COMMITTEES"],
-      "gapMechanismsSolved": ["MECH-04", "MECH-06"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_HOUSEHOLDS",
+        "CLUSTER_3_WASH_COMMITTEES"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-04",
+        "MECH-06"
+      ],
       "painPointSolved": "Prevents rural borehole breakdown from uncollected O&M tariffs and stops illegal sewage dumping by un-tracked desludging trucks.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "USSD_347_LGA", "QR_OFFLINE_VERIFIER"],
-      "buildingBlocks": ["BB-02", "BB-05", "BB-06"],
-      "stateMachine": ["DESLUDGE_REQUESTED", "TARIFF_LOCKED_SPLITDIRECT", "TREATMENT_PLANT_QR_DISCHARGE_VERIFIED", "SETTLED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "QR_OFFLINE_VERIFIER"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "stateMachine": [
+        "DESLUDGE_REQUESTED",
+        "TARIFF_LOCKED_SPLITDIRECT",
+        "TREATMENT_PLANT_QR_DISCHARGE_VERIFIED",
+        "SETTLED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-04",
       "canonicalName": "ShopPermit",
       "route": "/protocols/lga-governance-stack/lga-04-shop-permit",
       "fourthScheduleMandate": "Fourth Schedule Para 1(e), (i), (k): Licensing of markets, lock-up shops, kiosks, bakeries, eateries, liquor & outdoor signage.",
-      "targetPersonaClusters": ["CLUSTER_6_MSMES_TRADERS", "CLUSTER_4_MICROFINANCE_BANKS"],
-      "gapMechanismsSolved": ["MECH-05", "MECH-07"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_MSMES_TRADERS",
+        "CLUSTER_4_MICROFINANCE_BANKS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-05",
+        "MECH-07"
+      ],
       "painPointSolved": "Eliminates forged paper demand notices and multiple taxation by touts; provides verifiable shop credentials for MSME micro-credit.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "USSD_347_LGA", "QR_OFFLINE_VERIFIER"],
-      "buildingBlocks": ["BB-02", "BB-05", "BB-06"],
-      "stateMachine": ["ASSESSED_BY_SCHEDULE", "SPLITDIRECT_PAID_TO_LGA", "S84_QR_SHOP_STICKER_ISSUED", "ACTIVE_VERIFIABLE"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "QR_OFFLINE_VERIFIER"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "stateMachine": [
+        "ASSESSED_BY_SCHEDULE",
+        "SPLITDIRECT_PAID_TO_LGA",
+        "S84_QR_SHOP_STICKER_ISSUED",
+        "ACTIVE_VERIFIABLE"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-05",
       "canonicalName": "VitalProof",
       "route": "/protocols/lga-governance-stack/lga-05-vital-proof",
       "fourthScheduleMandate": "Fourth Schedule Para 1(i): Registration of all births, deaths, burials, and customary/local government marriages; NPC Act.",
-      "targetPersonaClusters": ["CLUSTER_6_CITIZENS_FAMILIES", "CLUSTER_1_REGISTRARS"],
-      "gapMechanismsSolved": ["MECH-05", "MECH-06"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_CITIZENS_FAMILIES",
+        "CLUSTER_1_REGISTRARS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-05",
+        "MECH-06"
+      ],
       "painPointSolved": "Prevents unregistered rural births/deaths during network drops and stops forged marriage/death certificates in probate and visa filings.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "USSD_347_LGA", "PAPER_COUNTER_ASSIST"],
-      "buildingBlocks": ["BB-01", "BB-02", "BB-05"],
-      "stateMachine": ["CAPTURED_OFFLINE_HLC", "NPC_NIN_BRIDGE_QUEUED", "REGISTRAR_FIDO2_S84_SEALED", "ENROLLED_VERIFIABLE"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "PAPER_COUNTER_ASSIST"
+      ],
+      "buildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-05"
+      ],
+      "stateMachine": [
+        "CAPTURED_OFFLINE_HLC",
+        "NPC_NIN_BRIDGE_QUEUED",
+        "REGISTRAR_FIDO2_S84_SEALED",
+        "ENROLLED_VERIFIABLE"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-06",
       "canonicalName": "IndigeneProof",
       "route": "/protocols/lga-governance-stack/lga-06-indigene-proof",
       "fourthScheduleMandate": "Nigerian Constitutional Federal Character & LGA Origin/Residency Attestation Mandate.",
-      "targetPersonaClusters": ["CLUSTER_6_YOUTH_APPLICANTS", "CLUSTER_3_LGA_SECRETARIES", "CLUSTER_4_EMPLOYERS_INSTITUTIONS"],
-      "gapMechanismsSolved": ["MECH-02", "MECH-05", "MECH-07"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_YOUTH_APPLICANTS",
+        "CLUSTER_3_LGA_SECRETARIES",
+        "CLUSTER_4_EMPLOYERS_INSTITUTIONS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-02",
+        "MECH-05",
+        "MECH-07"
+      ],
       "painPointSolved": "Eliminates forged paper LGA Indigene letters, multi-week ward endorsement delays, and travel burdens via a 72-hour SLA and USSD community vouching.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "USSD_347_LGA", "QR_OFFLINE_VERIFIER"],
-      "buildingBlocks": ["BB-01", "BB-02", "BB-04", "BB-05", "BB-06"],
-      "stateMachine": ["CLEARAM_APPLICATION_SUBMITTED", "USSD_WARD_VOUCH_ATTESTED_72H_SLA", "SPLITDIRECT_STATUTORY_FEE_PAID", "SECRETARY_FIDO2_S84_QR_SEALED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "QR_OFFLINE_VERIFIER"
+      ],
+      "buildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "stateMachine": [
+        "CLEARAM_APPLICATION_SUBMITTED",
+        "USSD_WARD_VOUCH_ATTESTED_72H_SLA",
+        "SPLITDIRECT_STATUTORY_FEE_PAID",
+        "SECRETARY_FIDO2_S84_QR_SEALED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-07",
       "canonicalName": "SafetyNOC",
       "route": "/protocols/lga-governance-stack/lga-07-safety-noc",
       "fourthScheduleMandate": "Fourth Schedule Para 1(e) & (h): Slaughter slabs, abattoir hygiene, and market fire-safety clearances.",
-      "targetPersonaClusters": ["CLUSTER_6_MARKET_ASSOCIATIONS", "CLUSTER_3_ENV_HEALTH_OFFICERS"],
-      "gapMechanismsSolved": ["MECH-05"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_MARKET_ASSOCIATIONS",
+        "CLUSTER_3_ENV_HEALTH_OFFICERS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-05"
+      ],
       "painPointSolved": "Replaces fake paper environmental and fire clearance letters with geo-stamped inspection photos and time-bounded Section 84 QR certificates.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "QR_OFFLINE_VERIFIER"],
-      "buildingBlocks": ["BB-02", "BB-05"],
-      "stateMachine": ["INSPECTION_LOGGED_OFFLINE", "GEO_PHOTO_HASHED", "S84_SAFETY_NOC_SEALED", "EXPIRY_MONITORED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "QR_OFFLINE_VERIFIER"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05"
+      ],
+      "stateMachine": [
+        "INSPECTION_LOGGED_OFFLINE",
+        "GEO_PHOTO_HASHED",
+        "S84_SAFETY_NOC_SEALED",
+        "EXPIRY_MONITORED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-08",
       "canonicalName": "WardWorks",
       "route": "/protocols/lga-governance-stack/lga-08-ward-works",
       "fourthScheduleMandate": "Fourth Schedule Para 1(f): Construction and maintenance of feeder roads, drains, street lighting, and ward micro-projects.",
-      "targetPersonaClusters": ["CLUSTER_3_LGA_COUNCILS_AUDITORS", "CLUSTER_7_CIVIC_RESEARCHERS"],
-      "gapMechanismsSolved": ["MECH-05", "MECH-07"],
+      "targetPersonaClusters": [
+        "CLUSTER_3_LGA_COUNCILS_AUDITORS",
+        "CLUSTER_7_CIVIC_RESEARCHERS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-05",
+        "MECH-07"
+      ],
       "painPointSolved": "Blocks ghost ward projects and payments for unexecuted feeder-road grading by requiring geo-fenced before/after SureEvidence photo hashes before milestone release.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "PUBLIC_OCDS_EXPORT"],
-      "buildingBlocks": ["BB-02", "BB-05", "BB-06"],
-      "stateMachine": ["OCDS_CONTRACT_REGISTERED", "MUSTER_ROLL_AND_GEO_PHOTOS_SEALED", "AUDITOR_VERIFIED", "SPLITDIRECT_MILESTONE_RELEASED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "PUBLIC_OCDS_EXPORT"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "stateMachine": [
+        "OCDS_CONTRACT_REGISTERED",
+        "MUSTER_ROLL_AND_GEO_PHOTOS_SEALED",
+        "AUDITOR_VERIFIED",
+        "SPLITDIRECT_MILESTONE_RELEASED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-09",
       "canonicalName": "TenementRate",
       "route": "/protocols/lga-governance-stack/lga-09-tenement-rate",
       "fourthScheduleMandate": "Fourth Schedule Para 1(j) & Land Use Act 1978 s. 6: Assessment of privately owned houses/tenements and Customary Rights of Occupancy.",
-      "targetPersonaClusters": ["CLUSTER_3_LGA_REVENUE_OFFICERS", "CLUSTER_6_LANDLORDS_OCCUPIERS"],
-      "gapMechanismsSolved": ["MECH-02", "MECH-05", "MECH-07"],
+      "targetPersonaClusters": [
+        "CLUSTER_3_LGA_REVENUE_OFFICERS",
+        "CLUSTER_6_LANDLORDS_OCCUPIERS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-02",
+        "MECH-05",
+        "MECH-07"
+      ],
       "painPointSolved": "Eliminates arbitrary manual assessments, cash diversion, and double-allocation of Customary C of O parcels during active Customary Court disputes.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "USSD_347_LGA", "SMS_5_LOCALE"],
-      "buildingBlocks": ["BB-02", "BB-05", "BB-06", "BB-10"],
-      "stateMachine": ["LANDGUARD_3X3M_AND_DOCKET_CHECKED", "GAZETTED_RATE_COMPUTED", "SPLITDIRECT_100PCT_LGA_TREASURY_PAID", "S84_RECEIPT_ISSUED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "SMS_5_LOCALE"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "stateMachine": [
+        "LANDGUARD_3X3M_AND_DOCKET_CHECKED",
+        "GAZETTED_RATE_COMPUTED",
+        "SPLITDIRECT_100PCT_LGA_TREASURY_PAID",
+        "S84_RECEIPT_ISSUED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-10",
       "canonicalName": "MarketCollect",
       "route": "/protocols/lga-governance-stack/lga-10-market-collect",
       "fourthScheduleMandate": "Fourth Schedule Para 1(e) & SC/CV/343/2024: Collection of daily fees in markets, motor parks, loading bays, and inter-LGA haulage corridors.",
-      "targetPersonaClusters": ["CLUSTER_6_DRIVERS_MARKET_WOMEN", "CLUSTER_3_LGA_TREASURERS"],
-      "gapMechanismsSolved": ["MECH-05", "MECH-06", "MECH-07"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_DRIVERS_MARKET_WOMEN",
+        "CLUSTER_3_LGA_TREASURERS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-05",
+        "MECH-06",
+        "MECH-07"
+      ],
       "painPointSolved": "Eradicates cash touting (agbero leakage), fake paper tickets, and inter-LGA commercial vehicle double-taxation via offline POS/USSD tickets and a verifiable Inter-LGA Corridor Pass.",
-      "channels": ["KIOSKBASE_OFFLINE_POS_PWA", "USSD_347_LGA", "SMS_5_LOCALE", "QR_OFFLINE_VERIFIER"],
-      "buildingBlocks": ["BB-02", "BB-05", "BB-06"],
-      "stateMachine": ["TICKET_OR_CORRIDOR_PASS_REQUESTED", "SPLITDIRECT_ZERO_ESCROW_SETTLED", "S84_QR_PASS_MINTED", "MERKLE_TREASURY_LOGGED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_POS_PWA",
+        "USSD_347_LGA",
+        "SMS_5_LOCALE",
+        "QR_OFFLINE_VERIFIER"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "stateMachine": [
+        "TICKET_OR_CORRIDOR_PASS_REQUESTED",
+        "SPLITDIRECT_ZERO_ESCROW_SETTLED",
+        "S84_QR_PASS_MINTED",
+        "MERKLE_TREASURY_LOGGED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-11",
       "canonicalName": "WardPHC",
       "route": "/protocols/lga-governance-stack/lga-11-ward-phc",
       "fourthScheduleMandate": "Fourth Schedule Para 2(c): Provision and maintenance of Primary Health Care (PHC), immunization, and Seasonal Malaria Chemoprevention (SMC).",
-      "targetPersonaClusters": ["CLUSTER_6_MOTHERS_INFANTS", "CLUSTER_3_PHC_HEALTH_WORKERS"],
-      "gapMechanismsSolved": ["MECH-02", "MECH-06"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_MOTHERS_INFANTS",
+        "CLUSTER_3_PHC_HEALTH_WORKERS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-02",
+        "MECH-06"
+      ],
       "painPointSolved": "Replaces lost paper tally sheets and prevents vaccine/malaria commodity stockouts in rural wards (scaling the verified Kebbi State 21-LGA baseline nationwide).",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "USSD_347_LGA", "SMS_5_LOCALE"],
-      "buildingBlocks": ["BB-02", "BB-04", "BB-09"],
-      "stateMachine": ["WARD_HOUSEHOLD_ENUMERATED_OFFLINE", "COMMODITY_DISPENSED", "HLC_CRDT_SYNCED_TO_NDHX", "COVERAGE_VERIFIED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "SMS_5_LOCALE"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-04",
+        "BB-09"
+      ],
+      "stateMachine": [
+        "WARD_HOUSEHOLD_ENUMERATED_OFFLINE",
+        "COMMODITY_DISPENSED",
+        "HLC_CRDT_SYNCED_TO_NDHX",
+        "COVERAGE_VERIFIED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-12",
       "canonicalName": "CouncilLedger",
       "route": "/protocols/lga-governance-stack/lga-12-council-ledger",
       "fourthScheduleMandate": "Section 7(1), Section 162 CFRN & Supreme Court SC/CV/343/2024 Direct FAAC + IGR Fiscal Accountability.",
-      "targetPersonaClusters": ["CLUSTER_3_AUDITORS_NFIU", "CLUSTER_7_CIVIC_MONITORS"],
-      "gapMechanismsSolved": ["MECH-03", "MECH-05"],
+      "targetPersonaClusters": [
+        "CLUSTER_3_AUDITORS_NFIU",
+        "CLUSTER_7_CIVIC_MONITORS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-03",
+        "MECH-05"
+      ],
       "painPointSolved": "Provides real-time ward-level transparency over direct FAAC allocations and SplitDirect local IGR collections with daily signed SHA-256 Merkle roots.",
-      "channels": ["PUBLIC_WEB_DASHBOARD", "MERKLE_AUDIT_API_EXPORT"],
-      "buildingBlocks": ["BB-03", "BB-05", "BB-06"],
-      "stateMachine": ["FAAC_AND_SPLITDIRECT_INGESTED", "WARD_RECONCILIATION_COMPUTED", "DAILY_MERKLE_ROOT_SIGNED", "PUBLICLY_AUDITABLE"]
+      "channels": [
+        "PUBLIC_WEB_DASHBOARD",
+        "MERKLE_AUDIT_API_EXPORT"
+      ],
+      "buildingBlocks": [
+        "BB-03",
+        "BB-05",
+        "BB-06"
+      ],
+      "stateMachine": [
+        "FAAC_AND_SPLITDIRECT_INGESTED",
+        "WARD_RECONCILIATION_COMPUTED",
+        "DAILY_MERKLE_ROOT_SIGNED",
+        "PUBLICLY_AUDITABLE"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-13",
       "canonicalName": "CustomaryDocket",
       "route": "/protocols/lga-governance-stack/lga-13-customary-docket",
-      "fourthScheduleMandate": "Customary, Area, and District Courts operating at the LGA level across the 36 States + FCT; NDPA 2023 ss. 30–31.",
-      "targetPersonaClusters": ["CLUSTER_1_COURT_CLERKS_JUDGES", "CLUSTER_2_LEGAL_PRACTITIONERS", "CLUSTER_6_LITIGANTS"],
-      "gapMechanismsSolved": ["MECH-02", "MECH-05", "MECH-06"],
+      "fourthScheduleMandate": "Customary, Area, and District Courts operating at the LGA level across the 36 States + FCT; NDPA 2023 ss. 30\u201331.",
+      "targetPersonaClusters": [
+        "CLUSTER_1_COURT_CLERKS_JUDGES",
+        "CLUSTER_2_LEGAL_PRACTITIONERS",
+        "CLUSTER_6_LITIGANTS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-02",
+        "MECH-05",
+        "MECH-06"
+      ],
       "painPointSolved": "Digitizes paper-bound Area/Customary courts offline, preserves appellate records to State High Courts, and locks matrimonial/minor files inside INTERNAL_RESTRICTED_NDPA.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "QR_OFFLINE_VERIFIER"],
-      "buildingBlocks": ["BB-02", "BB-04", "BB-05", "BB-10"],
-      "stateMachine": ["DOCKET_CAPTURED_OFFLINE", "NDPA_GATE10_PRIVACY_CLASSIFIED", "CLERK_FIDO2_S84_CTC_SEALED", "HIGH_COURT_APPEAL_LINKED"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "QR_OFFLINE_VERIFIER"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-10"
+      ],
+      "stateMachine": [
+        "DOCKET_CAPTURED_OFFLINE",
+        "NDPA_GATE10_PRIVACY_CLASSIFIED",
+        "CLERK_FIDO2_S84_CTC_SEALED",
+        "HIGH_COURT_APPEAL_LINKED"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     },
     {
       "moduleId": "LGA-14",
       "canonicalName": "StreetGrid",
       "route": "/protocols/lga-governance-stack/lga-14-street-grid",
       "fourthScheduleMandate": "Fourth Schedule Para 1(g): Naming of roads and streets and the numbering of houses.",
-      "targetPersonaClusters": ["CLUSTER_6_RESIDENTS_MSMES", "CLUSTER_4_BANKS_COURIERS"],
-      "gapMechanismsSolved": ["MECH-02", "MECH-06"],
+      "targetPersonaClusters": [
+        "CLUSTER_6_RESIDENTS_MSMES",
+        "CLUSTER_4_BANKS_COURIERS"
+      ],
+      "gapMechanismsSolved": [
+        "MECH-02",
+        "MECH-06"
+      ],
       "painPointSolved": "Assigns every rural and peri-urban house/shop an offline-computable 3x3m alphanumeric StreetGrid address linked to official LGA street-naming gazettes.",
-      "channels": ["KIOSKBASE_OFFLINE_PWA", "USSD_347_LGA", "QR_SIGNPLATE_VERIFIER"],
-      "buildingBlocks": ["BB-02", "BB-05", "BB-10"],
-      "stateMachine": ["PARCEL_3X3M_HASHED_OFFLINE", "LGA_STREET_GAZETTE_BOUND", "S84_ADDRESS_CREDENTIAL_MINTED", "RESOLVABLE_OFFLINE"]
+      "channels": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "QR_SIGNPLATE_VERIFIER"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "stateMachine": [
+        "PARCEL_3X3M_HASHED_OFFLINE",
+        "LGA_STREET_GAZETTE_BOUND",
+        "S84_ADDRESS_CREDENTIAL_MINTED",
+        "RESOLVABLE_OFFLINE"
+      ],
+      "claimReview": {
+        "legalMappingStatus": "REQUIRES_EXTERNAL_LEGAL_VALIDATION",
+        "deploymentStatus": "NOT_ASSESSED",
+        "observedAt": null,
+        "sourceRefs": [],
+        "limitation": "The Fourth Schedule mapping and proposed outcome are unvalidated design assertions. No council deployment, allocated USSD code, admissibility ruling or operational evidence is supplied."
+      }
     }
-  ]
+  ],
+  "methodologyNotice": "Fourteen proposed service specifications. Constitutional function mappings, court functions, fiscal interpretations, evidentiary claims, USSD availability and operational guarantees require independent validation. Listed channels and state machines are design intent, not deployed services."
 }

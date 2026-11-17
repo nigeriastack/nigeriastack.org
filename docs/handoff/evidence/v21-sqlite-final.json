@@ -1,0 +1,18 @@
+{
+  "runtime": "Python SQLite; not remote D1",
+  "counts": {
+    "normative_rfcs": 14,
+    "industry_capability_ledger": 32,
+    "subnational_state_atlas": 37,
+    "constitutional_lga_774_registry": 774,
+    "lga_service_modules_14": 14,
+    "daily_merkle_audit_roots": 0,
+    "ngstack_global_search_fts": 901
+  },
+  "logicalIdempotency": true,
+  "integrity": "ok",
+  "foreignKeys": [],
+  "ftsPathTargetsAllExistInCompiledInventory": true,
+  "seedSha256": "775eb0057e224d0970b630ba01f61be6c3e18f2ba023d3c0c03b673b55ee4ebf",
+  "limitations": "FTS internal segment bytes may differ after reseeding; fragment binding is checked separately by content gates; no live release claim"
+}

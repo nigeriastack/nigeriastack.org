@@ -55,6 +55,10 @@ export function buildDailyTreasuryMerkleRoot(
         `TREASURY_PASSTHROUGH_INVARIANCE_BREACH on ${r.envelopeUlid}: non-zero escrow detected.`
       );
     }
+    if (!Number.isSafeInteger(r.statutoryAmountKobo) || r.statutoryAmountKobo < 0 ||
+        !Number.isSafeInteger(totalStatutoryKoboSettledDirect + r.statutoryAmountKobo)) {
+      throw new Error("INVALID_STATUTORY_AMOUNT_KOBO");
+    }
     totalStatutoryKoboSettledDirect += r.statutoryAmountKobo;
     leafHashes.push(
       sha256NodeHex(`${r.envelopeUlid}|${r.lgaOrCourtCode}|${r.statutoryAmountKobo}|0|0`)

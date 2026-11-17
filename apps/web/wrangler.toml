@@ -15,7 +15,8 @@ routes = [
 directory = "./dist/client"
 binding = "ASSETS"
 html_handling = "auto-trailing-slash"
-not_found_handling = "single-page-application"
+not_found_handling = "none"
+run_worker_first = true
 
 # Cloudflare D1 FTS5 SQLite Binding
 [[d1_databases]]
@@ -25,7 +26,7 @@ database_id = "00000000-0000-0000-0000-ngstack2026d1"
 migrations_dir = "migrations"
 
 [vars]
-ENVIRONMENT = "production"
+ENVIRONMENT = "staging"
 COMMONS_VERSION = "v2026.6.5"
 LICENSE_SPDX = "CC0-1.0"
 SOVEREIGN_NON_IMPERSONATION_HEADER = "Independent Open Specification & Conformance Commons (CC0-1.0 Public Domain) — Not a Federal/State Executive Portal or Commercial API Gateway"

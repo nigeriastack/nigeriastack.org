@@ -33,7 +33,7 @@ export function validateClearAmEnvelope(params) {
     }
     const nowMs = Date.parse(params.nowUtcIso ?? new Date().toISOString());
     const expiryMs = Date.parse(envelope.temporalBoundsAndExpiry.validUntilUtc);
-    if (Number.isNaN(expiryMs) || expiryMs < nowMs) {
+    if (!Number.isFinite(nowMs) || !Number.isFinite(expiryMs) || expiryMs <= nowMs) {
         return {
             allowed: false,
             httpStatus: 403,
@@ -54,4 +54,9 @@ export function validateClearAmEnvelope(params) {
         httpStatus: 200,
         zeroDatabaseQueriesExecuted: false,
     };
+}
+/** Run the provider query only after the perimeter gate accepts the envelope. */
+export async function executeClearAmQuery(params, query) {
+    const validation = validateClearAmEnvelope(params);
+    return validation.allowed ? { validation, result: await query() } : { validation };
 }

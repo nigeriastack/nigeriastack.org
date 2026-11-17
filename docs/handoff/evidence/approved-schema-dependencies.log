@@ -1,0 +1,20 @@
+Scope: all 8 workspace projects
+✓ Lockfile passes supply-chain policies (verified 6m ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 16, reused 15, downloaded 0, added 0
+Progress: resolved 16, reused 16, downloaded 0, added 0
+Progress: resolved 17, reused 16, downloaded 0, added 0
+Progress: resolved 75, reused 70, downloaded 4, added 0
+Progress: resolved 76, reused 70, downloaded 4, added 0
+Progress: resolved 308, reused 153, downloaded 13, added 0
+[WARN] 2 deprecated subdependencies found: rollup-plugin-inject@3.0.2, sourcemap-codec@1.4.8
+Packages: +14
+++++++++++++++
+Progress: resolved 368, reused 214, downloaded 14, added 14, done
+
+devDependencies:
++ @apidevtools/swagger-parser 12.1.0 (13.1.0 is available)
++ ajv 8.17.1 (8.20.0 is available)
++ ajv-formats 3.0.1
+
+Done in 12.8s using pnpm v11.25.0

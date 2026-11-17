@@ -1,0 +1,1790 @@
+{
+  "version": "2026-11-17-v2.1",
+  "scope": "Evaluation protocol; not measured external engine results",
+  "questionCount": 60,
+  "scoring": [
+    "retrieval",
+    "citation source correctness",
+    "factual accuracy",
+    "institutional disambiguation",
+    "unsupported deployment claims"
+  ],
+  "evidenceRequired": [
+    "engine",
+    "runTimeUtc",
+    "exactQuery",
+    "verbatimAnswerOrArtifactReference",
+    "citedUrls",
+    "reviewerAssessment"
+  ],
+  "questions": [
+    {
+      "id": "NS-EVAL-01",
+      "unitId": "NS-ANSWER-01",
+      "route": "/",
+      "kind": "direct",
+      "question": "What is NigeriaStack, and how is its institutional independence defined?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-02",
+      "unitId": "NS-ANSWER-01",
+      "route": "/",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: What is NigeriaStack, and how is its institutional independence defined?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-03",
+      "unitId": "NS-ANSWER-01",
+      "route": "/",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: What is NigeriaStack, and how is its institutional independence defined?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-04",
+      "unitId": "NS-ANSWER-01",
+      "route": "/",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: What is NigeriaStack, and how is its institutional independence defined?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-05",
+      "unitId": "NS-ANSWER-02",
+      "route": "/",
+      "kind": "direct",
+      "question": "How does NigeriaStack complement operating digital public infrastructure?",
+      "expectedSourceIds": [
+        "NS-KB-01",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-06",
+      "unitId": "NS-ANSWER-02",
+      "route": "/",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: How does NigeriaStack complement operating digital public infrastructure?",
+      "expectedSourceIds": [
+        "NS-KB-01",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-07",
+      "unitId": "NS-ANSWER-02",
+      "route": "/",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: How does NigeriaStack complement operating digital public infrastructure?",
+      "expectedSourceIds": [
+        "NS-KB-01",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-08",
+      "unitId": "NS-ANSWER-02",
+      "route": "/",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: How does NigeriaStack complement operating digital public infrastructure?",
+      "expectedSourceIds": [
+        "NS-KB-01",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-09",
+      "unitId": "NS-ANSWER-03",
+      "route": "/sectors",
+      "kind": "direct",
+      "question": "Which digital interoperability problems recur across Nigeria’s 32 mapped industries?",
+      "expectedSourceIds": [
+        "NS-KB-03A"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-10",
+      "unitId": "NS-ANSWER-03",
+      "route": "/sectors",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: Which digital interoperability problems recur across Nigeria’s 32 mapped industries?",
+      "expectedSourceIds": [
+        "NS-KB-03A"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-11",
+      "unitId": "NS-ANSWER-03",
+      "route": "/sectors",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: Which digital interoperability problems recur across Nigeria’s 32 mapped industries?",
+      "expectedSourceIds": [
+        "NS-KB-03A"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-12",
+      "unitId": "NS-ANSWER-03",
+      "route": "/sectors",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: Which digital interoperability problems recur across Nigeria’s 32 mapped industries?",
+      "expectedSourceIds": [
+        "NS-KB-03A"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-13",
+      "unitId": "NS-ANSWER-04",
+      "route": "/sectors",
+      "kind": "direct",
+      "question": "Which interoperability needs are already served by existing Nigerian platforms?",
+      "expectedSourceIds": [
+        "NS-KB-03A"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-14",
+      "unitId": "NS-ANSWER-04",
+      "route": "/sectors",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: Which interoperability needs are already served by existing Nigerian platforms?",
+      "expectedSourceIds": [
+        "NS-KB-03A"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-15",
+      "unitId": "NS-ANSWER-04",
+      "route": "/sectors",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: Which interoperability needs are already served by existing Nigerian platforms?",
+      "expectedSourceIds": [
+        "NS-KB-03A"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-16",
+      "unitId": "NS-ANSWER-04",
+      "route": "/sectors",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: Which interoperability needs are already served by existing Nigerian platforms?",
+      "expectedSourceIds": [
+        "NS-KB-03A"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-17",
+      "unitId": "NS-ANSWER-05",
+      "route": "/sectors",
+      "kind": "direct",
+      "question": "How are residual interoperability opportunities evaluated?",
+      "expectedSourceIds": [
+        "NS-KB-03A",
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-18",
+      "unitId": "NS-ANSWER-05",
+      "route": "/sectors",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: How are residual interoperability opportunities evaluated?",
+      "expectedSourceIds": [
+        "NS-KB-03A",
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-19",
+      "unitId": "NS-ANSWER-05",
+      "route": "/sectors",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: How are residual interoperability opportunities evaluated?",
+      "expectedSourceIds": [
+        "NS-KB-03A",
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-20",
+      "unitId": "NS-ANSWER-05",
+      "route": "/sectors",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: How are residual interoperability opportunities evaluated?",
+      "expectedSourceIds": [
+        "NS-KB-03A",
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-21",
+      "unitId": "NS-ANSWER-06",
+      "route": "/protocols",
+      "kind": "direct",
+      "question": "What do the NigeriaStack interoperability protocols specify?",
+      "expectedSourceIds": [
+        "NS-KB-02",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-22",
+      "unitId": "NS-ANSWER-06",
+      "route": "/protocols",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: What do the NigeriaStack interoperability protocols specify?",
+      "expectedSourceIds": [
+        "NS-KB-02",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-23",
+      "unitId": "NS-ANSWER-06",
+      "route": "/protocols",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: What do the NigeriaStack interoperability protocols specify?",
+      "expectedSourceIds": [
+        "NS-KB-02",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-24",
+      "unitId": "NS-ANSWER-06",
+      "route": "/protocols",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: What do the NigeriaStack interoperability protocols specify?",
+      "expectedSourceIds": [
+        "NS-KB-02",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-25",
+      "unitId": "NS-ANSWER-07",
+      "route": "/protocols",
+      "kind": "direct",
+      "question": "How does NigeriaStack preserve evidence continuity across statutory registries?",
+      "expectedSourceIds": [
+        "NS-RFC-005"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-26",
+      "unitId": "NS-ANSWER-07",
+      "route": "/protocols",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: How does NigeriaStack preserve evidence continuity across statutory registries?",
+      "expectedSourceIds": [
+        "NS-RFC-005"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-27",
+      "unitId": "NS-ANSWER-07",
+      "route": "/protocols",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: How does NigeriaStack preserve evidence continuity across statutory registries?",
+      "expectedSourceIds": [
+        "NS-RFC-005"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-28",
+      "unitId": "NS-ANSWER-07",
+      "route": "/protocols",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: How does NigeriaStack preserve evidence continuity across statutory registries?",
+      "expectedSourceIds": [
+        "NS-RFC-005"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-29",
+      "unitId": "NS-ANSWER-08",
+      "route": "/protocols",
+      "kind": "direct",
+      "question": "How do NigeriaStack consent and agent-delegation protocols govern access?",
+      "expectedSourceIds": [
+        "NS-RFC-006",
+        "NS-RFC-008"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-30",
+      "unitId": "NS-ANSWER-08",
+      "route": "/protocols",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: How do NigeriaStack consent and agent-delegation protocols govern access?",
+      "expectedSourceIds": [
+        "NS-RFC-006",
+        "NS-RFC-008"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-31",
+      "unitId": "NS-ANSWER-08",
+      "route": "/protocols",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: How do NigeriaStack consent and agent-delegation protocols govern access?",
+      "expectedSourceIds": [
+        "NS-RFC-006",
+        "NS-RFC-008"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-32",
+      "unitId": "NS-ANSWER-08",
+      "route": "/protocols",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: How do NigeriaStack consent and agent-delegation protocols govern access?",
+      "expectedSourceIds": [
+        "NS-RFC-006",
+        "NS-RFC-008"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-33",
+      "unitId": "NS-ANSWER-09",
+      "route": "/rfcs",
+      "kind": "direct",
+      "question": "How are NigeriaStack RFC versions, approvals and implementations distinguished?",
+      "expectedSourceIds": [
+        "NS-KB-01",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-34",
+      "unitId": "NS-ANSWER-09",
+      "route": "/rfcs",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: How are NigeriaStack RFC versions, approvals and implementations distinguished?",
+      "expectedSourceIds": [
+        "NS-KB-01",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-35",
+      "unitId": "NS-ANSWER-09",
+      "route": "/rfcs",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: How are NigeriaStack RFC versions, approvals and implementations distinguished?",
+      "expectedSourceIds": [
+        "NS-KB-01",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-36",
+      "unitId": "NS-ANSWER-09",
+      "route": "/rfcs",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: How are NigeriaStack RFC versions, approvals and implementations distinguished?",
+      "expectedSourceIds": [
+        "NS-KB-01",
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-37",
+      "unitId": "NS-ANSWER-10",
+      "route": "/rfcs",
+      "kind": "direct",
+      "question": "How are statutory requirements distinguished from NigeriaStack technical specifications?",
+      "expectedSourceIds": [
+        "NS-KB-12"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-38",
+      "unitId": "NS-ANSWER-10",
+      "route": "/rfcs",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: How are statutory requirements distinguished from NigeriaStack technical specifications?",
+      "expectedSourceIds": [
+        "NS-KB-12"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-39",
+      "unitId": "NS-ANSWER-10",
+      "route": "/rfcs",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: How are statutory requirements distinguished from NigeriaStack technical specifications?",
+      "expectedSourceIds": [
+        "NS-KB-12"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-40",
+      "unitId": "NS-ANSWER-10",
+      "route": "/rfcs",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: How are statutory requirements distinguished from NigeriaStack technical specifications?",
+      "expectedSourceIds": [
+        "NS-KB-12"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-41",
+      "unitId": "NS-ANSWER-11",
+      "route": "/conformance",
+      "kind": "direct",
+      "question": "What has the NigeriaStack interoperability test bed verified?",
+      "expectedSourceIds": [
+        "NS-KB-21",
+        "NS-COMPLETION-LEDGER-2026-11-17"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-42",
+      "unitId": "NS-ANSWER-11",
+      "route": "/conformance",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: What has the NigeriaStack interoperability test bed verified?",
+      "expectedSourceIds": [
+        "NS-KB-21",
+        "NS-COMPLETION-LEDGER-2026-11-17"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-43",
+      "unitId": "NS-ANSWER-11",
+      "route": "/conformance",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: What has the NigeriaStack interoperability test bed verified?",
+      "expectedSourceIds": [
+        "NS-KB-21",
+        "NS-COMPLETION-LEDGER-2026-11-17"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-44",
+      "unitId": "NS-ANSWER-11",
+      "route": "/conformance",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: What has the NigeriaStack interoperability test bed verified?",
+      "expectedSourceIds": [
+        "NS-KB-21",
+        "NS-COMPLETION-LEDGER-2026-11-17"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-45",
+      "unitId": "NS-ANSWER-12",
+      "route": "/conformance",
+      "kind": "direct",
+      "question": "What is the difference between a conformance test and formal accreditation?",
+      "expectedSourceIds": [
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-46",
+      "unitId": "NS-ANSWER-12",
+      "route": "/conformance",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: What is the difference between a conformance test and formal accreditation?",
+      "expectedSourceIds": [
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-47",
+      "unitId": "NS-ANSWER-12",
+      "route": "/conformance",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: What is the difference between a conformance test and formal accreditation?",
+      "expectedSourceIds": [
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-48",
+      "unitId": "NS-ANSWER-12",
+      "route": "/conformance",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: What is the difference between a conformance test and formal accreditation?",
+      "expectedSourceIds": [
+        "NS-KB-21"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-49",
+      "unitId": "NS-ANSWER-13",
+      "route": "/atlas",
+      "kind": "direct",
+      "question": "What does the NigeriaStack 774-LGA registry and atlas cover?",
+      "expectedSourceIds": [
+        "NS-KB-03A",
+        "NS-COMPLETION-LEDGER-2026-11-17"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-50",
+      "unitId": "NS-ANSWER-13",
+      "route": "/atlas",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: What does the NigeriaStack 774-LGA registry and atlas cover?",
+      "expectedSourceIds": [
+        "NS-KB-03A",
+        "NS-COMPLETION-LEDGER-2026-11-17"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-51",
+      "unitId": "NS-ANSWER-13",
+      "route": "/atlas",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: What does the NigeriaStack 774-LGA registry and atlas cover?",
+      "expectedSourceIds": [
+        "NS-KB-03A",
+        "NS-COMPLETION-LEDGER-2026-11-17"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-52",
+      "unitId": "NS-ANSWER-13",
+      "route": "/atlas",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: What does the NigeriaStack 774-LGA registry and atlas cover?",
+      "expectedSourceIds": [
+        "NS-KB-03A",
+        "NS-COMPLETION-LEDGER-2026-11-17"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-53",
+      "unitId": "NS-ANSWER-14",
+      "route": "/governance",
+      "kind": "direct",
+      "question": "How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-54",
+      "unitId": "NS-ANSWER-14",
+      "route": "/governance",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-55",
+      "unitId": "NS-ANSWER-14",
+      "route": "/governance",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-56",
+      "unitId": "NS-ANSWER-14",
+      "route": "/governance",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: How does NigeriaStack compare with India Stack, GovStack, X-Road and Diia?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-57",
+      "unitId": "NS-ANSWER-15",
+      "route": "/governance",
+      "kind": "direct",
+      "question": "How can institutions contribute to and verify NigeriaStack specifications?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-58",
+      "unitId": "NS-ANSWER-15",
+      "route": "/governance",
+      "kind": "source",
+      "question": "Which authoritative sources support this NigeriaStack answer: How can institutions contribute to and verify NigeriaStack specifications?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-59",
+      "unitId": "NS-ANSWER-15",
+      "route": "/governance",
+      "kind": "boundary",
+      "question": "What remains unverified, outside scope or deployment-dependent when answering: How can institutions contribute to and verify NigeriaStack specifications?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "NS-EVAL-60",
+      "unitId": "NS-ANSWER-15",
+      "route": "/governance",
+      "kind": "navigation",
+      "question": "Which NigeriaStack page and source records should I inspect for: How can institutions contribute to and verify NigeriaStack specifications?",
+      "expectedSourceIds": [
+        "NS-KB-01"
+      ],
+      "requiredDistinctions": [
+        "institutional identity",
+        "specification lifecycle",
+        "execution evidence"
+      ],
+      "engineRuns": {
+        "googleAI": {
+          "status": "NOT_RUN"
+        },
+        "bingCopilot": {
+          "status": "NOT_RUN"
+        },
+        "chatgpt": {
+          "status": "NOT_RUN"
+        },
+        "perplexity": {
+          "status": "NOT_RUN"
+        }
+      }
+    }
+  ]
+}

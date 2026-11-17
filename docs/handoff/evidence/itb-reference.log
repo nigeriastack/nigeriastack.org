@@ -1,0 +1,7 @@
+[PASS] ITB-01: Timeout becomes UNKNOWN_TIMEOUT; new reference rejected; original reference accepted.
+[PASS] ITB-02: Expired and locally revoked consent denied; valid scoped consent accepted.
+[PASS] ITB-03: Ephemeral-key signature verifies; one-byte mutation fails digest check; 420-second drift blocks public sync.
+[PASS] ITB-04: Valid zero-escrow fixture accepted; platform and state intermediary escrow independently rejected with 422.
+[NOT_RUN] ITB-05: No GivePower gateway or x402 escrow implementation is available in this workspace.
+Scope: local reference SDK checks; target labels do not establish deployed-system coverage.
+[ATTESTATION SHA-256] 901d767ce4157a77a67066af38bd9c7228a5e118630eb09eb402103182525dc1

@@ -1,0 +1,42 @@
+[
+  {
+    "command": "node --import tsx scripts/ci/verify-cleanroom-nomenclature.ts",
+    "exitCode": 0,
+    "evidence": "docs/handoff/evidence/final-nomenclature.log"
+  },
+  {
+    "command": "bash scripts/ci/validate-tokens.sh",
+    "exitCode": 0,
+    "evidence": "docs/handoff/evidence/final-tokens.log"
+  },
+  {
+    "command": "node scripts/ci/verify-dataset-integrity.mjs",
+    "exitCode": 1,
+    "evidence": "docs/handoff/evidence/final-dataset.log"
+  },
+  {
+    "command": "node scripts/ci/verify-content-counts.mjs",
+    "exitCode": 0,
+    "evidence": "docs/handoff/evidence/final-content-counts.log"
+  },
+  {
+    "command": "../opa test tests/conformance-itb/validation -v",
+    "exitCode": 0,
+    "evidence": "docs/handoff/evidence/final-opa.log"
+  },
+  {
+    "command": "pnpm --filter nigeriastack-org-portal build",
+    "exitCode": 0,
+    "evidence": "docs/handoff/evidence/final-portal-build.log"
+  },
+  {
+    "command": "node --import tsx docs/handoff/evidence/worker-smoke.mjs",
+    "exitCode": 0,
+    "evidence": "docs/handoff/evidence/final-worker-smoke.log"
+  },
+  {
+    "command": "bash -n scripts/ci/astra-deploy-pipeline.sh",
+    "exitCode": 0,
+    "evidence": "docs/handoff/evidence/final-pipeline-syntax.log"
+  }
+]

@@ -58,7 +58,7 @@ html, body {
   color: var(--ns-text-primary);
   font-family: var(--ns-font-body);
   line-height: 1.6;
-  overflow-x: hidden;
+  
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -159,7 +159,7 @@ table.ns-grid-table th, table.ns-grid-table td {
 }
 table.ns-grid-table th { background-color: var(--ns-surface-well); font-family: var(--ns-font-code); }
 @media (max-width: 640px) {
-  .ns-split-grid { grid-template-columns: 1fr !important; padding: 12px !important; }
+  .ns-split-grid { grid-template-columns: minmax(0, 1fr) !important; padding: 12px !important; }
 }
 details.ns-faq-item {
   background-color: var(--ns-surface-panel);
@@ -178,7 +178,19 @@ details.ns-faq-item {
  .ns-btn, button, select, details.ns-faq-item, details.ns-tech-drawer, table.ns-grid-table, th, td { border: 1px solid CanvasText !important; }
  :focus-visible { outline: 3px solid Highlight !important; }
 }
- </style>
+ 
+    /* Allow intrinsic grid/flex content to shrink without concealing overflow. */
+    .ns-header > *, .ns-toolbar > *, .ns-nav-tabs > *,
+    .ns-split-grid > *, .ns-card-grid > * { min-width: 0; }
+    button, select, input, textarea { min-width: 0; max-width: 100%; }
+    button { white-space: normal; overflow-wrap: anywhere; }
+    .ns-terminal-box { min-width: 0; }
+    @media (max-width: 640px) {
+      .ns-split-grid, .ns-card-grid { grid-template-columns: minmax(0, 1fr) !important; }
+      select { width: 100%; }
+      table.ns-grid-table { display: block; overflow-x: auto; max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
  <aside role="region" aria-label="Interactive Responsive Viewport Switcher" class="ns-viewport-bar">
@@ -186,7 +198,7 @@ details.ns-faq-item {
    <button class="ns-btn" onclick="setViewport('1440px')" aria-pressed="true" id="vp-1440">[1440px Desktop]</button>
    <button class="ns-btn" onclick="setViewport('768px')" aria-pressed="false" id="vp-768">[768px Tablet]</button>
    <button class="ns-btn" onclick="setViewport('390px')" aria-pressed="false" id="vp-390">[390px Mobile]</button>
-   <button class="ns-btn" onclick="setViewport('320px')" aria-pressed="false" id="vp-320">[320px 2G Lite / 400% Zoom]</button>
+   <button class="ns-btn" onclick="setViewport('320px')" aria-pressed="false" id="vp-320">[320px reflow viewport]</button>
  </aside>
  <aside role="region" aria-label="Sovereign Non-Impersonation Notice" data-slot-id="ngstack.global.non_impersonation_banner" class="ns-non-impersonation-bar">
    <strong>[✓ OPEN STANDARDS COMMONS • CC0-1.0 PUBLIC DOMAIN]</strong>
@@ -262,7 +274,7 @@ details.ns-faq-item {
   <h2 id="rag-h2-15">How does the Sub-National Atlas track public digital service readiness across 36 States + FCT (296 Cells) and 774 LGAs &amp; 6 FCT Area Councils?</h2>
   <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:16px;">
     <label for="atlas-state-select" style="font-weight:600;">Select State or Territory to Inspect Constituent Local Governments:</label>
-    <select id="atlas-state-select" onchange="selectAtlasState(this.value)" style="max-width:400px;">
+    <select id="atlas-state-select" onchange="selectAtlasState(this.value)" style="max-width:min(400px,100%);">
       <option value="AB">AB — Abia State (South-East • 17 Constitutional LGAs)</option>
       <option value="AD">AD — Adamawa State (North-East • 21 Constitutional LGAs)</option>
       <option value="AK">AK — Akwa Ibom State (South-South • 31 Constitutional LGAs)</option>
@@ -446,7 +458,7 @@ details.ns-faq-item {
     <details class="ns-tech-drawer"><summary>View Bound RFCs &amp; Gates</summary><div>Bound RFCs: NS-RFC-010 | Bound Gates: Gate NS-G3</div></details>
   </details>
 </section>
-<!-- EMBEDDED NS-KB-19 4-VIEWPORT TELEMETRY INSPECTOR --><section id="ns-kb-19-telemetry" style="margin-top:32px;border:2px solid var(--ns-border-structural);padding:16px;background-color:var(--ns-surface-panel);"><h2 style="margin-top:0;">NS-KB-19 4-Viewport Telemetry Inspector (v2026.6.5)</h2><table class="ns-grid-table" role="grid" aria-label="Viewport Telemetry Report"><thead><tr><th>Viewport</th><th>Horizontal Overflow (px)</th><th>Tap Target Violations (&lt;44px)</th><th>Raw Hex Literals Outside Root</th><th>Craft Score</th></tr></thead><tbody><tr><td>1440px Desktop</td><td>0</td><td>0</td><td>0</td><td>97/100</td></tr><tr><td>768px Tablet</td><td>0</td><td>0</td><td>0</td><td>97/100</td></tr><tr><td>390px Mobile</td><td>0</td><td>0</td><td>0</td><td>97/100</td></tr><tr><td>320px 2G Lite / 400% Zoom</td><td>0</td><td>0</td><td>0</td><td>97/100</td></tr></tbody></table></section>
+<section id="ns-kb-19-telemetry"><h2>Viewport verification</h2><p>Browser measurements are pending. A 320 CSS-pixel viewport checks reflow; it does not measure browser zoom.</p></section>
 
   </main>  <script>
    function setViewport(size) {

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/LawTreeStatuteNode.schema.json",
+  "title": "LawTreeStatuteNode",
+  "description": "NS-RFC-013 draft snapshot, with separate periods for legal effect and the repository record. Bounding box coordinates are normalized to the cited page.",
+  "type": "object",
+  "required": [
+    "urn",
+    "valid_period",
+    "sys_period",
+    "gazettePageSha256",
+    "gazettePage",
+    "boundingBox",
+    "reviewState"
+  ],
+  "properties": {
+    "urn": {
+      "type": "string",
+      "pattern": "^urn:lex:ng:[a-z0-9-]+:act:[0-9]{4}-[0-9]+@[0-9]{4}-[0-9]{2}-[0-9]{2}#sec_[A-Za-z0-9_.-]+$"
+    },
+    "valid_period": {
+      "$ref": "#/$defs/period"
+    },
+    "sys_period": {
+      "$ref": "#/$defs/period"
+    },
+    "gazettePageSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gazettePage": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "boundingBox": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "reviewState": {
+      "enum": [
+        "DRAFT_UNPUBLISHED",
+        "LINGUISTIC_REVIEW_PASSED",
+        "LEGAL_SEMANTIC_REVIEW_APPROVED"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "period": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "baseline": "2083b50267c4fc1af5f41692a96658c37d6b4723",
+  "repositories": [
+    {
+      "name": "nigeriastack/protocol-specifications",
+      "metadataResult": 404,
+      "push": null
+    },
+    {
+      "name": "nigeriastack/industry-capability-ledger",
+      "metadataResult": 404,
+      "push": null
+    },
+    {
+      "name": "nigeriastack/subnational-readiness-atlas",
+      "metadataResult": 404,
+      "push": null
+    },
+    {
+      "name": "nigeriastack/clearam-consent-templates",
+      "metadataResult": 404,
+      "push": null
+    },
+    {
+      "name": "nigeriastack/conformance-test-bed",
+      "metadataResult": 404,
+      "push": null
+    },
+    {
+      "name": "nigeriastack/joinbody-reference-sdks",
+      "metadataResult": 404,
+      "push": null
+    },
+    {
+      "name": "nigeriastack/nigeriastack.org",
+      "metadataResult": 200,
+      "push": false
+    }
+  ],
+  "note": "404 cannot distinguish absent repository from insufficient access; no repositories were created."
+}
