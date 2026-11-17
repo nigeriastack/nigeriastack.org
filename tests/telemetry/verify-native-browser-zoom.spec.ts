@@ -49,7 +49,7 @@ test('native Chromium 200% and 400% zoom with text spacing', async ({}, testInfo
           await api.tabs.setZoom(tabId, factor);
           return await api.tabs.getZoom(tabId);
         }, { tabId, factor });
-        expect(actualZoom).toBe(factor);
+        expect(actualZoom).toBeCloseTo(factor, 6);
         await expect.poll(() => page.evaluate(() => innerWidth)).toBe(1280 / factor);
         const measure = () => page.evaluate(() => ({
           innerWidth, dpr: devicePixelRatio,
@@ -76,6 +76,7 @@ test('native Chromium 200% and 400% zoom with text spacing', async ({}, testInfo
     expect(measurements).toHaveLength(20);
     const report = { nativeZoomVerified: true, testedCommit, browser: context.browser()?.version(), method: 'chrome.tabs.setZoom + getZoom + layout/DPR readback', measurements, artifacts: measurements.map(m => m.screenshot) };
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');
+    console.log('NATIVE_ZOOM_EVIDENCE ' + JSON.stringify(report));
     await testInfo.attach('native-zoom-evidence.json', { path: reportPath, contentType: 'application/json' });
   } finally {
     await context.close();

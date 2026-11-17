@@ -1,6 +1,7 @@
-import { spawnSync } from 'node:child_process';
+import { spawnSync, execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 const dir = 'verification-output';
+const testedCommit = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
 fs.mkdirSync(dir,{recursive:true});
 const checks = [
  ['naming', ['node','--import','tsx','scripts/ci/verify-cleanroom-nomenclature.ts']],
@@ -26,5 +27,5 @@ for(const [name,command] of checks){
  fs.writeFileSync(`${dir}/${name}.log`,(run.stdout??'')+(run.stderr??''));
  console.log(`${name}: ${run.status===0?'PASS':'FAIL'}`);
 }
-fs.writeFileSync(`${dir}/results.json`,JSON.stringify({scope:'source and reference implementation verification; browser and release evidence are separate',results},null,2));
+fs.writeFileSync(`${dir}/results.json`,JSON.stringify({testedCommit, completedAtUtc: new Date().toISOString(), scope:'source and reference implementation verification; browser and release evidence are separate',results},null,2));
 process.exitCode=results.every(r=>r.exitCode===0)?0:1;

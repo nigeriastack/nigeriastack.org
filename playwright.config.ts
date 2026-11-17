@@ -1,6 +1,8 @@
 import { defineConfig } from '@playwright/test';
+import { execFileSync } from 'node:child_process';
 
 export default defineConfig({
+  metadata: { testedCommit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim() },
   testDir: './tests/telemetry',
   timeout: 30000,
   outputDir: process.env.NS_TEST_OUTPUT_DIR || './playwright-output',
