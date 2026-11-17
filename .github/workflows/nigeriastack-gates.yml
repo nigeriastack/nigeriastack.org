@@ -70,3 +70,42 @@ jobs:
             playwright-report/
             apps/web/dist/reports/
             verification-output/native-zoom-evidence.json
+
+  release-evidence:
+    needs: [source, browser]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.12.0'
+      - uses: actions/download-artifact@v4
+        with:
+          name: source-verification
+          path: verification-output
+      - uses: actions/download-artifact@v4
+        with:
+          name: browser-evidence
+          path: .
+      - name: Check evidence coherence without deploying
+        run: |
+          cp docs/handoff/evidence/github-access-restored-2026-11-17.json verification-output/github-access.json
+          node --input-type=module <<'NODE'
+          import { spawnSync } from 'node:child_process';
+          import fs from 'node:fs';
+          const run = spawnSync('node', ['scripts/ci/verify-release-readiness.mjs'], { encoding: 'utf8' });
+          process.stdout.write(run.stdout || '');
+          process.stderr.write(run.stderr || '');
+          const report = JSON.parse(fs.readFileSync('verification-output/release-readiness.json', 'utf8'));
+          const external = new Set(['Separate publicrelease authorization absent', 'Cloudflare productionbinding is a placeholder']);
+          if (![0, 1].includes(run.status) || report.blockers.some(reason => !external.has(reason))) throw Error('Verification evidence is missing, stale or inconsistent');
+          if (report.status === 'BLOCKED' && run.status !== 1) throw Error('Blocked release must return failure');
+          if (report.status === 'READY_FOR_OPERATOR_REVIEW' && run.status !== 0) throw Error('Ready evidence must return success');
+          console.log('Evidence coherent; publicReleasePerformed=' + report.publicReleasePerformed);
+          NODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: release-evidence
+          path: verification-output/release-readiness.json
