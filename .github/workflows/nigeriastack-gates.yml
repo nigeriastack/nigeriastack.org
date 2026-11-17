@@ -61,6 +61,12 @@ jobs:
           done
           curl -fsS http://127.0.0.1:3000/ > /dev/null
           NS_APP_BASE_URL=http://127.0.0.1:3000 pnpm exec playwright test tests/telemetry
+      - name: Retain canonical viewport telemetry
+        if: always()
+        run: |
+          if [ -f playwright-report/results.json ]; then
+            cp playwright-report/results.json tests/telemetry/nigeriastack-viewport-telemetry.json
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -70,6 +76,7 @@ jobs:
             playwright-report/
             apps/web/dist/reports/
             verification-output/native-zoom-evidence.json
+            tests/telemetry/nigeriastack-viewport-telemetry.json
 
   release-evidence:
     needs: [source, browser]

@@ -28,3 +28,9 @@ Access blocks only remote writes, repository creation and hosted CI. Continue so
 ## Resolved installation gap — current continuation
 
 The owner completed GitHub Mobile verification and explicitly approved installation. GitHub now shows ChatGPT Codex Connector installation183083839 under nigeriastack with only nigeriastack/nigeriastack.org selected. It grants read/write actions, code, issues, pull requests and workflows, and read checks, commit statuses and metadata. The connector now lists the account and successfully created repair/corrected-p0-p7-v2-1; a separate ref readback confirmed2083b50267c4fc1af5f41692a96658c37d6b4723. This closes the write blocker without changing execution environment. The earlier403 entries above are historical evidence. No administration permission was included in this app grant, and no six-repository provisioning or production deployment is inferred.
+
+## Remote writes and merge now verified
+
+The installation now supports code commits, review branches, pull requests, workflow editing and merge for the selected portal. PR #2 merged at 7fd69e72cc53d53977e0962c078637eef7aa35e0, with hosted source/browser/evidence jobs passing in run44178043156. This is verified Work execution without moving to another environment. No administration grant is implied.
+
+The owner browser proved protocol-specifications is private and already contains source/history. Do not infer that the six404s mean repositories are absent, and do not recreate them. The remaining repository grant must explicitly select protocol-specifications, industry-capability-ledger, subnational-readiness-atlas, clearam-consent-templates, conformance-test-bed and joinbody-reference-sdks in addition to the portal. No expansion was saved before the cloud browser disconnected. Preserve private visibility and histories.

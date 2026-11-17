@@ -1,0 +1,44 @@
+{
+  "recordedAtUtc": "2026-11-17T21:20:30.414Z",
+  "repository": "nigeriastack/nigeriastack.org",
+  "pullRequest": 2,
+  "url": "https://github.com/nigeriastack/nigeriastack.org/pull/2",
+  "merged": true,
+  "mergeSha": "7fd69e72cc53d53977e0962c078637eef7aa35e0",
+  "mergedTree": "de046d07e7ac7c6f938e78f11a04df448abd88c2",
+  "testedHead": "d214ff66c4d33dcfb9e0b2a9fafc6f7ec33c99fc",
+  "testedCheckout": "826e229c27aa43dd164d72689871acee8793f9c0",
+  "workflowRun": 44178043156,
+  "workflowUrl": "https://github.com/nigeriastack/nigeriastack.org/actions/runs/44178043156",
+  "jobs": [
+    {
+      "id": 134374726693,
+      "name": "source",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 134374727256,
+      "name": "browser",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 134375752811,
+      "name": "release-evidence",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "sourceGroupsPassed": 15,
+  "browserTestsPassed": 63,
+  "nativeZoomMeasurements": 20,
+  "nativeZoomMaximumHorizontalOverflowPx": 0,
+  "scope": "Reference implementation and sampled browser behavior; not full accessibility certification or empirical readiness accreditation",
+  "publicReleasePerformed": false,
+  "productionBlockers": [
+    "Separate publicrelease authorization absent",
+    "Cloudflare productionbinding is a placeholder"
+  ],
+  "otherRepositories": "Connector selection still portal only; protocol-specifications confirmed private in owner browser. Remaining six require app repository selection before full audit/migration."
+}

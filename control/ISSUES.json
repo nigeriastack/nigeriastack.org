@@ -4,43 +4,41 @@
   "issues": [
     {
       "id": "P0-SOURCE",
-      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "status": "MERGED_HOSTED_SOURCE_CHECKS_PASS",
       "owner": "source",
       "acceptance": "Canonical precedence and attached v2.1 source hashes, governed H1s and independent institutional/spec/execution statuses"
     },
     {
       "id": "P1-IA",
-      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "status": "MERGED_HOSTED_SOURCE_CHECKS_PASS",
       "owner": "portal",
       "acceptance": "All886 source record paths plus explicit intermediate inventory; actual H1-H4 templates and traceable answer bindings"
     },
     {
       "id": "P2-SSR",
-      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "status": "MERGED_HOSTED_SOURCE_CHECKS_PASS",
       "owner": "portal",
       "acceptance": "GenuineStart SSR, metadata and canonical uniqueness, invalid paths404, deployment-gated noindex/sitemap"
     },
     {
       "id": "P3-COPY",
-      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "status": "MERGED_HOSTED_SOURCE_CHECKS_PASS",
       "owner": "source",
       "acceptance": "15NSANSWER and15RAG traceable without blindduplication;15visibleFAQs, corrected institutional scope"
     },
     {
       "id": "P4-JSONLD",
-      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "status": "MERGED_HOSTED_SOURCE_CHECKS_PASS",
       "owner": "portal",
       "acceptance": "Grounded Organization/WebSite and page visible matchingFAQ and breadcrumbs; preview graph remains unpublished"
     },
     {
       "id": "P5-BROWSER",
-      "status": "BLOCKED",
+      "status": "HOSTED_63_CASES_AND_20_NATIVE_ZOOM_MEASUREMENTS_PASS",
       "owner": "qa",
       "acceptance": "RealChromium fourwidths and native200/400zoom, accessibility evidence",
-      "blockedBy": [
-        "local socketEPERM"
-      ],
-      "nextAction": "Run prepared suite in hosted GitHub CI; native zoom separately evidenced"
+      "blockedBy": [],
+      "evidence": "docs/handoff/evidence/native-zoom-hosted-2026-11-17.json"
     },
     {
       "id": "P6-GEO",
@@ -55,13 +53,12 @@
       "acceptance": "Required realquality evidence and separate publicrelease approval",
       "blockedBy": [
         "ACCESS-GH-CREATE",
-        "RELEASE-CF",
-        "P5-BROWSER"
+        "RELEASE-CF"
       ]
     },
     {
       "id": "ITB-CANNED",
-      "status": "IMPLEMENTED_LOCAL_CHECKS_PASS_REMOTE_REVIEW_READY",
+      "status": "MERGED_HOSTED_SOURCE_CHECKS_PASS",
       "owner": "sdk",
       "acceptance": "5parsedGherkin scenarios24executedsteps and honest reference scope"
     },
@@ -80,9 +77,9 @@
     },
     {
       "id": "ACCESS-GH-CREATE",
-      "status": "BLOCKED",
+      "status": "BLOCKED_REPOSITORY_SELECTION",
       "owner": "account-owner",
-      "acceptance": "Sixmissingrepositories created or exposed under correctowner and source manifests populated"
+      "acceptance": "Preserve existing private repositories and histories; select intended six for app, then audit and migrate only verified differences"
     }
   ]
 }

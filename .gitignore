@@ -15,3 +15,6 @@ apps/web/scripts/seed-d1-from-canonical-json.sql
 repository-exports/
 
 repository-exports*/
+
+# Fresh viewport telemetry is retained as a commit-bound CI artifact.
+tests/telemetry/nigeriastack-viewport-telemetry.json

@@ -1,0 +1,510 @@
+{
+  "nativeZoomVerified": true,
+  "testedCommit": "826e229c27aa43dd164d72689871acee8793f9c0",
+  "browser": "159.0.8154.6",
+  "method": "chrome.tabs.setZoom + getZoom + layout/DPR readback",
+  "measurements": [
+    {
+      "target": "NS-KB-17",
+      "url": "file:///home/runner/work/nigeriastack.org/nigeriastack.org/design-system/hifi-artboards/batch1-architecture-sectors-protocols-rfcs.html",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/NS-KB-17-200pct.png"
+    },
+    {
+      "target": "NS-KB-17",
+      "url": "file:///home/runner/work/nigeriastack.org/nigeriastack.org/design-system/hifi-artboards/batch1-architecture-sectors-protocols-rfcs.html",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/NS-KB-17-400pct.png"
+    },
+    {
+      "target": "NS-KB-18",
+      "url": "file:///home/runner/work/nigeriastack.org/nigeriastack.org/design-system/hifi-artboards/batch2-conformance-atlas-governance.html",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/NS-KB-18-200pct.png"
+    },
+    {
+      "target": "NS-KB-18",
+      "url": "file:///home/runner/work/nigeriastack.org/nigeriastack.org/design-system/hifi-artboards/batch2-conformance-atlas-governance.html",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/NS-KB-18-400pct.png"
+    },
+    {
+      "target": "route-0",
+      "url": "http://127.0.0.1:3000/",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-0-200pct.png"
+    },
+    {
+      "target": "route-0",
+      "url": "http://127.0.0.1:3000/",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-0-400pct.png"
+    },
+    {
+      "target": "route-1",
+      "url": "http://127.0.0.1:3000/sectors",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-1-200pct.png"
+    },
+    {
+      "target": "route-1",
+      "url": "http://127.0.0.1:3000/sectors",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-1-400pct.png"
+    },
+    {
+      "target": "route-2",
+      "url": "http://127.0.0.1:3000/protocols",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-2-200pct.png"
+    },
+    {
+      "target": "route-2",
+      "url": "http://127.0.0.1:3000/protocols",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-2-400pct.png"
+    },
+    {
+      "target": "route-3",
+      "url": "http://127.0.0.1:3000/rfcs",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-3-200pct.png"
+    },
+    {
+      "target": "route-3",
+      "url": "http://127.0.0.1:3000/rfcs",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-3-400pct.png"
+    },
+    {
+      "target": "route-4",
+      "url": "http://127.0.0.1:3000/conformance",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-4-200pct.png"
+    },
+    {
+      "target": "route-4",
+      "url": "http://127.0.0.1:3000/conformance",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-4-400pct.png"
+    },
+    {
+      "target": "route-5",
+      "url": "http://127.0.0.1:3000/atlas/states",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-5-200pct.png"
+    },
+    {
+      "target": "route-5",
+      "url": "http://127.0.0.1:3000/atlas/states",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-5-400pct.png"
+    },
+    {
+      "target": "route-6",
+      "url": "http://127.0.0.1:3000/atlas/lga-774",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-6-200pct.png"
+    },
+    {
+      "target": "route-6",
+      "url": "http://127.0.0.1:3000/atlas/lga-774",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-6-400pct.png"
+    },
+    {
+      "target": "route-7",
+      "url": "http://127.0.0.1:3000/governance",
+      "requestedZoom": 2,
+      "actualZoom": 2,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 640,
+        "dpr": 2,
+        "clientWidth": 640,
+        "scrollWidth": 640,
+        "bodyScrollWidth": 640,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-7-200pct.png"
+    },
+    {
+      "target": "route-7",
+      "url": "http://127.0.0.1:3000/governance",
+      "requestedZoom": 4,
+      "actualZoom": 3.9999999999999996,
+      "baselineDpr": 1,
+      "normal": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "spaced": {
+        "innerWidth": 320,
+        "dpr": 4,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "cssZoom": "1"
+      },
+      "screenshot": "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-7-400pct.png"
+    }
+  ],
+  "artifacts": [
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/NS-KB-17-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/NS-KB-17-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/NS-KB-18-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/NS-KB-18-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-0-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-0-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-1-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-1-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-2-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-2-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-3-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-3-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-4-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-4-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-5-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-5-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-6-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-6-400pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-7-200pct.png",
+    "/home/runner/work/nigeriastack.org/nigeriastack.org/playwright-output/verify-native-browser-zoom-026ae--400-zoom-with-text-spacing/route-7-400pct.png"
+  ]
+}

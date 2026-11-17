@@ -2,18 +2,18 @@
   "project": "nigeriastack-org",
   "date": "2026-11-17",
   "mode": "IMPLEMENTATION_AUTHORIZED_PUBLIC_RELEASE_UNAUTHORIZED",
-  "currentWork": "Publish corrected v2.1 implementation and obtain hosted CI evidence",
+  "currentWork": "Portal implementation merged; six-repository installation scope and production prerequisites remain external",
   "blockingExternalPrerequisites": [
     {
       "id": "ACCESS-GH-CREATE",
-      "state": "BLOCKED",
-      "evidence": "Six named repositories still require provisioning or verified discovery; app installation currently selects portal only. Browser authenticated as nigeriastack; connector has no repository-creation action.",
+      "state": "BLOCKED_REPOSITORY_SELECTION",
+      "evidence": "Owner browser confirms protocol-specifications exists privately; app selection contains portal only. No creation/replacement or scope expansion saved. Cloud browser currently unavailable.",
       "blocks": [
-        "provisioning six repositories"
+        "private repository audit and migration"
       ],
       "doesNotBlock": [
-        "source exports",
-        "repository migration manifests"
+        "portal implementation merge",
+        "hosted CI"
       ]
     },
     {
@@ -38,7 +38,7 @@
     "Do not weaken a failed gate or forge receipts to advance status.",
     "Persist commits, issue status and recoverable checkpoint before pausing."
   ],
-  "checkpointState": "LOCAL_IMPLEMENTATION_VERIFIED_GITHUB_WRITE_RESTORED",
+  "checkpointState": "REMOTE_PORTAL_MERGED_HOSTED_SOURCE_BROWSER_NATIVE_ZOOM_VERIFIED",
   "resolvedPrerequisites": [
     {
       "id": "ACCESS-GH-WRITE",
@@ -56,5 +56,11 @@
         "patch checkpoint"
       ]
     }
-  ]
+  ],
+  "remoteMerge": {
+    "sha": "7fd69e72cc53d53977e0962c078637eef7aa35e0",
+    "pullRequest": 2,
+    "workflowRun": 44178043156
+  },
+  "workspaceReconciliationRequired": true
 }
