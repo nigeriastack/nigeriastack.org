@@ -56,7 +56,7 @@
       color: var(--ns-text-primary);
       font-family: var(--ns-font-body);
       line-height: 1.6;
-      overflow-x: hidden;
+      
     }
     .ns-non-impersonation-bar {
       background-color: var(--ns-surface-well);
@@ -192,14 +192,26 @@
       :focus-visible { outline: 3px solid Highlight !important; }
     }
   
-    html, body { max-width: 100%; overflow-x: hidden; overflow-wrap: anywhere; word-break: break-word; }
+    html, body { max-width: 100%;  overflow-wrap: anywhere; word-break: break-word; }
     select, button, input, table, pre, .ns-split-grid, .ns-card-grid, .ns-container { max-width: 100%; }
     pre { white-space: pre-wrap; word-break: break-word; }
     @media (max-width: 640px) {
-      .ns-split-grid, .ns-card-grid { grid-template-columns: 1fr !important; padding: 12px !important; }
+      .ns-split-grid, .ns-card-grid { grid-template-columns: minmax(0, 1fr) !important; padding: 12px !important; }
       table.ns-grid-table { display: block; overflow-x: auto; }
     }
 
+  
+    /* Allow intrinsic grid/flex content to shrink without concealing overflow. */
+    .ns-header > *, .ns-toolbar > *, .ns-nav-tabs > *,
+    .ns-split-grid > *, .ns-card-grid > * { min-width: 0; }
+    button, select, input, textarea { min-width: 0; max-width: 100%; }
+    button { white-space: normal; overflow-wrap: anywhere; }
+    .ns-terminal-box { min-width: 0; }
+    @media (max-width: 640px) {
+      .ns-split-grid, .ns-card-grid { grid-template-columns: minmax(0, 1fr) !important; }
+      select { width: 100%; }
+      table.ns-grid-table { display: block; overflow-x: auto; max-width: 100%; }
+    }
   </style>
 </head>
 <body>

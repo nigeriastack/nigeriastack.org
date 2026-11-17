@@ -73,8 +73,13 @@ for (const artboard of ARTBOARDS) {
             const r = node.getBoundingClientRect();
             const style = getComputedStyle(node);
             if (!r.width || !r.height || style.visibility === 'hidden') return false;
-            const scrollContainer = node.closest('table, pre, [style*="overflow"]');
-            return !scrollContainer && (r.left < -1 || r.right > innerWidth + 1);
+            let parent = node.parentElement;
+            while (parent && parent !== document.body) {
+              const parentStyle = getComputedStyle(parent);
+              if (['auto', 'scroll'].includes(parentStyle.overflowX) && parent.scrollWidth > parent.clientWidth) return false;
+              parent = parent.parentElement;
+            }
+            return r.left < -1 || r.right > innerWidth + 1;
           }).slice(0, 50).map(el => ({ tag: el.tagName, text: (el.textContent || '').trim().slice(0, 100), rect: { left: el.getBoundingClientRect().left, right: el.getBoundingClientRect().right } })));
         await page.keyboard.press('Tab');
         const focus = await page.evaluate(() => {
@@ -91,13 +96,14 @@ for (const artboard of ARTBOARDS) {
         await testInfo.attach('measurement.json', { body: Buffer.from(JSON.stringify({ artboard: artboard.id, viewport: vp, mode, ...measurement, missingCopy, prohibited, prohibitedControls, clippingCandidates, focus }, null, 2)), contentType: 'application/json' });
         await page.screenshot({ path: testInfo.outputPath('page.png'), fullPage: true });
         expect.soft(measurement.scrollWidth, 'page scroll width').toBeLessThanOrEqual(measurement.clientWidth);
+        expect.soft(measurement.bodyScrollWidth, 'body content must not be hidden outside viewport').toBeLessThanOrEqual(measurement.clientWidth);
+        expect.soft(clippingCandidates, 'non-scrollable content outside viewport').toEqual([]);
         expect.soft(missingCopy, 'selected required copy missing').toEqual([]);
         expect.soft(prohibited, 'selected prohibited copy present').toEqual([]);
         expect.soft(prohibitedControls, 'prohibited commercial controls present').toEqual([]);
         expect.soft(focus.tag, 'Tab should move focus to a control').not.toBe('BODY');
         expect.soft(focus.outlineStyle !== 'none' && focus.outlineWidth !== '0px' || focus.boxShadow !== 'none', 'keyboard focus should have a visible indicator').toBeTruthy();
-        // Candidates are recorded, not automatically failed: descendants of
-        // legitimate scrollable regions and off-screen designs need review.
+        // Only descendants of actual horizontal scroll containers are exempt.
 
       });
     }

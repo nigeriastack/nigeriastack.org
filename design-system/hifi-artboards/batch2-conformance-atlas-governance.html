@@ -58,7 +58,7 @@ html, body {
   color: var(--ns-text-primary);
   font-family: var(--ns-font-body);
   line-height: 1.6;
-  overflow-x: hidden;
+  
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -159,7 +159,7 @@ table.ns-grid-table th, table.ns-grid-table td {
 }
 table.ns-grid-table th { background-color: var(--ns-surface-well); font-family: var(--ns-font-code); }
 @media (max-width: 640px) {
-  .ns-split-grid { grid-template-columns: 1fr !important; padding: 12px !important; }
+  .ns-split-grid { grid-template-columns: minmax(0, 1fr) !important; padding: 12px !important; }
 }
 details.ns-faq-item {
   background-color: var(--ns-surface-panel);
@@ -178,7 +178,19 @@ details.ns-faq-item {
  .ns-btn, button, select, details.ns-faq-item, details.ns-tech-drawer, table.ns-grid-table, th, td { border: 1px solid CanvasText !important; }
  :focus-visible { outline: 3px solid Highlight !important; }
 }
- </style>
+ 
+    /* Allow intrinsic grid/flex content to shrink without concealing overflow. */
+    .ns-header > *, .ns-toolbar > *, .ns-nav-tabs > *,
+    .ns-split-grid > *, .ns-card-grid > * { min-width: 0; }
+    button, select, input, textarea { min-width: 0; max-width: 100%; }
+    button { white-space: normal; overflow-wrap: anywhere; }
+    .ns-terminal-box { min-width: 0; }
+    @media (max-width: 640px) {
+      .ns-split-grid, .ns-card-grid { grid-template-columns: minmax(0, 1fr) !important; }
+      select { width: 100%; }
+      table.ns-grid-table { display: block; overflow-x: auto; max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
  <aside role="region" aria-label="Interactive Responsive Viewport Switcher" class="ns-viewport-bar">
@@ -262,7 +274,7 @@ details.ns-faq-item {
   <h2 id="rag-h2-15">How does the Sub-National Atlas track public digital service readiness across 36 States + FCT (296 Cells) and 774 LGAs &amp; 6 FCT Area Councils?</h2>
   <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:16px;">
     <label for="atlas-state-select" style="font-weight:600;">Select State or Territory to Inspect Constituent Local Governments:</label>
-    <select id="atlas-state-select" onchange="selectAtlasState(this.value)" style="max-width:400px;">
+    <select id="atlas-state-select" onchange="selectAtlasState(this.value)" style="max-width:min(400px,100%);">
       <option value="AB">AB — Abia State (South-East • 17 Constitutional LGAs)</option>
       <option value="AD">AD — Adamawa State (North-East • 21 Constitutional LGAs)</option>
       <option value="AK">AK — Akwa Ibom State (South-South • 31 Constitutional LGAs)</option>

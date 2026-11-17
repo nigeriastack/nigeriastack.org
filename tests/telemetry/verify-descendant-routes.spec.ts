@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 // Representative rendered documents, not a substitute for the full HTTP inventory.
 const baseURL = process.env.NS_APP_BASE_URL;
 const routes = [
-  '/sectors/directory/IND-01',
+  '/sectors/finance-revenue-and-fiscal-systems/IND-01',
   '/protocols/sure-evidence',
   '/protocols/lga-governance-stack',
   '/protocols/lga-governance-stack/lga-01-council-complain',
