@@ -5,6 +5,7 @@ import councils from '../../../content/atlas/lga-774-constitutional-registry.jso
 import lgaSpec from '../../../content/atlas/lga-14-service-modules-spec.json';
 import faqs from '../../../content/canonical/reviewed-v2.1/faq.json';
 import { decoratePage } from './editorial';
+import researchedRootCopy from '../../../content/canonical/v2.3/researched-root-copy.json';
 const rawRfcs = import.meta.glob('../../../specs/rfcs/*.md', {query:'?raw',import:'default',eager:true}) as Record<string,string>;
 function clean(s:string) { return s.replace(/\*\*/g,'').replace(/\\([.()_#*])/g,'$1').replace(/^#+\s*/,'').trim(); }
 const rfcs = Object.entries(rawRfcs).map(([file,body])=>({id: file.match(/NS-RFC-\d+/)![0],file:file.split('/').at(-1)!,title:clean(body.split('\n')[0]).replace(/^\d+\.\s*/,''),body})).sort((a,b)=>a.id.localeCompare(b.id));
@@ -15,7 +16,8 @@ const groups=routeGroups.groups.map(g=>g.name);
 const sectorAssignments=routeGroups.groups.map(g=>g.industryIds.map(id=>Number(id.slice(4))));
 const sectorRows=industries.industries.map(i=>({industryId:i.industryId,name:i.name,concreteFailureMode:i.concreteFailureMode,nigeriaStackIntervention:i.nigeriaStackIntervention,group:groups[sectorAssignments.findIndex(a=>a.includes(Number(i.industryId.slice(4))))]}));
 const slug = (text:string) => text.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const headings={home:"Make Nigeria's digital systems work together without surrendering statutory authority, operational continuity, evidentiary integrity, or institutional independence",sectors:'Whole-of-economy 32-industry digital capability directory and integration ledger',protocols:'Open pan-Nigerian protocols and the 14 Local Government digital service standards',rfcs:'Nigeria Stack Open Standards Registry & Public Specifications (Plain-Language Overview on Left + Technical Schema Drawer on Right)',conformance:'National Interoperability Test Bed: Free browser-based verification and offline network testing',atlas:'Sub-National Digital Infrastructure Atlas: 36 States, FCT, and 774 Local Government Areas service readiness explorer',governance:'Ecosystem governance, institutional safeguards framework, open public standards, and collaborative working groups'};
+// Owner-authorized editorial replacements, preserving the ratified charter and historical NS-KB-12 record.
+const headings=Object.fromEntries(researchedRootCopy.rootPages.map(page=>[page.key,page.h1])) as Record<string,string>;
 function resolvePage(path:string,query:string):any {
  const parts=path.split('/').filter(Boolean), search=new URLSearchParams(query), q=(search.get('q')||'').slice(0,120), stateCode=search.get('state')||'', zone=search.get('zone')||'';
  const base={q,stateCode,zone};
