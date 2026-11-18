@@ -32,7 +32,14 @@
       "officialCodeVerified": false,
       "independentReviewer": null,
       "publishableCorrection": false,
-      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW",
+      "followUpEvidence": {
+        "source": "https://placng.org/i/wp-content/uploads/2023/05/Constitution-of-the-Federal-Republic-of-Nigeria-2023.pdf",
+        "sourceEdition": "PLAC consolidated 1999 Constitution through Fifth Alteration 2023, First Schedule Part I",
+        "observedSpelling": "Isuikwuato",
+        "assessment": "Published 2023 compilation supports the project spelling; differs from old WIPO 1999 transcription Isuikwato. Legal reviewer and authoritative gazette check still required.",
+        "status": "PRELIMINARY_CROSS_SOURCE_AGREEMENT_NOT_LEGAL_APPROVAL"
+      }
     },
     {
       "projectCode": "AB-LGA-11",
@@ -653,7 +660,16 @@
       "officialCodeVerified": false,
       "independentReviewer": null,
       "publishableCorrection": false,
-      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW",
+      "followUpEvidence": {
+        "source": "https://placng.org/i/wp-content/uploads/2023/05/Constitution-of-the-Federal-Republic-of-Nigeria-2023.pdf",
+        "sourceEdition": "PLAC consolidated 1999 Constitution through Fifth Alteration 2023, First Schedule Part I",
+        "observedSpelling": "Aiyekire",
+        "billSource": "https://placng.org/i/wp-content/uploads/2025/03/House-of-Reps-order-paper-Wednesday-26-March-2025.pdf",
+        "billName": "HB.2028 — proposed Aiyekire-to-Aiyedire constitutional renaming",
+        "assessment": "A proposed 2025 constitutional alteration is not an enacted legal name change. Check passage, state ratification and authoritative gazette before approving any rename.",
+        "status": "BILL_IDENTIFIED_NO_PROVEN_ENACTMENT"
+      }
     },
     {
       "projectCode": "EK-LGA-10",
@@ -2242,5 +2258,6 @@
       "publishableCorrection": false,
       "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
     }
-  ]
+  ],
+  "additionalCrosschecks": 2
 }
