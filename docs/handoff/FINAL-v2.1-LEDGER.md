@@ -1,6 +1,6 @@
 # Corrected P0–P7 v2.1 implementation ledger — 17 November 2026
 
-**Current outcome: corrected v2.1 implementation merged to GitHub main through PR #2 at `7fd69e72cc53d53977e0962c078637eef7aa35e0`. Hosted source, browser and evidence-coherence jobs passed. Production release and the remaining six-repository audit are not completed. Earlier entries below preserve the original checkpoint's history.**
+**Current outcome: corrected v2.1 implementation merged to GitHub main through PR #2 at `7fd69e72cc53d53977e0962c078637eef7aa35e0`. Hosted source, browser and evidence-coherence jobs passed. The six private reference repositories are now repaired and merged with passing hosted CI (18 November continuation below). Production release and empirical research remain unfinished. Earlier entries below preserve the original checkpoint's history.**
 
 ## Authority and review
 
@@ -91,3 +91,25 @@ PR #2 (https://github.com/nigeriastack/nigeriastack.org/pull/2) merged at `7fd69
 Continuation verification commands: `OPA_BIN=/workspace/scratch/9d2277dd6412/opa node scripts/ci/run-verification.mjs` (15 groups pass), `git -c core.whitespace=-blank-at-eol diff --check` (exit0), `node --import tsx scripts/ci/verify-cleanroom-nomenclature.ts` (exit0), and the Git pre-commit naming/token checks (both exit0). Hosted commands and their full outputs are in the linked run: `pnpm install --frozen-lockfile`, `pnpm run ci:verify-all-gates`, `pnpm exec playwright install --with-deps chromium`, SDK/portal builds, bounded portal startup, `NS_APP_BASE_URL=http://127.0.0.1:3000 pnpm exec playwright test tests/telemetry`, and `node scripts/ci/verify-release-readiness.mjs` (expected exit1 for external production prerequisites; evidence-coherence wrapper exits0). GitHub mutations used create_tree, create_commit, leased update_ref, create_pull_request and expected-head merge_pull_request with separate ref readbacks. The uploaded initial tree14d4da056304a8958ad1429a6d0850656675be78 exactly matched the local checkpoint before hosted corrections.
 
 Changed paths for this continuation and initial publication are in `continuation-modified-paths-2026-11-17.txt`. Public deployment, remote D1, production keys, administration settings, full empirical provenance and external retrieval-engine measurements remain unfinished.
+
+## Seven-repository continuation — 18 November 2026
+
+The owner explicitly approved saving the seven selected repositories for ChatGPT Codex Connector installation183083839. GitHub confirmed the update; all seven metadata reads succeeded. Actual repair-branch creation/readback succeeded on the six private repositories; portal commit/PR/merge access was already verified. No repository visibility was changed and no app administration permission was added. All six private repair PRs passed hosted verification, merged, and were read back at their new main refs. Each merged tree was compared with its reviewed candidate tree.
+
+| Repository | Corrected reference checks | Hosted result |
+| --- | --- | --- |
+| protocol-specifications |14 candidate RFCs,16 protocol schemas plus referenced readiness-provenance schema,4 OpenAPI3.1.1 contracts/6 operations, naming/tokens |PASS, PR1 merged |
+| industry-capability-ledger |32 candid industry records, source methodology,14 rejection/validation tests, naming and token applicability |PASS, PR1 merged |
+| subnational-readiness-atlas |37 jurisdictions/296 unassessed cells,774 council records including6 FCT councils,14 service proposals,19 tests, provenance/alias checks |PASS, PR1 merged |
+| clearam-consent-templates |6 template/catalog checks, negative validity control,11 repaired OPA boundary tests, naming/tokens |PASS, PR1 merged |
+| conformance-test-bed |6 local package builds,24 tests,5 Gherkin scenarios/24 executed steps,11 OPA tests, naming/tokens |PASS, PR1 merged |
+| joinbody-reference-sdks |5 builds,9 SDK/boundary tests, naming/tokens |PASS, PR1 merged |
+| nigeriastack.org |Previously merged source/SSR build,63 browser cases including20 native zoom measurements; main run44178837284 passed all3 jobs |PASS |
+
+The private repositories now have standalone validation/build entry points, CI with bounded job duration, licensing and source manifests. Existing private paths and histories are preserved. Generated SDK dist files and the old fixed conformance receipt were removed from source; builds and actual CLI execution regenerate their outputs. Unpublished SDK dependencies in the test bed are explicit local bootstrap snapshots. No npm release was invented. Non-UI repositories either verify canonical token-source parity or explicitly test token applicability; NOT_APPLICABLE is not a visual accessibility pass.
+
+The detailed private repository SHAs, source path/hash manifests, CI run IDs and write/merge receipts are retained in the designated project records and private PRs, rather than copying private source content into this public ledger. Local verification command groups: from each appropriate standalone root, `corepack pnpm@9.14.0 install --frozen-lockfile`, `corepack pnpm@9.14.0 run verify` (protocols/consent/SDKs/test bed), `npm run ci:verify-all-gates` (two dependency-free datasets), and `opa test validation -v` (consent/test bed). Local aggregate results are7 executed groups with exit0, under `verification-output/seven-repository/results.json`. Initial standalone schema checks exposed the separate provenance-schema dependency; it was included under its existing canonical ID. The six private SOURCE-MANIFEST.json files enumerate every candidate source path and SHA256; PR diffs also show generated-file deletions.
+
+Local portal checkout recovery preserved the original review history in a verified full bundle, fetched main and reconciled the clean checkout to7bc67454af1c766481ef5d9e95c838d49e557974. No user diff was discarded. The previous workspace-reconciliation blocker is resolved. The Drive ledger has been refreshed in place; its original file ID and parent are preserved.
+
+Remaining: production resource binding and explicit public-release authorization;296-cell empirical readiness assessment,97 unresolved council-name variants/constitutional identity review, external retrieval measurements, legal mapping/USSD evidence and any separately authorized administration settings. Passing reference CI does not establish deployment, statutory certification, complete WCAG conformance or empirical readiness.

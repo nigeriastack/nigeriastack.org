@@ -52,7 +52,6 @@
       "owner": "root",
       "acceptance": "Required realquality evidence and separate publicrelease approval",
       "blockedBy": [
-        "ACCESS-GH-CREATE",
         "RELEASE-CF"
       ]
     },
@@ -72,13 +71,13 @@
       "id": "ACCESS-GH-WRITE",
       "status": "RESOLVED_WRITE_READBACK_VERIFIED",
       "owner": "root",
-      "acceptance": "Actual authorized remote write/readback with correctintegration; metadata alone insufficient",
+      "acceptance": "Actual correct-account remote write/readback across all seven repositories; code/PR/workflow grant verified, app administration not expanded",
       "evidence": "docs/handoff/evidence/github-access-restored-2026-11-17.json"
     },
     {
       "id": "ACCESS-GH-CREATE",
-      "status": "BLOCKED_REPOSITORY_SELECTION",
-      "owner": "account-owner",
+      "status": "RESOLVED_EXISTING_PRIVATE_REPOSITORIES_RECONCILED",
+      "owner": "root",
       "acceptance": "Preserve existing private repositories and histories; select intended six for app, then audit and migrate only verified differences"
     }
   ]

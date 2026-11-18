@@ -5,32 +5,34 @@
     {
       "repository": "nigeriastack/protocol-specifications",
       "fileCount": 39,
-      "status": "SOURCE_EXPORT_REMOTE_PROVISIONING_BLOCKED"
+      "status": "MERGED_HOSTED_STANDALONE_CI_PASS"
     },
     {
       "repository": "nigeriastack/industry-capability-ledger",
       "fileCount": 7,
-      "status": "SOURCE_EXPORT_REMOTE_PROVISIONING_BLOCKED"
+      "status": "MERGED_HOSTED_STANDALONE_CI_PASS"
     },
     {
       "repository": "nigeriastack/subnational-readiness-atlas",
       "fileCount": 9,
-      "status": "SOURCE_EXPORT_REMOTE_PROVISIONING_BLOCKED"
+      "status": "MERGED_HOSTED_STANDALONE_CI_PASS"
     },
     {
       "repository": "nigeriastack/clearam-consent-templates",
       "fileCount": 13,
-      "status": "SOURCE_EXPORT_REMOTE_PROVISIONING_BLOCKED"
+      "status": "MERGED_HOSTED_STANDALONE_CI_PASS"
     },
     {
       "repository": "nigeriastack/conformance-test-bed",
       "fileCount": 38,
-      "status": "SOURCE_EXPORT_REMOTE_PROVISIONING_BLOCKED"
+      "status": "MERGED_HOSTED_STANDALONE_CI_PASS"
     },
     {
       "repository": "nigeriastack/joinbody-reference-sdks",
       "fileCount": 24,
-      "status": "SOURCE_EXPORT_REMOTE_PROVISIONING_BLOCKED"
+      "status": "MERGED_HOSTED_STANDALONE_CI_PASS"
     }
-  ]
+  ],
+  "remotesReconciled": true,
+  "existingPrivateHistoriesPreserved": true
 }
