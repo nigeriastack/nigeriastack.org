@@ -49,7 +49,8 @@ for(const r of records){
    throw Error(`${r.pathname} unexpanded SEO placeholder`);
  const rootCopy=researchedRoots.get(r.pathname);
  if (rootCopy) {
-   if (title!==rootCopy.title)throw Error(`${r.pathname} researched SEO title not rendered`);
+   const decodedTitle=title.replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'");
+   if (decodedTitle!==rootCopy.title)throw Error(`${r.pathname} researched SEO title not rendered: ${decodedTitle}`);
    const visibleH1=headingTree[0]?.text?.replace(/&amp;/g,'&').replace(/&#x27;|&#39;/g,"'").trim();
    if (visibleH1!==rootCopy.h1)throw Error(`${r.pathname} disapproved source H1 still visible: ${visibleH1}`);
  }
