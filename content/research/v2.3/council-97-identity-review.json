@@ -1,0 +1,2263 @@
+{
+  "schemaVersion": "NS-97-NAME-EVIDENCE-V23",
+  "date": "2026-11-18",
+  "source": "content/atlas/lga-774-constitutional-registry.json",
+  "scope": "97 cases, preliminary comparison with published historical First Schedule text; later amendments and INEC/state records not yet reconciled. No legal identity claim or canonical rename.",
+  "sourceEditionLimit": "WIPO Lex 1999 text includes legacy spellings and transcription inconsistencies; do not treat as an independently verified current amended constitutional register.",
+  "totals": {
+    "cases": 97,
+    "differentPreliminaryText": 14,
+    "currentConstitutionalIdentitiesVerified": 0,
+    "independentReviews": 0
+  },
+  "cases": [
+    {
+      "projectCode": "AB-LGA-08",
+      "state": "Abia State",
+      "projectName": "Isuikwuato",
+      "firstScheduleSourceTextCandidate": "Isuikwato",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2659,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW",
+      "followUpEvidence": {
+        "source": "https://placng.org/i/wp-content/uploads/2023/05/Constitution-of-the-Federal-Republic-of-Nigeria-2023.pdf",
+        "sourceEdition": "PLAC consolidated 1999 Constitution through Fifth Alteration 2023, First Schedule Part I",
+        "observedSpelling": "Isuikwuato",
+        "assessment": "Published 2023 compilation supports the project spelling; differs from old WIPO 1999 transcription Isuikwato. Legal reviewer and authoritative gazette check still required.",
+        "status": "PRELIMINARY_CROSS_SOURCE_AGREEMENT_NOT_LEGAL_APPROVAL"
+      }
+    },
+    {
+      "projectCode": "AB-LGA-11",
+      "state": "Abia State",
+      "projectName": "Osisioma Ngwa",
+      "firstScheduleSourceTextCandidate": "Osisioma Ngwa",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2659,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "AD-LGA-09",
+      "state": "Adamawa State",
+      "projectName": "Lamurde",
+      "firstScheduleSourceTextCandidate": "Lamurde",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2660,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "AK-LGA-08",
+      "state": "Akwa Ibom State",
+      "projectName": "Ibeno",
+      "firstScheduleSourceTextCandidate": "Ibeno",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2661,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "AK-LGA-27",
+      "state": "Akwa Ibom State",
+      "projectName": "Udung Uko",
+      "firstScheduleSourceTextCandidate": "Udung Uko",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2661,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "AN-LGA-04",
+      "state": "Anambra State",
+      "projectName": "Anaocha",
+      "firstScheduleSourceTextCandidate": "Anaocha",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2662,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "AN-LGA-16",
+      "state": "Anambra State",
+      "projectName": "Ogbaru",
+      "firstScheduleSourceTextCandidate": "Ogbaru",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2662,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BA-LGA-04",
+      "state": "Bauchi State",
+      "projectName": "Damban",
+      "firstScheduleSourceTextCandidate": "Damban",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2663,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BA-LGA-08",
+      "state": "Bauchi State",
+      "projectName": "Ganjuwa",
+      "firstScheduleSourceTextCandidate": "Ganjuwa",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2663,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BA-LGA-11",
+      "state": "Bauchi State",
+      "projectName": "Jama'are",
+      "firstScheduleSourceTextCandidate": "Jama'are",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2663,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BY-LGA-03",
+      "state": "Bayelsa State",
+      "projectName": "Kolokuma/Opokuma",
+      "firstScheduleSourceTextCandidate": "Kolokuma/Opokuma",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2664,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BY-LGA-08",
+      "state": "Bayelsa State",
+      "projectName": "Yenagoa",
+      "firstScheduleSourceTextCandidate": "Yenegoa",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2664,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BE-LGA-01",
+      "state": "Benue State",
+      "projectName": "Ado",
+      "firstScheduleSourceTextCandidate": "Ado",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2665,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BE-LGA-07",
+      "state": "Benue State",
+      "projectName": "Gwer East",
+      "firstScheduleSourceTextCandidate": "Gwer East",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2665,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BE-LGA-13",
+      "state": "Benue State",
+      "projectName": "Makurdi",
+      "firstScheduleSourceTextCandidate": "Makurdi",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2665,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BE-LGA-14",
+      "state": "Benue State",
+      "projectName": "Obi",
+      "firstScheduleSourceTextCandidate": "Obi",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2665,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BE-LGA-19",
+      "state": "Benue State",
+      "projectName": "Oturkpo",
+      "firstScheduleSourceTextCandidate": "Oturkpo",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2665,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BO-LGA-01",
+      "state": "Borno State",
+      "projectName": "Abadam",
+      "firstScheduleSourceTextCandidate": "Abadam",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2666,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "BO-LGA-11",
+      "state": "Borno State",
+      "projectName": "Gwoza",
+      "firstScheduleSourceTextCandidate": "Gwoza",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2666,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "CR-LGA-05",
+      "state": "Cross River State",
+      "projectName": "Bekwara",
+      "firstScheduleSourceTextCandidate": "Bekwara",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2667,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "CR-LGA-17",
+      "state": "Cross River State",
+      "projectName": "Yakurr",
+      "firstScheduleSourceTextCandidate": "Yakurr",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2667,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "DE-LGA-22",
+      "state": "Delta State",
+      "projectName": "Uvwie",
+      "firstScheduleSourceTextCandidate": "Uvwie",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2668,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "DE-LGA-24",
+      "state": "Delta State",
+      "projectName": "Warri South",
+      "firstScheduleSourceTextCandidate": "Warri South",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2668,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "DE-LGA-25",
+      "state": "Delta State",
+      "projectName": "Warri South West",
+      "firstScheduleSourceTextCandidate": "Warri South West",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2668,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "EB-LGA-03",
+      "state": "Ebonyi State",
+      "projectName": "Afikpo South (Edda)",
+      "firstScheduleSourceTextCandidate": "Afikpo South",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2669,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "ED-LGA-10",
+      "state": "Edo State",
+      "projectName": "Igueben",
+      "firstScheduleSourceTextCandidate": "Igueben",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2670,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "ED-LGA-18",
+      "state": "Edo State",
+      "projectName": "Uhunmwonde",
+      "firstScheduleSourceTextCandidate": "Uhunmwonde",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2670,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "EK-LGA-07",
+      "state": "Ekiti State",
+      "projectName": "Gbonyin (Aiyekire)",
+      "firstScheduleSourceTextCandidate": "Aiyekire",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2671,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW",
+      "followUpEvidence": {
+        "source": "https://placng.org/i/wp-content/uploads/2023/05/Constitution-of-the-Federal-Republic-of-Nigeria-2023.pdf",
+        "sourceEdition": "PLAC consolidated 1999 Constitution through Fifth Alteration 2023, First Schedule Part I",
+        "observedSpelling": "Aiyekire",
+        "billSource": "https://placng.org/i/wp-content/uploads/2025/03/House-of-Reps-order-paper-Wednesday-26-March-2025.pdf",
+        "billName": "HB.2028 — proposed Aiyekire-to-Aiyedire constitutional renaming",
+        "assessment": "A proposed 2025 constitutional alteration is not an enacted legal name change. Check passage, state ratification and authoritative gazette before approving any rename.",
+        "status": "BILL_IDENTIFIED_NO_PROVEN_ENACTMENT"
+      }
+    },
+    {
+      "projectCode": "EK-LGA-10",
+      "state": "Ekiti State",
+      "projectName": "Ikere",
+      "firstScheduleSourceTextCandidate": "Ikere",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2671,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "EK-LGA-12",
+      "state": "Ekiti State",
+      "projectName": "Ilejemeje",
+      "firstScheduleSourceTextCandidate": "Ilemeji",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2671,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "EK-LGA-13",
+      "state": "Ekiti State",
+      "projectName": "Irepodun/Ifelodun",
+      "firstScheduleSourceTextCandidate": "Irepodun/Ifelodun",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2671,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "IM-LGA-04",
+      "state": "Imo State",
+      "projectName": "Ezinihitte",
+      "firstScheduleSourceTextCandidate": "Ezinihitte",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2674,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "IM-LGA-12",
+      "state": "Imo State",
+      "projectName": "Ngor-Okpala",
+      "firstScheduleSourceTextCandidate": "Ngor-Okpala",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2674,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "IM-LGA-14",
+      "state": "Imo State",
+      "projectName": "Nkwerre",
+      "firstScheduleSourceTextCandidate": "Nkwerre",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2674,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "JI-LGA-03",
+      "state": "Jigawa State",
+      "projectName": "Biriniwa",
+      "firstScheduleSourceTextCandidate": "Biriniwa",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2675,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "JI-LGA-13",
+      "state": "Jigawa State",
+      "projectName": "Hadejia",
+      "firstScheduleSourceTextCandidate": "Hadejia",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2675,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "JI-LGA-15",
+      "state": "Jigawa State",
+      "projectName": "Kafin Hausa",
+      "firstScheduleSourceTextCandidate": "Kafin Hausa",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2675,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "JI-LGA-23",
+      "state": "Jigawa State",
+      "projectName": "Ringim",
+      "firstScheduleSourceTextCandidate": "Ringim",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2675,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KD-LGA-01",
+      "state": "Kaduna State",
+      "projectName": "Birnin-Gwari",
+      "firstScheduleSourceTextCandidate": "Birnin-Gwari",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2676,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KD-LGA-22",
+      "state": "Kaduna State",
+      "projectName": "Zangon-Kataf",
+      "firstScheduleSourceTextCandidate": "Zango-Kataf",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2676,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KN-LGA-15",
+      "state": "Kano State",
+      "projectName": "Garun Mallam",
+      "firstScheduleSourceTextCandidate": "Garum Mallam",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2677,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KN-LGA-31",
+      "state": "Kano State",
+      "projectName": "Nasarawa",
+      "firstScheduleSourceTextCandidate": "Nasarawa",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2677,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KT-LGA-12",
+      "state": "Katsina State",
+      "projectName": "Dutsin-Ma",
+      "firstScheduleSourceTextCandidate": "Dutsin-Ma",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2678,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KT-LGA-25",
+      "state": "Katsina State",
+      "projectName": "Malumfashi",
+      "firstScheduleSourceTextCandidate": "Malumfashi",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2678,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KE-LGA-01",
+      "state": "Kebbi State",
+      "projectName": "Aleiro",
+      "firstScheduleSourceTextCandidate": "Aleiro",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2679,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KE-LGA-02",
+      "state": "Kebbi State",
+      "projectName": "Arewa-Dandi",
+      "firstScheduleSourceTextCandidate": "Arewa-Dandi",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2679,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KE-LGA-03",
+      "state": "Kebbi State",
+      "projectName": "Argungu",
+      "firstScheduleSourceTextCandidate": "Argungu",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2679,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KE-LGA-06",
+      "state": "Kebbi State",
+      "projectName": "Birnin Kebbi",
+      "firstScheduleSourceTextCandidate": "Birnin Kebbi",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2679,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KE-LGA-19",
+      "state": "Kebbi State",
+      "projectName": "Wasagu/Danko",
+      "firstScheduleSourceTextCandidate": "Wasagu/Danko",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2679,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KO-LGA-04",
+      "state": "Kogi State",
+      "projectName": "Bassa",
+      "firstScheduleSourceTextCandidate": "Bassa",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2680,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KO-LGA-08",
+      "state": "Kogi State",
+      "projectName": "Igalamela-Odolu",
+      "firstScheduleSourceTextCandidate": "Igalamela-Odolu",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2680,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KO-LGA-11",
+      "state": "Kogi State",
+      "projectName": "Kogi (Koton Karfe)",
+      "firstScheduleSourceTextCandidate": "Kogi",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2680,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KO-LGA-13",
+      "state": "Kogi State",
+      "projectName": "Mopa-Muro",
+      "firstScheduleSourceTextCandidate": "Mopa-Muro",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2680,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KW-LGA-05",
+      "state": "Kwara State",
+      "projectName": "Ifelodun",
+      "firstScheduleSourceTextCandidate": "Ifelodun",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2681,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KW-LGA-09",
+      "state": "Kwara State",
+      "projectName": "Irepodun",
+      "firstScheduleSourceTextCandidate": "Irepodun",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2681,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KW-LGA-11",
+      "state": "Kwara State",
+      "projectName": "Kaiama",
+      "firstScheduleSourceTextCandidate": "Kaiama",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2681,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "KW-LGA-16",
+      "state": "Kwara State",
+      "projectName": "Pategi",
+      "firstScheduleSourceTextCandidate": "Pategi",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2681,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "LA-LGA-02",
+      "state": "Lagos State",
+      "projectName": "Ajeromi-Ifelodun",
+      "firstScheduleSourceTextCandidate": "Ajeromi-Ifelodun",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2682,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "LA-LGA-10",
+      "state": "Lagos State",
+      "projectName": "Ifako-Ijaye",
+      "firstScheduleSourceTextCandidate": "Ifako-Ijaye",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2682,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "LA-LGA-15",
+      "state": "Lagos State",
+      "projectName": "Lagos Mainland",
+      "firstScheduleSourceTextCandidate": "Lagos Mainland",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2682,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "LA-LGA-18",
+      "state": "Lagos State",
+      "projectName": "Oshodi-Isolo",
+      "firstScheduleSourceTextCandidate": "Oshodi-Isolo",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2682,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "LA-LGA-20",
+      "state": "Lagos State",
+      "projectName": "Surulere",
+      "firstScheduleSourceTextCandidate": "Surulere",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2682,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "NA-LGA-09",
+      "state": "Nasarawa State",
+      "projectName": "Nasarawa",
+      "firstScheduleSourceTextCandidate": "Nasarawa",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2683,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "NA-LGA-10",
+      "state": "Nasarawa State",
+      "projectName": "Nasarawa-Eggon",
+      "firstScheduleSourceTextCandidate": "Nasarawa-Eggon",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2683,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "NA-LGA-11",
+      "state": "Nasarawa State",
+      "projectName": "Obi",
+      "firstScheduleSourceTextCandidate": "Obi",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2683,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "NI-LGA-21",
+      "state": "Niger State",
+      "projectName": "Rijau",
+      "firstScheduleSourceTextCandidate": "Rijau",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2684,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OG-LGA-04",
+      "state": "Ogun State",
+      "projectName": "Egbado North (Yewa North)",
+      "firstScheduleSourceTextCandidate": "Egbado North",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2685,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OG-LGA-05",
+      "state": "Ogun State",
+      "projectName": "Egbado South (Yewa South)",
+      "firstScheduleSourceTextCandidate": "Egbado South",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2685,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OG-LGA-15",
+      "state": "Ogun State",
+      "projectName": "Obafemi-Owode",
+      "firstScheduleSourceTextCandidate": "Obafemi-Owode",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2685,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OS-LGA-03",
+      "state": "Osun State",
+      "projectName": "Atakumosa East",
+      "firstScheduleSourceTextCandidate": "Atakumosa East",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2687,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OS-LGA-04",
+      "state": "Osun State",
+      "projectName": "Atakumosa West",
+      "firstScheduleSourceTextCandidate": "Atakumosa West",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2687,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OS-LGA-16",
+      "state": "Osun State",
+      "projectName": "Ifelodun",
+      "firstScheduleSourceTextCandidate": "Ifelodun",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2687,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OS-LGA-30",
+      "state": "Osun State",
+      "projectName": "Osogbo",
+      "firstScheduleSourceTextCandidate": "Osogbo",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2687,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OY-LGA-28",
+      "state": "Oyo State",
+      "projectName": "Ori Ire",
+      "firstScheduleSourceTextCandidate": "Ori Ire",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2688,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OY-LGA-31",
+      "state": "Oyo State",
+      "projectName": "Saki East",
+      "firstScheduleSourceTextCandidate": "Saki East",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2688,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OY-LGA-32",
+      "state": "Oyo State",
+      "projectName": "Saki West",
+      "firstScheduleSourceTextCandidate": "Saki West",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2688,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "OY-LGA-33",
+      "state": "Oyo State",
+      "projectName": "Surulere",
+      "firstScheduleSourceTextCandidate": "Surulere",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2688,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "PL-LGA-02",
+      "state": "Plateau State",
+      "projectName": "Bassa",
+      "firstScheduleSourceTextCandidate": "Bassa",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2689,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "PL-LGA-14",
+      "state": "Plateau State",
+      "projectName": "Qua'an Pan",
+      "firstScheduleSourceTextCandidate": "Qua'an Pan",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2689,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "RI-LGA-01",
+      "state": "Rivers State",
+      "projectName": "Abua/Odual",
+      "firstScheduleSourceTextCandidate": "Abua/Odual",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2690,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "RI-LGA-04",
+      "state": "Rivers State",
+      "projectName": "Akuku Toru",
+      "firstScheduleSourceTextCandidate": "Akuku Toru",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2690,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "RI-LGA-06",
+      "state": "Rivers State",
+      "projectName": "Asari-Toru",
+      "firstScheduleSourceTextCandidate": "Asari-Toru",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2690,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "RI-LGA-10",
+      "state": "Rivers State",
+      "projectName": "Emohua",
+      "firstScheduleSourceTextCandidate": "Emohua",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2690,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "RI-LGA-16",
+      "state": "Rivers State",
+      "projectName": "Ogba/Egbema/Ndoni",
+      "firstScheduleSourceTextCandidate": "Ogba/Egbema/Ndoni",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2690,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "RI-LGA-18",
+      "state": "Rivers State",
+      "projectName": "Okrika",
+      "firstScheduleSourceTextCandidate": "Okrika",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2690,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "RI-LGA-19",
+      "state": "Rivers State",
+      "projectName": "Omuma",
+      "firstScheduleSourceTextCandidate": "Omumma",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2690,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "SO-LGA-08",
+      "state": "Sokoto State",
+      "projectName": "Illela",
+      "firstScheduleSourceTextCandidate": "Illela",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2691,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "SO-LGA-18",
+      "state": "Sokoto State",
+      "projectName": "Tambuwal",
+      "firstScheduleSourceTextCandidate": "Tambuwal",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2691,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "SO-LGA-21",
+      "state": "Sokoto State",
+      "projectName": "Wamako",
+      "firstScheduleSourceTextCandidate": "Wamako",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2691,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "TA-LGA-08",
+      "state": "Taraba State",
+      "projectName": "Karim-Lamido",
+      "firstScheduleSourceTextCandidate": "Karin-Lamido",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2692,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "TA-LGA-11",
+      "state": "Taraba State",
+      "projectName": "Sardauna",
+      "firstScheduleSourceTextCandidate": "Sardauna",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2692,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "YO-LGA-01",
+      "state": "Yobe State",
+      "projectName": "Bade",
+      "firstScheduleSourceTextCandidate": "Bade",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2693,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "YO-LGA-15",
+      "state": "Yobe State",
+      "projectName": "Tarmua",
+      "firstScheduleSourceTextCandidate": "Tarmua",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2693,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "YO-LGA-17",
+      "state": "Yobe State",
+      "projectName": "Yusufari",
+      "firstScheduleSourceTextCandidate": "Yusufari",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2693,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "ZA-LGA-03",
+      "state": "Zamfara State",
+      "projectName": "Birnin Magaji/Kiyaw",
+      "firstScheduleSourceTextCandidate": "Birnin Magaji",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2694,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "ZA-LGA-09",
+      "state": "Zamfara State",
+      "projectName": "Maradun",
+      "firstScheduleSourceTextCandidate": "Maradun",
+      "sourceTextComparison": "PRELIMINARY_MATCH_IN_1999_SCHEDULE",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2694,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    },
+    {
+      "projectCode": "ZA-LGA-13",
+      "state": "Zamfara State",
+      "projectName": "Chafe (Tsafe)",
+      "firstScheduleSourceTextCandidate": "Tsafe",
+      "sourceTextComparison": "DIFFERENT_SPELLING_OR_HISTORICAL_ALIAS_REQUIRES_STATUTORY_REVIEW",
+      "constitutionSource": {
+        "url": "https://www.wipo.int/wipolex/en/text/218190",
+        "section": "First Schedule Part I",
+        "sourceLineHint": 2694,
+        "sourceEdition": "1999 text; may not incorporate subsequent alterations"
+      },
+      "crosscheckSource": {
+        "url": "https://www.inecnigeria.org/about/state-offices/",
+        "status": "PENDING_LGA_PDF_SOURCE_RECONCILIATION"
+      },
+      "currentConstitutionalIdentity": "NOT_YET_LEGALLY_VERIFIED",
+      "proposedCanonicalName": null,
+      "officialCodeVerified": false,
+      "independentReviewer": null,
+      "publishableCorrection": false,
+      "redirectDecision": "PRESERVE_EXISTING_URL_UNTIL_REVIEW"
+    }
+  ],
+  "additionalCrosschecks": 2
+}

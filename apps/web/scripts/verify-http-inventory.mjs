@@ -12,6 +12,7 @@ const councils=read('content/atlas/lga-774-constitutional-registry.json').states
 const modules=read('content/atlas/lga-14-service-modules-spec.json').modules;
 const slug=s=>s.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const routeGroups=read('content/taxonomy/route-groups.json');
+const researchedRoots=new Map(read('content/canonical/v2.3/researched-root-copy.json').rootPages.map(r=>[r.route,r]));
 const groups=routeGroups.groups.map(g=>g.name);
 const assignments=routeGroups.groups.map(g=>g.industryIds.map(id=>Number(id.slice(4))));
 const records=[];
@@ -41,6 +42,18 @@ for(const r of records){
  const title=html.match(/<title>(.*?)<\/title>/s)?.[1],description=html.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"/)?.[1];
  if(!title||titles.has(title))throw Error(`${r.pathname} empty/duplicate title ${title}`);titles.add(title);
  if(!description||descriptions.has(description))throw Error(`${r.pathname} empty/duplicate description`);descriptions.add(description);
+ // v2.3: a generic fallback, an outdated researched root title or an old retained H1 fails CI.
+ if (/Inspect source records, specification requirements and evidence limits\./.test(description))
+   throw Error(`${r.pathname} unbound generic metadata fallback`);
+ if (/\{\{|\}\}|\bTODO\b|\bTBD\b/i.test(title+' '+description))
+   throw Error(`${r.pathname} unexpanded SEO placeholder`);
+ const rootCopy=researchedRoots.get(r.pathname);
+ if (rootCopy) {
+   const decodedTitle=title.replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'");
+   if (decodedTitle!==rootCopy.title)throw Error(`${r.pathname} researched SEO title not rendered: ${decodedTitle}`);
+   const visibleH1=headingTree[0]?.text?.replace(/&amp;/g,'&').replace(/&#x27;|&#39;/g,"'").trim();
+   if (visibleH1!==rootCopy.h1)throw Error(`${r.pathname} disapproved source H1 still visible: ${visibleH1}`);
+ }
  if(!html.includes(`rel="canonical" href="https://nigeriastack.org${r.pathname}"`))throw Error(`${r.pathname} canonical`);
  if(!html.includes('name="robots" content="noindex, follow"'))throw Error(`${r.pathname} release hold missing`);
  const breadcrumb=html.match(/<nav aria-label="Breadcrumb">([\s\S]*?)<\/nav>/)?.[1];if(!breadcrumb)throw Error(`${r.pathname} breadcrumb missing`);
