@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-13.schema.json",
+  "title": "LGA-13 CustomaryDocket submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "courtIdentifier",
+    "matterRef",
+    "privacyClassification"
+  ],
+  "properties": {
+    "courtIdentifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "matterRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "privacyClassification": {
+      "type": "string",
+      "enum": [
+        "PUBLIC_MUNICIPAL_RECORD",
+        "CONSENT_RESTRICTED",
+        "INTERNAL_RESTRICTED_NDPA"
+      ]
+    },
+    "filingDate": {
+      "type": "string"
+    },
+    "judicialDirectionRef": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}
