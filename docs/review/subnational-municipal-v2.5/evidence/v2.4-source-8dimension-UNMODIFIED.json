@@ -1,0 +1,235 @@
+{
+  "$schema": "https://nigeriastack.org/schemas/v2026/SubNationalDpiReadinessAtlas.schema.json",
+  "extensionId": "NS-ATLAS-8DIM-EXPANSION-2026-V2.4",
+  "license": "CC0-1.0",
+  "parentInitiative": {
+    "name": "Digital Economic Development Initiative | DIGITECO",
+    "url": "https://digiteco.org"
+  },
+  "empiricalGradingPolicy": {
+    "allowFabricatedCompositeScores": false,
+    "allowedStatusLabels": [
+      "Live digital service",
+      "Active pilot program",
+      "Paper-only registry",
+      "Not yet assessed"
+    ],
+    "unknownFallbackLabel": "Not yet assessed"
+  },
+  "dimensions": [
+    {
+      "dimensionId": "DIM-01",
+      "name": "Judiciary & Magistracy Digitization",
+      "linkedIndustries": [
+        "IND-21",
+        "IND-31"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-13"
+      ],
+      "governingRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-013"
+      ],
+      "referenceClientShell": "KioskBase Offline Court & CTC Verifier PWA (<35KB)",
+      "globalBenchmarks": [
+        "NYC Court e-File",
+        "Singapore eLitigation",
+        "UK CE-File"
+      ]
+    },
+    {
+      "dimensionId": "DIM-02",
+      "name": "Land Cadastral & Deeds Registry (GIS)",
+      "linkedIndustries": [
+        "IND-17",
+        "IND-28"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-02",
+        "LGA-14"
+      ],
+      "governingRfcs": [
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-012"
+      ],
+      "referenceClientShell": "Consented Land Search & Lis Pendens Portal + StreetGrid Offline PWA",
+      "globalBenchmarks": [
+        "Auckland LIM / Landonline",
+        "Australia PEXA",
+        "Karnataka Bhoomi"
+      ]
+    },
+    {
+      "dimensionId": "DIM-03",
+      "name": "State IRS & Direct Treasury Pass-Through",
+      "linkedIndustries": [
+        "IND-01",
+        "IND-05",
+        "IND-06",
+        "IND-26"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-09",
+        "LGA-10",
+        "LGA-12"
+      ],
+      "governingRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "referenceClientShell": "SplitDirect Zero-Escrow Billing Portal + *347*LGA# USSD & POS Receipt Kit",
+      "globalBenchmarks": [
+        "Seoul ETAX",
+        "Tokyo eLTAX",
+        "Malaysia PBTpay",
+        "Quezon City RPT"
+      ]
+    },
+    {
+      "dimensionId": "DIM-04",
+      "name": "State Health Insurance & PHC EMRs",
+      "linkedIndustries": [
+        "IND-03",
+        "IND-19"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-11"
+      ],
+      "governingRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-006",
+        "NS-RFC-011"
+      ],
+      "referenceClientShell": "WardPHC Offline HL7 FHIR Encounter & SHIA Claims PWA (<35KB)",
+      "globalBenchmarks": [
+        "Surabaya Puskesmas",
+        "Indonesia SATUSEHAT",
+        "New Zealand Hira"
+      ]
+    },
+    {
+      "dimensionId": "DIM-05",
+      "name": "Civil Registration, 774-LGA & KioskBase Edge",
+      "linkedIndustries": [
+        "IND-07",
+        "IND-09",
+        "IND-11",
+        "IND-14",
+        "IND-20",
+        "IND-22",
+        "IND-23",
+        "IND-27",
+        "IND-28"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-01",
+        "LGA-03",
+        "LGA-04",
+        "LGA-05",
+        "LGA-06",
+        "LGA-07",
+        "LGA-14"
+      ],
+      "governingRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-007",
+        "NS-RFC-014"
+      ],
+      "referenceClientShell": "Unified Municipal Civic & Permitting Shell + *347*LGA# USSD + 300-DPI QR Kiosk",
+      "globalBenchmarks": [
+        "Tokyo MyNa/Conveni-Kofu",
+        "DKI Jakarta JAKI",
+        "Singapore OneService",
+        "Makati Makatizen"
+      ]
+    },
+    {
+      "dimensionId": "DIM-06",
+      "name": "Open Contracting & State Public Procurement",
+      "linkedIndustries": [
+        "IND-04",
+        "IND-06",
+        "IND-17"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-08"
+      ],
+      "governingRfcs": [
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "referenceClientShell": "OCDS Tender & WardWorks Geo-Photo Milestone Attestation Portal",
+      "globalBenchmarks": [
+        "Seoul S-Map Projects",
+        "NYC Checkbook",
+        "India eGov DIGIT / MUKTA"
+      ]
+    },
+    {
+      "dimensionId": "DIM-07",
+      "name": "Agricultural Extension, Farm Polygons & Warehouses",
+      "linkedIndustries": [
+        "IND-09",
+        "IND-10",
+        "IND-15",
+        "IND-18"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-10",
+        "LGA-14"
+      ],
+      "governingRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-010",
+        "NS-RFC-012"
+      ],
+      "referenceClientShell": "AgriTrust Offline GPS Polygon & Verifiable Warehouse Receipt PWA",
+      "globalBenchmarks": [
+        "India AgriStack",
+        "New Zealand LIC Traceability",
+        "Hokkaido Rural Municipal Stack"
+      ]
+    },
+    {
+      "dimensionId": "DIM-08",
+      "name": "Fiber RoW Policy, IXPN Peering & Sovereign Hosting",
+      "linkedIndustries": [
+        "IND-12",
+        "IND-13",
+        "IND-16",
+        "IND-25",
+        "IND-29",
+        "IND-30",
+        "IND-32"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-01",
+        "LGA-02",
+        "LGA-03",
+        "LGA-14"
+      ],
+      "governingRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-008"
+      ],
+      "referenceClientShell": "Fiber RoW Digital Permitting Portal + Decentralized did:web Key Discovery Node",
+      "globalBenchmarks": [
+        "Singapore APEX",
+        "Tokyo ISMAP GovCloud",
+        "Estonia X-Road"
+      ]
+    }
+  ]
+}

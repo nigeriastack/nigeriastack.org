@@ -1,0 +1,112 @@
+{
+  "@context": [
+    "https://schema.org",
+    {
+      "ns": "https://nigeriastack.org/ns/v2026#",
+      "conformsToSpec": {
+        "@id": "dcterms:conformsTo",
+        "@type": "@id"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://digiteco.org/#organization",
+      "name": "Digital Economic Development Initiative | DIGITECO",
+      "url": "https://digiteco.org"
+    },
+    {
+      "@type": "Consortium",
+      "@id": "https://nigeriastack.org/#commons",
+      "name": "NigeriaStack Open Standards & Conformance Commons",
+      "url": "https://nigeriastack.org/",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://nigeriastack.org/protocols/lga-governance-stack#subnational-expansion",
+      "url": "https://nigeriastack.org/protocols/lga-governance-stack",
+      "headline": "Expanded Sub-National & 774-LGA Interoperable Stack, Apps, PWAs & API Specification",
+      "inLanguage": "en-NG",
+      "datePublished": "2026-11-23",
+      "isPartOf": {
+        "@type": "Organization",
+        "@id": "https://digiteco.org/#organization",
+        "name": "Digital Economic Development Initiative | DIGITECO",
+        "url": "https://digiteco.org"
+      },
+      "publisher": {
+        "@id": "https://nigeriastack.org/#commons"
+      },
+      "conformsToSpec": [
+        "https://nigeriastack.org/rfcs/NS-RFC-004",
+        "https://nigeriastack.org/rfcs/NS-RFC-005",
+        "https://nigeriastack.org/rfcs/NS-RFC-006",
+        "https://nigeriastack.org/rfcs/NS-RFC-009",
+        "https://nigeriastack.org/rfcs/NS-RFC-014"
+      ]
+    }
+  ],
+  "ingestionTargets": [
+    {
+      "artifactId": "ART-01",
+      "driveFilename": "NS-KB-08B_subnational-municipal-interoperability.openapi.yaml",
+      "githubRepo": "nigeriastack/protocol-specifications",
+      "repoPath": "openapi/v2026/subnational-municipal-interoperability.openapi.yaml",
+      "requiredGates": [
+        "Gate NS-G1"
+      ]
+    },
+    {
+      "artifactId": "ART-02",
+      "driveFilename": "NS-KB-08C_SubNationalServiceInteroperabilityEnvelope.schema.json",
+      "githubRepo": "nigeriastack/protocol-specifications",
+      "repoPath": "schemas/json-schema-2020-12/SubNationalServiceInteroperabilityEnvelope.schema.json",
+      "requiredGates": [
+        "Gate NS-G1"
+      ]
+    },
+    {
+      "artifactId": "ART-03",
+      "driveFilename": "NS-KB-03E_eight-dimension-interoperability-expansion.json",
+      "githubRepo": "nigeriastack/subnational-readiness-atlas",
+      "repoPath": "states/eight-dimension-interoperability-expansion.json",
+      "requiredGates": [
+        "Gate NS-G2"
+      ]
+    },
+    {
+      "artifactId": "ART-04",
+      "driveFilename": "NS-INGESTION-MANIFEST_subnational-municipal-expansion-v2.4.json",
+      "githubRepo": "nigeriastack/nigeriastack.org",
+      "repoPath": "docs/content/subnational-expansion-ingestion-manifest.json",
+      "requiredGates": [
+        "Gate NS-G1",
+        "Gate NS-G3",
+        "Gate NS-G5",
+        "Gate NS-G6"
+      ]
+    }
+  ],
+  "verificationChecklist": {
+    "zeroForeignCloneNomenclature": true,
+    "zeroSectionalNomenclature": true,
+    "zeroVendorNamesInLayerHeadings": true,
+    "zeroEscrowInvarianceEnforced": true,
+    "liteShellMaxGzipBytes": 35840,
+    "multiModalInclusion": [
+      "KIOSKBASE_OFFLINE_PWA",
+      "USSD_347_LGA",
+      "PAPER_COUNTER_ASSISTED"
+    ],
+    "supportedLocales": [
+      "en-NG",
+      "ha-NG",
+      "yo-NG",
+      "ig-NG",
+      "pcm-NG"
+    ],
+    "publicReleaseAuthorized": false
+  }
+}

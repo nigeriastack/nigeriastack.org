@@ -1,0 +1,342 @@
+{
+  "assembledOn": "2026-11-24",
+  "fileCount": 66,
+  "inputs": {
+    "webcopyZipSha256": "3b4e0a864a2692c0e2c225cfdc871333b04686ea61da604a9b35e89239b43fcb",
+    "architectureMdSha256": "9531519a86627ca5b7bac048124e1e293aef9ad067c779678c82b950a68da776"
+  },
+  "entries": [
+    {
+      "path": "ARCHITECTURE-REEXECUTION-FULL.md",
+      "bytes": 121008,
+      "sha256": "c1baeaac98b06b2412d05be3fb17f477760a6899ed92c76cdd1ca75a35201db7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2716,
+      "sha256": "8bf1043948ba37533432a28efb240ccb015430945e1a94c664f6d79f31dab2f8"
+    },
+    {
+      "path": "conformance/RELEASE-AND-SECURITY-ACCEPTANCE.md",
+      "bytes": 2882,
+      "sha256": "18a92a985993a77ff654e6c9c7c5ba6502b3090b80de1d56b36d4b268522e9d2"
+    },
+    {
+      "path": "conformance/run_local_conformance.py",
+      "bytes": 12006,
+      "sha256": "aaa9f6330e8de9a1c8de91dbdea22a65c70ea32234e09c03b7934684801ffeb5"
+    },
+    {
+      "path": "evidence/v2.4-source-8dimension-UNMODIFIED.json",
+      "bytes": 5808,
+      "sha256": "ab7f0947e440f9b693ce7c42b2c2a0596db19253a833e1def83b58b4cd212824"
+    },
+    {
+      "path": "evidence/v2.4-source-envelope-UNMODIFIED.json",
+      "bytes": 3952,
+      "sha256": "8ee49b118ea3c685c2b220598a643ca22b339480eb1b854c85a614a1ae9e2d4e"
+    },
+    {
+      "path": "evidence/v2.4-source-ingestion-UNMODIFIED.json",
+      "bytes": 3592,
+      "sha256": "bb333295a39ce5a458a17fc96ee07b2d54e1cb0d9f0c6344154328a5b551204c"
+    },
+    {
+      "path": "evidence/v2.4-source-openapi-UNMODIFIED.yaml",
+      "bytes": 10635,
+      "sha256": "054bfae6ff53d53b13e2e79e8ca9ac6cc7b90148730d23e56acc86248e5b1798"
+    },
+    {
+      "path": "ingestion/DIGITECO-NigeriaStack-graph-PREVIEW-DO-NOT-PUBLISH.json",
+      "bytes": 1937,
+      "sha256": "8e12eb39b5fedeb0ae04ad391befc716477fdcc45ccc8a63f55e706ff1f47b87"
+    },
+    {
+      "path": "ingestion/NigeriaStack-subnational-ingestion-manifest-CANDIDATE.json",
+      "bytes": 7186,
+      "sha256": "e4d38f8544da6e5343bc36beb33367d0ba934c2841549a8d8628e8b92e1cd58f"
+    },
+    {
+      "path": "public-copy-candidates/LGA-01-councilcomplain.md",
+      "bytes": 3409,
+      "sha256": "e71acbc79b503f26e68ba5c7be5f163c6c8e65e390c15155ee115af2ade73fc6"
+    },
+    {
+      "path": "public-copy-candidates/LGA-02-buildclear.md",
+      "bytes": 3348,
+      "sha256": "bc4f2578dbea427fde9919c2f7e1ea778c552f2839c023b65eb82f4a293e40b4"
+    },
+    {
+      "path": "public-copy-candidates/LGA-03-washconnect.md",
+      "bytes": 3342,
+      "sha256": "6c9d86f2a619a78b8d931bb47302467da4189ce11fbe1720bd5c7e5fa00b519d"
+    },
+    {
+      "path": "public-copy-candidates/LGA-04-shoppermit.md",
+      "bytes": 3317,
+      "sha256": "da207f9b19cadfee445c71ebdab2674ebd84b327a12bc6acb0f3e500217cb6e9"
+    },
+    {
+      "path": "public-copy-candidates/LGA-05-vitalproof.md",
+      "bytes": 3341,
+      "sha256": "fc5ef561ef9116ab6391d2f6b65dd55692608de7a95648fb72295bc6865fd48d"
+    },
+    {
+      "path": "public-copy-candidates/LGA-06-indigeneproof.md",
+      "bytes": 3376,
+      "sha256": "283d88c6e0f3ddb8c05b92aad7c8b363dea17727156a05dc0f0e39754d0a781c"
+    },
+    {
+      "path": "public-copy-candidates/LGA-07-safetynoc.md",
+      "bytes": 3300,
+      "sha256": "e62dfae58d06aa27084299c043928950c1d74ee823e44a5e3a9ffbd2341ab771"
+    },
+    {
+      "path": "public-copy-candidates/LGA-08-wardworks.md",
+      "bytes": 3297,
+      "sha256": "945e36bdd28c4baa89745c1940e9174fe96889588f05b8d0d27df782c482f4f8"
+    },
+    {
+      "path": "public-copy-candidates/LGA-09-tenementrate.md",
+      "bytes": 3343,
+      "sha256": "805e16b563d3c3c8754203d5f9ead036f04f1ddfb573188148f390273c0c5219"
+    },
+    {
+      "path": "public-copy-candidates/LGA-10-marketcollect.md",
+      "bytes": 3337,
+      "sha256": "dfb115f66f0c661d480527893e9f236ebfbdec49d0093b7d5fc16ba3c56ceeaf"
+    },
+    {
+      "path": "public-copy-candidates/LGA-11-wardphc.md",
+      "bytes": 3291,
+      "sha256": "d3b6e49f6f1308bd16cabc29b0c74920b6b62b7cff70f141526a6f3e21a22323"
+    },
+    {
+      "path": "public-copy-candidates/LGA-12-councilledger.md",
+      "bytes": 3347,
+      "sha256": "508897b2da4ed42d6f70da0879cb41619fc55c3ac22666efcdc751aeef5fc1ad"
+    },
+    {
+      "path": "public-copy-candidates/LGA-13-customarydocket.md",
+      "bytes": 3380,
+      "sha256": "3c7f343a541bd5628150f561f919391900631ee4b9171043190bcefbd0ab255e"
+    },
+    {
+      "path": "public-copy-candidates/LGA-14-streetgrid.md",
+      "bytes": 3309,
+      "sha256": "0b2257bd41e2139237c95961670486d43b2a44889cc0ddc947df9d7ab649f1bb"
+    },
+    {
+      "path": "public-copy-candidates/sovereign-design-tokens.CANDIDATE.json",
+      "bytes": 544,
+      "sha256": "ed7b5bc6e1f04dd86eaeec5335f2b0a7d55926277e67a723350535e9d958ba2a"
+    },
+    {
+      "path": "route-audit/CROSS-SOURCE-CONFLICT-REGISTER.csv",
+      "bytes": 7944,
+      "sha256": "055ae28018ffda20b06f3fdf3b3127e7fd191ff077703c9c2e921dd5e7a309bf"
+    },
+    {
+      "path": "route-audit/CROSS-SOURCE-CONFLICT-REGISTER.json",
+      "bytes": 13029,
+      "sha256": "8ae881abc847c376defdaa03d970ca073434a0e4024099b03df62552937acd39"
+    },
+    {
+      "path": "route-audit/archive-integrity-audit.json",
+      "bytes": 2169,
+      "sha256": "6ce150631b9eba7f67c511d9cd9c7f729d270ab263f5ad888b0e803a27ff2eb8"
+    },
+    {
+      "path": "route-audit/claim-risk-review-index.json",
+      "bytes": 263925,
+      "sha256": "fccb2cfd82c05cdee8dd240371e2de15b342da941283b72214f04a001927dc66"
+    },
+    {
+      "path": "route-audit/corrected-route-index-CANDIDATE.json",
+      "bytes": 382308,
+      "sha256": "b780dd01ba77f31bc8c46c6f52f13c3253df1ae755624395e7c716e14f45b624"
+    },
+    {
+      "path": "route-audit/route-source-inventory.csv",
+      "bytes": 207911,
+      "sha256": "d13193abe564fb46fab65081b40f5c3829bff70303e7f404b3cf15f59cbd8c64"
+    },
+    {
+      "path": "task-1-global-crosswalk/14-module-reverse-city-coverage.csv",
+      "bytes": 1304,
+      "sha256": "213fe6736559a5412083dda0be19bc15bca2f59e76e3d3b830af474750514076"
+    },
+    {
+      "path": "task-1-global-crosswalk/66-global-city-functional-crosswalk.csv",
+      "bytes": 29463,
+      "sha256": "1c8f61766c9194dbeedbab991320e145eacbc3076362b26310a1d68765b16719"
+    },
+    {
+      "path": "task-1-global-crosswalk/GLOBAL-CITY-TO-NIGERIASTACK-FULL-CROSSWALK.md",
+      "bytes": 25034,
+      "sha256": "ecc676927bab4b09f3ca71a622e1e5ec4b29474d7c0de2166168aaf47e0b4486"
+    },
+    {
+      "path": "task-1-global-crosswalk/canonical-12BB-14RFC-index.json",
+      "bytes": 3655,
+      "sha256": "fc6f8ddd22eb95e0cbfba1dc5ca96c6dad803aeeb4a813c024b3578325932229"
+    },
+    {
+      "path": "task-1-global-crosswalk/eight-city-66-service-domains.json",
+      "bytes": 70832,
+      "sha256": "150820f1de5f8f1c5e808f1a40fbf2a8c257d31956d222fead377e55a1e0882e"
+    },
+    {
+      "path": "task-2-readiness/296-cell-readiness-and-technical-targets.json",
+      "bytes": 196006,
+      "sha256": "221347de94a89d6d1e2ccef4fec67ec34ab855d53242025a327782f6ecb6a58d"
+    },
+    {
+      "path": "task-2-readiness/37-states-fct-x-8-cell-status.csv",
+      "bytes": 6407,
+      "sha256": "a1cda20b18737d16262e66713c1917ce5460c998e3850ccd6e0785796ef2e30c"
+    },
+    {
+      "path": "task-2-readiness/EIGHT-DIMENSION-37-STATE-FCT-FULL-SPECIFICATION.md",
+      "bytes": 25141,
+      "sha256": "dfb7446f3e00832d9b9090823655e7326f5be9b21ab185d692b649c7d1ac0697"
+    },
+    {
+      "path": "task-2-readiness/SubNationalReadinessEvidence-CANDIDATE.schema.json",
+      "bytes": 2867,
+      "sha256": "ac666447a4e13cff4e75fc579b33f4466743b5a12b54c4edd7760e609821db4e"
+    },
+    {
+      "path": "task-2-readiness/eight-dimension-operational-blueprints.json",
+      "bytes": 14098,
+      "sha256": "f7398a9255a12e918dd312b08935dcfb8a9b8813f6a09caec7ef7ffcec1281b4"
+    },
+    {
+      "path": "task-3-industry/256-industry-x-mechanism-grid.csv",
+      "bytes": 14290,
+      "sha256": "034202c688e6d6064b5bd18376419cf9f014c5358b375531ae7a890d0b388675"
+    },
+    {
+      "path": "task-3-industry/32-INDUSTRY-AND-MUNICIPAL-FULL-GAP-MATRIX.md",
+      "bytes": 31638,
+      "sha256": "14c0d0ccd59c1f97ca05b481673df1a737a63aa3ae832011844f6f766d808cf0"
+    },
+    {
+      "path": "task-3-industry/32-industry-7-webcopy-sector-civic-ledger.json",
+      "bytes": 47594,
+      "sha256": "9a64b8c7a7ad5317c278838e55aeb4ba37957abc9acef49e5703430c1dd3a697"
+    },
+    {
+      "path": "task-3-industry/32-industry-full-crosswalk.csv",
+      "bytes": 10711,
+      "sha256": "0a799f88f2d64194dc40144930dcc8eafc0252c068148f3601d76e82ea2dd547"
+    },
+    {
+      "path": "task-4-municipal-contracts/14-module-service-profiles-expanded.json",
+      "bytes": 38762,
+      "sha256": "83af714ada511fafea94c2d4c0a3b35dec99a75afcd4d42d1b2d28ea75d32355"
+    },
+    {
+      "path": "task-4-municipal-contracts/FOUR-PILLAR-ALL-14-MODULES-FULL-IMPLEMENTATION-SPEC.md",
+      "bytes": 34948,
+      "sha256": "679374181ee6f697df71476578663dbad441b65c84d19d5a68046dbef8df6166"
+    },
+    {
+      "path": "task-4-municipal-contracts/OFFLINE-SYNC-AND-DEVICE-CONTRACT.md",
+      "bytes": 4275,
+      "sha256": "c75075755fb905b81b92d33af10bdadbbca22a497daf3206fe3a6487e412139b"
+    },
+    {
+      "path": "task-4-municipal-contracts/USSD-PAPER-LOCALES-CONTRACT.md",
+      "bytes": 2651,
+      "sha256": "edc9b14bb1ea885375670520543455ca88a552808eb3e89a80db70e73f05eeb9"
+    },
+    {
+      "path": "task-4-municipal-contracts/openapi/state-municipal-v2026.11.24-CANDIDATE.openapi.json",
+      "bytes": 164224,
+      "sha256": "e783eb2df9aabd266cf071cecec039357281634d344b86bebe84c0bfe6a624bd"
+    },
+    {
+      "path": "task-4-municipal-contracts/openapi/state-municipal-v2026.11.24-CANDIDATE.openapi.yaml",
+      "bytes": 111404,
+      "sha256": "bc13109bf06af999dee5aa5234a6aac6ec4992eb7c3299c46e4475f389f5c97d"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/SubNationalServiceInteroperabilityEnvelope-CANDIDATE.schema.json",
+      "bytes": 35224,
+      "sha256": "4f5dd04d1470c3fa19661e0fb3bb6db2e877861c98973e2274735fa7ec9aa28b"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-01.schema.json",
+      "bytes": 980,
+      "sha256": "bd6ea51866f853b9a58f68a3e8912d56125bbaa3cffc850d7981e6a840f35cc9"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-02.schema.json",
+      "bytes": 927,
+      "sha256": "790b4cab52e92df62fab7ccef62c1bb95cb5bfa80c090ffbe7dfb4cdb8a1c4f1"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-03.schema.json",
+      "bytes": 988,
+      "sha256": "561258c4e4691ac25461f2a4fe11d8b7cb8e62eb7a0083162919ec8c929bcebc"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-04.schema.json",
+      "bytes": 913,
+      "sha256": "0d61bce24a6fa5a5453d7f87b45cbed9109a2ee712fe9ae115a945239f7b72dc"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-05.schema.json",
+      "bytes": 1064,
+      "sha256": "61b80c9d7ab6255c3139d43e9ba47b1a4c5d70cef5bf3dea16f3b0ff489fb631"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-06.schema.json",
+      "bytes": 1073,
+      "sha256": "a72ada7e14207b5bb6e507a16d30e1e728e80be0d7d6b0e479085577693e568f"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-07.schema.json",
+      "bytes": 997,
+      "sha256": "77437552c6e6b0ed5baa1f20ae3548f859407b82321fe60a0ad998b96f65f185"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-08.schema.json",
+      "bytes": 901,
+      "sha256": "afe87d849c809c33900663db563e4c766a086b88426da9ad0feeb9a7524e0f5e"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-09.schema.json",
+      "bytes": 940,
+      "sha256": "e2bcca278e5b0f4f0421528227d5b00d21720ceded3ec3735ec7d1df1ba31f04"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-10.schema.json",
+      "bytes": 945,
+      "sha256": "7260c86a288a611cf6fc793c99e0b571820cb460fd84017a755e74aa53cfc169"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-11.schema.json",
+      "bytes": 923,
+      "sha256": "3c67207dab572399f2b168e3a8f3eef2678e8dd52331455754cd0b4f5c383e35"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-12.schema.json",
+      "bytes": 1115,
+      "sha256": "db18d52f8fafd39e3ff65f3219d434e1de64d62e2d6d7ad040369c9035d6760f"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-13.schema.json",
+      "bytes": 1049,
+      "sha256": "11faf0e2a64fe75d436e66ff6792318c8e1c5ffbc55c56c6eb3e3c576f8fd4dd"
+    },
+    {
+      "path": "task-4-municipal-contracts/schemas/modules/LGA-14.schema.json",
+      "bytes": 922,
+      "sha256": "3c513705386ec943b121106a525a422d5af9b0a47e7cc9cee492cbf306a2ac89"
+    }
+  ],
+  "remoteWritePerformed": false,
+  "status": "CANDIDATE_UNDER_REVIEW"
+}
