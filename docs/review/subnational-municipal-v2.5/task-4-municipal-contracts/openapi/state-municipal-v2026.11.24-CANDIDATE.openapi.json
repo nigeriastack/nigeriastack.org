@@ -1,0 +1,5814 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "NigeriaStack — State & 774-Jurisdiction Municipal Interoperability API (review candidate)",
+    "version": "2026.11.24-candidate",
+    "summary": "Interoperable interface patterns under NS-RFC-014; never a central operating API",
+    "description": "Unbundled contracts for authority-owned deployments. Each state/LGA/area council/TSP hosts its own instance. Existing v2026.6.2 and attached v2026.6.5 are source baselines; this version is an additive review candidate, not ratified.",
+    "license": {
+      "name": "CC0-1.0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "contact": {
+      "name": "NigeriaStack — DIGITECO institutional context",
+      "url": "https://digiteco.org"
+    }
+  },
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "servers": [
+    {
+      "url": "https://{authorityHost}",
+      "description": "Deployed by each independently authorized service authority; example only",
+      "variables": {
+        "authorityHost": {
+          "default": "authority.example.ng",
+          "description": "Independent host, not a NigeriaStack centralized service"
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "Registry",
+      "description": "Public metadata and capability index"
+    },
+    {
+      "name": "State",
+      "description": "Eight dimension state service adapters"
+    },
+    {
+      "name": "Municipal",
+      "description": "14 municipal workflows"
+    },
+    {
+      "name": "Offline",
+      "description": "KioskBase protected staged sync"
+    },
+    {
+      "name": "Treasury",
+      "description": "Independent bank-verified payment flows"
+    },
+    {
+      "name": "Evidence",
+      "description": "Issuer trust and signature checks"
+    },
+    {
+      "name": "Assisted",
+      "description": "USSD only after NCC/operator allocation and paper counters"
+    },
+    {
+      "name": "Audit",
+      "description": "Privacy-approved audit exports"
+    },
+    {
+      "name": "Access",
+      "description": "Consent/revocation and signed export"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "PublicOAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "OfficerMTLS": {
+        "type": "mutualTLS"
+      },
+      "GatewayMTLS": {
+        "type": "mutualTLS"
+      },
+      "OperatorMTLS": {
+        "type": "mutualTLS"
+      }
+    },
+    "parameters": {
+      "CouncilCode": {
+        "name": "councilCode",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "pattern": "^(?:(?!FC-)[A-Z]{2}-LGA-[0-9]{2}|FC-AC-0[1-6])$"
+        }
+      },
+      "ModuleId": {
+        "name": "moduleId",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "LGA-01",
+            "LGA-02",
+            "LGA-03",
+            "LGA-04",
+            "LGA-05",
+            "LGA-06",
+            "LGA-07",
+            "LGA-08",
+            "LGA-09",
+            "LGA-10",
+            "LGA-11",
+            "LGA-12",
+            "LGA-13",
+            "LGA-14"
+          ]
+        }
+      },
+      "StateCode": {
+        "name": "stateCode",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "AB",
+            "AD",
+            "AK",
+            "AN",
+            "BA",
+            "BY",
+            "BE",
+            "BO",
+            "CR",
+            "DE",
+            "EB",
+            "ED",
+            "EK",
+            "EN",
+            "FC",
+            "GO",
+            "IM",
+            "JI",
+            "KD",
+            "KN",
+            "KT",
+            "KE",
+            "KO",
+            "KW",
+            "LA",
+            "NA",
+            "NI",
+            "OG",
+            "ON",
+            "OS",
+            "OY",
+            "PL",
+            "RI",
+            "SO",
+            "TA",
+            "YO",
+            "ZA"
+          ]
+        }
+      },
+      "DimensionId": {
+        "name": "dimensionId",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "DIM-01",
+            "DIM-02",
+            "DIM-03",
+            "DIM-04",
+            "DIM-05",
+            "DIM-06",
+            "DIM-07",
+            "DIM-08"
+          ]
+        }
+      },
+      "CaseId": {
+        "name": "caseId",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 8
+        }
+      },
+      "IdempotencyKey": {
+        "name": "X-NgStack-Idempotency-Key",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "minLength": 16,
+          "maxLength": 128
+        }
+      },
+      "OperationId": {
+        "name": "X-NgStack-Operation-Id",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "pattern": "^cop_[0-9A-HJKMNP-TV-Z]{26}$"
+        }
+      },
+      "Signature": {
+        "name": "X-NgStack-Signature-Ed25519",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "minLength": 64
+        },
+        "description": "Signature-suite negotiated and independently trusted; WebAuthn hardware may use other supported algorithms"
+      },
+      "Locale": {
+        "name": "Accept-Language",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "en-NG",
+            "ha-NG",
+            "yo-NG",
+            "ig-NG",
+            "pcm-NG"
+          ]
+        }
+      }
+    },
+    "schemas": {
+      "MunicipalRequest": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://nigeriastack.org/schemas/v2026/SubNationalServiceInteroperabilityEnvelope-CANDIDATE.schema.json",
+        "title": "NigeriaStack Municipal Interoperability Envelope — reconciled core+v2.4, review candidate",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "schemaVersion",
+          "envelopeUlid",
+          "kioskBaseDeltaId",
+          "jurisdictionType",
+          "stateCode",
+          "councilCode",
+          "moduleId",
+          "pillar",
+          "dimensionId",
+          "channel",
+          "locale",
+          "hlc",
+          "privacyTier",
+          "issuerAuthorityRef",
+          "operationState",
+          "purposeCode",
+          "lawfulBasis",
+          "payload"
+        ],
+        "properties": {
+          "schemaVersion": {
+            "const": "2026.11.24-CANDIDATE"
+          },
+          "envelopeUlid": {
+            "type": "string",
+            "pattern": "^cop_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "kioskBaseDeltaId": {
+            "type": "string",
+            "pattern": "^kbd_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "jurisdictionType": {
+            "type": "string",
+            "enum": [
+              "STATE_LOCAL_GOVERNMENT",
+              "FCT_AREA_COUNCIL"
+            ]
+          },
+          "stateCode": {
+            "type": "string",
+            "enum": [
+              "AB",
+              "AD",
+              "AK",
+              "AN",
+              "BA",
+              "BY",
+              "BE",
+              "BO",
+              "CR",
+              "DE",
+              "EB",
+              "ED",
+              "EK",
+              "EN",
+              "FC",
+              "GO",
+              "IM",
+              "JI",
+              "KD",
+              "KN",
+              "KT",
+              "KE",
+              "KO",
+              "KW",
+              "LA",
+              "NA",
+              "NI",
+              "OG",
+              "ON",
+              "OS",
+              "OY",
+              "PL",
+              "RI",
+              "SO",
+              "TA",
+              "YO",
+              "ZA"
+            ]
+          },
+          "councilCode": {
+            "type": "string",
+            "pattern": "^(?:(?!FC-)[A-Z]{2}-LGA-[0-9]{2}|FC-AC-0[1-6])$"
+          },
+          "moduleId": {
+            "type": "string",
+            "enum": [
+              "LGA-01",
+              "LGA-02",
+              "LGA-03",
+              "LGA-04",
+              "LGA-05",
+              "LGA-06",
+              "LGA-07",
+              "LGA-08",
+              "LGA-09",
+              "LGA-10",
+              "LGA-11",
+              "LGA-12",
+              "LGA-13",
+              "LGA-14"
+            ]
+          },
+          "pillar": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "dimensionId": {
+            "type": "string",
+            "enum": [
+              "DIM-01",
+              "DIM-02",
+              "DIM-03",
+              "DIM-04",
+              "DIM-05",
+              "DIM-06",
+              "DIM-07",
+              "DIM-08"
+            ]
+          },
+          "channel": {
+            "type": "string",
+            "enum": [
+              "WEB_PORTAL",
+              "KIOSKBASE_OFFLINE_PWA",
+              "USSD_347_LGA",
+              "PAPER_COUNTER_ASSISTED",
+              "TSP_PARTNER_API"
+            ]
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "en-NG",
+              "ha-NG",
+              "yo-NG",
+              "ig-NG",
+              "pcm-NG"
+            ]
+          },
+          "hlc": {
+            "$ref": "#/$defs/HlcMetadata"
+          },
+          "privacyTier": {
+            "type": "string",
+            "enum": [
+              "PUBLIC_MUNICIPAL_RECORD",
+              "CONSENT_RESTRICTED",
+              "INTERNAL_RESTRICTED_NDPA"
+            ]
+          },
+          "issuerAuthorityRef": {
+            "type": "string",
+            "minLength": 3
+          },
+          "purposeCode": {
+            "type": "string",
+            "minLength": 3
+          },
+          "lawfulBasis": {
+            "type": "string",
+            "enum": [
+              "CONSENT",
+              "CONTRACT",
+              "LEGAL_OBLIGATION",
+              "VITAL_INTERESTS",
+              "PUBLIC_INTEREST",
+              "LEGITIMATE_INTERESTS",
+              "OTHER_LEGAL_BASIS_WITH_COUNSEL_APPROVAL"
+            ]
+          },
+          "operationState": {
+            "type": "string",
+            "enum": [
+              "DRAFT_OFFLINE",
+              "STAGED",
+              "AUTHORITY_REVIEW",
+              "WAITING_EXTERNAL_AUTHORITY",
+              "UNKNOWN_TIMEOUT",
+              "APPROVED",
+              "REJECTED",
+              "REVOKED",
+              "CLOSED"
+            ]
+          },
+          "idempotencyKey": {
+            "type": "string",
+            "minLength": 16,
+            "maxLength": 128
+          },
+          "clearAmTokenRef": {
+            "type": "string",
+            "pattern": "^clm_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "sureEvidenceSealId": {
+            "type": "string",
+            "pattern": "^s84_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "paymentIntentRef": {
+            "type": "string",
+            "minLength": 8
+          },
+          "bankSettlementProof": {
+            "$ref": "#/$defs/DirectTreasurySettlement"
+          },
+          "publishIntent": {
+            "type": "boolean",
+            "default": false
+          },
+          "wasSignedByAuthority": {
+            "type": "boolean",
+            "default": false
+          },
+          "payload": {
+            "type": "object"
+          },
+          "sourceSubmissionRef": {
+            "type": "string"
+          },
+          "policyVersion": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "$defs": {
+          "HlcMetadata": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "physicalEpochMs",
+              "logicalCounter",
+              "nodeFingerprint",
+              "driftSeconds",
+              "syncState"
+            ],
+            "properties": {
+              "physicalEpochMs": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "logicalCounter": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 65535
+              },
+              "nodeFingerprint": {
+                "type": "string",
+                "minLength": 16,
+                "maxLength": 128
+              },
+              "driftSeconds": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "syncState": {
+                "type": "string",
+                "enum": [
+                  "NTP_GPS_VERIFIED",
+                  "DEGRADED_LOCAL_HLC",
+                  "STAGED_AWAITING_ATTESTATION"
+                ]
+              },
+              "localCapturedAt": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "DirectTreasurySettlement": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "statutoryAmountKobo",
+              "platformEscrowAmountKobo",
+              "stateIntermediaryEscrowKobo",
+              "beneficiaryAccountRef",
+              "settlementStatus",
+              "bankSignedConfirmationRef",
+              "confirmationVerified"
+            ],
+            "properties": {
+              "statutoryAmountKobo": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "platformEscrowAmountKobo": {
+                "type": "integer",
+                "const": 0
+              },
+              "stateIntermediaryEscrowKobo": {
+                "type": "integer",
+                "const": 0
+              },
+              "beneficiaryAccountRef": {
+                "type": "string",
+                "minLength": 8
+              },
+              "beneficiaryAuthorityRef": {
+                "type": "string",
+                "minLength": 8
+              },
+              "settlementStatus": {
+                "type": "string",
+                "enum": [
+                  "PAYMENT_INITIATED",
+                  "UNKNOWN_TIMEOUT",
+                  "SETTLED_DIRECT_TO_TREASURY",
+                  "REVERSED",
+                  "FAILED"
+                ]
+              },
+              "bankSignedConfirmationRef": {
+                "type": "string",
+                "minLength": 5
+              },
+              "confirmationVerified": {
+                "type": "boolean"
+              },
+              "independentBankReconciliationRef": {
+                "type": "string",
+                "minLength": 8
+              },
+              "gatewayId": {
+                "type": "string",
+                "minLength": 3
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "settlementStatus": {
+                      "const": "SETTLED_DIRECT_TO_TREASURY"
+                    }
+                  },
+                  "required": [
+                    "settlementStatus"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "confirmationVerified": {
+                      "const": true
+                    }
+                  },
+                  "required": [
+                    "independentBankReconciliationRef"
+                  ]
+                }
+              }
+            ]
+          },
+          "LGA_01": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-01.schema.json",
+            "title": "LGA-01 CouncilComplain submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "serviceCategory",
+              "wardCode",
+              "issueDescription"
+            ],
+            "properties": {
+              "serviceCategory": {
+                "type": "string",
+                "minLength": 1
+              },
+              "wardCode": {
+                "type": "string",
+                "minLength": 1
+              },
+              "issueDescription": {
+                "type": "string",
+                "minLength": 1
+              },
+              "locationRef": {
+                "type": "string"
+              },
+              "hazardSeverity": {
+                "type": "string"
+              },
+              "photoDigest": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_02": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-02.schema.json",
+            "title": "LGA-02 BuildClear submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "parcelRef",
+              "permitType",
+              "setbackPlanRef"
+            ],
+            "properties": {
+              "parcelRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "permitType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "setbackPlanRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "landAuthorityResponseRef": {
+                "type": "string"
+              },
+              "inspectionDigest": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_03": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-03.schema.json",
+            "title": "LGA-03 WashConnect submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "assetId",
+              "workType",
+              "serviceLocationRef"
+            ],
+            "properties": {
+              "assetId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "workType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "serviceLocationRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "operatorPermitRef": {
+                "type": "string"
+              },
+              "serviceChargeScheduleRef": {
+                "type": "string"
+              },
+              "deliveryProofDigest": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_04": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-04.schema.json",
+            "title": "LGA-04 ShopPermit submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "premisesRef",
+              "licenceType",
+              "rateCode"
+            ],
+            "properties": {
+              "premisesRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "licenceType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rateCode": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tradeCategory": {
+                "type": "string"
+              },
+              "tradingPermitExpiry": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_05": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-05.schema.json",
+            "title": "LGA-05 VitalProof submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "eventType",
+              "notificationRef",
+              "registrarAuthorityRef"
+            ],
+            "properties": {
+              "eventType": {
+                "type": "string",
+                "enum": [
+                  "BIRTH_NOTICE",
+                  "DEATH_NOTICE",
+                  "MARRIAGE_NOTICE",
+                  "OTHER_STATUTORILY_AUTHORIZED"
+                ]
+              },
+              "notificationRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "registrarAuthorityRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "eventDate": {
+                "type": "string"
+              },
+              "familyRestrictedEvidenceRef": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_06": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-06.schema.json",
+            "title": "LGA-06 IndigeneProof submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "applicantRef",
+              "attestationClass",
+              "evidenceRefs"
+            ],
+            "properties": {
+              "applicantRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "attestationClass": {
+                "type": "string",
+                "enum": [
+                  "RESIDENCY",
+                  "ORIGIN",
+                  "OTHER_LEGALLY_AUTHORIZED"
+                ]
+              },
+              "evidenceRefs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1,
+                "maxItems": 12
+              },
+              "wardVouchRef": {
+                "type": "string"
+              },
+              "appealRef": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_07": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-07.schema.json",
+            "title": "LGA-07 SafetyNOC submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "facilityRef",
+              "inspectionKind",
+              "inspectionRequestRef"
+            ],
+            "properties": {
+              "facilityRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "inspectionKind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "inspectionRequestRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "testResultRef": {
+                "type": "string"
+              },
+              "deficiencyNotices": {
+                "type": "string"
+              },
+              "certificateExpiry": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_08": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-08.schema.json",
+            "title": "LGA-08 WardWorks submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "ocdsId",
+              "wardRef",
+              "milestoneRef"
+            ],
+            "properties": {
+              "ocdsId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "wardRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "milestoneRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "contractVariationRef": {
+                "type": "string"
+              },
+              "proofDigest": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_09": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-09.schema.json",
+            "title": "LGA-09 TenementRate submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "parcelReference",
+              "legalRateCode",
+              "valuationBasis"
+            ],
+            "properties": {
+              "parcelReference": {
+                "type": "string",
+                "minLength": 1
+              },
+              "legalRateCode": {
+                "type": "string",
+                "minLength": 1
+              },
+              "valuationBasis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "objectionRef": {
+                "type": "string"
+              },
+              "beneficiaryAccountRef": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_10": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-10.schema.json",
+            "title": "LGA-10 MarketCollect submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "marketOrParkRef",
+              "chargeCode",
+              "paymentIntentRef"
+            ],
+            "properties": {
+              "marketOrParkRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "chargeCode": {
+                "type": "string",
+                "minLength": 1
+              },
+              "paymentIntentRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "permittedRouteRef": {
+                "type": "string"
+              },
+              "confirmedSettlementRef": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_11": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-11.schema.json",
+            "title": "LGA-11 WardPHC submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "careEncounterRef",
+              "patientPseudonym",
+              "clinicId"
+            ],
+            "properties": {
+              "careEncounterRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "patientPseudonym": {
+                "type": "string",
+                "minLength": 1
+              },
+              "clinicId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "inventoryEvent": {
+                "type": "string"
+              },
+              "referralRef": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_12": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-12.schema.json",
+            "title": "LGA-12 CouncilLedger submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "bankSettlementRef",
+              "cashflowClass",
+              "reconciliationPeriod"
+            ],
+            "properties": {
+              "bankSettlementRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cashflowClass": {
+                "type": "string",
+                "enum": [
+                  "FAAC_ALLOCATION",
+                  "MUNICIPAL_IGR",
+                  "REVERSAL",
+                  "ADJUSTMENT"
+                ]
+              },
+              "reconciliationPeriod": {
+                "type": "string",
+                "minLength": 1
+              },
+              "faacAllocationRef": {
+                "type": "string"
+              },
+              "dailyMerkleRoot": {
+                "type": "string"
+              },
+              "reconciliationException": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_13": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-13.schema.json",
+            "title": "LGA-13 CustomaryDocket submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "courtIdentifier",
+              "matterRef",
+              "privacyClassification"
+            ],
+            "properties": {
+              "courtIdentifier": {
+                "type": "string",
+                "minLength": 1
+              },
+              "matterRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "privacyClassification": {
+                "type": "string",
+                "enum": [
+                  "PUBLIC_MUNICIPAL_RECORD",
+                  "CONSENT_RESTRICTED",
+                  "INTERNAL_RESTRICTED_NDPA"
+                ]
+              },
+              "filingDate": {
+                "type": "string"
+              },
+              "judicialDirectionRef": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "LGA_14": {
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-14.schema.json",
+            "title": "LGA-14 StreetGrid submission payload (review candidate)",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "roadGazetteRef",
+              "addressGridRef",
+              "wardRef"
+            ],
+            "properties": {
+              "roadGazetteRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "addressGridRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "wardRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "parcelCandidate": {
+                "type": "string"
+              },
+              "correctionNotice": {
+                "type": "string"
+              },
+              "sourceAuthorityRef": {
+                "type": "string",
+                "minLength": 3
+              },
+              "changeReason": {
+                "type": "string"
+              },
+              "proofDigestSha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "enum": [
+                    "LGA-09",
+                    "LGA-10",
+                    "LGA-12"
+                  ]
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "pillar": {
+                  "const": "A"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "enum": [
+                    "LGA-02",
+                    "LGA-04",
+                    "LGA-07",
+                    "LGA-08"
+                  ]
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "pillar": {
+                  "const": "B"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "enum": [
+                    "LGA-05",
+                    "LGA-06",
+                    "LGA-14"
+                  ]
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "pillar": {
+                  "const": "C"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "enum": [
+                    "LGA-01",
+                    "LGA-03",
+                    "LGA-11",
+                    "LGA-13"
+                  ]
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "pillar": {
+                  "const": "D"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-01"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_01"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-02"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_02"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-03"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_03"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-04"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_04"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-05"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_05"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-06"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_06"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-07"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_07"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-08"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_08"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-09"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_09"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-10"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_10"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-11"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_11"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-12"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_12"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-13"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_13"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-14"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "payload": {
+                  "$ref": "#/$defs/LGA_14"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "jurisdictionType": {
+                  "const": "FCT_AREA_COUNCIL"
+                }
+              },
+              "required": [
+                "jurisdictionType"
+              ]
+            },
+            "then": {
+              "properties": {
+                "stateCode": {
+                  "const": "FC"
+                },
+                "councilCode": {
+                  "pattern": "^FC-AC-0[1-6]$"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "jurisdictionType": {
+                  "const": "STATE_LOCAL_GOVERNMENT"
+                }
+              },
+              "required": [
+                "jurisdictionType"
+              ]
+            },
+            "then": {
+              "properties": {
+                "stateCode": {
+                  "not": {
+                    "const": "FC"
+                  }
+                },
+                "councilCode": {
+                  "pattern": "^(?!FC-)[A-Z]{2}-LGA-[0-9]{2}$"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "privacyTier": {
+                  "const": "INTERNAL_RESTRICTED_NDPA"
+                }
+              },
+              "required": [
+                "privacyTier"
+              ]
+            },
+            "then": {
+              "properties": {
+                "publishIntent": {
+                  "const": false
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "hlc": {
+                  "properties": {
+                    "syncState": {
+                      "enum": [
+                        "DEGRADED_LOCAL_HLC",
+                        "STAGED_AWAITING_ATTESTATION"
+                      ]
+                    }
+                  }
+                }
+              },
+              "required": [
+                "hlc"
+              ]
+            },
+            "then": {
+              "properties": {
+                "operationState": {
+                  "not": {
+                    "enum": [
+                      "APPROVED",
+                      "CLOSED"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "operationState": {
+                  "enum": [
+                    "APPROVED",
+                    "CLOSED"
+                  ]
+                }
+              },
+              "required": [
+                "operationState"
+              ]
+            },
+            "then": {
+              "properties": {
+                "wasSignedByAuthority": {
+                  "const": true
+                },
+                "hlc": {
+                  "properties": {
+                    "syncState": {
+                      "const": "NTP_GPS_VERIFIED"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "sureEvidenceSealId",
+                "wasSignedByAuthority"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "enum": [
+                    "LGA-09",
+                    "LGA-10"
+                  ]
+                },
+                "operationState": {
+                  "enum": [
+                    "APPROVED",
+                    "CLOSED"
+                  ]
+                }
+              },
+              "required": [
+                "moduleId",
+                "operationState"
+              ]
+            },
+            "then": {
+              "required": [
+                "bankSettlementProof"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "hlc": {
+                  "properties": {
+                    "driftSeconds": {
+                      "exclusiveMinimum": 300
+                    }
+                  },
+                  "required": [
+                    "driftSeconds"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "hlc": {
+                  "properties": {
+                    "syncState": {
+                      "enum": [
+                        "DEGRADED_LOCAL_HLC",
+                        "STAGED_AWAITING_ATTESTATION"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-05"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "privacyTier": {
+                  "enum": [
+                    "CONSENT_RESTRICTED",
+                    "INTERNAL_RESTRICTED_NDPA"
+                  ]
+                },
+                "publishIntent": {
+                  "const": false
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-11"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "privacyTier": {
+                  "enum": [
+                    "CONSENT_RESTRICTED",
+                    "INTERNAL_RESTRICTED_NDPA"
+                  ]
+                },
+                "publishIntent": {
+                  "const": false
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "moduleId": {
+                  "const": "LGA-13"
+                }
+              },
+              "required": [
+                "moduleId"
+              ]
+            },
+            "then": {
+              "properties": {
+                "privacyTier": {
+                  "enum": [
+                    "CONSENT_RESTRICTED",
+                    "INTERNAL_RESTRICTED_NDPA"
+                  ]
+                },
+                "publishIntent": {
+                  "const": false
+                }
+              }
+            }
+          }
+        ]
+      },
+      "TreasurySettlement": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "statutoryAmountKobo",
+          "platformEscrowAmountKobo",
+          "stateIntermediaryEscrowKobo",
+          "beneficiaryAccountRef",
+          "settlementStatus",
+          "bankSignedConfirmationRef",
+          "confirmationVerified"
+        ],
+        "properties": {
+          "statutoryAmountKobo": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "platformEscrowAmountKobo": {
+            "type": "integer",
+            "const": 0
+          },
+          "stateIntermediaryEscrowKobo": {
+            "type": "integer",
+            "const": 0
+          },
+          "beneficiaryAccountRef": {
+            "type": "string",
+            "minLength": 8
+          },
+          "beneficiaryAuthorityRef": {
+            "type": "string",
+            "minLength": 8
+          },
+          "settlementStatus": {
+            "type": "string",
+            "enum": [
+              "PAYMENT_INITIATED",
+              "UNKNOWN_TIMEOUT",
+              "SETTLED_DIRECT_TO_TREASURY",
+              "REVERSED",
+              "FAILED"
+            ]
+          },
+          "bankSignedConfirmationRef": {
+            "type": "string",
+            "minLength": 5
+          },
+          "confirmationVerified": {
+            "type": "boolean"
+          },
+          "independentBankReconciliationRef": {
+            "type": "string",
+            "minLength": 8
+          },
+          "gatewayId": {
+            "type": "string",
+            "minLength": 3
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "settlementStatus": {
+                  "const": "SETTLED_DIRECT_TO_TREASURY"
+                }
+              },
+              "required": [
+                "settlementStatus"
+              ]
+            },
+            "then": {
+              "properties": {
+                "confirmationVerified": {
+                  "const": true
+                }
+              },
+              "required": [
+                "independentBankReconciliationRef"
+              ]
+            }
+          }
+        ]
+      },
+      "ReadinessCell": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "https://nigeriastack.org/schemas/v2026/SubNationalReadinessEvidence-CANDIDATE.schema.json",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stateCode",
+          "dimensionId",
+          "status",
+          "evidenceRefs",
+          "observedAtUtc",
+          "assessor",
+          "serviceScope",
+          "method"
+        ],
+        "properties": {
+          "stateCode": {
+            "type": "string",
+            "enum": [
+              "AB",
+              "AD",
+              "AK",
+              "AN",
+              "BA",
+              "BY",
+              "BE",
+              "BO",
+              "CR",
+              "DE",
+              "EB",
+              "ED",
+              "EK",
+              "EN",
+              "FC",
+              "GO",
+              "IM",
+              "JI",
+              "KD",
+              "KN",
+              "KT",
+              "KE",
+              "KO",
+              "KW",
+              "LA",
+              "NA",
+              "NI",
+              "OG",
+              "ON",
+              "OS",
+              "OY",
+              "PL",
+              "RI",
+              "SO",
+              "TA",
+              "YO",
+              "ZA"
+            ]
+          },
+          "dimensionId": {
+            "type": "string",
+            "enum": [
+              "DIM-01",
+              "DIM-02",
+              "DIM-03",
+              "DIM-04",
+              "DIM-05",
+              "DIM-06",
+              "DIM-07",
+              "DIM-08"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Live digital service",
+              "Active pilot program",
+              "Paper-only registry",
+              "Not yet assessed"
+            ]
+          },
+          "evidenceRefs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "observedAtUtc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "assessor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "serviceScope": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "method": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceJurisdictionAuthority": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limitations": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reviewedOn": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "not": {
+                    "const": "Not yet assessed"
+                  }
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "evidenceRefs": {
+                  "minItems": 1
+                },
+                "assessor": {
+                  "type": "string",
+                  "minLength": 2
+                },
+                "observedAtUtc": {
+                  "type": "string"
+                },
+                "serviceScope": {
+                  "type": "string",
+                  "minLength": 4
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 4
+                }
+              }
+            }
+          }
+        ]
+      },
+      "ApiError": {
+        "type": "object",
+        "required": [
+          "errorCode",
+          "message",
+          "governingRfc",
+          "traceId"
+        ],
+        "properties": {
+          "errorCode": {
+            "type": "string",
+            "enum": [
+              "AUTHORITY_NOT_VERIFIED",
+              "CLEARAM_ARTIFACT_EXPIRED",
+              "CLEARAM_ARTIFACT_REVOKED",
+              "CROSS_JURISDICTION_DENIED",
+              "UNKNOWN_TIMEOUT_LOCKED",
+              "TREASURY_PASSTHROUGH_INVARIANCE_BREACH",
+              "SETTLEMENT_NOT_INDEPENDENTLY_VERIFIED",
+              "RESTRICTED_PUBLIC_SYNC_DENIED",
+              "CLOCK_DRIFT_REQUIRES_STAGING",
+              "S84_PAYLOAD_DIGEST_MISMATCH",
+              "CONFLICT_HUMAN_REVIEW_REQUIRED",
+              "USSD_CHANNEL_UNALLOCATED",
+              "SCHEMA_INVALID",
+              "EVIDENCE_NOT_ASSESSED"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "governingRfc": {
+            "type": "string"
+          },
+          "traceId": {
+            "type": "string"
+          }
+        }
+      },
+      "QueuedReceipt": {
+        "type": "object",
+        "required": [
+          "operationId",
+          "status",
+          "caseId"
+        ],
+        "properties": {
+          "operationId": {
+            "type": "string",
+            "pattern": "^cop_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "caseId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "STAGED",
+              "ACCEPTED",
+              "AUTHORITY_REVIEW",
+              "UNKNOWN_TIMEOUT"
+            ]
+          },
+          "statusUrl": {
+            "type": "string"
+          }
+        }
+      },
+      "ServiceSummary": {
+        "type": "object",
+        "properties": {
+          "moduleId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "authorityRef": {
+            "type": "string"
+          },
+          "evidenceStatus": {
+            "const": "Not yet assessed"
+          }
+        }
+      },
+      "AuditRoot": {
+        "type": "object",
+        "required": [
+          "dateUtc",
+          "rootDigestSha256",
+          "issuerKeyRef",
+          "verifiedBankReconciliationRef"
+        ],
+        "properties": {
+          "dateUtc": {
+            "type": "string",
+            "format": "date"
+          },
+          "rootDigestSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "issuerKeyRef": {
+            "type": "string"
+          },
+          "verifiedBankReconciliationRef": {
+            "type": "string"
+          },
+          "verificationMethod": {
+            "type": "string"
+          }
+        }
+      },
+      "ModulePayloads": {
+        "LGA-01": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-01.schema.json",
+          "title": "LGA-01 CouncilComplain submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "serviceCategory",
+            "wardCode",
+            "issueDescription"
+          ],
+          "properties": {
+            "serviceCategory": {
+              "type": "string",
+              "minLength": 1
+            },
+            "wardCode": {
+              "type": "string",
+              "minLength": 1
+            },
+            "issueDescription": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locationRef": {
+              "type": "string"
+            },
+            "hazardSeverity": {
+              "type": "string"
+            },
+            "photoDigest": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-02": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-02.schema.json",
+          "title": "LGA-02 BuildClear submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "parcelRef",
+            "permitType",
+            "setbackPlanRef"
+          ],
+          "properties": {
+            "parcelRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "permitType": {
+              "type": "string",
+              "minLength": 1
+            },
+            "setbackPlanRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "landAuthorityResponseRef": {
+              "type": "string"
+            },
+            "inspectionDigest": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-03": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-03.schema.json",
+          "title": "LGA-03 WashConnect submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assetId",
+            "workType",
+            "serviceLocationRef"
+          ],
+          "properties": {
+            "assetId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "workType": {
+              "type": "string",
+              "minLength": 1
+            },
+            "serviceLocationRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "operatorPermitRef": {
+              "type": "string"
+            },
+            "serviceChargeScheduleRef": {
+              "type": "string"
+            },
+            "deliveryProofDigest": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-04": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-04.schema.json",
+          "title": "LGA-04 ShopPermit submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "premisesRef",
+            "licenceType",
+            "rateCode"
+          ],
+          "properties": {
+            "premisesRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "licenceType": {
+              "type": "string",
+              "minLength": 1
+            },
+            "rateCode": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tradeCategory": {
+              "type": "string"
+            },
+            "tradingPermitExpiry": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-05": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-05.schema.json",
+          "title": "LGA-05 VitalProof submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "eventType",
+            "notificationRef",
+            "registrarAuthorityRef"
+          ],
+          "properties": {
+            "eventType": {
+              "type": "string",
+              "enum": [
+                "BIRTH_NOTICE",
+                "DEATH_NOTICE",
+                "MARRIAGE_NOTICE",
+                "OTHER_STATUTORILY_AUTHORIZED"
+              ]
+            },
+            "notificationRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "registrarAuthorityRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "eventDate": {
+              "type": "string"
+            },
+            "familyRestrictedEvidenceRef": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-06": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-06.schema.json",
+          "title": "LGA-06 IndigeneProof submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "applicantRef",
+            "attestationClass",
+            "evidenceRefs"
+          ],
+          "properties": {
+            "applicantRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "attestationClass": {
+              "type": "string",
+              "enum": [
+                "RESIDENCY",
+                "ORIGIN",
+                "OTHER_LEGALLY_AUTHORIZED"
+              ]
+            },
+            "evidenceRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "maxItems": 12
+            },
+            "wardVouchRef": {
+              "type": "string"
+            },
+            "appealRef": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-07": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-07.schema.json",
+          "title": "LGA-07 SafetyNOC submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "facilityRef",
+            "inspectionKind",
+            "inspectionRequestRef"
+          ],
+          "properties": {
+            "facilityRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "inspectionKind": {
+              "type": "string",
+              "minLength": 1
+            },
+            "inspectionRequestRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "testResultRef": {
+              "type": "string"
+            },
+            "deficiencyNotices": {
+              "type": "string"
+            },
+            "certificateExpiry": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-08": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-08.schema.json",
+          "title": "LGA-08 WardWorks submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "ocdsId",
+            "wardRef",
+            "milestoneRef"
+          ],
+          "properties": {
+            "ocdsId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "wardRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "milestoneRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "contractVariationRef": {
+              "type": "string"
+            },
+            "proofDigest": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-09": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-09.schema.json",
+          "title": "LGA-09 TenementRate submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "parcelReference",
+            "legalRateCode",
+            "valuationBasis"
+          ],
+          "properties": {
+            "parcelReference": {
+              "type": "string",
+              "minLength": 1
+            },
+            "legalRateCode": {
+              "type": "string",
+              "minLength": 1
+            },
+            "valuationBasis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "objectionRef": {
+              "type": "string"
+            },
+            "beneficiaryAccountRef": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-10": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-10.schema.json",
+          "title": "LGA-10 MarketCollect submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "marketOrParkRef",
+            "chargeCode",
+            "paymentIntentRef"
+          ],
+          "properties": {
+            "marketOrParkRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "chargeCode": {
+              "type": "string",
+              "minLength": 1
+            },
+            "paymentIntentRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "permittedRouteRef": {
+              "type": "string"
+            },
+            "confirmedSettlementRef": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-11": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-11.schema.json",
+          "title": "LGA-11 WardPHC submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "careEncounterRef",
+            "patientPseudonym",
+            "clinicId"
+          ],
+          "properties": {
+            "careEncounterRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "patientPseudonym": {
+              "type": "string",
+              "minLength": 1
+            },
+            "clinicId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "inventoryEvent": {
+              "type": "string"
+            },
+            "referralRef": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-12": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-12.schema.json",
+          "title": "LGA-12 CouncilLedger submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "bankSettlementRef",
+            "cashflowClass",
+            "reconciliationPeriod"
+          ],
+          "properties": {
+            "bankSettlementRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "cashflowClass": {
+              "type": "string",
+              "enum": [
+                "FAAC_ALLOCATION",
+                "MUNICIPAL_IGR",
+                "REVERSAL",
+                "ADJUSTMENT"
+              ]
+            },
+            "reconciliationPeriod": {
+              "type": "string",
+              "minLength": 1
+            },
+            "faacAllocationRef": {
+              "type": "string"
+            },
+            "dailyMerkleRoot": {
+              "type": "string"
+            },
+            "reconciliationException": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-13": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-13.schema.json",
+          "title": "LGA-13 CustomaryDocket submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "courtIdentifier",
+            "matterRef",
+            "privacyClassification"
+          ],
+          "properties": {
+            "courtIdentifier": {
+              "type": "string",
+              "minLength": 1
+            },
+            "matterRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "privacyClassification": {
+              "type": "string",
+              "enum": [
+                "PUBLIC_MUNICIPAL_RECORD",
+                "CONSENT_RESTRICTED",
+                "INTERNAL_RESTRICTED_NDPA"
+              ]
+            },
+            "filingDate": {
+              "type": "string"
+            },
+            "judicialDirectionRef": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        "LGA-14": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-14.schema.json",
+          "title": "LGA-14 StreetGrid submission payload (review candidate)",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "roadGazetteRef",
+            "addressGridRef",
+            "wardRef"
+          ],
+          "properties": {
+            "roadGazetteRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "addressGridRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "wardRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "parcelCandidate": {
+              "type": "string"
+            },
+            "correctionNotice": {
+              "type": "string"
+            },
+            "sourceAuthorityRef": {
+              "type": "string",
+              "minLength": 3
+            },
+            "changeReason": {
+              "type": "string"
+            },
+            "proofDigestSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        }
+      },
+      "CapabilityManifest": {
+        "type": "object",
+        "required": [
+          "instanceAuthorityRef",
+          "releaseStatus",
+          "localeCoverage",
+          "availableModules",
+          "supportedApiVersion"
+        ],
+        "properties": {
+          "instanceAuthorityRef": {
+            "type": "string"
+          },
+          "releaseStatus": {
+            "type": "string",
+            "enum": [
+              "PROPOSED",
+              "PILOT",
+              "LIVE_WITH_EVIDENCE",
+              "UNASSESSED"
+            ]
+          },
+          "localeCoverage": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "en-NG",
+                "ha-NG",
+                "yo-NG",
+                "ig-NG",
+                "pcm-NG"
+              ]
+            }
+          },
+          "availableModules": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "LGA-01",
+                "LGA-02",
+                "LGA-03",
+                "LGA-04",
+                "LGA-05",
+                "LGA-06",
+                "LGA-07",
+                "LGA-08",
+                "LGA-09",
+                "LGA-10",
+                "LGA-11",
+                "LGA-12",
+                "LGA-13",
+                "LGA-14"
+              ]
+            }
+          },
+          "supportedApiVersion": {
+            "type": "string"
+          },
+          "ussdProvisioningStatus": {
+            "type": "string",
+            "enum": [
+              "NOT_ALLOCATED",
+              "ALLOCATED_NOT_INTEGRATED",
+              "INTEGRATED_WITH_EVIDENCE"
+            ]
+          }
+        }
+      },
+      "JurisdictionList": {
+        "type": "object",
+        "required": [
+          "jurisdictions",
+          "registryVersion"
+        ],
+        "properties": {
+          "registryVersion": {
+            "type": "string"
+          },
+          "jurisdictions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "councilCode",
+                "name",
+                "stateCode"
+              ],
+              "properties": {
+                "councilCode": {
+                  "type": "string",
+                  "pattern": "^(?:(?!FC-)[A-Z]{2}-LGA-[0-9]{2}|FC-AC-0[1-6])$"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "stateCode": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ServiceList": {
+        "type": "object",
+        "properties": {
+          "modules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceSummary"
+            }
+          },
+          "assessmentState": {
+            "const": "Not yet assessed"
+          }
+        }
+      },
+      "ReadinessList": {
+        "type": "object",
+        "required": [
+          "cells",
+          "sourceAtlasVersion"
+        ],
+        "properties": {
+          "sourceAtlasVersion": {
+            "type": "string"
+          },
+          "cells": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReadinessCell"
+            }
+          }
+        }
+      },
+      "StateRecordCollection": {
+        "type": "object",
+        "properties": {
+          "records": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "nextCursor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "CaseStatus": {
+        "type": "object",
+        "required": [
+          "caseId",
+          "currentState",
+          "authorityRef"
+        ],
+        "properties": {
+          "caseId": {
+            "type": "string"
+          },
+          "currentState": {
+            "type": "string",
+            "enum": [
+              "DRAFT_OFFLINE",
+              "STAGED",
+              "AUTHORITY_REVIEW",
+              "WAITING_EXTERNAL_AUTHORITY",
+              "UNKNOWN_TIMEOUT",
+              "APPROVED",
+              "REJECTED",
+              "REVOKED",
+              "CLOSED"
+            ]
+          },
+          "authorityRef": {
+            "type": "string"
+          },
+          "appealRoute": {
+            "type": "string"
+          },
+          "changedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "PaymentIntentStatus": {
+        "type": "object",
+        "required": [
+          "paymentIntentRef",
+          "status"
+        ],
+        "properties": {
+          "paymentIntentRef": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "CREATED",
+              "UNKNOWN_TIMEOUT",
+              "RECONCILED_SETTLED",
+              "FAILED",
+              "REVERSED"
+            ]
+          },
+          "bankReconciliationRef": {
+            "type": "string"
+          },
+          "statutoryAmountKobo": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "InclusionProof": {
+        "type": "object",
+        "properties": {
+          "rootDigestSha256": {
+            "type": "string"
+          },
+          "leafDigestSha256": {
+            "type": "string"
+          },
+          "siblingDigests": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rootSignatureRef": {
+            "type": "string"
+          }
+        }
+      },
+      "EvidenceVerifyRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "issuerRef",
+          "documentDigestSha256",
+          "signatureRef"
+        ],
+        "properties": {
+          "issuerRef": {
+            "type": "string"
+          },
+          "documentDigestSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "signatureRef": {
+            "type": "string"
+          },
+          "offlineTrustedRevocationCacheVersion": {
+            "type": "string"
+          }
+        }
+      },
+      "EvidenceVerification": {
+        "type": "object",
+        "required": [
+          "issuerTrusted",
+          "digestVerified",
+          "signatureVerified",
+          "revocationFreshness"
+        ],
+        "properties": {
+          "issuerTrusted": {
+            "type": "boolean"
+          },
+          "digestVerified": {
+            "type": "boolean"
+          },
+          "signatureVerified": {
+            "type": "boolean"
+          },
+          "revocationFreshness": {
+            "type": "string",
+            "enum": [
+              "CURRENT",
+              "STALE",
+              "UNKNOWN"
+            ]
+          },
+          "legalAdmissibilityNotDetermined": {
+            "const": true
+          }
+        }
+      },
+      "IssuerKeySet": {
+        "type": "object",
+        "properties": {
+          "issuerDomain": {
+            "type": "string"
+          },
+          "keys": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "statusListAgeSeconds": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "issuerAuthorityEvidenceUri": {
+            "type": "string"
+          }
+        }
+      },
+      "UssdSessionRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "operatorId",
+          "sessionRef",
+          "opaqueSubscriberRef",
+          "menuChoice",
+          "provisioningProofRef"
+        ],
+        "properties": {
+          "operatorId": {
+            "type": "string"
+          },
+          "sessionRef": {
+            "type": "string"
+          },
+          "opaqueSubscriberRef": {
+            "type": "string"
+          },
+          "menuChoice": {
+            "type": "string"
+          },
+          "provisioningProofRef": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "en-NG",
+              "ha-NG",
+              "yo-NG",
+              "ig-NG",
+              "pcm-NG"
+            ]
+          }
+        }
+      },
+      "UssdSessionResponse": {
+        "type": "object",
+        "required": [
+          "sessionRef",
+          "displayText",
+          "sessionState"
+        ],
+        "properties": {
+          "sessionRef": {
+            "type": "string"
+          },
+          "displayText": {
+            "type": "string"
+          },
+          "sessionState": {
+            "type": "string",
+            "enum": [
+              "CONTINUE",
+              "END",
+              "DISABLED_UNALLOCATED"
+            ]
+          }
+        }
+      },
+      "ClearAmRevocationRequest": {
+        "type": "object",
+        "required": [
+          "clearAmTokenRef",
+          "requesterProofRef"
+        ],
+        "properties": {
+          "clearAmTokenRef": {
+            "type": "string",
+            "pattern": "^clm_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "requesterProofRef": {
+            "type": "string"
+          },
+          "reasonCode": {
+            "type": "string"
+          }
+        }
+      },
+      "RevocationReceipt": {
+        "type": "object",
+        "properties": {
+          "grantRef": {
+            "type": "string",
+            "pattern": "^clm_[0-9A-HJKMNP-TV-Z]{26}$"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "REVOKED",
+              "PENDING_VERIFICATION"
+            ]
+          },
+          "appliedAtUtc": {
+            "type": "string"
+          }
+        }
+      },
+      "ExportRequest": {
+        "type": "object",
+        "required": [
+          "authorityRef",
+          "exportFormat",
+          "scope"
+        ],
+        "properties": {
+          "authorityRef": {
+            "type": "string"
+          },
+          "exportFormat": {
+            "type": "string",
+            "enum": [
+              "SQLITE",
+              "JSON_LD",
+              "JSON",
+              "CSV"
+            ]
+          },
+          "scope": {
+            "type": "string"
+          }
+        }
+      },
+      "ExportReceipt": {
+        "type": "object",
+        "required": [
+          "jobId",
+          "state"
+        ],
+        "properties": {
+          "jobId": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "READY_FOR_AUTHORIZED_DOWNLOAD",
+              "DENIED"
+            ]
+          },
+          "signedDigestSha256": {
+            "type": "string"
+          }
+        }
+      },
+      "StateServiceEvent": {
+        "type": "object",
+        "required": [
+          "stateCode",
+          "dimensionId",
+          "authorityRef",
+          "purposeCode",
+          "eventRef",
+          "operationState"
+        ],
+        "properties": {
+          "stateCode": {
+            "type": "string"
+          },
+          "dimensionId": {
+            "type": "string",
+            "enum": [
+              "DIM-01",
+              "DIM-02",
+              "DIM-03",
+              "DIM-04",
+              "DIM-05",
+              "DIM-06",
+              "DIM-07",
+              "DIM-08"
+            ]
+          },
+          "authorityRef": {
+            "type": "string"
+          },
+          "purposeCode": {
+            "type": "string"
+          },
+          "eventRef": {
+            "type": "string"
+          },
+          "operationState": {
+            "type": "string",
+            "enum": [
+              "DRAFT_OFFLINE",
+              "STAGED",
+              "AUTHORITY_REVIEW",
+              "WAITING_EXTERNAL_AUTHORITY",
+              "UNKNOWN_TIMEOUT",
+              "APPROVED",
+              "REJECTED",
+              "REVOKED",
+              "CLOSED"
+            ]
+          },
+          "restrictedPayloadRef": {
+            "type": "string"
+          },
+          "publicDigestSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/v1/capabilities": {
+      "get": {
+        "operationId": "getInstanceCapabilities",
+        "tags": [
+          "Registry"
+        ],
+        "summary": "Inspect this authority-owned instance and five-locale support",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CapabilityManifest"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/v1/registry/jurisdictions": {
+      "get": {
+        "operationId": "listRegisteredJurisdictions",
+        "tags": [
+          "Registry"
+        ],
+        "summary": "Read validated 774 council / six FCT area-council reference identities",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JurisdictionList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/v1/registry/services": {
+      "get": {
+        "operationId": "listMunicipalServices",
+        "tags": [
+          "Registry"
+        ],
+        "summary": "List all 14 module contracts and actual capability evidence",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/v1/registry/readiness": {
+      "get": {
+        "operationId": "getReadinessEvidence",
+        "tags": [
+          "Registry"
+        ],
+        "summary": "Read the 296 evidence-graded dimension cells",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadinessList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/v1/state/{stateCode}/dimensions/{dimensionId}/records": {
+      "post": {
+        "operationId": "submitStateDimensionDraft",
+        "tags": [
+          "State"
+        ],
+        "summary": "Stage one of eight state-dimension service events, pending source authority approval",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/StateCode"
+          },
+          {
+            "$ref": "#/components/parameters/DimensionId"
+          },
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted for staged processing; not final statutory issuance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueuedReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "OfficerMTLS": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StateServiceEvent"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "listStateDimensionRecords",
+        "tags": [
+          "State"
+        ],
+        "summary": "Authority-scoped dimension case metadata; never unrestricted source datasets",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/StateCode"
+          },
+          {
+            "$ref": "#/components/parameters/DimensionId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StateRecordCollection"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "OfficerMTLS": []
+          }
+        ]
+      }
+    },
+    "/v1/municipal/{councilCode}/services/{moduleId}/applications": {
+      "post": {
+        "operationId": "submitMunicipalServiceDraft",
+        "tags": [
+          "Municipal"
+        ],
+        "summary": "Receive purpose-bound module-specific submission",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "$ref": "#/components/parameters/ModuleId"
+          },
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted for staged processing; not final statutory issuance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueuedReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "PublicOAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MunicipalRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/municipal/{councilCode}/services/{moduleId}/cases/{caseId}": {
+      "get": {
+        "operationId": "getMunicipalCase",
+        "tags": [
+          "Municipal"
+        ],
+        "summary": "Scoped case status and owner-authority decision",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "$ref": "#/components/parameters/ModuleId"
+          },
+          {
+            "$ref": "#/components/parameters/CaseId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseStatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "PublicOAuth": []
+          }
+        ]
+      }
+    },
+    "/v1/municipal/{councilCode}/services/{moduleId}/observations": {
+      "post": {
+        "operationId": "stageOfflineMunicipalDelta",
+        "tags": [
+          "Offline"
+        ],
+        "summary": "Stage encrypted HLC/CRDT delta, not final decision",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "$ref": "#/components/parameters/ModuleId"
+          },
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted for staged processing; not final statutory issuance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueuedReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "OfficerMTLS": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MunicipalRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/municipal/{councilCode}/services/{moduleId}/decisions": {
+      "post": {
+        "operationId": "recordAuthorizedMunicipalDecision",
+        "tags": [
+          "Municipal"
+        ],
+        "summary": "Approve/reject with independent authority signature",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "$ref": "#/components/parameters/ModuleId"
+          },
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Decision submitted for verification; 202 is not evidence of legal approval",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueuedReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "OfficerMTLS": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MunicipalRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/municipal/{councilCode}/treasury/payment-intents": {
+      "post": {
+        "operationId": "createCouncilPaymentIntent",
+        "tags": [
+          "Treasury"
+        ],
+        "summary": "Produce bank-bound statutory assessment and payment intent",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Intent created only: must not issue paid receipt without bank confirmation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueuedReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "PublicOAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MunicipalRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/municipal/{councilCode}/treasury/payment-intents/{caseId}": {
+      "get": {
+        "operationId": "getCouncilPaymentIntent",
+        "tags": [
+          "Treasury"
+        ],
+        "summary": "Read payment intent and authoritative settlement status",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "$ref": "#/components/parameters/CaseId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntentStatus"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "PublicOAuth": []
+          }
+        ]
+      }
+    },
+    "/v1/municipal/{councilCode}/treasury/settlements/confirm": {
+      "post": {
+        "operationId": "confirmCouncilSettlement",
+        "tags": [
+          "Treasury"
+        ],
+        "summary": "Independent bank-signed callback, direct-to-beneficiary proof",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Settlement proof accepted for independent bank verification; receipt issuance is separate",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueuedReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "GatewayMTLS": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TreasurySettlement"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/municipal/{councilCode}/audit/daily-roots/{dateUtc}": {
+      "get": {
+        "operationId": "getCouncilDailyAuditRoot",
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Read signed, privacy-safe Merkle root plus bank reconciliation pointer",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "name": "dateUtc",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuditRoot"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/v1/municipal/{councilCode}/audit/inclusion-proofs/{caseId}": {
+      "get": {
+        "operationId": "getCouncilAuditInclusionProof",
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Read signed inclusion proof with no payee identities",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CouncilCode"
+          },
+          {
+            "$ref": "#/components/parameters/CaseId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InclusionProof"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/v1/evidence/verify": {
+      "post": {
+        "operationId": "verifySureEvidenceDigest",
+        "tags": [
+          "Evidence"
+        ],
+        "summary": "Verify issuer, signature, revocation freshness, digest mismatch",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvidenceVerification"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvidenceVerifyRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/issuers/{issuerId}/keys": {
+      "get": {
+        "operationId": "readIssuerKeyDiscovery",
+        "tags": [
+          "Evidence"
+        ],
+        "summary": "Read issuer-owned signed current and retired verifier keys",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "name": "issuerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 3
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssuerKeySet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/v1/assisted/ussd/sessions": {
+      "post": {
+        "operationId": "handleAllocatedOperatorUssd",
+        "tags": [
+          "Assisted"
+        ],
+        "summary": "Conditional telecom-operator USSD menu adapter",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UssdSessionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "OperatorMTLS": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UssdSessionRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/assisted/counter-intake": {
+      "post": {
+        "operationId": "capturePaperAssistedIntake",
+        "tags": [
+          "Assisted"
+        ],
+        "summary": "Witnessed paper-to-digital queue with receipt and correction path",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted for staged processing; not final statutory issuance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueuedReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "OfficerMTLS": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MunicipalRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/access/clearam/revoke": {
+      "post": {
+        "operationId": "revokeClearAmGrant",
+        "tags": [
+          "Access"
+        ],
+        "summary": "Receive authorized revocation or permission change",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RevocationReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "PublicOAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClearAmRevocationRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/access/portability/export": {
+      "post": {
+        "operationId": "exportAuthorityOwnedRecords",
+        "tags": [
+          "Access"
+        ],
+        "summary": "Create scoped machine-readable export job with authorization",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Typed operation result; runtime authorization and evidence gates apply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "OfficerMTLS": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "webhooks": {
+    "onMunicipalOperation": {
+      "post": {
+        "operationId": "onMunicipalOperationOutcome",
+        "tags": [
+          "Municipal"
+        ],
+        "summary": "Signed asynchronous update preserving unknown/reversed states",
+        "description": "Tenant-bound authority enforcement, case visibility, privacy and current legal-basis checks are mandatory.",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          },
+          {
+            "$ref": "#/components/parameters/OperationId"
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "Accepted for staged processing; not final statutory issuance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueuedReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "RFC/authority-policy enforced error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "OfficerMTLS": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MunicipalRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-nigeriastack-compatibility": {
+    "existingRepoAPI": "specs/openapi/v2026/lga-municipal-services.openapi.yaml (2026.6.2)",
+    "attachedAPI": "v2.4 artifact 1 (2026.6.5)",
+    "sourceConflict": "Attached envelopeUlid uses kbd_ vs existing canonical repository envelopeUlid uses cop_",
+    "resolution": "Keep existing envelopeUlid=cop_ for operation, kioskBaseDeltaId=kbd_ for CRDT. Introduce versioned adapters, never silently reinterpret IDs.",
+    "fctCase": "FC-AC-01..06 distinct from regular XX-LGA-##. Validate against 774 registry lookup, not regex alone.",
+    "statefulOperations": "No offline final seals; money transfers require independently verified bank confirmation; legal decisions require competent issuer."
+  }
+}
