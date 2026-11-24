@@ -1,1 +1,51 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-12.schema.json",
+  "title": "LGA-12 CouncilLedger submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bankSettlementRef",
+    "cashflowClass",
+    "reconciliationPeriod"
+  ],
+  "properties": {
+    "bankSettlementRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cashflowClass": {
+      "type": "string",
+      "enum": [
+        "FAAC_ALLOCATION",
+        "MUNICIPAL_IGR",
+        "REVERSAL",
+        "ADJUSTMENT"
+      ]
+    },
+    "reconciliationPeriod": {
+      "type": "string",
+      "minLength": 1
+    },
+    "faacAllocationRef": {
+      "type": "string"
+    },
+    "dailyMerkleRoot": {
+      "type": "string"
+    },
+    "reconciliationException": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

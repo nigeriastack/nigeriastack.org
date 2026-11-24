@@ -185,7 +185,7 @@
     {
       "test": "API_PATHPARAMS_getCouncilDailyAuditRoot",
       "result": "PASS",
-      "detail": "{'dateUtc', 'councilCode'} vs {'dateUtc', 'councilCode'}"
+      "detail": "{'councilCode', 'dateUtc'} vs {'councilCode', 'dateUtc'}"
     },
     {
       "test": "API_PATHPARAMS_getCouncilAuditInclusionProof",
@@ -543,32 +543,32 @@
       "detail": ""
     },
     {
-      "test": "HEADING_HIERARCHY_LGA-01-councilcomplain",
+      "test": "HEADING_HIERARCHY_LGA-04-shoppermit",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "DEV_DRAWER_LGA-01-councilcomplain",
+      "test": "DEV_DRAWER_LGA-04-shoppermit",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "NOT_PUBLIC_LGA-01-councilcomplain",
+      "test": "NOT_PUBLIC_LGA-04-shoppermit",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "HEADING_HIERARCHY_LGA-10-marketcollect",
+      "test": "HEADING_HIERARCHY_LGA-11-wardphc",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "DEV_DRAWER_LGA-10-marketcollect",
+      "test": "DEV_DRAWER_LGA-11-wardphc",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "NOT_PUBLIC_LGA-10-marketcollect",
+      "test": "NOT_PUBLIC_LGA-11-wardphc",
       "result": "PASS",
       "detail": ""
     },
@@ -588,17 +588,17 @@
       "detail": ""
     },
     {
-      "test": "HEADING_HIERARCHY_LGA-06-indigeneproof",
+      "test": "HEADING_HIERARCHY_LGA-08-wardworks",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "DEV_DRAWER_LGA-06-indigeneproof",
+      "test": "DEV_DRAWER_LGA-08-wardworks",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "NOT_PUBLIC_LGA-06-indigeneproof",
+      "test": "NOT_PUBLIC_LGA-08-wardworks",
       "result": "PASS",
       "detail": ""
     },
@@ -618,47 +618,17 @@
       "detail": ""
     },
     {
-      "test": "HEADING_HIERARCHY_LGA-09-tenementrate",
+      "test": "HEADING_HIERARCHY_LGA-12-councilledger",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "DEV_DRAWER_LGA-09-tenementrate",
+      "test": "DEV_DRAWER_LGA-12-councilledger",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "NOT_PUBLIC_LGA-09-tenementrate",
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "test": "HEADING_HIERARCHY_LGA-08-wardworks",
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "test": "DEV_DRAWER_LGA-08-wardworks",
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "test": "NOT_PUBLIC_LGA-08-wardworks",
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "test": "HEADING_HIERARCHY_LGA-04-shoppermit",
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "test": "DEV_DRAWER_LGA-04-shoppermit",
-      "result": "PASS",
-      "detail": ""
-    },
-    {
-      "test": "NOT_PUBLIC_LGA-04-shoppermit",
+      "test": "NOT_PUBLIC_LGA-12-councilledger",
       "result": "PASS",
       "detail": ""
     },
@@ -678,6 +648,36 @@
       "detail": ""
     },
     {
+      "test": "HEADING_HIERARCHY_LGA-01-councilcomplain",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-01-councilcomplain",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-01-councilcomplain",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-09-tenementrate",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-09-tenementrate",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-09-tenementrate",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
       "test": "HEADING_HIERARCHY_LGA-13-customarydocket",
       "result": "PASS",
       "detail": ""
@@ -693,32 +693,32 @@
       "detail": ""
     },
     {
-      "test": "HEADING_HIERARCHY_LGA-12-councilledger",
+      "test": "HEADING_HIERARCHY_LGA-10-marketcollect",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "DEV_DRAWER_LGA-12-councilledger",
+      "test": "DEV_DRAWER_LGA-10-marketcollect",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "NOT_PUBLIC_LGA-12-councilledger",
+      "test": "NOT_PUBLIC_LGA-10-marketcollect",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "HEADING_HIERARCHY_LGA-05-vitalproof",
+      "test": "HEADING_HIERARCHY_LGA-06-indigeneproof",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "DEV_DRAWER_LGA-05-vitalproof",
+      "test": "DEV_DRAWER_LGA-06-indigeneproof",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "NOT_PUBLIC_LGA-05-vitalproof",
+      "test": "NOT_PUBLIC_LGA-06-indigeneproof",
       "result": "PASS",
       "detail": ""
     },
@@ -738,17 +738,17 @@
       "detail": ""
     },
     {
-      "test": "HEADING_HIERARCHY_LGA-11-wardphc",
+      "test": "HEADING_HIERARCHY_LGA-05-vitalproof",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "DEV_DRAWER_LGA-11-wardphc",
+      "test": "DEV_DRAWER_LGA-05-vitalproof",
       "result": "PASS",
       "detail": ""
     },
     {
-      "test": "NOT_PUBLIC_LGA-11-wardphc",
+      "test": "NOT_PUBLIC_LGA-05-vitalproof",
       "result": "PASS",
       "detail": ""
     }

@@ -1,1 +1,43 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-14.schema.json",
+  "title": "LGA-14 StreetGrid submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "roadGazetteRef",
+    "addressGridRef",
+    "wardRef"
+  ],
+  "properties": {
+    "roadGazetteRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "addressGridRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "wardRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parcelCandidate": {
+      "type": "string"
+    },
+    "correctionNotice": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}
