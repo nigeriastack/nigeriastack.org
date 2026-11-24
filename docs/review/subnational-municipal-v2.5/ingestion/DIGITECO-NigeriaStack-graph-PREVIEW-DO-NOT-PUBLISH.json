@@ -1,0 +1,66 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://digiteco.org/#organization",
+      "name": "Digital Economic Development Initiative | DIGITECO",
+      "url": "https://digiteco.org"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nigeriastack.org/#organization",
+      "name": "NigeriaStack",
+      "url": "https://nigeriastack.org/",
+      "description": "Independent, Nigerian-designed, whole-of-economy open specification and conformance commons",
+      "memberOf": {
+        "@id": "https://digiteco.org/#organization"
+      },
+      "sameAs": [
+        "https://github.com/nigeriastack"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "institutional charter",
+          "value": "NS-GOV-2026-KB01-V2 (2026.6-RATIFIED)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "operational claim status",
+          "value": "No government operational services asserted"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nigeriastack.org/#website",
+      "name": "NigeriaStack",
+      "url": "https://nigeriastack.org/",
+      "publisher": {
+        "@id": "https://nigeriastack.org/#organization"
+      },
+      "inLanguage": "en-NG"
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://nigeriastack.org/protocols/lga-governance-stack#subnational-expansion",
+      "headline": "Expanded sub-national and 774-LGA interoperability reference architecture",
+      "isPartOf": {
+        "@id": "https://nigeriastack.org/#website"
+      },
+      "publisher": {
+        "@id": "https://nigeriastack.org/#organization"
+      },
+      "about": [
+        {
+          "@id": "https://nigeriastack.org/#organization"
+        },
+        {
+          "@id": "https://digiteco.org/#organization"
+        }
+      ],
+      "inLanguage": "en-NG"
+    }
+  ]
+}

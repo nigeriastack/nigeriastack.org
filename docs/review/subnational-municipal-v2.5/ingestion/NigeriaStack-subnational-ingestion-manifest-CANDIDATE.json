@@ -1,0 +1,151 @@
+{
+  "documentId": "NS-ARCH-SUBNAT-REEXECUTION-2026-V2.5-CANDIDATE",
+  "date": "2026-11-24",
+  "canonicalIdentity": "NigeriaStack is an independent, Nigerian-designed, whole-of-economy open specification and conformance commons.",
+  "institutionalProgram": "Digital Economic Development Initiative | DIGITECO — https://digiteco.org",
+  "sourceArchiveSha256": "3b4e0a864a2692c0e2c225cfdc871333b04686ea61da604a9b35e89239b43fcb",
+  "sourceV24MarkdownSha256": "9531519a86627ca5b7bac048124e1e293aef9ad067c779678c82b950a68da776",
+  "ownerApprovalForPublicRelease": false,
+  "gitPushPerformed": false,
+  "driveUploadPerformed": false,
+  "artifacts": [
+    {
+      "artifactId": "TASK1_CITY_CROSSWALK",
+      "localPath": "task-1-global-crosswalk/eight-city-66-service-domains.json",
+      "sha256": "150820f1de5f8f1c5e808f1a40fbf2a8c257d31956d222fead377e55a1e0882e",
+      "targetRepo": "nigeriastack/nigeriastack.org",
+      "suggestedRepoPath": "docs/content/subnational/global-8-city-functional-crosswalk.json",
+      "driveTarget": "nigeriastack-org/subnational-expansion/eight-city-66-service-domains.json",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    },
+    {
+      "artifactId": "TASK2_READINESS",
+      "localPath": "task-2-readiness/296-cell-readiness-and-technical-targets.json",
+      "sha256": "221347de94a89d6d1e2ccef4fec67ec34ab855d53242025a327782f6ecb6a58d",
+      "targetRepo": "nigeriastack/subnational-readiness-atlas",
+      "suggestedRepoPath": "states/8dim-296-targets.v2026.json",
+      "driveTarget": "nigeriastack-org/subnational-expansion/296-cell-readiness-and-technical-targets.json",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    },
+    {
+      "artifactId": "TASK2_DIMENSIONS",
+      "localPath": "task-2-readiness/eight-dimension-operational-blueprints.json",
+      "sha256": "f7398a9255a12e918dd312b08935dcfb8a9b8813f6a09caec7ef7ffcec1281b4",
+      "targetRepo": "nigeriastack/subnational-readiness-atlas",
+      "suggestedRepoPath": "states/8-dimension-interoperability-expansion.v2026.json",
+      "driveTarget": "nigeriastack-org/subnational-expansion/eight-dimension-operational-blueprints.json",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    },
+    {
+      "artifactId": "TASK3_INDUSTRY",
+      "localPath": "task-3-industry/32-industry-7-webcopy-sector-civic-ledger.json",
+      "sha256": "9a64b8c7a7ad5317c278838e55aeb4ba37957abc9acef49e5703430c1dd3a697",
+      "targetRepo": "nigeriastack/industry-capability-ledger",
+      "suggestedRepoPath": "expansions/subnational-32-industry-ledger.v2026.json",
+      "driveTarget": "nigeriastack-org/subnational-expansion/32-industry-7-webcopy-sector-civic-ledger.json",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    },
+    {
+      "artifactId": "TASK4_MODULES",
+      "localPath": "task-4-municipal-contracts/14-module-service-profiles-expanded.json",
+      "sha256": "83af714ada511fafea94c2d4c0a3b35dec99a75afcd4d42d1b2d28ea75d32355",
+      "targetRepo": "nigeriastack/protocol-specifications",
+      "suggestedRepoPath": "municipal/lga-01-to-14.expanded.json",
+      "driveTarget": "nigeriastack-org/subnational-expansion/14-module-service-profiles-expanded.json",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    },
+    {
+      "artifactId": "TASK4_OPENAPI",
+      "localPath": "task-4-municipal-contracts/openapi/state-municipal-v2026.11.24-CANDIDATE.openapi.yaml",
+      "sha256": "bc13109bf06af999dee5aa5234a6aac6ec4992eb7c3299c46e4475f389f5c97d",
+      "targetRepo": "nigeriastack/protocol-specifications",
+      "suggestedRepoPath": "openapi/v2026/subnational-municipal-interoperability.openapi.yaml",
+      "driveTarget": "nigeriastack-org/subnational-expansion/state-municipal-v2026.11.24-CANDIDATE.openapi.yaml",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    },
+    {
+      "artifactId": "TASK4_JSON_SCHEMA",
+      "localPath": "task-4-municipal-contracts/schemas/SubNationalServiceInteroperabilityEnvelope-CANDIDATE.schema.json",
+      "sha256": "4f5dd04d1470c3fa19661e0fb3bb6db2e877861c98973e2274735fa7ec9aa28b",
+      "targetRepo": "nigeriastack/protocol-specifications",
+      "suggestedRepoPath": "schemas/json-schema-2020-12/SubNationalServiceInteroperabilityEnvelope.schema.json",
+      "driveTarget": "nigeriastack-org/subnational-expansion/SubNationalServiceInteroperabilityEnvelope-CANDIDATE.schema.json",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    },
+    {
+      "artifactId": "TASK4_WEB_COPY",
+      "localPath": "public-copy-candidates/",
+      "sha256": null,
+      "targetRepo": "nigeriastack/nigeriastack.org",
+      "suggestedRepoPath": "content/review/subnational-municipal-pages/",
+      "driveTarget": "nigeriastack-org/subnational-expansion/public-copy-candidates",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    },
+    {
+      "artifactId": "GRAPH",
+      "localPath": "ingestion/DIGITECO-NigeriaStack-graph-PREVIEW-DO-NOT-PUBLISH.json",
+      "sha256": "8e12eb39b5fedeb0ae04ad391befc716477fdcc45ccc8a63f55e706ff1f47b87",
+      "targetRepo": "nigeriastack/nigeriastack.org",
+      "suggestedRepoPath": "docs/content/subnational/graph-preview.json",
+      "driveTarget": "nigeriastack-org/subnational-expansion/DIGITECO-NigeriaStack-graph-PREVIEW-DO-NOT-PUBLISH.json",
+      "stage": "REVIEW_ONLY",
+      "willWriteRemote": false
+    }
+  ],
+  "requiredBeforeWrite": [
+    "Verify repository HEAD/branch privileges and source precedence",
+    "Resolve conflict register and 934/960 route count",
+    "Review legal authority and exact status evidence",
+    "Run full API and browser/telecom/authority gates",
+    "Draft review branch; human acceptance; separately authorize public release"
+  ],
+  "sourceProvidedIngestionTargets": [
+    {
+      "artifactId": "ART-01",
+      "driveFilename": "NS-KB-08B_subnational-municipal-interoperability.openapi.yaml",
+      "githubRepo": "nigeriastack/protocol-specifications",
+      "repoPath": "openapi/v2026/subnational-municipal-interoperability.openapi.yaml",
+      "requiredGates": [
+        "Gate NS-G1"
+      ]
+    },
+    {
+      "artifactId": "ART-02",
+      "driveFilename": "NS-KB-08C_SubNationalServiceInteroperabilityEnvelope.schema.json",
+      "githubRepo": "nigeriastack/protocol-specifications",
+      "repoPath": "schemas/json-schema-2020-12/SubNationalServiceInteroperabilityEnvelope.schema.json",
+      "requiredGates": [
+        "Gate NS-G1"
+      ]
+    },
+    {
+      "artifactId": "ART-03",
+      "driveFilename": "NS-KB-03E_eight-dimension-interoperability-expansion.json",
+      "githubRepo": "nigeriastack/subnational-readiness-atlas",
+      "repoPath": "states/eight-dimension-interoperability-expansion.json",
+      "requiredGates": [
+        "Gate NS-G2"
+      ]
+    },
+    {
+      "artifactId": "ART-04",
+      "driveFilename": "NS-INGESTION-MANIFEST_subnational-municipal-expansion-v2.4.json",
+      "githubRepo": "nigeriastack/nigeriastack.org",
+      "repoPath": "docs/content/subnational-expansion-ingestion-manifest.json",
+      "requiredGates": [
+        "Gate NS-G1",
+        "Gate NS-G3",
+        "Gate NS-G5",
+        "Gate NS-G6"
+      ]
+    }
+  ]
+}
