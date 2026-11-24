@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-06.schema.json",
+  "title": "LGA-06 IndigeneProof submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "applicantRef",
+    "attestationClass",
+    "evidenceRefs"
+  ],
+  "properties": {
+    "applicantRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attestationClass": {
+      "type": "string",
+      "enum": [
+        "RESIDENCY",
+        "ORIGIN",
+        "OTHER_LEGALLY_AUTHORIZED"
+      ]
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "maxItems": 12
+    },
+    "wardVouchRef": {
+      "type": "string"
+    },
+    "appealRef": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

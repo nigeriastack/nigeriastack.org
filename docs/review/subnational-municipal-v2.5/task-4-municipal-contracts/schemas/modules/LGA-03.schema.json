@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-03.schema.json",
+  "title": "LGA-03 WashConnect submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "assetId",
+    "workType",
+    "serviceLocationRef"
+  ],
+  "properties": {
+    "assetId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "serviceLocationRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operatorPermitRef": {
+      "type": "string"
+    },
+    "serviceChargeScheduleRef": {
+      "type": "string"
+    },
+    "deliveryProofDigest": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}
