@@ -1,0 +1,395 @@
+{
+  "source": "v2.4 attachment + previously generated V1 matrix; implementation expansion, not deployment evidence",
+  "dimensions": [
+    {
+      "dimensionId": "DIM-01",
+      "name": "Judiciary & Magistracy Digitization",
+      "linkedIndustries": [
+        "IND-21",
+        "IND-31"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-13"
+      ],
+      "governingRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-013"
+      ],
+      "referenceClientShell": "KioskBase Offline Court & CTC Verifier PWA (<35KB)",
+      "globalBenchmarks": [
+        "NYC Court e-File",
+        "Singapore eLitigation",
+        "UK CE-File"
+      ],
+      "canonicalShortName": "Judiciary and Magistracy",
+      "primaryApp": "State Court Registry and CTC Portal",
+      "portalCapabilities": "Court-controlled search, docket status, CTC requests, restricted appeal transfer",
+      "offlinePwaSpecification": "Court registrar offline draft / court-controlled cause list cache",
+      "proposedApi": "/v1/state/{stateCode}/dimensions/DIM-01/records",
+      "authorityAndPrivacyGuard": "No council judicial write-plane; issuance by competent court registrar",
+      "empiricalAssessment": "Not yet assessed",
+      "authentication": {
+        "officer": "authority-owned signing + role/attribute authorization",
+        "citizen": "least-privilege authentication or assisted access",
+        "auditor": "public aggregate/read-only unless authorized"
+      },
+      "operationalEvidenceRequired": [
+        "dated accessible primary source",
+        "authority/owner",
+        "service scope",
+        "test method",
+        "assessor",
+        "actual endpoint/office observed",
+        "appeals/correction route",
+        "timestamp"
+      ]
+    },
+    {
+      "dimensionId": "DIM-02",
+      "name": "Land Cadastral & Deeds Registry (GIS)",
+      "linkedIndustries": [
+        "IND-17",
+        "IND-28"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-02",
+        "LGA-14"
+      ],
+      "governingRfcs": [
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-012"
+      ],
+      "referenceClientShell": "Consented Land Search & Lis Pendens Portal + StreetGrid Offline PWA",
+      "globalBenchmarks": [
+        "Auckland LIM / Landonline",
+        "Australia PEXA",
+        "Karnataka Bhoomi"
+      ],
+      "canonicalShortName": "Land and Deeds/GIS",
+      "primaryApp": "State Parcel and Deeds/GIS Portal",
+      "portalCapabilities": "Parcel polygon, encumbrance authorized query, planning status, Gazette version",
+      "offlinePwaSpecification": "Offline parcel observation, geofence and address referencing; no title determination",
+      "proposedApi": "/v1/state/{stateCode}/dimensions/DIM-02/records",
+      "authorityAndPrivacyGuard": "State land authority is source; address/grid does not equal title",
+      "empiricalAssessment": "Not yet assessed",
+      "authentication": {
+        "officer": "authority-owned signing + role/attribute authorization",
+        "citizen": "least-privilege authentication or assisted access",
+        "auditor": "public aggregate/read-only unless authorized"
+      },
+      "operationalEvidenceRequired": [
+        "dated accessible primary source",
+        "authority/owner",
+        "service scope",
+        "test method",
+        "assessor",
+        "actual endpoint/office observed",
+        "appeals/correction route",
+        "timestamp"
+      ]
+    },
+    {
+      "dimensionId": "DIM-03",
+      "name": "State IRS & Direct Treasury Pass-Through",
+      "linkedIndustries": [
+        "IND-01",
+        "IND-05",
+        "IND-06",
+        "IND-26"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-09",
+        "LGA-10",
+        "LGA-12"
+      ],
+      "governingRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "referenceClientShell": "SplitDirect Zero-Escrow Billing Portal + *347*LGA# USSD & POS Receipt Kit",
+      "globalBenchmarks": [
+        "Seoul ETAX",
+        "Tokyo eLTAX",
+        "Malaysia PBTpay",
+        "Quezon City RPT"
+      ],
+      "canonicalShortName": "IRS and Treasury",
+      "primaryApp": "Revenue, Treasury and Direct Settlement Portal",
+      "portalCapabilities": "Tax/levy schedule, beneficiary binding, bank signed settlement, signed audit roots",
+      "offlinePwaSpecification": "Offline assessment drafts and cashless payment references; no offline paid receipt",
+      "proposedApi": "/v1/state/{stateCode}/dimensions/DIM-03/records",
+      "authorityAndPrivacyGuard": "No statutory payment held by intermediary; fees require valid legal schedule",
+      "empiricalAssessment": "Not yet assessed",
+      "authentication": {
+        "officer": "authority-owned signing + role/attribute authorization",
+        "citizen": "least-privilege authentication or assisted access",
+        "auditor": "public aggregate/read-only unless authorized"
+      },
+      "operationalEvidenceRequired": [
+        "dated accessible primary source",
+        "authority/owner",
+        "service scope",
+        "test method",
+        "assessor",
+        "actual endpoint/office observed",
+        "appeals/correction route",
+        "timestamp"
+      ]
+    },
+    {
+      "dimensionId": "DIM-04",
+      "name": "State Health Insurance & PHC EMRs",
+      "linkedIndustries": [
+        "IND-03",
+        "IND-19"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-11"
+      ],
+      "governingRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-006",
+        "NS-RFC-011"
+      ],
+      "referenceClientShell": "WardPHC Offline HL7 FHIR Encounter & SHIA Claims PWA (<35KB)",
+      "globalBenchmarks": [
+        "Surabaya Puskesmas",
+        "Indonesia SATUSEHAT",
+        "New Zealand Hira"
+      ],
+      "canonicalShortName": "Health and Social Registry",
+      "primaryApp": "State Health/PHC and Claims Portal",
+      "portalCapabilities": "Encounter, referral, immunization, FHIR profiles and authorized insurance claims",
+      "offlinePwaSpecification": "Encrypted SQLite encounter and stock drafts, staged FHIR resources",
+      "proposedApi": "/v1/state/{stateCode}/dimensions/DIM-04/records",
+      "authorityAndPrivacyGuard": "Sensitive data segregated; clinical decision by competent professional",
+      "empiricalAssessment": "Not yet assessed",
+      "authentication": {
+        "officer": "authority-owned signing + role/attribute authorization",
+        "citizen": "least-privilege authentication or assisted access",
+        "auditor": "public aggregate/read-only unless authorized"
+      },
+      "operationalEvidenceRequired": [
+        "dated accessible primary source",
+        "authority/owner",
+        "service scope",
+        "test method",
+        "assessor",
+        "actual endpoint/office observed",
+        "appeals/correction route",
+        "timestamp"
+      ]
+    },
+    {
+      "dimensionId": "DIM-05",
+      "name": "Civil Registration, 774-LGA & KioskBase Edge",
+      "linkedIndustries": [
+        "IND-07",
+        "IND-09",
+        "IND-11",
+        "IND-14",
+        "IND-20",
+        "IND-22",
+        "IND-23",
+        "IND-27",
+        "IND-28"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-01",
+        "LGA-03",
+        "LGA-04",
+        "LGA-05",
+        "LGA-06",
+        "LGA-07",
+        "LGA-14"
+      ],
+      "governingRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-007",
+        "NS-RFC-014"
+      ],
+      "referenceClientShell": "Unified Municipal Civic & Permitting Shell + *347*LGA# USSD + 300-DPI QR Kiosk",
+      "globalBenchmarks": [
+        "Tokyo MyNa/Conveni-Kofu",
+        "DKI Jakarta JAKI",
+        "Singapore OneService",
+        "Makati Makatizen"
+      ],
+      "canonicalShortName": "CRVS and LGA Councils",
+      "primaryApp": "Municipal Service and CRVS Bridge Portal",
+      "portalCapabilities": "NPC reconciled vital-event and lawful local attestation, grievance/permit catalog",
+      "offlinePwaSpecification": "Vital event notice, localized kiosk, protected attestation/outbox",
+      "proposedApi": "/v1/state/{stateCode}/dimensions/DIM-05/records",
+      "authorityAndPrivacyGuard": "LGA counters are not NPC or NIMC masters; FCT council code family distinct",
+      "empiricalAssessment": "Not yet assessed",
+      "authentication": {
+        "officer": "authority-owned signing + role/attribute authorization",
+        "citizen": "least-privilege authentication or assisted access",
+        "auditor": "public aggregate/read-only unless authorized"
+      },
+      "operationalEvidenceRequired": [
+        "dated accessible primary source",
+        "authority/owner",
+        "service scope",
+        "test method",
+        "assessor",
+        "actual endpoint/office observed",
+        "appeals/correction route",
+        "timestamp"
+      ]
+    },
+    {
+      "dimensionId": "DIM-06",
+      "name": "Open Contracting & State Public Procurement",
+      "linkedIndustries": [
+        "IND-04",
+        "IND-06",
+        "IND-17"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-08"
+      ],
+      "governingRfcs": [
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "referenceClientShell": "OCDS Tender & WardWorks Geo-Photo Milestone Attestation Portal",
+      "globalBenchmarks": [
+        "Seoul S-Map Projects",
+        "NYC Checkbook",
+        "India eGov DIGIT / MUKTA"
+      ],
+      "canonicalShortName": "Open Contracting",
+      "primaryApp": "Open Contracting and WardWorks Public Portal",
+      "portalCapabilities": "OCDS planning/tender/award/implementation, verified milestone, audit linkage",
+      "offlinePwaSpecification": "Geo-evidence drafts, OCDS view-only cached export",
+      "proposedApi": "/v1/state/{stateCode}/dimensions/DIM-06/records",
+      "authorityAndPrivacyGuard": "Bid secrecy, procurements and payment authority remain with procuring body",
+      "empiricalAssessment": "Not yet assessed",
+      "authentication": {
+        "officer": "authority-owned signing + role/attribute authorization",
+        "citizen": "least-privilege authentication or assisted access",
+        "auditor": "public aggregate/read-only unless authorized"
+      },
+      "operationalEvidenceRequired": [
+        "dated accessible primary source",
+        "authority/owner",
+        "service scope",
+        "test method",
+        "assessor",
+        "actual endpoint/office observed",
+        "appeals/correction route",
+        "timestamp"
+      ]
+    },
+    {
+      "dimensionId": "DIM-07",
+      "name": "Agricultural Extension, Farm Polygons & Warehouses",
+      "linkedIndustries": [
+        "IND-09",
+        "IND-10",
+        "IND-15",
+        "IND-18"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-10",
+        "LGA-14"
+      ],
+      "governingRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-010",
+        "NS-RFC-012"
+      ],
+      "referenceClientShell": "AgriTrust Offline GPS Polygon & Verifiable Warehouse Receipt PWA",
+      "globalBenchmarks": [
+        "India AgriStack",
+        "New Zealand LIC Traceability",
+        "Hokkaido Rural Municipal Stack"
+      ],
+      "canonicalShortName": "Agriculture Extension",
+      "primaryApp": "Farm Extension and Warehouse Evidence Portal",
+      "portalCapabilities": "Polygon, farm event, goods receipt, issuer provenance",
+      "offlinePwaSpecification": "Offline GeoJSON and inputs/warehouse event attestations",
+      "proposedApi": "/v1/state/{stateCode}/dimensions/DIM-07/records",
+      "authorityAndPrivacyGuard": "Parcel overlap flags do not establish land title, water right or eligibility",
+      "empiricalAssessment": "Not yet assessed",
+      "authentication": {
+        "officer": "authority-owned signing + role/attribute authorization",
+        "citizen": "least-privilege authentication or assisted access",
+        "auditor": "public aggregate/read-only unless authorized"
+      },
+      "operationalEvidenceRequired": [
+        "dated accessible primary source",
+        "authority/owner",
+        "service scope",
+        "test method",
+        "assessor",
+        "actual endpoint/office observed",
+        "appeals/correction route",
+        "timestamp"
+      ]
+    },
+    {
+      "dimensionId": "DIM-08",
+      "name": "Fiber RoW Policy, IXPN Peering & Sovereign Hosting",
+      "linkedIndustries": [
+        "IND-12",
+        "IND-13",
+        "IND-16",
+        "IND-25",
+        "IND-29",
+        "IND-30",
+        "IND-32"
+      ],
+      "linkedMunicipalModules": [
+        "LGA-01",
+        "LGA-02",
+        "LGA-03",
+        "LGA-14"
+      ],
+      "governingRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-008"
+      ],
+      "referenceClientShell": "Fiber RoW Digital Permitting Portal + Decentralized did:web Key Discovery Node",
+      "globalBenchmarks": [
+        "Singapore APEX",
+        "Tokyo ISMAP GovCloud",
+        "Estonia X-Road"
+      ],
+      "canonicalShortName": "Fiber RoW and Hosting",
+      "primaryApp": "Fiber Right-of-Way and Infrastructure Portal",
+      "portalCapabilities": "RoW permits, asset coordinates, incident notices, public-key discovery",
+      "offlinePwaSpecification": "Offline duct/pole survey, pending works record and restoration record",
+      "proposedApi": "/v1/state/{stateCode}/dimensions/DIM-08/records",
+      "authorityAndPrivacyGuard": "NCC license, state RoW, utility owners and security restrictions must be checked",
+      "empiricalAssessment": "Not yet assessed",
+      "authentication": {
+        "officer": "authority-owned signing + role/attribute authorization",
+        "citizen": "least-privilege authentication or assisted access",
+        "auditor": "public aggregate/read-only unless authorized"
+      },
+      "operationalEvidenceRequired": [
+        "dated accessible primary source",
+        "authority/owner",
+        "service scope",
+        "test method",
+        "assessor",
+        "actual endpoint/office observed",
+        "appeals/correction route",
+        "timestamp"
+      ]
+    }
+  ]
+}
