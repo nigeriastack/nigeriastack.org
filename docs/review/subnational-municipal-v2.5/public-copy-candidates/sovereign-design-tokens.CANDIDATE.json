@@ -1,0 +1,27 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "metadata": {
+    "source": "User-supplied ISL 2026",
+    "status": "candidate, requires real WCAG measurement"
+  },
+  "color": {
+    "surface": {
+      "sovereign-parchment": {
+        "$type": "color",
+        "$value": "#F8FAF8"
+      }
+    },
+    "brand": {
+      "federal-green": {
+        "$type": "color",
+        "$value": "#008751"
+      }
+    },
+    "text": {
+      "archival-ink": {
+        "$type": "color",
+        "$value": "#0D1512"
+      }
+    }
+  }
+}

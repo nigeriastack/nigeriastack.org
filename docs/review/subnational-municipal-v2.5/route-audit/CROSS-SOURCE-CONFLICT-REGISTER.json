@@ -1,0 +1,266 @@
+{
+  "status": "No automatic legal ratification or public release",
+  "count": 26,
+  "items": [
+    {
+      "id": "SRC-01",
+      "severity": "Critical",
+      "issue": "Webcopy archive called 934 routes",
+      "sourceEvidence": "Actual 956 Markdown route docs, one path collision, 955 distinct page routes, four governance anchors; ZIP 960 physical files",
+      "resolution": "Correct candidate inventory; preserve original ZIP; do not publish 934 claim as count",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "SRC-02",
+      "severity": "High",
+      "issue": "Manifest count and SHA receipts",
+      "sourceEvidence": "960 manifest entries, four governance anchor digest entries do not match single governance.md file",
+      "resolution": "Regenerate SHA from actual archived bytes and move anchor indices outside unique-page count",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "SRC-03",
+      "severity": "High",
+      "issue": "Duplicate canonical path /rfcs/NS-RFC-004",
+      "sourceEvidence": "Two Markdown source files claim identical canonical route",
+      "resolution": "Keep core-001-to-014/NS-RFC-004.md as page; mark 00-core/rfc-004-sample.md source-only",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "SRC-04",
+      "severity": "High",
+      "issue": "READY_FOR_GITHUB_PUBLICATION in supplied webcopy",
+      "sourceEvidence": "Self-declared editorial status without independent 6-gate CI/hosted browser readback",
+      "resolution": "Candidate under review; false until CI, owner and release receipts",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "RFC-01",
+      "severity": "High",
+      "issue": "NS-RFC-012 labeled LandGuard in v2.4 dimension text",
+      "sourceEvidence": "Existing canonical RFC-012 is AgriTrust farm polygon profile; LandGuard is BB-10 spatial work",
+      "resolution": "Retain NS-RFC-012 for AgriTrust; assign LandGuard to BB-10 and appropriate GIS schema, RFC-014 adapter",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "ID-01",
+      "severity": "High",
+      "issue": "FCT Council identifier pattern",
+      "sourceEvidence": "v2.4 sample/old municipal API uses XX-LGA-##, webcopy uses FC-AC-01..06",
+      "resolution": "Add two code families and 774-entry authoritative lookup; no invented FC-LGA-##",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "ID-02",
+      "severity": "High",
+      "issue": "Envelope ULID prefix mismatch",
+      "sourceEvidence": "Core repo LgaGovernanceServiceEnvelope uses cop_ for operation; v2.4 uses kbd_ for envelope",
+      "resolution": "Preserve cop_ as operation envelope, kbd_ for offline CRDT delta; explicit versioned adapter",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "TAX-01",
+      "severity": "Medium",
+      "issue": "Macro-sector cardinality drift",
+      "sourceEvidence": "Master industry ledger reports 8 macro sectors; webcopy routes group into 7 slugs",
+      "resolution": "Preserve both facts in taxonomy ledger; await canonical registry decision before changing category semantics",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "BUD-01",
+      "severity": "High",
+      "issue": "<35KB and <=35840 bytes conflicting thresholds",
+      "sourceEvidence": "Task says <35 KB gzipped, v2.4 says <=35,840 bytes",
+      "resolution": "Use strict <35,000 bytes initial shell measurement for conservative compliance; report bundle and deferred WASM separately",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "PERF-01",
+      "severity": "High",
+      "issue": "50ms QR and offline 300 DPI claims",
+      "sourceEvidence": "50ms is not a measured device-independent guarantee; DPI is printing characteristic",
+      "resolution": "Treat as performance target and measure real hardware, cached revocation freshness",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "AUTH-01",
+      "severity": "Critical",
+      "issue": "Council automatic authority in LGA profile webcopy",
+      "sourceEvidence": "Many 774 profiles say council retains 100% statutory authority over vital registrations; competence varies by source/State/FCT law",
+      "resolution": "Replace with authority-of-record language, NPC statutory control and separate court/land/health mandates",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "LAW-01",
+      "severity": "High",
+      "issue": "CFRN s.121(3) and SC/CV/343/2024 automatic escrow rule",
+      "sourceEvidence": "Different fiscal provisions; zero escrow is NigeriaStack engineering policy, not quoted judicial rule covering all statutory fees",
+      "resolution": "Distinguish Court judgment on LGA allocations, s121(3) state judicial/legislative finance and enabling fee laws",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "LAW-02",
+      "severity": "High",
+      "issue": "Evidence Act 2011 s84 final legal proof",
+      "sourceEvidence": "Evidence (Amendment) Act 2023 changes relevant electronic-record provisions; cryptographic signature not automatic admissibility",
+      "resolution": "Keep device provenance as evidence aid, require counsel/authority review and qualified admissibility statement",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "LAW-03",
+      "severity": "High",
+      "issue": "NDPA s37 as agent delegation authorization",
+      "sourceEvidence": "Section addresses significant solely automated decisions, not standalone mandate for autonomous AI",
+      "resolution": "Human countersign, lawful basis, contestability and independent mandate check",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "DATA-01",
+      "severity": "Critical",
+      "issue": "Salted NIN hashes called zero-knowledge identity",
+      "sourceEvidence": "A salted hash alone is not a ZK proof and may be guessable or correlatable",
+      "resolution": "Use issuer-signed claims and verifiable selective disclosure; cryptographic ZK only with validated protocol",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "FISC-01",
+      "severity": "Critical",
+      "issue": "USSD/offline paid receipt before bank confirmation",
+      "sourceEvidence": "v2.4 wording risks treating assessment/QR ticket as settled while network is down",
+      "resolution": "Provisional intent only; bank-signed confirmation and independent ledger match required for final receipt",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "WASH-01",
+      "severity": "High",
+      "issue": "Escrowed WASH operator tariff release in Pillar D",
+      "sourceEvidence": "Conflicts with no escrow of public statutory principal; private contractor arrangements distinct",
+      "resolution": "Separate public tariff from lawful private contractual payment, enforce no public-principal escrow",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "USSD-01",
+      "severity": "High",
+      "issue": "*347*LGA# described as guaranteed universal access",
+      "sourceEvidence": "No NCC allocation/operator agreements supplied",
+      "resolution": "Conditional adapter; disable live dialing claims, require allocation evidence and per-MNO testing",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "AUTH-02",
+      "severity": "Critical",
+      "issue": "CustomaryDocket listed under LGA functions",
+      "sourceEvidence": "Court may be geographically in LGA but judge, registrar and docket are judicial authorities",
+      "resolution": "Route case writes only to court-controlled issuer; council only locator",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "REG-01",
+      "severity": "High",
+      "issue": "CRVS data and NPC authority",
+      "sourceEvidence": "Council intake does not itself create official NPC birth/death registration",
+      "resolution": "Request/notification and authoritative NPC reconciliation separate from official extract",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "GRAPH-01",
+      "severity": "Medium",
+      "issue": "DIGITECO JSON-LD vs baseline NigeriaStack publisher",
+      "sourceEvidence": "v2.4 graph identifies DIGITECO parent context, earlier baseline NigeriaStack Organization publisher",
+      "resolution": "Use two distinct identity nodes and reference relationship without claiming statutory government role or equivalence",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": true
+    },
+    {
+      "id": "INTEROP-01",
+      "severity": "High",
+      "issue": "MyNa, RedeemSG, AT HOP misclassified as city apps",
+      "sourceEvidence": "Some benchmarks are national/shared or separately operated organizations",
+      "resolution": "Include jurisdiction/owner column in functional comparison; no maturity ranking",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "EXT-01",
+      "severity": "High",
+      "issue": "NS-RFC-015..080 webcopy pages",
+      "sourceEvidence": "66 extended-track pages are route/webcopy records, not verified separately ratified specifications",
+      "resolution": "Represent as extended-track content only, check RFC registry decisions before normative claims",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "CRDT-01",
+      "severity": "Critical",
+      "issue": "HLC LWW applied to legally authoritative records",
+      "sourceEvidence": "LWW can discard payment/court/health/land decisions",
+      "resolution": "CRDT only for nonauthoritative observations; authoritative transitions need explicit issuer/state reconciliation",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "OUT-01",
+      "severity": "Medium",
+      "issue": "JSON-LD HTML tech-key exposure",
+      "sourceEvidence": "Raw identifiers and ULIDs must not clutter civic webcopy",
+      "resolution": "Present inside ns-tech-drawer details only on candidate public pages",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    },
+    {
+      "id": "SCOPE-01",
+      "severity": "High",
+      "issue": "No authority to publish/deploy",
+      "sourceEvidence": "Neither new attachment nor the user prompt grants production public-release authorization",
+      "resolution": "Produce review artifacts and ingestion plan only; no remote writes or Cloudflare deploy",
+      "closureState": "REVIEW_REQUIRED",
+      "owner": "Standards owner / responsible authority",
+      "legalOrEmpiricalReviewNeeded": false
+    }
+  ]
+}
