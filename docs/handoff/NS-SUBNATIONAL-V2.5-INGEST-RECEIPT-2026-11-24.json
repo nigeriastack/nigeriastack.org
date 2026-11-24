@@ -1,0 +1,43 @@
+{
+  "documentId": "NS-KB-DRIVE-GITHUB-V2.5-REVIEW-2026-11-24",
+  "reviewOnly": true,
+  "publicReleaseAuthorized": false,
+  "sourceCount": 68,
+  "gitByteExactCompared": 68,
+  "driveZip": {
+    "id": "1pOxQ2-4W6PFhKvcyZ9UJXThRb2-GY66B",
+    "sizeBytes": 322645,
+    "sha256": "a58300c5e0792ff7cb80fa23bed12ad01c6be0c323d51a57d097c1b31fae04ef",
+    "folderId": "110-I0eGu7FHeKZQOu7RZDiLBhHj0Hd1u"
+  },
+  "pullRequests": [
+    {
+      "repo": "nigeriastack/nigeriastack.org",
+      "number": 4
+    },
+    {
+      "repo": "nigeriastack/subnational-readiness-atlas",
+      "number": 3
+    },
+    {
+      "repo": "nigeriastack/industry-capability-ledger",
+      "number": 2
+    },
+    {
+      "repo": "nigeriastack/protocol-specifications",
+      "number": 2
+    }
+  ],
+  "staticTests": {
+    "passed": 149,
+    "failed": 0,
+    "scope": "local only"
+  },
+  "unresolved": {
+    "sourceRouteManifest": true,
+    "legalValidation": true,
+    "liveSystemsTesting": true,
+    "publicReleaseAuthorized": false
+  },
+  "note": "PRs remain draft. Verify fresh commit SHAs and CI status before integration."
+}
