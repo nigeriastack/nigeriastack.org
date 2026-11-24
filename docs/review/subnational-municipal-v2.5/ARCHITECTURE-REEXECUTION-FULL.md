@@ -897,6 +897,7 @@ v2.4 mechanism codes: MECH-03, MECH-04. Expanded test hypotheses: MECH-01, MECH-
 **IND-26 — Network Intelligence and Anti-Fraud.** Cross-council fake-receipt / tout-impersonation fraud signal exchange via salted SureEvidence hashes.
 Binding: State DIM-03; municipal LGA-04, LGA-09, LGA-10, LGA-12; BB-03, BB-04; NS-RFC-006.
 v2.4 mechanism codes: MECH-01, MECH-05. Expanded test hypotheses: MECH-01, MECH-03, MECH-05, MECH-07. **Evidence status: Not yet assessed**. Validate domestic supply, data-rights feasibility, offline value, and independent provider demand before recording a residual market gap.
+
 **IND-27 — AI and Nigerian Indigenous Languages.** Reviewed Hausa, Yoruba, Igbo & Pidgin civic UI strings and local bye-law translations (LEGAL_SEMANTIC_REVIEW_APPROVED).
 Binding: State DIM-01; municipal LGA-01, LGA-03, LGA-05, LGA-06, LGA-11, LGA-13; BB-11; NS-RFC-013.
 v2.4 mechanism codes: MECH-02, MECH-08. Expanded test hypotheses: MECH-02, MECH-03, MECH-06, MECH-08. **Evidence status: Not yet assessed**. Validate domestic supply, data-rights feasibility, offline value, and independent provider demand before recording a residual market gap.
