@@ -1,0 +1,2349 @@
+{
+  "methodology": "Functional comparison not claim of equivalent governance, municipal deployment ranking or source authority",
+  "cities": [
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "jurisdiction": "Seoul municipal government",
+      "domainCount": 10,
+      "platformEvidence": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ],
+      "separateAuthority": "City and agency services, not a common legal mandate"
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "jurisdiction": "Jakarta provincial administration",
+      "domainCount": 9,
+      "platformEvidence": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ],
+      "separateAuthority": "JAKI, JakEvo and JakLingko have different roles"
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "jurisdiction": "National portal, shared local tax, individual local authorities",
+      "domainCount": 9,
+      "platformEvidence": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ],
+      "separateAuthority": "MyNa Portal is national and eLTAX cross-municipal, not municipal super-app"
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "jurisdiction": "Municipal/town-council, public housing, national voucher service",
+      "domainCount": 8,
+      "platformEvidence": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ],
+      "separateAuthority": "OneService municipal; RedeemSG national; HDB statutory body"
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "jurisdiction": "NYC municipal agencies",
+      "domainCount": 8,
+      "platformEvidence": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ],
+      "separateAuthority": "NYC.ID is account login, not a statutory card or record issuer"
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "jurisdiction": "Surabaya municipal agencies",
+      "domainCount": 8,
+      "platformEvidence": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ],
+      "separateAuthority": "Permit, resident and civil registry authorities remain distinct"
+    },
+    {
+      "cityId": "CITY-07",
+      "city": "Auckland Council and Auckland Transport",
+      "jurisdiction": "Council and separately operated council-controlled transport organization",
+      "domainCount": 7,
+      "platformEvidence": [
+        "https://www.aucklandcouncil.govt.nz/en/buying-property/order-property-report/order-lim.html",
+        "https://at.govt.nz/about-us/our-role-organisation/how-we-work"
+      ],
+      "separateAuthority": "AT HOP is operated by Auckland Transport, not directly a council billing system"
+    },
+    {
+      "cityId": "CITY-08",
+      "city": "Quezon City / City of Makati",
+      "jurisdiction": "Two separate Philippine local-government jurisdictions",
+      "domainCount": 7,
+      "platformEvidence": [
+        "https://quezoncity.gov.ph/program/qcitizen-id/",
+        "https://quezoncity.gov.ph/program/qc-eservices/",
+        "https://www.makati.gov.ph/makatizen",
+        "https://www.makati-eboss.ph/"
+      ],
+      "separateAuthority": "Quezon City and Makati are separate LGUs; e-BOSS also has national regulatory framing"
+    }
+  ],
+  "functions": [
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 1,
+      "benchmarkFunction": "Civil contact and requests",
+      "benchmarkProgram": "120 Dasan",
+      "nigerianFunctionalAdaptation": "Local issue intake and status feedback",
+      "linkedModules": [
+        "LGA-01"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Councils may refer to competent State agency",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 2,
+      "benchmarkFunction": "Local tax billing",
+      "benchmarkProgram": "Seoul ETAX",
+      "nigerianFunctionalAdaptation": "Published statutory assessment and proof of payment",
+      "linkedModules": [
+        "LGA-09",
+        "LGA-10",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Council beneficiary and law-bound charge",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 3,
+      "benchmarkFunction": "Geospatial visualization",
+      "benchmarkProgram": "Seoul S-Map",
+      "nigerianFunctionalAdaptation": "GIS layers for address and planning",
+      "linkedModules": [
+        "LGA-02",
+        "LGA-14"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "State title remains authoritative",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 4,
+      "benchmarkFunction": "Environmental telemetry",
+      "benchmarkProgram": "Seoul S-Dot",
+      "nigerianFunctionalAdaptation": "Non-personal environmental sensor events",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-03"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Station accuracy and safety thresholds are not statutory decisions",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 5,
+      "benchmarkFunction": "Ward works progress",
+      "benchmarkProgram": "Municipal project tracking",
+      "nigerianFunctionalAdaptation": "Inspection-linked milestone transparency",
+      "linkedModules": [
+        "LGA-08",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Audit acceptance by proper body",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 6,
+      "benchmarkFunction": "Civic consultation",
+      "benchmarkProgram": "Municipal participation services",
+      "nigerianFunctionalAdaptation": "Question-and-response/citizen feedback",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-08"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Consultation does not replace statutory public notice",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 7,
+      "benchmarkFunction": "Licensing discovery",
+      "benchmarkProgram": "Municipal e-services",
+      "nigerianFunctionalAdaptation": "Open permit catalog and cases",
+      "linkedModules": [
+        "LGA-02",
+        "LGA-04",
+        "LGA-07"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Issuer defined per permit",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 8,
+      "benchmarkFunction": "Market commerce",
+      "benchmarkProgram": "Local merchant and market services",
+      "nigerianFunctionalAdaptation": "Shop licence and market ticket interoperability",
+      "linkedModules": [
+        "LGA-04",
+        "LGA-10"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No market-platform revenue escrow",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 9,
+      "benchmarkFunction": "Resident assistance",
+      "benchmarkProgram": "120 Dasan multilingual services",
+      "nigerianFunctionalAdaptation": "Assisted case navigation",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-05",
+        "LGA-06"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No unconsented disclosure",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-01",
+      "city": "Seoul Metropolitan Government",
+      "domainOrdinal": 10,
+      "benchmarkFunction": "Service transparency",
+      "benchmarkProgram": "City financial and project information",
+      "nigerianFunctionalAdaptation": "Public aggregates and verifiable work record",
+      "linkedModules": [
+        "LGA-08",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "A public ledger does not prove settlement alone",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://english.seoul.go.kr/seouls-120-dasan-call-center-expands-multilingual-support-with-new-english-text-messaging/",
+        "https://etax.seoul.go.kr/"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 1,
+      "benchmarkFunction": "Service navigation",
+      "benchmarkProgram": "JAKI",
+      "nigerianFunctionalAdaptation": "Citizen case launch and discoverability",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-04"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Each agency owns final service",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 2,
+      "benchmarkFunction": "Local issue escalation",
+      "benchmarkProgram": "JAKI CRM",
+      "nigerianFunctionalAdaptation": "Ward to LGA to agency response workflow",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-08"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Escalation requires known responsibility matrix",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 3,
+      "benchmarkFunction": "Business permitting",
+      "benchmarkProgram": "JakEvo",
+      "nigerianFunctionalAdaptation": "License intake, renewal and inspections",
+      "linkedModules": [
+        "LGA-04",
+        "LGA-07"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Licensing powers verified by law",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 4,
+      "benchmarkFunction": "Building-related permissions",
+      "benchmarkProgram": "JakEvo",
+      "nigerianFunctionalAdaptation": "Site and permit review crosswalk",
+      "linkedModules": [
+        "LGA-02"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "State planning authority decides",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 5,
+      "benchmarkFunction": "Intermodal transport",
+      "benchmarkProgram": "JakLingko",
+      "nigerianFunctionalAdaptation": "Local park/transport validation",
+      "linkedModules": [
+        "LGA-10"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No fake cross-operator settlement agreement",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 6,
+      "benchmarkFunction": "Flood response",
+      "benchmarkProgram": "JAKI city incident data",
+      "nigerianFunctionalAdaptation": "Critical drainage and WASH incident tracking",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-03"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Emergency protocols independent",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 7,
+      "benchmarkFunction": "Local commerce",
+      "benchmarkProgram": "Jakarta business service ecosystem",
+      "nigerianFunctionalAdaptation": "Permits and merchant discovery",
+      "linkedModules": [
+        "LGA-04",
+        "LGA-10"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No exclusive merchant lock-in",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 8,
+      "benchmarkFunction": "Geo-coded works",
+      "benchmarkProgram": "Jakarta mapping/ward notices",
+      "nigerianFunctionalAdaptation": "Geo-linked repair and address references",
+      "linkedModules": [
+        "LGA-08",
+        "LGA-14"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No parcel ownership claims",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-02",
+      "city": "DKI Jakarta",
+      "domainOrdinal": 9,
+      "benchmarkFunction": "Health service access",
+      "benchmarkProgram": "Jakarta public services",
+      "nigerianFunctionalAdaptation": "Appointment/encounter handoff only",
+      "linkedModules": [
+        "LGA-05",
+        "LGA-11"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-09"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-011",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Health issuer and records remain separate",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.jakarta.go.id/pelayanan-dan-perizinan-lainnya",
+        "https://invest.jakarta.go.id/news/267/jakevo-for-faster-more-transparent-and-more-convenient-public-services"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 1,
+      "benchmarkFunction": "National citizen navigation",
+      "benchmarkProgram": "MyNa Portal",
+      "nigerianFunctionalAdaptation": "Authorization and status access",
+      "linkedModules": [
+        "LGA-05",
+        "LGA-06"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "National function not copied as council master",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 2,
+      "benchmarkFunction": "Local tax interchange",
+      "benchmarkProgram": "eLTAX",
+      "nigerianFunctionalAdaptation": "Standard tax message codes and reconciliation",
+      "linkedModules": [
+        "LGA-09",
+        "LGA-10",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Use valid council revenue schedule",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 3,
+      "benchmarkFunction": "Convenience-counter print issuance",
+      "benchmarkProgram": "Conveni-Kofu",
+      "nigerianFunctionalAdaptation": "Human-authorized printed credential requests",
+      "linkedModules": [
+        "LGA-05",
+        "LGA-06"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No unverified registrar seal",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 4,
+      "benchmarkFunction": "Resident identity verification",
+      "benchmarkProgram": "My Number Card services",
+      "nigerianFunctionalAdaptation": "Signed attribute attestation not raw NIN copying",
+      "linkedModules": [
+        "LGA-05",
+        "LGA-06"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Authority bound and privacy-safe",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 5,
+      "benchmarkFunction": "Household record requests",
+      "benchmarkProgram": "Municipal certificate services",
+      "nigerianFunctionalAdaptation": "Verified public extract request",
+      "linkedModules": [
+        "LGA-05"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-05"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "NPC source retains formal record",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 6,
+      "benchmarkFunction": "Assisted kiosks",
+      "benchmarkProgram": "Local convenience store terminals",
+      "nigerianFunctionalAdaptation": "Paper fallback and machine-readable verification",
+      "linkedModules": [
+        "LGA-04",
+        "LGA-05"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Public kiosk must never leak personal records",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 7,
+      "benchmarkFunction": "Municipal address records",
+      "benchmarkProgram": "City street and dwelling records",
+      "nigerianFunctionalAdaptation": "Address cross-index and gazette referencing",
+      "linkedModules": [
+        "LGA-14"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No legal title proof",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 8,
+      "benchmarkFunction": "Public health administration",
+      "benchmarkProgram": "Municipal appointment processes",
+      "nigerianFunctionalAdaptation": "Opt-in appointment notices",
+      "linkedModules": [
+        "LGA-11"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-04",
+        "BB-09"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-006",
+        "NS-RFC-011",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Medical data isolated",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-03",
+      "city": "Tokyo and Japanese municipalities",
+      "domainOrdinal": 9,
+      "benchmarkFunction": "Local government fiscal audit",
+      "benchmarkProgram": "eLTAX municipal accounting",
+      "nigerianFunctionalAdaptation": "Inter-institutional reporting/export",
+      "linkedModules": [
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-03",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Bank statement remains settlement authority",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.digital.go.jp/en/policies/mynumber/utilization/life-stage",
+        "https://www3.lg-waps.go.jp/01-04.html"
+      ]
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "domainOrdinal": 1,
+      "benchmarkFunction": "Cross-agency complaint routing",
+      "benchmarkProgram": "OneService",
+      "nigerianFunctionalAdaptation": "Jurisdiction-neutral dispatch and closure challenge",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-08"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No impersonation of town council",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ]
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "domainOrdinal": 2,
+      "benchmarkFunction": "Public housing account",
+      "benchmarkProgram": "My HDBPage",
+      "nigerianFunctionalAdaptation": "Premises and service-charge information",
+      "linkedModules": [
+        "LGA-02",
+        "LGA-09"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "HDB authority is not LGA land authority",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ]
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "domainOrdinal": 3,
+      "benchmarkFunction": "Voucher and merchant redemption",
+      "benchmarkProgram": "RedeemSG",
+      "nigerianFunctionalAdaptation": "Issuer-funded vouchers and recipient verification",
+      "linkedModules": [
+        "LGA-04",
+        "LGA-10"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No central voucher wallet assumption",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ]
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "domainOrdinal": 4,
+      "benchmarkFunction": "Estate maintenance",
+      "benchmarkProgram": "OneService/Town Councils",
+      "nigerianFunctionalAdaptation": "Public asset repair case tracking",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-08"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Operator signs repair inspection",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ]
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "domainOrdinal": 5,
+      "benchmarkFunction": "Sanitation incident services",
+      "benchmarkProgram": "OneService",
+      "nigerianFunctionalAdaptation": "WASH fault notifications",
+      "linkedModules": [
+        "LGA-03"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No auto hazardous discharge clearance",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ]
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "domainOrdinal": 6,
+      "benchmarkFunction": "Resident benefit support",
+      "benchmarkProgram": "RedeemSG programmes",
+      "nigerianFunctionalAdaptation": "Need-bound proof and counter assistance",
+      "linkedModules": [
+        "LGA-05",
+        "LGA-06"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Lawful purpose and eligibility decision required",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ]
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "domainOrdinal": 7,
+      "benchmarkFunction": "Health access notices",
+      "benchmarkProgram": "Public agency services",
+      "nigerianFunctionalAdaptation": "Nonclinical appointment and referral status",
+      "linkedModules": [
+        "LGA-11"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-04",
+        "BB-09"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-006",
+        "NS-RFC-011",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Clinical record is restricted",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ]
+    },
+    {
+      "cityId": "CITY-04",
+      "city": "Singapore municipal and national interfaces",
+      "domainOrdinal": 8,
+      "benchmarkFunction": "Service performance and audit",
+      "benchmarkProgram": "OneService/RedeemSG reporting",
+      "nigerianFunctionalAdaptation": "Agency referral metrics and audit event",
+      "linkedModules": [
+        "LGA-08",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Distinct agency metrics, no pooled master",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.oneservice.gov.sg/oneservice/oneservice-work/",
+        "https://www.tech.gov.sg/products-and-services/for-government-agencies/government-transactions/redeemsg/"
+      ]
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "domainOrdinal": 1,
+      "benchmarkFunction": "City complaint requests",
+      "benchmarkProgram": "NYC311",
+      "nigerianFunctionalAdaptation": "Service request life cycle",
+      "linkedModules": [
+        "LGA-01"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Appeal/reopen allowed",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ]
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "domainOrdinal": 2,
+      "benchmarkFunction": "Construction application",
+      "benchmarkProgram": "DOB NOW",
+      "nigerianFunctionalAdaptation": "Planning permits, versions and inspections",
+      "linkedModules": [
+        "LGA-02"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "NYC DOB is not court or land registry",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ]
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "domainOrdinal": 3,
+      "benchmarkFunction": "City account federation",
+      "benchmarkProgram": "NYC.ID login",
+      "nigerianFunctionalAdaptation": "Identity federation to issue-specific authorities",
+      "linkedModules": [
+        "LGA-04",
+        "LGA-05",
+        "LGA-06"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Login is not national ID or claim to indigene status",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ]
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "domainOrdinal": 4,
+      "benchmarkFunction": "Property fee inquiry",
+      "benchmarkProgram": "NYC finance",
+      "nigerianFunctionalAdaptation": "Assessment, objection, receipt and reconciliation",
+      "linkedModules": [
+        "LGA-09",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Use lawful Council rate only",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ]
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "domainOrdinal": 5,
+      "benchmarkFunction": "Water/sewer services",
+      "benchmarkProgram": "NYC municipal water services",
+      "nigerianFunctionalAdaptation": "Service interruption and charge dispute",
+      "linkedModules": [
+        "LGA-03"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Distinct water operator",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ]
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "domainOrdinal": 6,
+      "benchmarkFunction": "Work orders and roads",
+      "benchmarkProgram": "NYC311/DOT",
+      "nigerianFunctionalAdaptation": "Street repair ticket and spatial evidence",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-08",
+        "LGA-14"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Jurisdiction matching necessary",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ]
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "domainOrdinal": 7,
+      "benchmarkFunction": "Safety inspection",
+      "benchmarkProgram": "DOB NOW/agency code checks",
+      "nigerianFunctionalAdaptation": "Deficiency orders and remedy periods",
+      "linkedModules": [
+        "LGA-07"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Competent inspector signs",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ]
+    },
+    {
+      "cityId": "CITY-05",
+      "city": "New York City",
+      "domainOrdinal": 8,
+      "benchmarkFunction": "Public issue transparency",
+      "benchmarkProgram": "NYC open data",
+      "nigerianFunctionalAdaptation": "Auditable restricted/public views",
+      "linkedModules": [
+        "LGA-08",
+        "LGA-12",
+        "LGA-13"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-04",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Court information stays judicial",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://portal.311.nyc.gov/article/?kanumber=KA-02445",
+        "https://www.nyc.gov/site/buildings/dob/use-dob-now.page"
+      ]
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "domainOrdinal": 1,
+      "benchmarkFunction": "Permitting single window",
+      "benchmarkProgram": "SSW Alfa",
+      "nigerianFunctionalAdaptation": "Integrated application, multiagency decision states",
+      "linkedModules": [
+        "LGA-02",
+        "LGA-04",
+        "LGA-07"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Authority remains with permit issuer",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ]
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "domainOrdinal": 2,
+      "benchmarkFunction": "Citizen grievance",
+      "benchmarkProgram": "WargaKu",
+      "nigerianFunctionalAdaptation": "Ticket status and ward follow-up",
+      "linkedModules": [
+        "LGA-01"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Citizen appeal without premature closure",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ]
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "domainOrdinal": 3,
+      "benchmarkFunction": "Civil status processing",
+      "benchmarkProgram": "Klampid",
+      "nigerianFunctionalAdaptation": "Civil-event notices and official registrar handoff",
+      "linkedModules": [
+        "LGA-05",
+        "LGA-06"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "NPC/statutory issuer separation",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ]
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "domainOrdinal": 4,
+      "benchmarkFunction": "Health queueing",
+      "benchmarkProgram": "Puskesmas services",
+      "nigerianFunctionalAdaptation": "Clinic scheduling and patient referral",
+      "linkedModules": [
+        "LGA-11"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-04",
+        "BB-09"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-006",
+        "NS-RFC-011",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Do not expose clinical data in USSD",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ]
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "domainOrdinal": 5,
+      "benchmarkFunction": "Sanitation complaints",
+      "benchmarkProgram": "WargaKu",
+      "nigerianFunctionalAdaptation": "Wastewater/water issue intake",
+      "linkedModules": [
+        "LGA-03"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Contractor and WASH authority controls",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ]
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "domainOrdinal": 6,
+      "benchmarkFunction": "Ward maintenance",
+      "benchmarkProgram": "City works services",
+      "nigerianFunctionalAdaptation": "Site inspection and project milestones",
+      "linkedModules": [
+        "LGA-08"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Public work order is not paid receipt",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ]
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "domainOrdinal": 7,
+      "benchmarkFunction": "Municipal charges",
+      "benchmarkProgram": "City revenue portals",
+      "nigerianFunctionalAdaptation": "Fee reference and direct settlement",
+      "linkedModules": [
+        "LGA-09",
+        "LGA-10",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No assumed private collector authority",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ]
+    },
+    {
+      "cityId": "CITY-06",
+      "city": "City of Surabaya",
+      "domainOrdinal": 8,
+      "benchmarkFunction": "Local business access",
+      "benchmarkProgram": "SSW Alfa and resident services",
+      "nigerianFunctionalAdaptation": "Permit validation linked to address",
+      "linkedModules": [
+        "LGA-04",
+        "LGA-10",
+        "LGA-14"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Address reference not cadastral title",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://jdih.surabaya.go.id/uploads/peraturan/2023perwali3578093.pdf",
+        "https://wargaku.surabaya.go.id/"
+      ]
+    },
+    {
+      "cityId": "CITY-07",
+      "city": "Auckland Council and Auckland Transport",
+      "domainOrdinal": 1,
+      "benchmarkFunction": "Council household accounts",
+      "benchmarkProgram": "myAUCKLAND",
+      "nigerianFunctionalAdaptation": "Local account, rates and citizen notifications",
+      "linkedModules": [
+        "LGA-09",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Council-specific charge codes",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.aucklandcouncil.govt.nz/en/buying-property/order-property-report/order-lim.html",
+        "https://at.govt.nz/about-us/our-role-organisation/how-we-work"
+      ]
+    },
+    {
+      "cityId": "CITY-07",
+      "city": "Auckland Council and Auckland Transport",
+      "domainOrdinal": 2,
+      "benchmarkFunction": "Land Information Memoranda",
+      "benchmarkProgram": "Auckland Council LIM",
+      "nigerianFunctionalAdaptation": "Authorized parcel reports from source datasets",
+      "linkedModules": [
+        "LGA-02",
+        "LGA-14"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Land report not proof of legal ownership",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.aucklandcouncil.govt.nz/en/buying-property/order-property-report/order-lim.html",
+        "https://at.govt.nz/about-us/our-role-organisation/how-we-work"
+      ]
+    },
+    {
+      "cityId": "CITY-07",
+      "city": "Auckland Council and Auckland Transport",
+      "domainOrdinal": 3,
+      "benchmarkFunction": "Transit ticket and payment",
+      "benchmarkProgram": "Auckland Transport AT HOP",
+      "nigerianFunctionalAdaptation": "Signed transit/park pass interface",
+      "linkedModules": [
+        "LGA-10"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Council/AT institutional boundary and fare rules",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.aucklandcouncil.govt.nz/en/buying-property/order-property-report/order-lim.html",
+        "https://at.govt.nz/about-us/our-role-organisation/how-we-work"
+      ]
+    },
+    {
+      "cityId": "CITY-07",
+      "city": "Auckland Council and Auckland Transport",
+      "domainOrdinal": 4,
+      "benchmarkFunction": "Building consents",
+      "benchmarkProgram": "Council building services",
+      "nigerianFunctionalAdaptation": "Permits, inspection and reasoned decisions",
+      "linkedModules": [
+        "LGA-02",
+        "LGA-07"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Lawful planning officer required",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.aucklandcouncil.govt.nz/en/buying-property/order-property-report/order-lim.html",
+        "https://at.govt.nz/about-us/our-role-organisation/how-we-work"
+      ]
+    },
+    {
+      "cityId": "CITY-07",
+      "city": "Auckland Council and Auckland Transport",
+      "domainOrdinal": 5,
+      "benchmarkFunction": "Stormwater and water issues",
+      "benchmarkProgram": "Council/utility interfaces",
+      "nigerianFunctionalAdaptation": "Utility failure reporting, escalation",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-03"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Water operator records independent",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.aucklandcouncil.govt.nz/en/buying-property/order-property-report/order-lim.html",
+        "https://at.govt.nz/about-us/our-role-organisation/how-we-work"
+      ]
+    },
+    {
+      "cityId": "CITY-07",
+      "city": "Auckland Council and Auckland Transport",
+      "domainOrdinal": 6,
+      "benchmarkFunction": "Council procurement",
+      "benchmarkProgram": "Council projects",
+      "nigerianFunctionalAdaptation": "Contract milestone open data",
+      "linkedModules": [
+        "LGA-08",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "OCDS where appropriate",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.aucklandcouncil.govt.nz/en/buying-property/order-property-report/order-lim.html",
+        "https://at.govt.nz/about-us/our-role-organisation/how-we-work"
+      ]
+    },
+    {
+      "cityId": "CITY-07",
+      "city": "Auckland Council and Auckland Transport",
+      "domainOrdinal": 7,
+      "benchmarkFunction": "Civic addresses",
+      "benchmarkProgram": "Council street/parcel references",
+      "nigerianFunctionalAdaptation": "Street/address correction and aliases",
+      "linkedModules": [
+        "LGA-14"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Postal interoperability only with agreement",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://www.aucklandcouncil.govt.nz/en/buying-property/order-property-report/order-lim.html",
+        "https://at.govt.nz/about-us/our-role-organisation/how-we-work"
+      ]
+    },
+    {
+      "cityId": "CITY-08",
+      "city": "Quezon City / City of Makati",
+      "domainOrdinal": 1,
+      "benchmarkFunction": "Resident credential",
+      "benchmarkProgram": "QCitizen ID / Makatizen",
+      "nigerianFunctionalAdaptation": "Locally issued residence service token",
+      "linkedModules": [
+        "LGA-05",
+        "LGA-06"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Do not copy unified municipal resident database",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://quezoncity.gov.ph/program/qcitizen-id/",
+        "https://quezoncity.gov.ph/program/qc-eservices/",
+        "https://www.makati.gov.ph/makatizen",
+        "https://www.makati-eboss.ph/"
+      ]
+    },
+    {
+      "cityId": "CITY-08",
+      "city": "Quezon City / City of Makati",
+      "domainOrdinal": 2,
+      "benchmarkFunction": "Digital service portal",
+      "benchmarkProgram": "QC e-Services",
+      "nigerianFunctionalAdaptation": "Unified navigation and request tracking",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-04",
+        "LGA-05"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Each issuer remains independent",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://quezoncity.gov.ph/program/qcitizen-id/",
+        "https://quezoncity.gov.ph/program/qc-eservices/",
+        "https://www.makati.gov.ph/makatizen",
+        "https://www.makati-eboss.ph/"
+      ]
+    },
+    {
+      "cityId": "CITY-08",
+      "city": "Quezon City / City of Makati",
+      "domainOrdinal": 3,
+      "benchmarkFunction": "Business one-stop shop",
+      "benchmarkProgram": "Makati e-BOSS",
+      "nigerianFunctionalAdaptation": "Combined business permit intake and review",
+      "linkedModules": [
+        "LGA-02",
+        "LGA-04",
+        "LGA-07"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Business issuance according to specific legal power",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://quezoncity.gov.ph/program/qcitizen-id/",
+        "https://quezoncity.gov.ph/program/qc-eservices/",
+        "https://www.makati.gov.ph/makatizen",
+        "https://www.makati-eboss.ph/"
+      ]
+    },
+    {
+      "cityId": "CITY-08",
+      "city": "Quezon City / City of Makati",
+      "domainOrdinal": 4,
+      "benchmarkFunction": "Real-property taxation",
+      "benchmarkProgram": "QC/Makati property tax",
+      "nigerianFunctionalAdaptation": "Lawful assessment and transparency",
+      "linkedModules": [
+        "LGA-09",
+        "LGA-12"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-03",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No unverified council rate powers",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://quezoncity.gov.ph/program/qcitizen-id/",
+        "https://quezoncity.gov.ph/program/qc-eservices/",
+        "https://www.makati.gov.ph/makatizen",
+        "https://www.makati-eboss.ph/"
+      ]
+    },
+    {
+      "cityId": "CITY-08",
+      "city": "Quezon City / City of Makati",
+      "domainOrdinal": 5,
+      "benchmarkFunction": "Market/merchant access",
+      "benchmarkProgram": "City trade services",
+      "nigerianFunctionalAdaptation": "Public licence and ticket checks",
+      "linkedModules": [
+        "LGA-04",
+        "LGA-10"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "No exclusive vendor channel",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://quezoncity.gov.ph/program/qcitizen-id/",
+        "https://quezoncity.gov.ph/program/qc-eservices/",
+        "https://www.makati.gov.ph/makatizen",
+        "https://www.makati-eboss.ph/"
+      ]
+    },
+    {
+      "cityId": "CITY-08",
+      "city": "Quezon City / City of Makati",
+      "domainOrdinal": 6,
+      "benchmarkFunction": "Resident benefit support",
+      "benchmarkProgram": "City social assistance",
+      "nigerianFunctionalAdaptation": "Case eligibility referral",
+      "linkedModules": [
+        "LGA-06",
+        "LGA-11"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06",
+        "BB-09"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-006",
+        "NS-RFC-009",
+        "NS-RFC-011",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Human review and privacy by design",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://quezoncity.gov.ph/program/qcitizen-id/",
+        "https://quezoncity.gov.ph/program/qc-eservices/",
+        "https://www.makati.gov.ph/makatizen",
+        "https://www.makati-eboss.ph/"
+      ]
+    },
+    {
+      "cityId": "CITY-08",
+      "city": "Quezon City / City of Makati",
+      "domainOrdinal": 7,
+      "benchmarkFunction": "City service feedback",
+      "benchmarkProgram": "City feedback portals",
+      "nigerianFunctionalAdaptation": "Grievance, road and works tracking",
+      "linkedModules": [
+        "LGA-01",
+        "LGA-08",
+        "LGA-14"
+      ],
+      "linkedBuildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "linkedRfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-014"
+      ],
+      "authorityBoundary": "Accountable agency receives escalation",
+      "evidenceBasis": "SOURCE_PLATFORM_CITED_FUNCTIONAL_MAPPING_RESEARCH_PROPOSAL",
+      "platformSources": [
+        "https://quezoncity.gov.ph/program/qcitizen-id/",
+        "https://quezoncity.gov.ph/program/qc-eservices/",
+        "https://www.makati.gov.ph/makatizen",
+        "https://www.makati-eboss.ph/"
+      ]
+    }
+  ],
+  "reverseLgaCoverage": [
+    {
+      "moduleId": "LGA-01",
+      "moduleName": "CouncilComplain",
+      "pillar": "D",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-07",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 15,
+      "stateDimensions": [
+        "DIM-05",
+        "DIM-08"
+      ]
+    },
+    {
+      "moduleId": "LGA-02",
+      "moduleName": "BuildClear",
+      "pillar": "B",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-07",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 9,
+      "stateDimensions": [
+        "DIM-02",
+        "DIM-08"
+      ]
+    },
+    {
+      "moduleId": "LGA-03",
+      "moduleName": "WashConnect",
+      "pillar": "D",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-07"
+      ],
+      "benchmarkFunctions": 6,
+      "stateDimensions": [
+        "DIM-05",
+        "DIM-08"
+      ]
+    },
+    {
+      "moduleId": "LGA-04",
+      "moduleName": "ShopPermit",
+      "pillar": "B",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-03",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 13,
+      "stateDimensions": [
+        "DIM-05"
+      ]
+    },
+    {
+      "moduleId": "LGA-05",
+      "moduleName": "VitalProof",
+      "pillar": "C",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-03",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 12,
+      "stateDimensions": [
+        "DIM-05"
+      ]
+    },
+    {
+      "moduleId": "LGA-06",
+      "moduleName": "IndigeneProof",
+      "pillar": "C",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-03",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 9,
+      "stateDimensions": [
+        "DIM-05"
+      ]
+    },
+    {
+      "moduleId": "LGA-07",
+      "moduleName": "SafetyNOC",
+      "pillar": "B",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-05",
+        "CITY-06",
+        "CITY-07",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 6,
+      "stateDimensions": [
+        "DIM-05"
+      ]
+    },
+    {
+      "moduleId": "LGA-08",
+      "moduleName": "WardWorks",
+      "pillar": "B",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-07",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 13,
+      "stateDimensions": [
+        "DIM-06"
+      ]
+    },
+    {
+      "moduleId": "LGA-09",
+      "moduleName": "TenementRate",
+      "pillar": "A",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-03",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-07",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 7,
+      "stateDimensions": [
+        "DIM-03"
+      ]
+    },
+    {
+      "moduleId": "LGA-10",
+      "moduleName": "MarketCollect",
+      "pillar": "A",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-03",
+        "CITY-04",
+        "CITY-06",
+        "CITY-07",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 10,
+      "stateDimensions": [
+        "DIM-03",
+        "DIM-07"
+      ]
+    },
+    {
+      "moduleId": "LGA-11",
+      "moduleName": "WardPHC",
+      "pillar": "D",
+      "benchmarkCityIds": [
+        "CITY-02",
+        "CITY-03",
+        "CITY-04",
+        "CITY-06",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 5,
+      "stateDimensions": [
+        "DIM-04"
+      ]
+    },
+    {
+      "moduleId": "LGA-12",
+      "moduleName": "CouncilLedger",
+      "pillar": "A",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-03",
+        "CITY-04",
+        "CITY-05",
+        "CITY-06",
+        "CITY-07",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 12,
+      "stateDimensions": [
+        "DIM-03"
+      ]
+    },
+    {
+      "moduleId": "LGA-13",
+      "moduleName": "CustomaryDocket",
+      "pillar": "D",
+      "benchmarkCityIds": [
+        "CITY-05"
+      ],
+      "benchmarkFunctions": 1,
+      "stateDimensions": [
+        "DIM-01"
+      ]
+    },
+    {
+      "moduleId": "LGA-14",
+      "moduleName": "StreetGrid",
+      "pillar": "C",
+      "benchmarkCityIds": [
+        "CITY-01",
+        "CITY-02",
+        "CITY-03",
+        "CITY-05",
+        "CITY-06",
+        "CITY-07",
+        "CITY-08"
+      ],
+      "benchmarkFunctions": 8,
+      "stateDimensions": [
+        "DIM-02",
+        "DIM-05",
+        "DIM-07",
+        "DIM-08"
+      ]
+    }
+  ],
+  "bbCoverageInMunicipalFunctions": [
+    "BB-01",
+    "BB-02",
+    "BB-03",
+    "BB-04",
+    "BB-05",
+    "BB-06",
+    "BB-09",
+    "BB-10"
+  ],
+  "unmappedBbs": "BB-08 trade corridor and BB-12 agent controls are cross-sector extensions, not artificial named city-service matches"
+}
