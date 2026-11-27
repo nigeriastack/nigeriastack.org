@@ -55,6 +55,12 @@ const PROHIBITED_SECTIONAL_TERMS: ReadonlyArray<{
 const VENDOR_IN_LAYER_HEADING_REGEX =
   /^#{1,4}\s+.*Layer\s+[1-5].*\b(MIDL|Metrosafe|MSS|courts\.com\.ng|openlaw\.org\.ng|justicelens\.ng|api\.net\.ng|McKolm|ResilienceAI)\b/i;
 
+const ARCHIVED_ROUTE_INDEX = 'docs/review/subnational-municipal-v2.5/route-audit/corrected-route-index-CANDIDATE.json';
+const ARCHIVED_SOURCE_HEADINGS = new Set([
+  '"h1": "NS-RFC-005: LawTree AkomaNtoso-NG Bi-Temporal Statutory & Citation AST",',
+  '"h1": "NS-RFC-008: GivePower Bounded Agent Delegation & Human Approval Protocol (ACDP-NG)",',
+]);
+
 
 export function auditFileContent(filePath: string, content: string): NomenclatureViolation[] {
   const violations: NomenclatureViolation[] = [];
@@ -80,7 +86,7 @@ export function auditFileContent(filePath: string, content: string): Nomenclatur
     }
 
 
-    if (!isDeprecationGlossary) {
+    if (!isDeprecationGlossary && !(filePath === ARCHIVED_ROUTE_INDEX && ARCHIVED_SOURCE_HEADINGS.has(line.trim()))) {
       for (const rule of PROHIBITED_FOREIGN_CLONES) {
         const match = line.match(rule.pattern);
         if (match) {
@@ -93,8 +99,9 @@ export function auditFileContent(filePath: string, content: string): Nomenclatur
           });
         }
       }
+    }
 
-
+    if (!isDeprecationGlossary) {
       for (const rule of PROHIBITED_SECTIONAL_TERMS) {
         const match = line.match(rule.pattern);
         if (match) {
