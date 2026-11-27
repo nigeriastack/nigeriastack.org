@@ -1,0 +1,10 @@
+{
+  "kind": "spoken-accessibility",
+  "buildReceiptSha256": "",
+  "profiles": [
+    {"id": "nvda-windows", "os": "Windows", "reader": "NVDA", "results": []},
+    {"id": "voiceover-ios", "os": "iOS", "browser": "Safari", "reader": "VoiceOver", "results": []},
+    {"id": "talkback-android", "os": "Android", "browser": "Chrome", "reader": "TalkBack", "results": []}
+  ],
+  "findings": []
+}

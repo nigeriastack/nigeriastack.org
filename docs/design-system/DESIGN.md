@@ -261,3 +261,24 @@ button, a.ns-btn, select, input, summary {
 ## Corrected v2.1 contrast boundary — 17 November 2026
 
 The token-pair calculations in `contrast-measurements-2026-11-17.csv` replace the earlier numerical ratios. Federal green #008751 against parchment #F8FAF8 is approximately4.37:1 and fails AA for normal-sized text; reserve it for appropriate non-text/large-use contexts. White on deep emerald is approximately8.09:1. A token-pair calculation is not component-level accessibility certification. Browser measurements for focus, hover, forced colors, fonts and native200%/400%zoom remain separate evidence requirements. The44px target policy exceeds some WCAG minimum cases; it is a project policy, not a blanket statement of WCAG2.2AA. SVG basic-phone dial strings in historical design examples are unverified examples and are not provisioned services.
+
+## Task-first v2.5 review components
+
+The November 26 review uses the existing DTCG palette, the approved 660 by 110 lockup and the documented serif, sans and monospace stacks. The successor source is `apps/archive-web-v25/review.css`, with state and content bindings in `parent_review.py`, `review_copy.py` and `review.mjs`. On the parent surfaces the task appears ahead of detailed source material. The full Open Standards & Non-Impersonation notice appears after the shared footer links on the seven parent pages only. It uses the fine-print text size and the secondary ink token on the footer surface.
+
+| Surface | Component and interaction |
+| --- | --- |
+| Home | Task links beside a text-labelled architecture. The same layer order reads vertically on narrow screens. |
+| Industries and specifications | Exact or topical lookup, labelled facets and explicit result counts. Industries uses a comparison table at wide widths, a serial list on narrow screens and an export of the filtered set. Additional facets collapse in a native disclosure at narrow widths. |
+| Protocols and Atlas | Task or record-type selection with direct routes to source, jurisdiction and municipal workflows. Reports distinguish proposed design, directory identity and service readiness. |
+| Conformance | Sample text and digest check with local outcome and unsigned download. Editing clears the former result. Verified protocol references appear with availability text. |
+| Governance | Six addressable native disclosures, sourced remit and RFC links, a local draft and addressable FAQ answers. Shared links open and focus the matching disclosure. |
+| Supporting records | The owning collection appears near the record. Returning from search or a filtered list restores the recorded URL state. Reference-only and unassessed states use explicit text. |
+
+Retain the source language and title when a verified translation is unavailable. All viewports use the same DOM reading order. Forced colours maintains native system contrast. State changes have no animated dependency. The archive review uses the current website tokens with the project touch-target policy and keeps long technical artifacts in their own labelled scroll region.
+
+### Approved lockup and shared footer
+
+Apply the [brand and editorial guidelines](BRAND-AND-EDITORIAL-GUIDELINES.md) for the original v2.3 lockup, its visible framing, copy style and footer destination policy. The shared footer keeps discovery, project governance and developer resources distinct. Its GitHub link leads to the project source. The seven parents carry the full institutional notice at the end of the footer in fine print. Supporting pages carry the shared identity and links.
+
+Primary civic headings and controls use descriptive labels. Exact technical material opens in the reader's source disclosure. Keep source identifiers available for lookup, citation or correction. Corrected labels preserve their archive fragments.
