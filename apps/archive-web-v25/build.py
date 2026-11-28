@@ -461,6 +461,10 @@ def main():
         "publicIndexVersion": index_version,
         "deploymentFiles": deploy_files,
     }
+    if review:
+        from audit_editorial import verify_copy
+
+        verify_copy(arguments.output, receipt)
     arguments.receipt.write_text(json.dumps(receipt, indent=2, ensure_ascii=False) + "\n")
     print(f"Rendered {len(results)} pages and {len(corrections)} governance anchors.")
     print(f"Checked {internal} internal links; {len(invalid)} lack a local target.")

@@ -11,10 +11,19 @@ import re
 from lxml import html
 
 from parent_review import GITHUB_ORG, SPECIFICATION_REPO
-from review_copy import PARENT_COPY
+from review_copy import GUIDE_COPY, PARENT_COPY
 
 DECORATIVE = re.compile(r'[\d\[\]✓☑≤≥±·]')
 NOTICE = 'Open Standards & Non-Impersonation Notice'
+EXECUTIVE_SUMMARY = re.compile(r'\bexecutive[\s-]+summary\b', re.I)
+NUMBERED_SECTION = re.compile(
+    r'^(?:(?:section|chapter|part|phase|step|appendix)\s+(?:\d+|[ivxlcdm]+|[a-z])\b|'
+    r'\(?(?:\d+(?:\.\d+)*|[ivxlcdm]+)\)?[.)]\s+|\d+(?:\.\d+)*\s*[:–—]\s+)', re.I,
+)
+THESIS_HEADING = re.compile(
+    r'^(?:abstract|preface|introduction|table of contents|literature review|'
+    r'(?:research )?methodology|results and discussion|conclusions?)\s*[:.]?$', re.I,
+)
 
 
 def normalized(node):
@@ -30,6 +39,21 @@ def page_path(directory, route):
     return directory / route.strip('/') / 'index.html'
 
 
+def verify_presentation(page, main, route):
+    text = ' '.join(' '.join(page.xpath('//title/text()|//meta[@name="description"]/@content|//body//text()')).split())
+    verify(not EXECUTIVE_SUMMARY.search(text), f'Executive summary copy at {route}')
+    labels = page.xpath('//h1|//h2|//h3|//h4|//h5|//h6|//summary|//caption|//a|//button|//label')
+    for label in labels:
+        value = normalized(label) if label.tag != 'label' else ' '.join(label.xpath('./text()')).strip()
+        verify(not NUMBERED_SECTION.search(value), f'Numbered presentation label at {route}: {value}')
+        if label.tag in ('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'summary'):
+            verify(not THESIS_HEADING.search(value), f'Generic thesis heading at {route}: {value}')
+    ordered = main.xpath('.//ol')
+    verify(all(node.xpath('ancestor::details[not(@open) and contains(concat(" ",normalize-space(@class)," ")," technical-requirements ")]')
+               for node in ordered), f'Ordered list outside protected technical requirements at {route}')
+    return len(labels), len(ordered)
+
+
 def verify_copy(directory, receipt):
     observed = Counter()
     rows = []
@@ -41,6 +65,15 @@ def verify_copy(directory, receipt):
         heading, = main.xpath('.//h1')
         title = page.findtext('head/title')
         description, = page.xpath('//meta[@name="description"]/@content')
+        lead, = main.xpath('.//p[@class="lead"]')
+        authored = PARENT_COPY.get(route) or GUIDE_COPY.get(route)
+        if authored:
+            verify(normalized(heading) == authored['h1'] and normalized(lead) == authored['lead'],
+                   f'Rendering differs from the reviewed heading or lead at {route}')
+            observed['reviewedHeadingAndLeadBindings'] += 1
+        all_labels, technical_lists = verify_presentation(page, main, route)
+        observed['allPresentationLabels'] += all_labels
+        observed['technicalListsRetainingOrderSemantics'] += technical_lists
         verify(page.xpath('//link[@rel="canonical"]/@href') == ['https://nigeriastack.org' + route], f'Canonical URL changed at {route}')
         labels = main.xpath('(.//h1|.//h2|.//h3|.//h4|.//summary|.//label|.//button)[not(ancestor::details[not(@open)]) and not(ancestor-or-self::*[@hidden])]')
         labels += main.xpath('.//details[not(@open) and not(ancestor::details[not(@open)])]/summary[not(ancestor-or-self::*[@hidden])]')
@@ -70,11 +103,14 @@ def verify_copy(directory, receipt):
                    [(item['name'], item['acceptedAnswer']['text']) for item in items] == visible_answers,
                    'Governance answers differ from their structured record')
             observed['faqPairs'] += len(items)
-        lead, = main.xpath('.//p[@class="lead"]')
         primary = ' '.join(main.xpath('.//text()[not(ancestor::details[not(@open)]) and not(ancestor::*[@hidden])]'))
         details = [normalized(node) for node in main.xpath('.//details[not(@open) and not(ancestor::details[not(@open)])]')]
         rows.append((route, title, description, normalized(heading), normalized(lead), ' '.join(primary.split()), '\n\n'.join(details)))
     verify(len(rows) == 955, 'Expected 955 reviewed page records')
+    verify(observed['reviewedHeadingAndLeadBindings'] == len(PARENT_COPY) + len(GUIDE_COPY),
+           'Reviewed heading and lead coverage differs from the source deck')
+    verify('.technical-requirements ol { list-style-type: disc; }' in (directory / '_assets/review.css').read_text(),
+           'Technical requirements must render list markers as bullets')
     verify(len({row[1] for row in rows}) == len({row[2] for row in rows}) == 955, 'Titles or descriptions are duplicated')
     return rows, dict(pages=len(rows), **observed)
 
