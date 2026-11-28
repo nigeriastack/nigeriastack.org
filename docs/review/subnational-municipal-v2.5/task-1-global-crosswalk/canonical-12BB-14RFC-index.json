@@ -1,0 +1,126 @@
+{
+  "identity": "charter-ratified independent commons; RFC lifecycle remains per RFC",
+  "buildingBlocks": [
+    {
+      "id": "BB-01",
+      "name": "Federated statutory identity and issuer bridges"
+    },
+    {
+      "id": "BB-02",
+      "name": "KioskBase offline registry shell and edge"
+    },
+    {
+      "id": "BB-03",
+      "name": "Confluence signed async transport and workflow"
+    },
+    {
+      "id": "BB-04",
+      "name": "ClearAm lawful-basis and purpose controls"
+    },
+    {
+      "id": "BB-05",
+      "name": "SureEvidence cryptographic evidence/provenance"
+    },
+    {
+      "id": "BB-06",
+      "name": "SplitDirect treasury pass-through"
+    },
+    {
+      "id": "BB-07",
+      "name": "MarketLink interoperable commerce"
+    },
+    {
+      "id": "BB-08",
+      "name": "TradeCorridor customs and evidence"
+    },
+    {
+      "id": "BB-09",
+      "name": "NDHX health/clinical exchange"
+    },
+    {
+      "id": "BB-10",
+      "name": "LandGuard spatial references and address mapping"
+    },
+    {
+      "id": "BB-11",
+      "name": "LawTree statutory AST and interoperable schema"
+    },
+    {
+      "id": "BB-12",
+      "name": "GivePower bounded, counter-signed delegation"
+    }
+  ],
+  "rfcs": [
+    {
+      "id": "NS-RFC-001",
+      "name": "Five-layer hourglass/12 BB reference",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-002",
+      "name": "Confluence signed async transport",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-003",
+      "name": "Workflow state and safe retry",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-004",
+      "name": "KioskBase offline HLC/CRDT",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-005",
+      "name": "SureEvidence record/issuer evidence",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-006",
+      "name": "ClearAm purpose and lawful basis",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-007",
+      "name": "MarketLink open commerce",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-008",
+      "name": "GivePower agent delegation",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-009",
+      "name": "SplitDirect treasury routing",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-010",
+      "name": "TradeCorridor customs mesh",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-011",
+      "name": "NDHX health profile",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-012",
+      "name": "AgriTrust farm polygons",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-013",
+      "name": "LawTree 5-locale statute AST",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    },
+    {
+      "id": "NS-RFC-014",
+      "name": "774-jurisdiction municipal governance",
+      "lifecycle": "Use current standards registry; not inferred from charter"
+    }
+  ],
+  "commonNote": "NS-RFC-012 is AgriTrust; LandGuard is BB-10 / spatial integration profile, not redefined as RFC-012"
+}

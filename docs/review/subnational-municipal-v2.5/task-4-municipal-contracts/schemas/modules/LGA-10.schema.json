@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-10.schema.json",
+  "title": "LGA-10 MarketCollect submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "marketOrParkRef",
+    "chargeCode",
+    "paymentIntentRef"
+  ],
+  "properties": {
+    "marketOrParkRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chargeCode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "paymentIntentRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "permittedRouteRef": {
+      "type": "string"
+    },
+    "confirmedSettlementRef": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

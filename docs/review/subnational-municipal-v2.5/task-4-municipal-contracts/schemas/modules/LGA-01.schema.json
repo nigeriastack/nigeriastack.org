@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-01.schema.json",
+  "title": "LGA-01 CouncilComplain submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "serviceCategory",
+    "wardCode",
+    "issueDescription"
+  ],
+  "properties": {
+    "serviceCategory": {
+      "type": "string",
+      "minLength": 1
+    },
+    "wardCode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "issueDescription": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locationRef": {
+      "type": "string"
+    },
+    "hazardSeverity": {
+      "type": "string"
+    },
+    "photoDigest": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

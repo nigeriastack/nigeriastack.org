@@ -1,0 +1,896 @@
+{
+  "status": "candidate implementation specifications, not deployed services",
+  "governingRFC": "NS-RFC-014",
+  "modules": [
+    {
+      "id": "LGA-01",
+      "name": "CouncilComplain",
+      "pillar": "D",
+      "scope": "Council infrastructure complaint intake; assigned responsible service owner",
+      "actors": "Resident, ward officer, competent public works authority",
+      "fields": "Ward, location, category, description, attachment digest",
+      "stateMachine": [
+        "FILED_OFFLINE",
+        "ASSIGNED_WARD_OFFICER",
+        "GEO_PHOTO_ATTESTED_S84",
+        "CITIZEN_CLOSED"
+      ],
+      "portal": "Submit, track, add evidence, dispute premature closure",
+      "ussd": "USSD complaint reference + category; counter transcribes signed intake",
+      "evidence": "Issue ID; ward; safety risk; location reference",
+      "guard": "No citizen-forced closure; responsible agency verifies and provides appeal",
+      "mechanisms": [
+        "MECH-02",
+        "MECH-06"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-01-council-complain",
+      "authorityOfRecord": "Public works/council or responsible State utility",
+      "workflowCategory": "Civic grievance",
+      "canonicalDataFields": [
+        "serviceCategory",
+        "wardCode",
+        "locationRef",
+        "hazardSeverity",
+        "issueDescription",
+        "photoDigest"
+      ],
+      "expandedStateMachine": [
+        "FILED_OFFLINE",
+        "VALIDATED",
+        "REFERRED_TO_COMPETENT_AUTHORITY",
+        "WORK_IN_PROGRESS",
+        "EVIDENCE_SUBMITTED",
+        "CITIZEN_REVIEW",
+        "CLOSED",
+        "REOPENED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-01",
+      "publicRoute": "/protocols/lga-governance-stack/lga-01-council-complain",
+      "proposedUsSdMenu": "Complaint receipt on basic phone; no sensitive narrative",
+      "safetyAndLegalGate": "No citizen-forced closure, publish accountability trail without personal details",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-02",
+      "name": "BuildClear",
+      "pillar": "B",
+      "scope": "Local building/planning application where legally competent",
+      "actors": "Owner, planner, state planning authority, council inspector",
+      "fields": "Site reference, intended works, setback schedule version, title-claim disclaimer",
+      "stateMachine": [
+        "APPLICATION_LOGGED",
+        "LANDGUARD_GRID_CHECKED",
+        "SETBACK_INSPECTED",
+        "S84_QR_PERMIT_SEALED"
+      ],
+      "portal": "Apply, track plan review, request inspection",
+      "ussd": "USSD status only; paper plan and assisted submission",
+      "evidence": "Approved gazetted rule; map tolerance; inspection evidence",
+      "guard": "No permit until competent authority signs; grid cannot prove title",
+      "mechanisms": [
+        "MECH-03",
+        "MECH-05"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-02-build-clear",
+      "authorityOfRecord": "Authorized state/FCT town planning authority or lawfully delegated council",
+      "workflowCategory": "Building permission",
+      "canonicalDataFields": [
+        "parcelRef",
+        "setbackPlanRef",
+        "permitType",
+        "landAuthorityResponseRef",
+        "inspectionDigest"
+      ],
+      "expandedStateMachine": [
+        "DRAFT",
+        "LODGED",
+        "LAND_QUERY_PENDING",
+        "INSPECTION_PENDING",
+        "DECISION_AWAITING_AUTHORITY",
+        "APPROVED",
+        "REJECTED",
+        "REVOKED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-02",
+      "publicRoute": "/protocols/lga-governance-stack/lga-02-build-clear",
+      "proposedUsSdMenu": "Check application reference only",
+      "safetyAndLegalGate": "Parcel match and caveat merely alert; human planning judgment required",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-03",
+      "name": "WashConnect",
+      "pillar": "D",
+      "scope": "Water/sanitation complaint and scheduled desludging",
+      "actors": "Resident, sanitation contractor, treatment plant officer",
+      "fields": "Service request, asset, approved tariff, plant discharge hash",
+      "stateMachine": [
+        "DESLUDGE_REQUESTED",
+        "TARIFF_LOCKED_SPLITDIRECT",
+        "TREATMENT_PLANT_QR_DISCHARGE_VERIFIED",
+        "SETTLED"
+      ],
+      "portal": "Report burst or sanitation issue, schedule service, verify completion",
+      "ussd": "USSD service ticket and confirmation; counter dispatch",
+      "evidence": "Treat plant identification, lawful fee, delivery verification",
+      "guard": "No final settlement assertion until bank/plant confirmation; protect address",
+      "mechanisms": [
+        "MECH-04",
+        "MECH-06"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-03-wash-connect",
+      "authorityOfRecord": "Legally competent water/sanitation utility and council",
+      "workflowCategory": "WASH service",
+      "canonicalDataFields": [
+        "assetId",
+        "workType",
+        "operatorPermitRef",
+        "serviceChargeScheduleRef",
+        "deliveryProofDigest"
+      ],
+      "expandedStateMachine": [
+        "REQUESTED",
+        "ASSIGNED",
+        "WORK_RECORDED",
+        "TREATMENT_CONFIRMED",
+        "CHARGE_ASSESSED",
+        "SETTLEMENT_PENDING",
+        "COMPLETE"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-03",
+      "publicRoute": "/protocols/lga-governance-stack/lga-03-wash-connect",
+      "proposedUsSdMenu": "Service booking and receipt reference; no health data",
+      "safetyAndLegalGate": "Distinguish public tariff principal from permitted private contractor compensation",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-04",
+      "name": "ShopPermit",
+      "pillar": "B",
+      "scope": "Stall/shop and trading premises licensing as enabled by law",
+      "actors": "Trader, authorized licensing official, treasury officer",
+      "fields": "Business alias, stall ID, fee schedule ID, permit expiry",
+      "stateMachine": [
+        "ASSESSED_BY_SCHEDULE",
+        "SPLITDIRECT_PAID_TO_LGA",
+        "S84_QR_SHOP_STICKER_ISSUED",
+        "ACTIVE_VERIFIABLE"
+      ],
+      "portal": "Assess, pay directly, download status and verified permit",
+      "ussd": "USSD amount query; paper receipt verification",
+      "evidence": "Published fee authority; binding business location; receipt",
+      "guard": "Reject invented taxes, unauthorized issuance and third-party escrow",
+      "mechanisms": [
+        "MECH-05",
+        "MECH-07"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-04-shop-permit",
+      "authorityOfRecord": "Authorized local licensing council or state regulator",
+      "workflowCategory": "Shop licence",
+      "canonicalDataFields": [
+        "premisesRef",
+        "licenceType",
+        "tradeCategory",
+        "rateCode",
+        "tradingPermitExpiry"
+      ],
+      "expandedStateMachine": [
+        "APPLICATION_RECEIVED",
+        "CHARGE_PUBLISHED",
+        "INSPECTION_IF_REQUIRED",
+        "PAID_CONFIRMED",
+        "ISSUED",
+        "SUSPENDED",
+        "EXPIRED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-04",
+      "publicRoute": "/protocols/lga-governance-stack/lga-04-shop-permit",
+      "proposedUsSdMenu": "Request, check assessment, verify public license",
+      "safetyAndLegalGate": "No overlapping state licence impersonation; fee authority is recorded",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-05",
+      "name": "VitalProof",
+      "pillar": "C",
+      "scope": "Notification and certified-registration referral for life events",
+      "actors": "Family informant, NPC/competent registrar, caseworker",
+      "fields": "Event type/date, restricted family details, registrar routing key",
+      "stateMachine": [
+        "CAPTURED_OFFLINE_HLC",
+        "NPC_NIN_BRIDGE_QUEUED",
+        "REGISTRAR_FIDO2_S84_SEALED",
+        "ENROLLED_VERIFIABLE"
+      ],
+      "portal": "Capture notification and request lawful certificate verification",
+      "ussd": "USSD reference/status only; private counter appointment",
+      "evidence": "Event notification, issuer response, evidence verification",
+      "guard": "Offline draft is not official NPC birth/death registration",
+      "mechanisms": [
+        "MECH-05",
+        "MECH-06"
+      ],
+      "buildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-05"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-05-vital-proof",
+      "authorityOfRecord": "NPC and authorized registrar / source-of-record",
+      "workflowCategory": "Vital registration notice",
+      "canonicalDataFields": [
+        "eventType",
+        "eventDate",
+        "registrarAuthorityRef",
+        "notificationRef",
+        "familyRestrictedEvidenceRef"
+      ],
+      "expandedStateMachine": [
+        "NOTIFIED_OFFLINE",
+        "REGISTRY_HANDOFF",
+        "AUTHORITATIVE_REGISTRY_ACK",
+        "ISSUER_APPROVED",
+        "ATTESTED",
+        "CORRECTED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-05",
+      "publicRoute": "/protocols/lga-governance-stack/lga-05-vital-proof",
+      "proposedUsSdMenu": "Appointment/status with opaque number only",
+      "safetyAndLegalGate": "Council cannot automatically issue NPC certificate; protect minor identities",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-06",
+      "name": "IndigeneProof",
+      "pillar": "C",
+      "scope": "Apply for lawful origin/residency attestation, not nationality determination",
+      "actors": "Applicant, ward reference, lawfully empowered officer",
+      "fields": "Claimed locality, proof type, lawful-basis receipt, appeal",
+      "stateMachine": [
+        "CLEARAM_APPLICATION_SUBMITTED",
+        "USSD_WARD_VOUCH_ATTESTED_72H_SLA",
+        "SPLITDIRECT_STATUTORY_FEE_PAID",
+        "SECRETARY_FIDO2_S84_QR_SEALED"
+      ],
+      "portal": "Apply, supplement, track, challenge result",
+      "ussd": "USSD stage/reference only, consented community vouching where allowed",
+      "evidence": "Statutory fee (if lawful), officer authority, verification response",
+      "guard": "72h is proposed SLA not achieved metric; non-discrimination review",
+      "mechanisms": [
+        "MECH-02",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "buildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-06"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-06-indigene-proof",
+      "authorityOfRecord": "Lawfully empowered council attestation officer",
+      "workflowCategory": "Residency/origin attestation",
+      "canonicalDataFields": [
+        "applicantRef",
+        "attestationClass",
+        "wardVouchRef",
+        "evidenceRefs",
+        "appealRef"
+      ],
+      "expandedStateMachine": [
+        "REQUESTED",
+        "WARD_REVIEW",
+        "ADDITIONAL_INFO",
+        "OFFICER_DECISION",
+        "ATTESTED",
+        "DENIED",
+        "APPEALED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-06",
+      "publicRoute": "/protocols/lga-governance-stack/lga-06-indigene-proof",
+      "proposedUsSdMenu": "Request opaque reference, status and safe appointment",
+      "safetyAndLegalGate": "Non-discrimination review, defined eligibility and contestability; 72h is proposed SLO",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-07",
+      "name": "SafetyNOC",
+      "pillar": "B",
+      "scope": "Environmental and fire clearance only within issuer mandate",
+      "actors": "Operator, inspector, public-health/fire authority",
+      "fields": "Site, checklist revision, photos digest, conditions/expiry",
+      "stateMachine": [
+        "INSPECTION_LOGGED_OFFLINE",
+        "GEO_PHOTO_HASHED",
+        "S84_SAFETY_NOC_SEALED",
+        "EXPIRY_MONITORED"
+      ],
+      "portal": "Request inspection, review findings, show valid clearance",
+      "ussd": "USSD status check only, paper inspection ticket",
+      "evidence": "Hazard conditions, inspector appointment, expiry and appeal",
+      "guard": "No automatic NOC from unsigned photos; fire authority boundaries",
+      "mechanisms": [
+        "MECH-05"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-07-safety-noc",
+      "authorityOfRecord": "Competent environment, fire, health or safety regulator",
+      "workflowCategory": "Safety inspection",
+      "canonicalDataFields": [
+        "facilityRef",
+        "inspectionKind",
+        "testResultRef",
+        "deficiencyNotices",
+        "certificateExpiry"
+      ],
+      "expandedStateMachine": [
+        "INSPECTION_REQUESTED",
+        "ASSIGNED",
+        "INSPECTED",
+        "DEFICIENCY_NOTICE",
+        "DECISION_REVIEW",
+        "ISSUED",
+        "EXPIRED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-07",
+      "publicRoute": "/protocols/lga-governance-stack/lga-07-safety-noc",
+      "proposedUsSdMenu": "Safe status and expiry only",
+      "safetyAndLegalGate": "No automatic clearance from image upload; who can certify defined in authority map",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-08",
+      "name": "WardWorks",
+      "pillar": "B",
+      "scope": "Public works inspection against open procurement milestones",
+      "actors": "Project officer, independent auditor, citizen observer",
+      "fields": "OCDS release identifier, location, milestone, field evidence",
+      "stateMachine": [
+        "OCDS_CONTRACT_REGISTERED",
+        "MUSTER_ROLL_AND_GEO_PHOTOS_SEALED",
+        "AUDITOR_VERIFIED",
+        "SPLITDIRECT_MILESTONE_RELEASED"
+      ],
+      "portal": "Browse awards, upload inspection, review corrective action",
+      "ussd": "USSD public project status, counter evidence submission",
+      "evidence": "Award, variation history, reviewer signature, disposal of complaint",
+      "guard": "Public procurement visibility separate from sensitive whistleblower data",
+      "mechanisms": [
+        "MECH-05",
+        "MECH-07"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-08-ward-works",
+      "authorityOfRecord": "Procuring authority and independent auditor",
+      "workflowCategory": "Ward works",
+      "canonicalDataFields": [
+        "ocdsId",
+        "wardRef",
+        "milestoneRef",
+        "contractVariationRef",
+        "proofDigest"
+      ],
+      "expandedStateMachine": [
+        "CONTRACT_LINKED",
+        "MILESTONE_RECORDED",
+        "EVIDENCE_REVIEW",
+        "AUDITOR_ACCEPTED",
+        "PAYOUT_AUTHORIZED",
+        "CORRECTED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-08",
+      "publicRoute": "/protocols/lga-governance-stack/lga-08-ward-works",
+      "proposedUsSdMenu": "Public high-level milestone status",
+      "safetyAndLegalGate": "Open contracting records must reflect legal restrictions and independent procurement authority",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-09",
+      "name": "TenementRate",
+      "pillar": "A",
+      "scope": "Rate assessment with published legal basis and direct council settlement",
+      "actors": "Owner/occupier, valuer, revenue officer, council treasury",
+      "fields": "Parcel cross-reference, valuation rule version, liable party, fee notice",
+      "stateMachine": [
+        "LANDGUARD_3X3M_AND_DOCKET_CHECKED",
+        "GAZETTED_RATE_COMPUTED",
+        "SPLITDIRECT_100PCT_LGA_TREASURY_PAID",
+        "S84_RECEIPT_ISSUED"
+      ],
+      "portal": "View valuation basis, appeal, settle into verified treasury",
+      "ussd": "USSD notice amount and payment-reference status; counter notice",
+      "evidence": "Rate schedule and effective dates; protest rights; bank confirmation",
+      "guard": "No title creation from grid; no final receipt on uncertain transfer",
+      "mechanisms": [
+        "MECH-02",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-10"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-09-tenement-rate",
+      "authorityOfRecord": "Legal rate-assessing council/authority",
+      "workflowCategory": "Tenement rates",
+      "canonicalDataFields": [
+        "parcelReference",
+        "legalRateCode",
+        "valuationBasis",
+        "objectionRef",
+        "beneficiaryAccountRef"
+      ],
+      "expandedStateMachine": [
+        "ASSESSED",
+        "OBJECTED",
+        "ADJUDICATED",
+        "PAYMENT_PENDING",
+        "UNKNOWN_TIMEOUT",
+        "SETTLED_DIRECT",
+        "RECEIPT_SEALED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-09",
+      "publicRoute": "/protocols/lga-governance-stack/lga-09-tenement-rate",
+      "proposedUsSdMenu": "Assessment inquiry, appeal, payment intent, receipt lookup",
+      "safetyAndLegalGate": "No offline paid receipt and no title adjudication from geocode",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-10",
+      "name": "MarketCollect",
+      "pillar": "A",
+      "scope": "Public market or motor-park fee where local law permits",
+      "actors": "Trader/driver, market official, council treasury, checker",
+      "fields": "Ticket class, market/park reference, fee version, payable beneficiary",
+      "stateMachine": [
+        "TICKET_OR_CORRIDOR_PASS_REQUESTED",
+        "SPLITDIRECT_ZERO_ESCROW_SETTLED",
+        "S84_QR_PASS_MINTED",
+        "MERKLE_TREASURY_LOGGED"
+      ],
+      "portal": "Quote, pay directly, download signed token",
+      "ussd": "USSD quote/reference/verification; operator-approved assisted receipt",
+      "evidence": "Daily ticket class, issuance window, scheme authority, revoked status",
+      "guard": "No final paid ticket before verified settlement; corridor reciprocity requires agreement",
+      "mechanisms": [
+        "MECH-05",
+        "MECH-06",
+        "MECH-07"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-06"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-10-market-collect",
+      "authorityOfRecord": "Authorized market or motor park collecting authority",
+      "workflowCategory": "Market/park fee",
+      "canonicalDataFields": [
+        "marketOrParkRef",
+        "chargeCode",
+        "permittedRouteRef",
+        "paymentIntentRef",
+        "confirmedSettlementRef"
+      ],
+      "expandedStateMachine": [
+        "TICKET_REQUESTED",
+        "CHARGE_VALIDATED",
+        "PAYMENT_PENDING",
+        "UNKNOWN_TIMEOUT",
+        "SETTLED_DIRECT",
+        "PASS_SEALED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-10",
+      "publicRoute": "/protocols/lga-governance-stack/lga-10-market-collect",
+      "proposedUsSdMenu": "Charge inspection and verified ticket lookup",
+      "safetyAndLegalGate": "Cross-council pass acceptance requires express reciprocal legal agreement",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-11",
+      "name": "WardPHC",
+      "pillar": "D",
+      "scope": "Facility encounters, referrals and commodity inventory in authorized PHC",
+      "actors": "Patient, nurse, facility and state PHC agency",
+      "fields": "Pseudonymized patient reference, encounter type, referral, stock events",
+      "stateMachine": [
+        "WARD_HOUSEHOLD_ENUMERATED_OFFLINE",
+        "COMMODITY_DISPENSED",
+        "HLC_CRDT_SYNCED_TO_NDHX",
+        "COVERAGE_VERIFIED"
+      ],
+      "portal": "Clinic roster, nonclinical appointments, private referrals",
+      "ussd": "USSD generic appointment/reference only; secured paper visit form",
+      "evidence": "Facility code, commodity lot, patient lawful basis, authorized clinician",
+      "guard": "Sensitive data encrypted and excluded from public sync; no automated treatment decision",
+      "mechanisms": [
+        "MECH-02",
+        "MECH-06"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-04",
+        "BB-09"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-11-ward-phc",
+      "authorityOfRecord": "State PHC agency or authorized PHC clinical operator",
+      "workflowCategory": "Primary health care",
+      "canonicalDataFields": [
+        "careEncounterRef",
+        "patientPseudonym",
+        "clinicId",
+        "inventoryEvent",
+        "referralRef"
+      ],
+      "expandedStateMachine": [
+        "ENCOUNTER_DRAFT",
+        "CLINIC_REVIEW",
+        "APPROVED_RECORD",
+        "STAGED_PROTECTED_SYNC",
+        "RECONCILED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-11",
+      "publicRoute": "/protocols/lga-governance-stack/lga-11-ward-phc",
+      "proposedUsSdMenu": "Public clinic directory/appointment only",
+      "safetyAndLegalGate": "No diagnoses on USSD, protected FHIR transfers only, clinician authority",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-12",
+      "name": "CouncilLedger",
+      "pillar": "A",
+      "scope": "Independent treasury records and privacy-safe public reconciliation",
+      "actors": "Council treasury, auditor, external bank, citizen monitor",
+      "fields": "Allocation cycle, incoming settlements, bank confirmations, daily digest",
+      "stateMachine": [
+        "FAAC_AND_SPLITDIRECT_INGESTED",
+        "WARD_RECONCILIATION_COMPUTED",
+        "DAILY_MERKLE_ROOT_SIGNED",
+        "PUBLICLY_AUDITABLE"
+      ],
+      "portal": "Audit dashboard, aggregate download, dispute mismatch",
+      "ussd": "USSD public aggregate lookup only, paper budget notice",
+      "evidence": "Root signature, posting date, source bank proof, redaction method",
+      "guard": "Merkle root cannot prove money moved absent independent bank verification",
+      "mechanisms": [
+        "MECH-03",
+        "MECH-05"
+      ],
+      "buildingBlocks": [
+        "BB-03",
+        "BB-05",
+        "BB-06"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-12-council-ledger",
+      "authorityOfRecord": "Auditor/treasurer with independently verified bank data",
+      "workflowCategory": "Council ledger",
+      "canonicalDataFields": [
+        "bankSettlementRef",
+        "faacAllocationRef",
+        "cashflowClass",
+        "dailyMerkleRoot",
+        "reconciliationException"
+      ],
+      "expandedStateMachine": [
+        "DATA_RECEIVED",
+        "INDEPENDENT_BANK_MATCH",
+        "EXCEPTION_REVIEW",
+        "APPROVED_AGGREGATE",
+        "PUBLISHED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-12",
+      "publicRoute": "/protocols/lga-governance-stack/lga-12-council-ledger",
+      "proposedUsSdMenu": "View only broad public aggregates, not account details",
+      "safetyAndLegalGate": "Merkle root does not by itself prove bank settlement or zero escrow",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-13",
+      "name": "CustomaryDocket",
+      "pillar": "D",
+      "scope": "Competent court case intake and record transfer, geography only for LGA",
+      "actors": "Court registrar, litigant, judicial supervisor",
+      "fields": "Case class, restricted participant IDs, filing stamp, appeal reference",
+      "stateMachine": [
+        "DOCKET_CAPTURED_OFFLINE",
+        "NDPA_GATE10_PRIVACY_CLASSIFIED",
+        "CLERK_FIDO2_S84_CTC_SEALED",
+        "HIGH_COURT_APPEAL_LINKED"
+      ],
+      "portal": "Case status subject to court permissions; certified copy application",
+      "ussd": "USSD only public hearing logistics where court approves, counter filing",
+      "evidence": "Court authority, procedural timestamps, restrictions and versioned orders",
+      "guard": "Council has no judicial write rights; juvenile/family matters quarantined",
+      "mechanisms": [
+        "MECH-02",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-04",
+        "BB-05",
+        "BB-10"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-13-customary-docket",
+      "authorityOfRecord": "Chief Registrar/competent court of the relevant State/FCT",
+      "workflowCategory": "Customary/area court docket",
+      "canonicalDataFields": [
+        "courtIdentifier",
+        "matterRef",
+        "filingDate",
+        "privacyClassification",
+        "judicialDirectionRef"
+      ],
+      "expandedStateMachine": [
+        "COURT_INTAKE",
+        "RESTRICTED_CLASSIFIED",
+        "REGISTRAR_REVIEW",
+        "DOCUMENT_SEALED",
+        "APPEAL_REFERRED",
+        "ARCHIVED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-13",
+      "publicRoute": "/protocols/lga-governance-stack/lga-13-customary-docket",
+      "proposedUsSdMenu": "Public cause-list only if court rule permits",
+      "safetyAndLegalGate": "Council geo code gives no judicial competence; family/juvenile sealed",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    },
+    {
+      "id": "LGA-14",
+      "name": "StreetGrid",
+      "pillar": "C",
+      "scope": "Street naming and numbering with no claim to land tenure",
+      "actors": "Authorized council address officer, state GIS custodian, resident",
+      "fields": "Street gazette, address segment, coordinates if consented, version",
+      "stateMachine": [
+        "PARCEL_3X3M_HASHED_OFFLINE",
+        "LGA_STREET_GAZETTE_BOUND",
+        "S84_ADDRESS_CREDENTIAL_MINTED",
+        "RESOLVABLE_OFFLINE"
+      ],
+      "portal": "Register named streets, manage address corrections, verify QR",
+      "ussd": "USSD address lookup with consent, counter street-name index",
+      "evidence": "Official naming authority, provenance, disputed parcel marker",
+      "guard": "3x3m hash not legal land title; blur vulnerable persons locations",
+      "mechanisms": [
+        "MECH-02",
+        "MECH-06"
+      ],
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "route": "/protocols/lga-governance-stack/lga-14-street-grid",
+      "authorityOfRecord": "Lawfully authorized road naming/address authority, validated State GIS owner",
+      "workflowCategory": "Street addressing",
+      "canonicalDataFields": [
+        "roadGazetteRef",
+        "addressGridRef",
+        "wardRef",
+        "parcelCandidate",
+        "correctionNotice"
+      ],
+      "expandedStateMachine": [
+        "PROVISIONAL_GRID_CAPTURE",
+        "GAZETTE_CHECK",
+        "ADDRESS_ASSIGNED",
+        "VERIFIED_OR_DISPUTED",
+        "CORRECTED"
+      ],
+      "apiBase": "/v1/municipal/{councilCode}/services/LGA-14",
+      "publicRoute": "/protocols/lga-governance-stack/lga-14-street-grid",
+      "proposedUsSdMenu": "Public address reference status only",
+      "safetyAndLegalGate": "Address code is not cadastral title or postal-delivery guarantee",
+      "sourceStatus": "REFERENCE_SPECIFICATION_NOT_DEPLOYMENT",
+      "visibilityRule": "Never include restricted medical/family/juvenile/identity content in public export or shared outbox",
+      "reconciliationRule": "Only service authority issues final state; offline HLC is a proposed ordering hint, not final precedence",
+      "apiOperations": [
+        "POST application",
+        "GET case/{id} scoped",
+        "POST observations/deltas staged",
+        "POST authority decision with issuer seal",
+        "GET verifiable public status where allowed"
+      ],
+      "offlinePwa": "<35,000 gzipped initial shell; SQLite WASM separately loaded and integrity checked; queue all authority changes for server adjudication",
+      "accessibility": "WAI WCAG 2.2 AA candidate; 320/390/768/1440; 400% zoom; local review of all 5 language bundles"
+    }
+  ],
+  "pillars": {
+    "A": [
+      "LGA-09",
+      "LGA-10",
+      "LGA-12"
+    ],
+    "B": [
+      "LGA-02",
+      "LGA-04",
+      "LGA-07",
+      "LGA-08"
+    ],
+    "C": [
+      "LGA-05",
+      "LGA-06",
+      "LGA-14"
+    ],
+    "D": [
+      "LGA-01",
+      "LGA-03",
+      "LGA-11",
+      "LGA-13"
+    ]
+  }
+}

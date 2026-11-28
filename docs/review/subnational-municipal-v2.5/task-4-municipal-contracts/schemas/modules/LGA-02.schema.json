@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-02.schema.json",
+  "title": "LGA-02 BuildClear submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "parcelRef",
+    "permitType",
+    "setbackPlanRef"
+  ],
+  "properties": {
+    "parcelRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "permitType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "setbackPlanRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "landAuthorityResponseRef": {
+      "type": "string"
+    },
+    "inspectionDigest": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

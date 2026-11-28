@@ -1,0 +1,1513 @@
+{
+  "sectorRouteBuckets": [
+    "agriculture-land-and-environment",
+    "commerce-logistics-and-transport",
+    "energy-industry-and-digital-addressing",
+    "finance-revenue-and-fiscal-systems",
+    "healthcare-education-and-creative-industries",
+    "identity-civil-registration-and-labour",
+    "justice-legal-records-and-digital-governance"
+  ],
+  "taxonomyConflict": "Webcopy organizes 32 industries into 7 slugs whereas an older repository source reports 8 macro sectors; do not change canonical taxonomic counts without registry decision",
+  "industries": [
+    {
+      "id": "IND-01",
+      "name": "Payments and Money Movement",
+      "buildingBlocks": [
+        "BB-03",
+        "BB-06"
+      ],
+      "rfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003",
+        "NS-RFC-009"
+      ],
+      "municipalModules": [
+        "LGA-09",
+        "LGA-10",
+        "LGA-12"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "interoperabilityOpportunity": "Payment intent/reconciliation across independent council beneficiary accounts",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "finance-revenue-and-fiscal-systems",
+      "linkedStateDimensions": [
+        "DIM-03"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-07"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "sourceV24FunctionalProposal": "Direct-to-treasury POS/USSD payment adapter enforcing UNKNOWN_TIMEOUT locks & zero escrow",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-02",
+      "name": "Banking, Lending and Open Finance",
+      "buildingBlocks": [
+        "BB-04",
+        "BB-05"
+      ],
+      "rfcs": [
+        "NS-RFC-006"
+      ],
+      "municipalModules": [
+        "LGA-04",
+        "LGA-09",
+        "LGA-12"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05"
+      ],
+      "interoperabilityOpportunity": "Permissioned validation of treasury/merchant credential without sharing raw KYC",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "finance-revenue-and-fiscal-systems",
+      "linkedStateDimensions": [
+        "DIM-01"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05"
+      ],
+      "sourceV24FunctionalProposal": "Multi-sector MSME credit underwriting consent flow joining Open Banking, court dockets & LGA shop permits",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-03",
+      "name": "Insurance and Micro-Claims",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-09"
+      ],
+      "rfcs": [
+        "NS-RFC-005",
+        "NS-RFC-011"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-07",
+        "LGA-11"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Municipal hazard reports and PHC referral attestations as optional claim evidence",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "finance-revenue-and-fiscal-systems",
+      "linkedStateDimensions": [
+        "DIM-04"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-05"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "SureEvidence signed PHC discharge summaries, death certificates (VitalProof) & incident proofs",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-04",
+      "name": "Investment, Capital Markets and Funds",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-11"
+      ],
+      "rfcs": [
+        "NS-RFC-005"
+      ],
+      "municipalModules": [
+        "LGA-08",
+        "LGA-09",
+        "LGA-12"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05"
+      ],
+      "interoperabilityOpportunity": "Signed procurement milestones and publicly auditable financing disclosure",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "finance-revenue-and-fiscal-systems",
+      "linkedStateDimensions": [
+        "DIM-02"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05"
+      ],
+      "sourceV24FunctionalProposal": "Sub-national municipal bond & infrastructure concession covenant verification APIs",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-05",
+      "name": "Tax, e-Invoicing and Treasury IGR",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-06"
+      ],
+      "rfcs": [
+        "NS-RFC-009"
+      ],
+      "municipalModules": [
+        "LGA-04",
+        "LGA-09",
+        "LGA-10",
+        "LGA-12"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "interoperabilityOpportunity": "Published statutory charge codes, beneficiary confirmation and direct settlement",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "finance-revenue-and-fiscal-systems",
+      "linkedStateDimensions": [
+        "DIM-03"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-02",
+        "MECH-04",
+        "MECH-07"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-04",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "sourceV24FunctionalProposal": "Harmonized SIRS + 774-LGA tenement/market tax billing & daily SHA-256 treasury Merkle root logs",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-06",
+      "name": "Accounting, ERP and Corporate Treasury",
+      "buildingBlocks": [
+        "BB-03",
+        "BB-11"
+      ],
+      "rfcs": [
+        "NS-RFC-009"
+      ],
+      "municipalModules": [
+        "LGA-08",
+        "LGA-09",
+        "LGA-12"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Exportable council ledgers and tax-code mapping with reversal-safe postings",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "finance-revenue-and-fiscal-systems",
+      "linkedStateDimensions": [
+        "DIM-03"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Standardized public-council IPSAS-aligned ledger export & municipal audit reconciliation API",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-07",
+      "name": "Identity, Biometrics and KYB/KYC",
+      "buildingBlocks": [
+        "BB-01",
+        "BB-04",
+        "BB-05"
+      ],
+      "rfcs": [
+        "NS-RFC-005",
+        "NS-RFC-006"
+      ],
+      "municipalModules": [
+        "LGA-04",
+        "LGA-05",
+        "LGA-06"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Issuer-signed attribute checks without master identity replication",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "identity-civil-registration-and-labour",
+      "linkedStateDimensions": [
+        "DIM-05"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-05"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Zero-knowledge salted NIN hash verification linking NIMC to LGA VitalProof & IndigeneProof",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-08",
+      "name": "Employment, Payroll and Pensions",
+      "buildingBlocks": [
+        "BB-03",
+        "BB-06"
+      ],
+      "rfcs": [
+        "NS-RFC-003",
+        "NS-RFC-009"
+      ],
+      "municipalModules": [
+        "LGA-08",
+        "LGA-11",
+        "LGA-12"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Municipal payroll, statutory remittances and authorized agency reconciliation",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "identity-civil-registration-and-labour",
+      "linkedStateDimensions": [
+        "DIM-03"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-04"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Sub-national civil-service & LGA payroll/pension remittance verification envelopes",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-09",
+      "name": "Logistics, Courier and Haulage",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-07"
+      ],
+      "rfcs": [
+        "NS-RFC-004",
+        "NS-RFC-007"
+      ],
+      "municipalModules": [
+        "LGA-10",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Market loading permits and offline route-delivery evidence",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "commerce-logistics-and-transport",
+      "linkedStateDimensions": [
+        "DIM-05"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-04",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "Offline KioskBase proof-of-delivery + interstate commercial transit QR pass eliminating multiple LGA taxation",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-10",
+      "name": "Cross-Border Trade, Customs and Ports",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-08"
+      ],
+      "rfcs": [
+        "NS-RFC-010"
+      ],
+      "municipalModules": [
+        "LGA-07",
+        "LGA-10",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-04"
+      ],
+      "interoperabilityOpportunity": "Customs authority protected; municipal origin/waybill cross-reference only",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "commerce-logistics-and-transport",
+      "linkedStateDimensions": [
+        "DIM-03"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-04"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-04"
+      ],
+      "sourceV24FunctionalProposal": "Offline QR cargo-release verification at border LGAs (e.g., Seme, Mubi, Jibiya, Mfum) via PassCargo",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-11",
+      "name": "Retail and Open Digital Commerce",
+      "buildingBlocks": [
+        "BB-07"
+      ],
+      "rfcs": [
+        "NS-RFC-007"
+      ],
+      "municipalModules": [
+        "LGA-04",
+        "LGA-10",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-07",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Reusable stall licence and open catalog discovery across markets",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "commerce-logistics-and-transport",
+      "linkedStateDimensions": [
+        "DIM-05"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-07"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-07",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Unbundled heartland merchant catalogs (MarketLink) integrated with verified LGA ShopPermit credentials",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-12",
+      "name": "Energy, Smart Grids and Utilities",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-10"
+      ],
+      "rfcs": [
+        "NS-RFC-005"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-02",
+        "LGA-08",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Offline utility incident reporting and verifiable reinstatement works",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "energy-industry-and-digital-addressing",
+      "linkedStateDimensions": [
+        "DIM-08"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "Rural solar mini-grid & borehole O&M tariff metering/settlement (WashConnect) + offline outage reporting",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-13",
+      "name": "Connected Vehicles and Fleets",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-07"
+      ],
+      "rfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005"
+      ],
+      "municipalModules": [
+        "LGA-07",
+        "LGA-10",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Signed park entry and vehicle movement notices without vehicle shadow registry",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "commerce-logistics-and-transport",
+      "linkedStateDimensions": [
+        "DIM-05"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "Offline vehicle manifest & faecal-sludge desludging truck GPS/QR discharge verification (WashConnect)",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-14",
+      "name": "Mobility, Mass Transit and Ticketing",
+      "buildingBlocks": [
+        "BB-06",
+        "BB-07"
+      ],
+      "rfcs": [
+        "NS-RFC-007"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-10",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-05"
+      ],
+      "interoperabilityOpportunity": "Local park access, interoperator ticket validation and fare authority boundaries",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "commerce-logistics-and-transport",
+      "linkedStateDimensions": [
+        "DIM-03"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-02",
+        "MECH-04",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-04",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "Offline cryptographic motor-park & commuter transit passes with direct operator/LGA settlement",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-15",
+      "name": "Agriculture, Inputs and Food Security",
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "rfcs": [
+        "NS-RFC-004",
+        "NS-RFC-012"
+      ],
+      "municipalModules": [
+        "LGA-03",
+        "LGA-08",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Extension visits, soil/water infrastructure and parcel-claim dispute references",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "agriculture-land-and-environment",
+      "linkedStateDimensions": [
+        "DIM-07"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-02",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "Offline GeoJSON farm polygon capture (AgriTrust), cooperative warehouse receipts & rural market clearing",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-16",
+      "name": "Manufacturing and Industrial IoT",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-11"
+      ],
+      "rfcs": [
+        "NS-RFC-005"
+      ],
+      "municipalModules": [
+        "LGA-02",
+        "LGA-07",
+        "LGA-08"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Local inspections and signed compliance observations without auto-approval",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "energy-industry-and-digital-addressing",
+      "linkedStateDimensions": [
+        "DIM-02"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-05"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Hardware-sealed local factory safety/hygiene inspection NOCs (SafetyNOC) & environmental logs",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-17",
+      "name": "Construction, Land and Property Titles",
+      "buildingBlocks": [
+        "BB-02",
+        "BB-05",
+        "BB-10"
+      ],
+      "rfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005"
+      ],
+      "municipalModules": [
+        "LGA-02",
+        "LGA-08",
+        "LGA-09",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05"
+      ],
+      "interoperabilityOpportunity": "Planning and tenement linkage without pretending municipal grid is title",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "agriculture-land-and-environment",
+      "linkedStateDimensions": [
+        "DIM-02"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-02",
+        "MECH-05"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-02",
+        "MECH-03",
+        "MECH-05"
+      ],
+      "sourceV24FunctionalProposal": "Federated State GIS + LGA building setback (BuildClear) + Customary C-of-O + lis pendens API",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-18",
+      "name": "Climate, Weather and Environmental Data",
+      "buildingBlocks": [
+        "BB-03",
+        "BB-10"
+      ],
+      "rfcs": [
+        "NS-RFC-002",
+        "NS-RFC-012"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-03",
+        "LGA-08",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Drainage/flood warnings tied to verifiable location and work orders",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "agriculture-land-and-environment",
+      "linkedStateDimensions": [
+        "DIM-07"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-02",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "Offline ward-level flood/drainage alert intake (CouncilComplain) & environmental sensor telemetry",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-19",
+      "name": "Healthcare, EMRs and e-Prescriptions",
+      "buildingBlocks": [
+        "BB-04",
+        "BB-05",
+        "BB-09"
+      ],
+      "rfcs": [
+        "NS-RFC-006",
+        "NS-RFC-011"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-05",
+        "LGA-11"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Authorized PHC referral and protected encounter data exchange",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "healthcare-education-and-creative-industries",
+      "linkedStateDimensions": [
+        "DIM-04"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-02",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-02",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "WardPHC offline HL7 FHIR immunization/maternal PWA + ClearAm sensitive patient transfer envelopes",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-20",
+      "name": "Education, Credentials and Skilling",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-09"
+      ],
+      "rfcs": [
+        "NS-RFC-005",
+        "NS-RFC-011"
+      ],
+      "municipalModules": [
+        "LGA-05",
+        "LGA-06",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Resident evidence and training attestations, issuer consent gates",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "healthcare-education-and-creative-industries",
+      "linkedStateDimensions": [
+        "DIM-05"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-05",
+        "MECH-07",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "SureLearn offline-verifiable academic/trade credentials paired with IndigeneProof scholarship verification",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-21",
+      "name": "Judiciary, Justice and Legal Practice",
+      "buildingBlocks": [
+        "BB-01",
+        "BB-02",
+        "BB-05",
+        "BB-06",
+        "BB-11"
+      ],
+      "rfcs": [
+        "NS-RFC-004",
+        "NS-RFC-005",
+        "NS-RFC-009",
+        "NS-RFC-013"
+      ],
+      "municipalModules": [
+        "LGA-02",
+        "LGA-05",
+        "LGA-06",
+        "LGA-09",
+        "LGA-13"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Restricted court docket transmission and contested parcel caveat status",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "justice-legal-records-and-digital-governance",
+      "linkedStateDimensions": [
+        "DIM-01"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-02",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-02",
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "State High Court & LGA Customary/Area Court offline registry PWA (CustomaryDocket) + s.84 QR CTCs",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-22",
+      "name": "Travel, Tourism and Hospitality",
+      "buildingBlocks": [
+        "BB-01",
+        "BB-04",
+        "BB-07"
+      ],
+      "rfcs": [
+        "NS-RFC-006",
+        "NS-RFC-007"
+      ],
+      "municipalModules": [
+        "LGA-04",
+        "LGA-07",
+        "LGA-10",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "interoperabilityOpportunity": "Tourism premises permit verification and public service discovery",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "commerce-logistics-and-transport",
+      "linkedStateDimensions": [
+        "DIM-05"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-05"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "sourceV24FunctionalProposal": "Consented minimal-disclosure guest check-in + verifiable LGA hospitality/hygiene permits (SafetyNOC)",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-23",
+      "name": "Food Service and Hyperlocal Delivery",
+      "buildingBlocks": [
+        "BB-07"
+      ],
+      "rfcs": [
+        "NS-RFC-007"
+      ],
+      "municipalModules": [
+        "LGA-04",
+        "LGA-07",
+        "LGA-10",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Food premises clearance and route delivery without closed-market lock-in",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "commerce-logistics-and-transport",
+      "linkedStateDimensions": [
+        "DIM-05"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-04",
+        "MECH-06",
+        "MECH-07"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-05",
+        "MECH-06",
+        "MECH-07"
+      ],
+      "sourceV24FunctionalProposal": "Open hyperlocal kitchen discovery (MarketLink) + QR-verifiable LGA food-handler certificates (SafetyNOC)",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-24",
+      "name": "Media, Creative Rights and Entertainment",
+      "buildingBlocks": [
+        "BB-05",
+        "BB-06"
+      ],
+      "rfcs": [
+        "NS-RFC-005"
+      ],
+      "municipalModules": [
+        "LGA-04",
+        "LGA-07",
+        "LGA-08"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Event permit and neighborhood impact records with issuer provenance",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "healthcare-education-and-creative-industries",
+      "linkedStateDimensions": [
+        "DIM-03"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-05",
+        "MECH-07",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Local event/signage licensing (ShopPermit) + SureEvidence creative provenance & royalty splits",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-25",
+      "name": "Communications and Telecom Network APIs",
+      "buildingBlocks": [
+        "BB-01",
+        "BB-03"
+      ],
+      "rfcs": [
+        "NS-RFC-002",
+        "NS-RFC-003"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-03",
+        "LGA-05",
+        "LGA-10"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-04",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Approved SMS/USSD operator interfaces and delivery receipt normalization",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "justice-legal-records-and-digital-governance",
+      "linkedStateDimensions": [
+        "DIM-08"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-04"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-04",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "Carrier-neutral *347*LGA# USSD gateway bindings, SMS 5-locale receipts & Fiber RoW permit APIs",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-26",
+      "name": "Network Intelligence and Anti-Fraud",
+      "buildingBlocks": [
+        "BB-03",
+        "BB-04"
+      ],
+      "rfcs": [
+        "NS-RFC-006"
+      ],
+      "municipalModules": [
+        "LGA-04",
+        "LGA-09",
+        "LGA-10",
+        "LGA-12"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "interoperabilityOpportunity": "Privacy-protected counterfeit fee alert and suspicious settlement referral",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "justice-legal-records-and-digital-governance",
+      "linkedStateDimensions": [
+        "DIM-03"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-01",
+        "MECH-05"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05",
+        "MECH-07"
+      ],
+      "sourceV24FunctionalProposal": "Cross-council fake-receipt / tout-impersonation fraud signal exchange via salted SureEvidence hashes",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-27",
+      "name": "AI and Nigerian Indigenous Languages",
+      "buildingBlocks": [
+        "BB-11"
+      ],
+      "rfcs": [
+        "NS-RFC-013"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-03",
+        "LGA-05",
+        "LGA-06",
+        "LGA-11",
+        "LGA-13"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-06",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Five-locale terminology with human-approved civic/legal translations",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "justice-legal-records-and-digital-governance",
+      "linkedStateDimensions": [
+        "DIM-01"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-02",
+        "MECH-08"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-06",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Reviewed Hausa, Yoruba, Igbo & Pidgin civic UI strings and local bye-law translations (LEGAL_SEMANTIC_REVIEW_APPROVED)",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-28",
+      "name": "Geospatial, Maps and Digital Addressing",
+      "buildingBlocks": [
+        "BB-02",
+        "BB-10"
+      ],
+      "rfcs": [
+        "NS-RFC-004"
+      ],
+      "municipalModules": [
+        "LGA-02",
+        "LGA-03",
+        "LGA-08",
+        "LGA-09",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-02",
+        "MECH-03",
+        "MECH-06"
+      ],
+      "interoperabilityOpportunity": "Coordinate/parcel interoperability with disputed-location state",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "energy-industry-and-digital-addressing",
+      "linkedStateDimensions": [
+        "DIM-02"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-02",
+        "MECH-03",
+        "MECH-06"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-02",
+        "MECH-03",
+        "MECH-06"
+      ],
+      "sourceV24FunctionalProposal": "StreetGrid offline 3×3m grid-code address resolver linking ward buildings to State GIS & NIPOST",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-29",
+      "name": "Security, Authentication and PKI Cryptography",
+      "buildingBlocks": [
+        "BB-01",
+        "BB-05"
+      ],
+      "rfcs": [
+        "NS-RFC-005"
+      ],
+      "municipalModules": [
+        "LGA-02",
+        "LGA-05",
+        "LGA-07",
+        "LGA-10",
+        "LGA-13"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Independent issuer key rollovers and QR freshness validation",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "justice-legal-records-and-digital-governance",
+      "linkedStateDimensions": [
+        "DIM-01"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-05",
+        "MECH-08"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Decentralized did:web (/.well-known/ngstack-keys.json) key rotation & FIDO2 hardware tokens for council officers",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-30",
+      "name": "Developer Infrastructure, Testing and Chaos Simulation",
+      "buildingBlocks": [
+        "BB-03"
+      ],
+      "rfcs": [
+        "NS-RFC-003"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-02",
+        "LGA-03",
+        "LGA-04",
+        "LGA-05",
+        "LGA-06",
+        "LGA-07",
+        "LGA-08",
+        "LGA-09",
+        "LGA-10",
+        "LGA-11",
+        "LGA-12",
+        "LGA-13",
+        "LGA-14"
+      ],
+      "mechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-06",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Cross-jurisdiction portable contract and failure-replay test suite",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "justice-legal-records-and-digital-governance",
+      "linkedStateDimensions": [
+        "DIM-08"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-06",
+        "MECH-08"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-03",
+        "MECH-04",
+        "MECH-06",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Local Conformance CLI (@nigeriastack/conformance-cli) simulating 2G drops & 420s clock drift for State/LGA apps",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-31",
+      "name": "Data Products, Statutory ASTs and Search",
+      "buildingBlocks": [
+        "BB-11"
+      ],
+      "rfcs": [
+        "NS-RFC-013"
+      ],
+      "municipalModules": [
+        "LGA-02",
+        "LGA-04",
+        "LGA-07",
+        "LGA-09",
+        "LGA-12",
+        "LGA-13"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Versioned gazettes and law mappings with access-controlled search",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "justice-legal-records-and-digital-governance",
+      "linkedStateDimensions": [
+        "DIM-01"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-03",
+        "MECH-08"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-03",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Bi-temporal State Laws & LGA Bye-Laws compiled to LawTree AST (urn:lex:ng:*) for FTS5 search",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    },
+    {
+      "id": "IND-32",
+      "name": "Autonomous Agent Governance and MCP Safety",
+      "buildingBlocks": [
+        "BB-04",
+        "BB-12"
+      ],
+      "rfcs": [
+        "NS-RFC-008"
+      ],
+      "municipalModules": [
+        "LGA-01",
+        "LGA-02",
+        "LGA-04",
+        "LGA-06",
+        "LGA-09",
+        "LGA-11",
+        "LGA-13"
+      ],
+      "mechanismHypotheses": [
+        "MECH-01",
+        "MECH-04",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "interoperabilityOpportunity": "Read-only assistance with human-countersigned sensitive decisions",
+      "evidenceStatus": "Not yet assessed",
+      "claimType": "DESIGN_HYPOTHESIS_NOT_A_DEPLOYMENT_OR_MARKET_GAP_ASSERTION",
+      "macroSectorWebcopySlug": "justice-legal-records-and-digital-governance",
+      "linkedStateDimensions": [
+        "DIM-01",
+        "DIM-02",
+        "DIM-03",
+        "DIM-04",
+        "DIM-05",
+        "DIM-06",
+        "DIM-07",
+        "DIM-08"
+      ],
+      "sourceV24MechanismHypotheses": [
+        "MECH-04",
+        "MECH-08"
+      ],
+      "combinedMechanismHypotheses": [
+        "MECH-01",
+        "MECH-04",
+        "MECH-05",
+        "MECH-08"
+      ],
+      "sourceV24FunctionalProposal": "Read-only default MCP query tools for public state/LGA status; human countersignature required for any state mutation",
+      "sourceCoverage": "V2.4 + 2026-11-23 source-ledger-derived candidate",
+      "evidenceGrade": "RESEARCH_HYPOTHESIS_NEEDS_VALIDATION",
+      "verifiedDeployment": "Not yet assessed",
+      "sourceAuthority": "Master industry ledger name and BB/RFC maintained, v2.4 associations adjunct"
+    }
+  ],
+  "failureMechanisms": [
+    {
+      "id": "MECH-01",
+      "name": "Source-access"
+    },
+    {
+      "id": "MECH-02",
+      "name": "Coverage"
+    },
+    {
+      "id": "MECH-03",
+      "name": "Semantic"
+    },
+    {
+      "id": "MECH-04",
+      "name": "Transaction"
+    },
+    {
+      "id": "MECH-05",
+      "name": "Trust/provenance"
+    },
+    {
+      "id": "MECH-06",
+      "name": "Operational/offline"
+    },
+    {
+      "id": "MECH-07",
+      "name": "Commercial/procurement"
+    },
+    {
+      "id": "MECH-08",
+      "name": "Developer implementation"
+    }
+  ]
+}

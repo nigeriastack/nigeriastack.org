@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-07.schema.json",
+  "title": "LGA-07 SafetyNOC submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "facilityRef",
+    "inspectionKind",
+    "inspectionRequestRef"
+  ],
+  "properties": {
+    "facilityRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inspectionKind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inspectionRequestRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "testResultRef": {
+      "type": "string"
+    },
+    "deficiencyNotices": {
+      "type": "string"
+    },
+    "certificateExpiry": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

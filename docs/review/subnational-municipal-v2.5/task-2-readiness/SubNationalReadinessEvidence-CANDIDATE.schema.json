@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/SubNationalReadinessEvidence-CANDIDATE.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "stateCode",
+    "dimensionId",
+    "status",
+    "evidenceRefs",
+    "observedAtUtc",
+    "assessor",
+    "serviceScope",
+    "method"
+  ],
+  "properties": {
+    "stateCode": {
+      "type": "string",
+      "enum": [
+        "AB",
+        "AD",
+        "AK",
+        "AN",
+        "BA",
+        "BY",
+        "BE",
+        "BO",
+        "CR",
+        "DE",
+        "EB",
+        "ED",
+        "EK",
+        "EN",
+        "FC",
+        "GO",
+        "IM",
+        "JI",
+        "KD",
+        "KN",
+        "KT",
+        "KE",
+        "KO",
+        "KW",
+        "LA",
+        "NA",
+        "NI",
+        "OG",
+        "ON",
+        "OS",
+        "OY",
+        "PL",
+        "RI",
+        "SO",
+        "TA",
+        "YO",
+        "ZA"
+      ]
+    },
+    "dimensionId": {
+      "type": "string",
+      "enum": [
+        "DIM-01",
+        "DIM-02",
+        "DIM-03",
+        "DIM-04",
+        "DIM-05",
+        "DIM-06",
+        "DIM-07",
+        "DIM-08"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Live digital service",
+        "Active pilot program",
+        "Paper-only registry",
+        "Not yet assessed"
+      ]
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "observedAtUtc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "assessor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "serviceScope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceJurisdictionAuthority": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewedOn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "not": {
+              "const": "Not yet assessed"
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "evidenceRefs": {
+            "minItems": 1
+          },
+          "assessor": {
+            "type": "string",
+            "minLength": 2
+          },
+          "observedAtUtc": {
+            "type": "string"
+          },
+          "serviceScope": {
+            "type": "string",
+            "minLength": 4
+          },
+          "method": {
+            "type": "string",
+            "minLength": 4
+          }
+        }
+      }
+    }
+  ]
+}

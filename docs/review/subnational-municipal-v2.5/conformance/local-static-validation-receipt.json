@@ -1,0 +1,756 @@
+{
+  "runOn": "2026-11-24",
+  "scope": "Local static JSON Schema, YAML and source archive integrity only; no bank/USSD/Cloudflare/browser/GitHub CI executed",
+  "total": 149,
+  "passed": 149,
+  "failed": 0,
+  "sourceGate": "BLOCKED: unresolved original archive manifest/route count; candidate corrected index emitted",
+  "publicReleaseAuthorized": false,
+  "checks": [
+    {
+      "test": "JSON_SCHEMA_DRAFT_2020_12_VALID",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "YAML_JSON_OPENAPI_EQUIVALENT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "OAS_VERSION_3_1_1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_14_MODULES",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_12_BUILDING_BLOCKS",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_14_CORE_RFCS",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_37_JURISDICTIONS",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_296_READY_CELLS",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_32_INDUSTRIES",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_8_MECHANISMS",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_66_FUNCTIONS",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "955_CANONICAL_ROUTE_PAGES",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "SUPPLIED_SHA_MISMATCH_DETECTED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "SUPPLIED_DUPLICATE_ROUTE_DETECTED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "SOURCE_ZIP_CRC_VALID",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_PILLARS_A_TO_D",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "USSD_IS_CONDITIONAL",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "FCT_AC_PREFIX",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "INVALID_FCT_LGA_REJECTED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ZERO_ESCROW_SCHEMA_CONST",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "SHELL_BUDGET_STRICT_LT_35000",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "SOURCE_NOT_PUBLISHED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "API_PATHPARAMS_getInstanceCapabilities",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "API_PATHPARAMS_listRegisteredJurisdictions",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "API_PATHPARAMS_listMunicipalServices",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "API_PATHPARAMS_getReadinessEvidence",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "API_PATHPARAMS_submitStateDimensionDraft",
+      "result": "PASS",
+      "detail": "{'dimensionId', 'stateCode'} vs {'dimensionId', 'stateCode'}"
+    },
+    {
+      "test": "API_PATHPARAMS_listStateDimensionRecords",
+      "result": "PASS",
+      "detail": "{'dimensionId', 'stateCode'} vs {'dimensionId', 'stateCode'}"
+    },
+    {
+      "test": "API_PATHPARAMS_submitMunicipalServiceDraft",
+      "result": "PASS",
+      "detail": "{'councilCode', 'moduleId'} vs {'councilCode', 'moduleId'}"
+    },
+    {
+      "test": "API_PATHPARAMS_getMunicipalCase",
+      "result": "PASS",
+      "detail": "{'councilCode', 'caseId', 'moduleId'} vs {'councilCode', 'caseId', 'moduleId'}"
+    },
+    {
+      "test": "API_PATHPARAMS_stageOfflineMunicipalDelta",
+      "result": "PASS",
+      "detail": "{'councilCode', 'moduleId'} vs {'councilCode', 'moduleId'}"
+    },
+    {
+      "test": "API_PATHPARAMS_recordAuthorizedMunicipalDecision",
+      "result": "PASS",
+      "detail": "{'councilCode', 'moduleId'} vs {'councilCode', 'moduleId'}"
+    },
+    {
+      "test": "API_PATHPARAMS_createCouncilPaymentIntent",
+      "result": "PASS",
+      "detail": "{'councilCode'} vs {'councilCode'}"
+    },
+    {
+      "test": "API_PATHPARAMS_getCouncilPaymentIntent",
+      "result": "PASS",
+      "detail": "{'councilCode', 'caseId'} vs {'councilCode', 'caseId'}"
+    },
+    {
+      "test": "API_PATHPARAMS_confirmCouncilSettlement",
+      "result": "PASS",
+      "detail": "{'councilCode'} vs {'councilCode'}"
+    },
+    {
+      "test": "API_PATHPARAMS_getCouncilDailyAuditRoot",
+      "result": "PASS",
+      "detail": "{'councilCode', 'dateUtc'} vs {'councilCode', 'dateUtc'}"
+    },
+    {
+      "test": "API_PATHPARAMS_getCouncilAuditInclusionProof",
+      "result": "PASS",
+      "detail": "{'councilCode', 'caseId'} vs {'councilCode', 'caseId'}"
+    },
+    {
+      "test": "API_PATHPARAMS_verifySureEvidenceDigest",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "API_PATHPARAMS_readIssuerKeyDiscovery",
+      "result": "PASS",
+      "detail": "{'issuerId'} vs {'issuerId'}"
+    },
+    {
+      "test": "API_PATHPARAMS_handleAllocatedOperatorUssd",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "API_PATHPARAMS_capturePaperAssistedIntake",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "API_PATHPARAMS_revokeClearAmGrant",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "API_PATHPARAMS_exportAuthorityOwnedRecords",
+      "result": "PASS",
+      "detail": "set() vs set()"
+    },
+    {
+      "test": "OPERATION_IDS_UNIQUE",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "20_API_PATH_TEMPLATES",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "ALL_INTERNAL_OAS_REFS_RESOLVE",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "NO_REMOTE_SCHEMA_FETCH",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-01_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-01_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-01_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-02_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-02_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-02_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-03_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-03_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-03_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-04_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-04_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-04_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-05_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-05_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-05_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-06_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-06_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-06_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-07_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-07_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-07_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-08_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-08_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-08_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-09_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-09_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-09_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-10_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-10_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-10_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-11_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-11_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-11_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-12_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-12_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-12_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-13_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-13_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-13_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-14_DRAFT_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "MODULE_LGA-14_CROSS_PILLAR_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MODULE_LGA-14_REQUIRED_FIELD_REJECT",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "FCT_AREA_COUNCIL_VALID",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "FCT_MASQUERADING_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "FCT_WRONG_CODE_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "420S_DRIFT_UNSTAGED_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "420S_DRIFT_STAGED_VALID",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "420S_OFFLINE_FINAL_ISSUANCE_BLOCKED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "RESTRICTED_PUBLIC_OUTBOX_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "COUNCIL_PAID_RECEIPT_NO_SETTLEMENT_BLOCKED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DIRECT_SETTLED_APPROVAL_VALID",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "test": "NONZERO_PLATFORM_ESCROW_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NONZERO_STATE_INTERMEDIARY_ESCROW_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "BANK_NOT_CONFIRMED_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "MISSING_BANK_RECONCILIATION_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "CONSENT_RESTRICTED_DRAFT_ALLOWED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "LGA13_PUBLIC_DOCKET_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "UNASSESSED_CELL_VALID",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "LIVE_UNVERIFIED_DENIED",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "FOURTEEN_PUBLIC_REVIEW_CANDIDATES",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-04-shoppermit",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-04-shoppermit",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-04-shoppermit",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-11-wardphc",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-11-wardphc",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-11-wardphc",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-02-buildclear",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-02-buildclear",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-02-buildclear",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-08-wardworks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-08-wardworks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-08-wardworks",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-14-streetgrid",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-14-streetgrid",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-14-streetgrid",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-12-councilledger",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-12-councilledger",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-12-councilledger",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-03-washconnect",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-03-washconnect",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-03-washconnect",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-01-councilcomplain",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-01-councilcomplain",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-01-councilcomplain",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-09-tenementrate",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-09-tenementrate",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-09-tenementrate",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-13-customarydocket",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-13-customarydocket",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-13-customarydocket",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-10-marketcollect",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-10-marketcollect",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-10-marketcollect",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-06-indigeneproof",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-06-indigeneproof",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-06-indigeneproof",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-07-safetynoc",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-07-safetynoc",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-07-safetynoc",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "HEADING_HIERARCHY_LGA-05-vitalproof",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "DEV_DRAWER_LGA-05-vitalproof",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "NOT_PUBLIC_LGA-05-vitalproof",
+      "result": "PASS",
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/SubNationalServiceInteroperabilityEnvelope.schema.json",
+  "title": "NigeriaStack Sub-National & 774-LGA Service Interoperability Envelope",
+  "description": "Normative JSON Schema 2020-12 contract governing offline-first PWA, USSD, and portal payloads across Nigeria's 36 States, FCT, and 774 LGAs (NS-RFC-004, 005, 006, 009, 014).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "envelopeUlid",
+    "pillar",
+    "dimensionId",
+    "moduleId",
+    "stateCode",
+    "accessChannel",
+    "locale",
+    "hlcSyncMetadata",
+    "privacyPartition",
+    "statutoryAuthority"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "2026.6.5"
+    },
+    "envelopeUlid": {
+      "type": "string",
+      "pattern": "^kbd_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "pillar": {
+      "type": "string",
+      "enum": [
+        "PILLAR_A_DIRECT_TREASURY",
+        "PILLAR_B_LAND_AND_PERMITTING",
+        "PILLAR_C_CIVIL_AND_ADDRESSING",
+        "PILLAR_D_CIVIC_CARE_AND_JUSTICE"
+      ]
+    },
+    "dimensionId": {
+      "type": "string",
+      "enum": [
+        "DIM-01",
+        "DIM-02",
+        "DIM-03",
+        "DIM-04",
+        "DIM-05",
+        "DIM-06",
+        "DIM-07",
+        "DIM-08"
+      ]
+    },
+    "moduleId": {
+      "type": "string",
+      "pattern": "^LGA-(0[1-9]|1[0-4])$"
+    },
+    "stateCode": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "lgaCode": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}-LGA-[0-9]{2}$"
+    },
+    "accessChannel": {
+      "type": "string",
+      "enum": [
+        "KIOSKBASE_OFFLINE_PWA",
+        "USSD_347_LGA",
+        "WEB_PORTAL",
+        "PAPER_COUNTER_ASSISTED"
+      ]
+    },
+    "locale": {
+      "type": "string",
+      "enum": [
+        "en-NG",
+        "ha-NG",
+        "yo-NG",
+        "ig-NG",
+        "pcm-NG"
+      ]
+    },
+    "hlcSyncMetadata": {
+      "type": "object",
+      "required": [
+        "hlcTimestamp",
+        "clockDriftSeconds",
+        "syncState",
+        "liteShellGzipBytes"
+      ],
+      "properties": {
+        "hlcTimestamp": {
+          "type": "string",
+          "minLength": 24
+        },
+        "clockDriftSeconds": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "syncState": {
+          "type": "string",
+          "enum": [
+            "VERIFIED_SYNC",
+            "DEGRADED_LOCAL_HLC",
+            "STAGED_AWAITING_ATTESTATION"
+          ]
+        },
+        "liteShellGzipBytes": {
+          "type": "integer",
+          "maximum": 35840
+        }
+      }
+    },
+    "privacyPartition": {
+      "type": "string",
+      "enum": [
+        "PUBLIC_REGISTRY_EXPORTABLE",
+        "CONSENT_GATED_CLEARAM",
+        "INTERNAL_RESTRICTED_NDPA"
+      ]
+    },
+    "clearAmConsentId": {
+      "type": "string",
+      "pattern": "^clm_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "sureEvidenceSealId": {
+      "type": "string",
+      "pattern": "^s84_[0-9A-HJKMNP-TV-Z]{26}$"
+    },
+    "splitDirectTreasury": {
+      "type": "object",
+      "required": [
+        "statutoryAmountKobo",
+        "platformEscrowAmountKobo",
+        "stateIntermediaryEscrowKobo"
+      ],
+      "properties": {
+        "statutoryAmountKobo": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "platformEscrowAmountKobo": {
+          "type": "integer",
+          "const": 0
+        },
+        "stateIntermediaryEscrowKobo": {
+          "type": "integer",
+          "const": 0
+        }
+      }
+    },
+    "statutoryAuthority": {
+      "type": "object",
+      "required": [
+        "custodianName",
+        "constitutionalAnchor"
+      ],
+      "properties": {
+        "custodianName": {
+          "type": "string",
+          "minLength": 3
+        },
+        "constitutionalAnchor": {
+          "type": "string",
+          "minLength": 5
+        }
+      }
+    }
+  }
+}

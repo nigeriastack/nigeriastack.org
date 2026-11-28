@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-11.schema.json",
+  "title": "LGA-11 WardPHC submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "careEncounterRef",
+    "patientPseudonym",
+    "clinicId"
+  ],
+  "properties": {
+    "careEncounterRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patientPseudonym": {
+      "type": "string",
+      "minLength": 1
+    },
+    "clinicId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "inventoryEvent": {
+      "type": "string"
+    },
+    "referralRef": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

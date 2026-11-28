@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-05.schema.json",
+  "title": "LGA-05 VitalProof submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "eventType",
+    "notificationRef",
+    "registrarAuthorityRef"
+  ],
+  "properties": {
+    "eventType": {
+      "type": "string",
+      "enum": [
+        "BIRTH_NOTICE",
+        "DEATH_NOTICE",
+        "MARRIAGE_NOTICE",
+        "OTHER_STATUTORILY_AUTHORIZED"
+      ]
+    },
+    "notificationRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "registrarAuthorityRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "eventDate": {
+      "type": "string"
+    },
+    "familyRestrictedEvidenceRef": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

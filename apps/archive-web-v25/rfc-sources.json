@@ -1,0 +1,58 @@
+{
+  "NS-RFC-001": {
+    "blob": "f5ed6e4382661b3f9d1b70dc1e2668aafc3f0292",
+    "file": "NS-RFC-001-hourglass-reference-model.md"
+  },
+  "NS-RFC-002": {
+    "blob": "66a76181659b91637d7fff10efa8774c3243cdc3",
+    "file": "NS-RFC-002-confluence-signed-async-transport.md"
+  },
+  "NS-RFC-003": {
+    "blob": "34aeed1137f2443a8be4b0569e59e221fe2bdfcd",
+    "file": "NS-RFC-003-workflow-state-and-safe-retry.md"
+  },
+  "NS-RFC-004": {
+    "blob": "d500f00d1342415d5f777aaf29d37458331e6acf",
+    "file": "NS-RFC-004-kioskbase-offline-hlc-crdt-sync.md"
+  },
+  "NS-RFC-005": {
+    "blob": "fda3932d6ca6932584349bc2e49b389258f8d930",
+    "file": "NS-RFC-005-sureevidence-act-s84-credentials.md"
+  },
+  "NS-RFC-006": {
+    "blob": "5ce2ced11251287c0774dfc21f9a2000ed23be03",
+    "file": "NS-RFC-006-clearam-consent-envelopes.md"
+  },
+  "NS-RFC-007": {
+    "blob": "e040f07cce25bc46aebfc9f04f516349cdfe5e30",
+    "file": "NS-RFC-007-marketlink-decentralized-commerce.md"
+  },
+  "NS-RFC-008": {
+    "blob": "416ddab2b4c87a9cbad5332c7611c093d1ce1d9d",
+    "file": "NS-RFC-008-givepower-agent-delegation-protocol.md"
+  },
+  "NS-RFC-009": {
+    "blob": "7b7111fccefec3daf96a33b74c5fa6e9522a7eda",
+    "file": "NS-RFC-009-treasury-passthrough-invariance.md"
+  },
+  "NS-RFC-010": {
+    "blob": "fad5ae9e4af48675fa7e54ef5a5b279f76289515",
+    "file": "NS-RFC-010-tradecorridor-customs-mesh.md"
+  },
+  "NS-RFC-011": {
+    "blob": "3ec990b929351356810919b69bfedcde93479a3c",
+    "file": "NS-RFC-011-ndhx-fhir-health-data-profile.md"
+  },
+  "NS-RFC-012": {
+    "blob": "2933dcaa9c68c5c7de42aac0f09ced9101d9ff09",
+    "file": "NS-RFC-012-agritrust-farm-polygon-standard.md"
+  },
+  "NS-RFC-013": {
+    "blob": "6a93f44d860284d22f9de69ae20a4fc4390fe572",
+    "file": "NS-RFC-013-indigenous-language-legal-ast.md"
+  },
+  "NS-RFC-014": {
+    "blob": "7b1bca011a7e3c872dcfcc1c48f0ad9607d986d3",
+    "file": "NS-RFC-014-lga-774-municipal-governance-stack.md"
+  }
+}

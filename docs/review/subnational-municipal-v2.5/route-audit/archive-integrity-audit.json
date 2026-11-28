@@ -1,0 +1,54 @@
+{
+  "sourceZip": "NigeriaStack-Master-Webcopy-934-Routes.zip",
+  "sourceHashSha256": "3b4e0a864a2692c0e2c225cfdc871333b04686ea61da604a9b35e89239b43fcb",
+  "manifestDeclaredTotalRoutes": 960,
+  "manifestEntries": 960,
+  "uniqueManifestUrlsIncludingAnchors": 959,
+  "uniquePageRoutes": 955,
+  "routeDocumentFiles": 956,
+  "physicalArchiveFiles": 960,
+  "manifestRowsWithIncorrectSha": [
+    {
+      "manifestRowIndex": 956,
+      "file": "Webcopy/00-core/governance.md",
+      "route": "/governance#charter",
+      "declaredSha256": "e67c1445f408a3995e1e551d83093c803feaeee982a549b8ab83e00138911e28",
+      "actualSha256": "f7e304872b36bffa260d3854bfff1e4efc8197f675bf544d3bb4e8173a483cfb"
+    },
+    {
+      "manifestRowIndex": 957,
+      "file": "Webcopy/00-core/governance.md",
+      "route": "/governance#safeguards",
+      "declaredSha256": "9c1b1bbdf0c54058c8f599afb4faef9709aeb74ea59cccaa2cb437996ffaa44d",
+      "actualSha256": "f7e304872b36bffa260d3854bfff1e4efc8197f675bf544d3bb4e8173a483cfb"
+    },
+    {
+      "manifestRowIndex": 958,
+      "file": "Webcopy/00-core/governance.md",
+      "route": "/governance#contribute",
+      "declaredSha256": "fcfd735ee334cde69e9377a221a8797e6f1edc56a8dff899731d811003435ab3",
+      "actualSha256": "f7e304872b36bffa260d3854bfff1e4efc8197f675bf544d3bb4e8173a483cfb"
+    },
+    {
+      "manifestRowIndex": 959,
+      "file": "Webcopy/00-core/governance.md",
+      "route": "/governance#faqs",
+      "declaredSha256": "7a8d87aa16e916d1b055a4e2b093fe27968d7b003e5d1c62540b188086ee509f",
+      "actualSha256": "f7e304872b36bffa260d3854bfff1e4efc8197f675bf544d3bb4e8173a483cfb"
+    }
+  ],
+  "routeCollisions": {
+    "/rfcs/NS-RFC-004": [
+      "Webcopy/00-core/rfc-004-sample.md",
+      "Webcopy/rfcs/core-001-to-014/NS-RFC-004.md"
+    ]
+  },
+  "manifestAnchorCrossIndices": 4,
+  "manifestRowsReusingGovernanceDoc": 5,
+  "h1Violations": [],
+  "headingHierarchyViolations": [],
+  "notAssessedLiteralMissing": [],
+  "archiveIntegrityCrcBadFile": null,
+  "publicationGate": "BLOCKED_PENDING_ROUTE_AND_PROVENANCE_REVIEW",
+  "unverifiedClaims": "Archive review_status is source declaration, not a deployment/conformance receipt"
+}

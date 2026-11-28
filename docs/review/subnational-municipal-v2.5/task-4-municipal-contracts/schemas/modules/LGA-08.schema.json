@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nigeriastack.org/schemas/v2026/modules/LGA-08.schema.json",
+  "title": "LGA-08 WardWorks submission payload (review candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ocdsId",
+    "wardRef",
+    "milestoneRef"
+  ],
+  "properties": {
+    "ocdsId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "wardRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "milestoneRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contractVariationRef": {
+      "type": "string"
+    },
+    "proofDigest": {
+      "type": "string"
+    },
+    "sourceAuthorityRef": {
+      "type": "string",
+      "minLength": 3
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "proofDigestSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}
