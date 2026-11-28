@@ -264,7 +264,7 @@ The token-pair calculations in `contrast-measurements-2026-11-17.csv` replace th
 
 ## Task-first v2.5 review components
 
-The November 26 review uses the existing DTCG palette, the approved 660 by 110 lockup and the documented serif, sans and monospace stacks. The successor source is `apps/archive-web-v25/review.css`, with state and content bindings in `parent_review.py`, `review_copy.py` and `review.mjs`. On the parent surfaces the task appears ahead of detailed source material. The full Open Standards & Non-Impersonation notice appears after the shared footer links on the seven parent pages only. It uses the fine-print text size and the secondary ink token on the footer surface.
+The review uses the existing DTCG palette, the archived v2.3 Sites three-bar lockup and the documented serif, sans and monospace stacks. The source is `apps/archive-web-v25/review.css`, with state and content bindings in `parent_review.py`, `review_copy.py` and `review.mjs`. On the parent surfaces the task appears ahead of detailed source material. The full Open Standards & Non-Impersonation notice appears after the shared footer links on the seven parent pages only. It uses the fine-print text size and the secondary ink token on the footer surface.
 
 | Surface | Component and interaction |
 | --- | --- |

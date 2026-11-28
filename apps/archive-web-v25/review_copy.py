@@ -413,5 +413,5 @@ SECONDARY_COPY = {
 RFC_STATUS_COPY = {
     "core": "Candidate standard",
     "extended": "Archive profile",
-    "extended_scope": "This archive profile has no verified approval status or Working Group assignment. Browse the registry for current specifications.",
+    "extended_scope": "The title, approval and Working Group assignment of this archive record are unverified.",
 }

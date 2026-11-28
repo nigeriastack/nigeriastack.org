@@ -180,13 +180,12 @@ function recordLink(record, from) {
   return link;
 }
 
-function renderRecord(record, container, from) {
+function renderRecord(record, container, from, columns, labelsByColumn) {
   const table = container.tagName === 'TBODY';
   const item = document.createElement(table ? 'tr' : 'li');
   item.dataset.recordId = record.id || record.url;
   const link = recordLink(record, from);
   if (table) {
-    const columns = (container.dataset.columns || 'title sector gap maturity status').split(/\s+/u);
     for (const column of columns) {
       const cell = document.createElement(column === 'title' ? 'th' : 'td');
       if (column === 'title') {
@@ -199,6 +198,23 @@ function renderRecord(record, container, from) {
     }
   } else {
     item.append(link);
+    if (container.classList.contains('narrow-results')) {
+      const facts = document.createElement('dl');
+      facts.className = 'fact-list';
+      for (const [index, field] of columns.entries()) {
+        if (field === 'title') continue;
+        const entry = document.createElement('div');
+        const term = document.createElement('dt');
+        const value = document.createElement('dd');
+        term.textContent = labelsByColumn[index];
+        value.textContent = values(record[field]).filter(Boolean).join(', ') || '—';
+        entry.append(term, value);
+        facts.append(entry);
+      }
+      item.append(facts);
+      container.append(item);
+      return;
+    }
     const labels = [record.sector, record.gap, record.maturity, record.status, record.place]
       .filter(Boolean);
     if (labels.length) {
@@ -238,6 +254,9 @@ function connectCollection(form) {
   const status = region.querySelector('[data-status]');
   const containers = [...region.querySelectorAll('[data-results]')];
   if (!status || !containers.length) return;
+  const tableBody = containers.find(container => container.tagName === 'TBODY');
+  const columns = tableBody?.dataset.columns.split(/\s+/u) ?? [];
+  const labelsByColumn = tableBody ? [...tableBody.closest('table').tHead.rows[0].cells].map(cell => cell.textContent) : [];
   const clear = region.querySelector('[data-clear]');
   const exportButton = region.querySelector('[data-export]');
   const previous = region.querySelector('[data-previous]');
@@ -274,7 +293,7 @@ function connectCollection(form) {
     const from = allowedReturn(`${url.pathname}${url.search}${url.hash}`, location.origin);
     for (const container of containers) {
       container.replaceChildren();
-      for (const record of selection) renderRecord(record, container, from);
+      for (const record of selection) renderRecord(record, container, from, columns, labelsByColumn);
     }
     if (matches.length) {
       const noun = matches.length === 1 ? 'result' : 'results';

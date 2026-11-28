@@ -55,10 +55,15 @@ PAGE_TREE = "h1|h2|h3|h4|h5|h6"
 APP = Path(__file__).resolve().parent
 REPOSITORY = APP.parents[1]
 INDEX_PATH = "api/v1/index.json"
-LOCKUP_PATH = "_assets/nigeriastack.png"
-LOCKUP_SOURCE = REPOSITORY / "apps/web/src/assets/nigeriastack-lockup.png"
-# Approved v2.3 logo and wordmark, adopted for v2.5.
-LOCKUP_SHA256 = "6d5978d5856e65e8e50113c8d6457cba32e2e2b14e162ffa1b2dd61866b37292"
+LEGACY_LOCKUP_PATH = "_assets/nigeriastack.png"
+LEGACY_LOCKUP_SOURCE = REPOSITORY / "apps/web/src/assets/nigeriastack-lockup.png"
+LEGACY_LOCKUP_SHA256 = "6d5978d5856e65e8e50113c8d6457cba32e2e2b14e162ffa1b2dd61866b37292"
+REVIEW_LOCKUP_SOURCE = "7d9ed8b28203c8bf3122d35a1ed3cb4a28904c04"
+REVIEW_WORDMARK = (
+    '<a class="wordmark" href="/" aria-label="NigeriaStack home">'
+    '<span class="stack-symbol" aria-hidden="true"><i></i><i></i><i></i></span>'
+    '<span>Nigeria<b>Stack</b></span></a>'
+)
 INTERNAL_COPY = re.compile(
     r"READY_FOR_GITHUB_PUBLICATION|DRAFT_UNPUBLISHED|REVIEW_REQUIRED|"
     r"OWNER_DECISION_REQUIRED|PUBLIC_RELEASE|DO[ _-]NOT[ _-]PUBLISH|"
@@ -315,7 +320,9 @@ def render_page(page, review=None):
     if not review and route in SEARCH_SCOPES:
         script = '<script type="module" src="/_assets/search.mjs"></script>'
 
-    wordmark = f'<a class="wordmark" href="/"><img src="/{LOCKUP_PATH}" width="660" height="110" alt="NigeriaStack"></a>'
+    wordmark = REVIEW_WORDMARK if review else (
+        f'<a class="wordmark" href="/"><img src="/{LEGACY_LOCKUP_PATH}" width="660" height="110" alt="NigeriaStack"></a>'
+    )
     layout = ' class="review"' if review else (' class="landing"' if route == "/" else "")
     footer = review_footer(wordmark, footer_notice, ATTRIBUTION)
     output = f"""<!doctype html>
@@ -416,7 +423,8 @@ def main():
     if review:
         tokens = (REPOSITORY / "design-system/tokens/tokens.css").read_text()
         (assets / "tokens.css").write_text(tokens.split("/* ============================================================================\n * MANDATORY")[0])
-    copyfile(LOCKUP_SOURCE, arguments.output / LOCKUP_PATH)
+    if not review:
+        copyfile(LEGACY_LOCKUP_SOURCE, arguments.output / LEGACY_LOCKUP_PATH)
     index_file = arguments.output / INDEX_PATH
     index_file.parent.mkdir(parents=True)
     records.sort(key=lambda entry: entry["url"])
@@ -447,7 +455,8 @@ def main():
         "distinctInternalLinksPerPage": internal,
         "internalLinksWithoutLocalTarget": invalid,
         "stylesheetSha256": sha256(css).hexdigest(),
-        "approvedLockupSha256": LOCKUP_SHA256,
+        "brand": {"sourceCommit": REVIEW_LOCKUP_SOURCE, "markupSha256": sha256(REVIEW_WORDMARK.encode()).hexdigest()}
+        if review else {"legacyImageSha256": LEGACY_LOCKUP_SHA256},
         "renderedPageSha256": output_digests,
         "publicIndexVersion": index_version,
         "deploymentFiles": deploy_files,
@@ -460,9 +469,11 @@ def main():
 def audit_distribution(directory, routes, review=False):
     expected = {f"{route[1:] + '/' if route != '/' else ''}index.html" for route in routes}
     assets = REVIEW_ASSETS if review else ("archive.css", "search.mjs")
-    expected.update({INDEX_PATH, "_assets/verifier.mjs", LOCKUP_PATH, *(f"_assets/{asset}" for asset in assets)})
+    expected.update({INDEX_PATH, "_assets/verifier.mjs", *(f"_assets/{asset}" for asset in assets)})
     if review:
         expected.update(f"api/v1/{name}.json" for name in COLLECTION_INDEXES)
+    else:
+        expected.add(LEGACY_LOCKUP_PATH)
     files = sorted(path for path in directory.rglob("*") if path.is_file() or path.is_symlink())
     require({path.relative_to(directory).as_posix() for path in files} == expected,
             "Deployable package contains unexpected or missing files")
@@ -471,8 +482,8 @@ def audit_distribution(directory, routes, review=False):
         relative = path.relative_to(directory).as_posix()
         require(path.is_file() and not path.is_symlink(), f"Invalid output file: {relative}")
         data = path.read_bytes()
-        if relative == LOCKUP_PATH:
-            require(sha256(data).hexdigest() == LOCKUP_SHA256, "Approved v2.3 lockup digest mismatch")
+        if relative == LEGACY_LOCKUP_PATH:
+            require(sha256(data).hexdigest() == LEGACY_LOCKUP_SHA256, "Legacy lockup digest mismatch")
         if path.suffix == ".html":
             document = html.fromstring(data)
             notices = document.xpath("//*[contains(concat(' ', normalize-space(@class), ' '), ' footer-notice ')]")
@@ -482,12 +493,15 @@ def audit_distribution(directory, routes, review=False):
             require(not any("Open Standards & Non-Impersonation Notice" in node.text_content()
                             for node in document.xpath("//header|//main")), f"Notice above footer at {route}")
             for landmark in ("header", "footer"):
-                brand = document.xpath(
-                    "//" + landmark + "//a[@class='wordmark' and @href='/']/img"
-                )
-                require(len(brand) == 1 and brand[0].get("src") == "/" + LOCKUP_PATH
-                        and brand[0].get("alt") == "NigeriaStack",
-                        f"Approved wordmark missing or mislabeled in {relative} {landmark}")
+                brand = document.xpath(f"//{landmark}//a[@class='wordmark' and @href='/']")
+                require(len(brand) == 1, f"Missing or duplicated wordmark in {relative} {landmark}")
+                if review:
+                    require(html.tostring(brand[0], encoding="unicode", with_tail=False) == REVIEW_WORDMARK,
+                            f"Archived v2.3 wordmark differs in {relative} {landmark}")
+                else:
+                    image = brand[0].find('img')
+                    require(image is not None and image.get('src') == '/' + LEGACY_LOCKUP_PATH
+                            and image.get('alt') == 'NigeriaStack', f"Legacy wordmark differs in {relative} {landmark}")
         if path.suffix != ".png":
             match = INTERNAL_COPY.search(data.decode())
             require(match is None, f"Internal copy in {relative}: {match.group() if match else ''}")

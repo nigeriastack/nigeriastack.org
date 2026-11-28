@@ -4,7 +4,9 @@ NigeriaStack helps people find open standards for systems that need to work toge
 
 ## The approved mark
 
-Use the approved v2.3 NigeriaStack symbol and wordmark as a single lockup. The original file is `apps/web/src/assets/nigeriastack-lockup.png`. Its SHA-256 is `6d5978d5856e65e8e50113c8d6457cba32e2e2b14e162ffa1b2dd61866b37292`. The attached project reference, saved Sites version 4 package and revised candidate match that digest. The visible mark occupies the left portion of the source canvas. Frame the visible mark in the header and footer by clipping the blank right margin in CSS. Keep the mark, wordmark, small descriptor, approved colour and source bytes intact. Use “NigeriaStack” as the linked image's accessible name and send the link to Home.
+Use the wordmark from the archived v2.3 Sites build at `7d9ed8b28203c8bf3122d35a1ed3cb4a28904c04`. Its markup in `dist/server/portal.js` joins the three-bar symbol with “Nigeria” in the primary ink and “Stack” in the action colour. The original stylesheet is `portal-BRfHs3y9.css`. The review renderer binds that markup in `apps/archive-web-v25/build.py` and uses the recovered symbol proportions, typography and spacing in `review.css`. Keep both header and footer placements free of a background rectangle. Use “NigeriaStack home” as the accessible name of the link. The visual check covers spacing, clipping and proportion at all four review widths.
+
+Sites versions 4 and 5 carried a square-symbol PNG. Earlier guidance incorrectly recorded that file as the v2.3 Sites lockup. The legacy archive renderer and the separate application can still reference the PNG for their historical purposes.
 
 Use the versioned NigeriaStack design tokens and approved typography stacks. Give the civic page a short heading and lead, visible actions, and plain evidence labels. Where a route needs a reader, show the topic and status first and make exact technical requirements easy to open. Use text labels and existing focus treatments for every action.
 
@@ -19,6 +21,7 @@ Use GitHub calls to action where visitors want project source, specification sou
 - Start each page with its job. “Find standards for your industry”, “Read the charter” and “Check a sample payload” describe useful actions.
 - Replace numbered section labels, decorative digits, symbolic badges and chapter-style headings with short descriptive labels. Keep numbers that explain a real result or identify a specific record. Put RFC IDs, source revisions, exact legal references and implementation syntax next to their technical context or in the source disclosure.
 - Keep standards status, service availability, directory coverage and evidence quality separate. A candidate specification describes a proposed approach. A directory entry identifies a place. A sample check describes its local result.
+- State a material limitation once per record at the point of use. On a council page, put service availability alongside the responsible authority. On an extended RFC, consolidate the unverified title, approval and Working Group assignment in the lead.
 - Use the same verb for the same action across pages. Link to actual destinations. Avoid repeating the heading in the lead and avoid ornamental text or generic claims.
 - Keep approved English copy and its FAQ answers aligned with the structured data. Review Hausa, Yorùbá, Igbo and Nigerian Pidgin against the current English source and the rendered task before enabling a locale.
 - Preserve canonical routes, old heading anchors and source bindings during editorial changes. A numeric code in a route, fragment or machine-readable record can remain stable even when its visible heading changes.

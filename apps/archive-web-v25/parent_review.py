@@ -360,6 +360,8 @@ def reader_requirements(record):
         node.clear(keep_tail=True)
         node.text = title
     for table in root.xpath('.//table'):
+        for heading in table.xpath('./thead/tr/th'):
+            heading.set('scope', 'col')
         wrapper = html.Element('div', {'class': 'table-scroll', 'tabindex': '0', 'role': 'region', 'aria-label': 'Specification table'})
         table.addprevious(wrapper)
         wrapper.append(table)
@@ -373,8 +375,7 @@ def rfc_reader(route, archive, model):
     if record is None:
         title = 'Extended specification profile'
         lead = RFC_STATUS_COPY['extended_scope']
-        sections = [('Status', paragraph('Preserved archive record. Its current title, approval and Working Group assignment are unverified.')),
-                    ('Find a current specification', links([('/rfcs?track=Core', 'Browse core specifications'), ('/governance#working-groups', 'Find a Working Group')])
+        sections = [('Find a current specification', links([('/rfcs?track=Core', 'Browse core specifications'), ('/governance#working-groups', 'Find a Working Group')])
                      + f'<details class="reference"><summary>Source identifier</summary><p><code>{identifier}</code></p></details>')]
         return title, lead, child_sections(archive, sections), {'id': identifier, 'kind': 'specifications', 'status': 'Unverified', 'track': 'Extended',
             'meta': {'title': f'{identifier} archive profile | NigeriaStack',
@@ -440,7 +441,7 @@ def state_record(route, archive, model):
                 ('Service readiness', f'<dl class="fact-list">{values}</dl>' + paragraph(f'Reviewed {next(iter(provenance.values()))["reviewedOn"]}. The atlas has no qualifying observations for these dimensions.')),
                 ('Councils in this jurisdiction', f'<p>{link(f"/atlas/lga-774?jurisdiction={code}", "Browse and filter councils")}</p>' + links((url, model.councils[url]['name']) for url in model.councils_by_state[code])),
                 ('Source', links([(ATLAS_SOURCE + '/states/subnational-36states-fct-atlas.json', 'Read the state and FCT evidence')]))]
-    return record['stateName'], 'Read the jurisdiction’s council directory and the evidence available for service readiness.', child_sections(archive, sections), {
+    return record['stateName'], f'Find councils in {record["stateName"]} and see the dimensions tracked in the readiness assessment.', child_sections(archive, sections), {
         'kind': 'states', 'id': code, 'jurisdiction': code, 'aliases': [record['zone']], 'status': 'Not yet assessed',
         'meta': {'description': f'Read the {record["stateName"]} profile, related council directory and evidence available for service readiness.'},
     }
@@ -459,11 +460,10 @@ def council_record(route, archive, model):
         identity += f' The reviewed registry lists the spelling {record["reviewed_name"]}. Confirm the name with the responsible authority.'
     sections = [('Council identity', paragraph(identity) + paragraph(f'Directory code: {record["code"]}. Reviewed {audit["reviewedOn"]}.')
                  + f'<p>{link(f"/atlas/states/{code}", jurisdiction)}</p>' + (links(sources) if sources else '')),
-                ('Proposed municipal workflows', paragraph('The modules describe how a council could organise a service. Confirm availability and the responsible office with the relevant authority.')
-                 + links([('/protocols/lga-governance-stack', 'Browse municipal workflows'), ('/rfcs/NS-RFC-014', 'Read the municipal specification')])),
-                ('Service availability', paragraph('Not yet assessed. Directory inclusion identifies a place. Check service availability with the relevant authority.')
+                ('Proposed municipal workflows', links([('/protocols/lga-governance-stack', 'Browse municipal workflows'), ('/rfcs/NS-RFC-014', 'Read the municipal specification')])),
+                ('Service availability', paragraph('The Atlas has not assessed local services. Ask the responsible authority which services are available.')
                  + f'<p>{link(ATLAS_SOURCE + "/lga-774/lga-774-constitutional-registry.json", "Read the council registry")}</p>')]
-    return title, f'{jurisdiction}. Read the council’s directory record, name sources and related specifications.', child_sections(archive, sections), {
+    return title, f'Council directory entry in {jurisdiction}.', child_sections(archive, sections), {
         'kind': 'councils', 'id': record['code'], 'jurisdiction': code, 'place': jurisdiction, 'aliases': record['aliases'] + [jurisdiction], 'status': 'Directory record',
         'meta': {'title': f'{title} in {jurisdiction} | NigeriaStack Atlas',
                  'description': f'Read the directory record for {title} in {jurisdiction}. Find its name sources and related municipal workflows.'},
